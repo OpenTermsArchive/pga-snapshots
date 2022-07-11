@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"7ea89c5a2f",applicationID:"31524682"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="alternate" hreflang="x-default" href="https://policy.pinterest.com/en/terms-of-service" />
+<meta property="og:site_name" content="Pinterest Policy" />
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="274266067164" />
+<meta property="og:url" content="https://policy.pinterest.com/en/terms-of-service" />
+<meta property="og:title" content="Terms of service" />
+<link rel="image_src" href="https://policy.pinterest.com/sub/meta/artboard_horizontal.jpg" />
+<meta property="pin:media" content="https://policy.pinterest.com/sub/meta/artboard_vertical.jpg" />
+<meta property="pin:url" content="https://policy.pinterest.com/en/terms-of-service" />
+<meta property="og:image" content="https://policy.pinterest.com/sub/meta/artboard_horizontal.jpg" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/profiles/contrib/pin/favicon.png" />
+<link rel="alternate" hreflang="en" href="https://policy.pinterest.com/en/terms-of-service" />
+<link rel="alternate" hreflang="id" href="https://policy.pinterest.com/id/terms-of-service" />
+<link rel="alternate" hreflang="ms" href="https://policy.pinterest.com/ms/terms-of-service" />
+<link rel="alternate" hreflang="cs" href="https://policy.pinterest.com/cs/terms-of-service" />
+<link rel="alternate" hreflang="da" href="https://policy.pinterest.com/da/terms-of-service" />
+<link rel="alternate" hreflang="de" href="https://policy.pinterest.com/de/terms-of-service" />
+<link rel="alternate" hreflang="en-gb" href="https://policy.pinterest.com/en-gb/terms-of-service" />
+<link rel="alternate" hreflang="es" href="https://policy.pinterest.com/es/terms-of-service" />
+<link rel="alternate" hreflang="fr" href="https://policy.pinterest.com/fr/terms-of-service" />
+<link rel="alternate" hreflang="it" href="https://policy.pinterest.com/it/terms-of-service" />
+<link rel="alternate" hreflang="hu" href="https://policy.pinterest.com/hu/terms-of-service" />
+<link rel="alternate" hreflang="nl" href="https://policy.pinterest.com/nl/terms-of-service" />
+<link rel="alternate" hreflang="nb" href="https://policy.pinterest.com/nb/terms-of-service" />
+<link rel="alternate" hreflang="pl" href="https://policy.pinterest.com/pl/terms-of-service" />
+<link rel="alternate" hreflang="pt-br" href="https://policy.pinterest.com/pt-br/terms-of-service" />
+<link rel="alternate" hreflang="pt-pt" href="https://policy.pinterest.com/pt-pt/terms-of-service" />
+<link rel="alternate" hreflang="ro" href="https://policy.pinterest.com/ro/terms-of-service" />
+<link rel="alternate" hreflang="sk" href="https://policy.pinterest.com/sk/terms-of-service" />
+<link rel="alternate" hreflang="fi" href="https://policy.pinterest.com/fi/terms-of-service" />
+<link rel="alternate" hreflang="sv" href="https://policy.pinterest.com/sv/terms-of-service" />
+<link rel="alternate" hreflang="tl" href="https://policy.pinterest.com/tl/terms-of-service" />
+<link rel="alternate" hreflang="vi" href="https://policy.pinterest.com/vi/terms-of-service" />
+<link rel="alternate" hreflang="tr" href="https://policy.pinterest.com/tr/terms-of-service" />
+<link rel="alternate" hreflang="el" href="https://policy.pinterest.com/el/terms-of-service" />
+<link rel="alternate" hreflang="ru" href="https://policy.pinterest.com/ru/terms-of-service" />
+<link rel="alternate" hreflang="uk" href="https://policy.pinterest.com/uk/terms-of-service" />
+<link rel="alternate" hreflang="hi" href="https://policy.pinterest.com/hi/terms-of-service" />
+<link rel="alternate" hreflang="th" href="https://policy.pinterest.com/th/terms-of-service" />
+<link rel="alternate" hreflang="ko" href="https://policy.pinterest.com/ko/terms-of-service" />
+<link rel="alternate" hreflang="ja" href="https://policy.pinterest.com/ja/terms-of-service" />
+<link rel="alternate" hreflang="zh-hans" href="https://policy.pinterest.com/zh-hans/terms-of-service" />
+<link rel="alternate" hreflang="zh-hant" href="https://policy.pinterest.com/zh-hant/terms-of-service" />
+<link rel="alternate" hreflang="ar" href="https://policy.pinterest.com/ar/terms-of-service" />
+<link rel="alternate" hreflang="bn" href="https://policy.pinterest.com/bn/terms-of-service" />
+<link rel="alternate" hreflang="te" href="https://policy.pinterest.com/te/terms-of-service" />
+<link rel="alternate" hreflang="he" href="https://policy.pinterest.com/he/terms-of-service" />
+<link rel="canonical" href="https://policy.pinterest.com/en/terms-of-service" />
+<link rel="shortlink" href="https://policy.pinterest.com/en/node/426" />
+
+    <title>Terms of service | Pinterest Policy</title>
+    <link rel="stylesheet" media="all" href="/sites/pinpolicy/files/css/css_hkMBx1PHvJ_wGfa026friHbuYyByzoPha3poL-70hVI.css" />
+<link rel="stylesheet" media="all" href="/sites/pinpolicy/files/css/css_9FudEQ9MmihLT0biHlkPsL7YsrwNpJluN9N815MyaKs.css" />
+
+    <script>document.documentElement.classList.add('js');</script>
+    
+  </head>
+  <body class="policy-section policy-section--terms u-section--policy--teal pinterest-policy">
+        <a id="skip-link" href="#main-content" class="visually-hidden focusable button">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="site">
+
+    <header class="site__header" role="banner">
+    <div class="navigation navigation--white-bg"
+   data-nav-overlay="false">
+  <div class="navigation__inner">
+
+      <div id="block-sitebranding">
+  
+    
+    <aside class="branding">
+            <div class="branding__logo">
+        <a href="/en" title="Home" rel="home">
+          <img src="/profiles/contrib/pin/logo.svg?dpid=3c8df5f9079e46ea79c1093297169f7e" alt="Home" width="24" height="24" />
+        </a>
+      </div>
+      
+            <div class="branding__name">
+        <a href="/en" title="Home" rel="home">Policy</a>
+      </div>
+      
+        </aside>
+</div>
+<nav role="navigation" aria-labelledby="block-headernavigationactions-menu" id="block-headernavigationactions" class="menu--tools-nav">
+            
+  <h2 class="visually-hidden" id="block-headernavigationactions-menu">Header navigation - actions</h2>
+  
+
+        
+
+  
+      
+            <ul class="menu--tools menu">
+              <li class="menu__item">
+        <a href="https://www.pinterest.com">Sign up</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    <button class="menu__toggle menu__toggle--collapsed " data-menu-target="nav-circles--mobile">
+  <div class="menu__toggle-text">Open menu</div>
+</button>
+
+
+
+  
+
+
+<div class="nav-circles nav-circles--mobile">
+  <div class="nav-circles__inner">
+      
+    
+            <ul class="menu--circles menu--circles-mobile menu menu--has-active-links">
+            <li class="menu__item menu__item--active" data-hover-bg="u-bg--policy--teal">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/terms-of-service" class="js-nav-circle__target is-active" data-drupal-link-system-path="node/426">Terms</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--yellow">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/privacy-policy" class="js-nav-circle__target" data-drupal-link-system-path="node/481">Privacy</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--pink">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/community-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/16">Community</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--blue">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/merchant-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/476">Merchant</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--orange">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/advertising-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/471">Advertising</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--gray">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/developer-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/31">Developers</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lilac">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/copyright" class="js-nav-circle__target" data-drupal-link-system-path="node/36">Copyright</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lime">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/trademark" class="js-nav-circle__target" data-drupal-link-system-path="node/41">Trademark</a>
+        </span>
+      </li>
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+  
+  </div>
+</div>
+
+      
+
+  
+
+
+<div class="nav-circles nav-circles--policy">
+  <div class="nav-circles__inner">
+      
+    
+                  <ul class="menu--circles menu menu--has-active-links">
+              <li class="menu__item menu__item--active" data-hover-bg="u-bg--policy--teal">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/terms-of-service" class="js-nav-circle__target is-active" data-drupal-link-system-path="node/426">Terms</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--yellow">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/privacy-policy" class="js-nav-circle__target" data-drupal-link-system-path="node/481">Privacy</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--pink">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/community-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/16">Community</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--blue">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/merchant-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/476">Merchant</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--orange">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/advertising-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/471">Advertising</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--gray">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/developer-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/31">Developers</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lilac">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/copyright" class="js-nav-circle__target" data-drupal-link-system-path="node/36">Copyright</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lime">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/trademark" class="js-nav-circle__target" data-drupal-link-system-path="node/41">Trademark</a>
+        </span>
+      </li>
+        </ul>
+  
+  </div>
+</div>
+
+
+
+
+
+  </header>  
+    <div class="site__utility">
+      <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+  </div>  
+  <main class="site__content" role="main">
+        <a id="main-content" tabindex="-1" aria-hidden="true"></a>
+
+      <div>
+    <article role="article" about="/en/terms-of-service">
+      
+
+
+<header class="header   header--large-text     u-full-width header--full-width u-anim-staggered-start" data-anim-trigger="view">
+
+        
+        
+  <div class="header__inner">
+              <h1 class="header__text u-anim-fade-in-and-slide-up u-anim-staggered-start__item"><span>Terms of service</span>
+</h1>
+        
+            
+            
+            
+                </div>
+
+</header>
+            <a id="section-thank-you-for-using-pinterest" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--985484994">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Thank you for using Pinterest!
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>These Terms of Service ("Terms") govern your access to and use of the Pinterest website, apps, APIs, and widgets (“Pinterest” or the “Service”). Please read these Terms carefully, and contact us if you have any questions. By accessing or using Pinterest, you agree to be bound by these Terms, our <a href="/privacy-policy">Privacy Policy</a>, our <a href="/cookies">Cookies Policy</a> and our <a href="/community-guidelines">Community Guidelines</a>. </p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>Every company has its terms. These are ours.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-1-our-service" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--857228202">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                1. Our service
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest helps you discover and do what you love. To do that, we show you things we think will be relevant, interesting and personal to you based on your onsite and offsite activity. To provide our Service, we need to be able to identify you and your interests. Some of the things we show you are promoted by advertisers. As part of our service we try to ensure that even promoted content is relevant and interesting to you. You can identify promoted content because it will be clearly labelled.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>Pinterest helps you discover and do what you love. It’s customized to you. We need to know what you like to make everything on Pinterest relevant to you.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-2-using-pinterest" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--310972721">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                2. Using Pinterest
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-a-who-can-use-pinterest" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          a. Who can use Pinterest
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>You may use Pinterest only if you can legally form a binding contract with Pinterest, and only in compliance with these Terms and all applicable laws. When you create your Pinterest account, you must provide us with accurate and complete information. You can’t use Pinterest if it would be prohibited by U.S. sanctions. Any use or access by anyone under the age of 13 is not allowed. If you’re based in the EEA, you may only use Pinterest if you are over the age at which you can provide consent to data processing under the laws of your country. Using Pinterest may include downloading software to your computer, phone, tablet, or other device. You agree that we may automatically update that software, and these Terms will apply to any updates.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-b-our-license-to-you" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          b. Our license to you
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Subject to these Terms and our policies (including our <a href="/community-guidelines">Community Guidelines</a>), we grant you a limited, non-exclusive, non-transferable, and revocable license to use our Service.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-c-commercial-use-of-pinterest" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          c. Commercial use of Pinterest
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>If you want to use Pinterest for commercial purposes you must create a business account and agree to our <a href="https://business.pinterest.com/business-terms-of-service">Business Terms of Service</a>. If you do open an account for a company, organization, or other entity, then "you" includes you and that entity, and you promise that you are authorized to grant all permissions and licenses provided in these Terms and bind the entity to these Terms, and that you agree to these Terms on the entity's behalf.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>You cannot use Pinterest if you're under 13 (or older in some countries). Also, if you are using Pinterest for work, you need to set up a business account.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-3-your-content" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--40891759">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                3. Your content
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-a-posting-content" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          a. Posting content
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest allows you to post content, including photos, comments, links, and other materials. Anything that you post or otherwise make available on Pinterest is referred to as "User Content." You retain all rights in, and are solely responsible for, the User Content you post to Pinterest.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>If you post your content on Pinterest, it still belongs to you.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-b-how-pinterest-and-other-users-can-use-your-content" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          b. How Pinterest and other users can use your content
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>You grant Pinterest and our users a non-exclusive, royalty-free, transferable, sublicensable, worldwide license to use, store, display, reproduce, save, modify, create derivative works, perform, and distribute your User Content on Pinterest solely for the purposes of operating, developing, providing, and using Pinterest. Nothing in these Terms restricts other legal rights Pinterest may have to User Content, for example under other licenses. We reserve the right to remove or modify User Content, or change the way it’s used in Pinterest, for any reason. This includes User Content that we believe violates these Terms, our <a href="/community-guidelines">Community Guidelines</a>, or any other policies.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>If you post your content on Pinterest, we can show it to people and others can save it. Don't post porn or spam or be a jerk to other people on Pinterest. </p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-c-how-long-we-keep-your-content" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          c. How long we keep your content
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Following termination or deactivation of your account, or if you remove any User Content from Pinterest, we may keep your User Content for a reasonable period of time for backup, archival, or audit purposes. Pinterest and its users may retain and continue to use, store, display, reproduce, re-pin, modify, create derivative works, perform, and distribute any of your User Content that other users have stored or shared on Pinterest.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>If you choose to post content, you give us permission to use it to provide and improve Pinterest. Copies of content shared with others may remain even after you delete the content from your account.<br />
+ </p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-d-feedback-you-provide" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          d. Feedback you provide
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>We value hearing from our users, and are always interested in learning about ways we can make Pinterest more awesome. If you choose to submit comments, ideas or feedback, you agree that we are free to use them without any restriction or compensation to you. By accepting your submission, Pinterest doesn’t waive any rights to use similar or related feedback previously known to Pinterest, or developed by its employees, or obtained from sources other than you.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>We can use your suggestions to make Pinterest better.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-4-copyright-policy" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1026555026">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                4. Copyright policy
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest has adopted and implemented the Pinterest Copyright Policy in accordance with the Digital Millennium Copyright Act and other applicable copyright laws. For more information, please read our <a href="/en/copyright">Copyright Policy.</a> </p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>We respect copyrights. You should, too.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-5-security" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1554793886">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                5. Security
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>We care about the security of our users. While we work to protect the security of your content and account, Pinterest can’t guarantee that unauthorized third parties won’t be able to defeat our security measures. We ask that you keep your password secure. Please notify us immediately of any compromise or unauthorized use of your account.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>You can help us fight spammers by keeping <a href="https://help.pinterest.com/articles/account-security-and-hacked-accounts">these security tips</a> in mind.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-6-third-party-links-sites-and-services" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1263162241">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                6. Third party links, sites, and services
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest may contain links to third party websites, advertisers, services, special offers, or other events or activities that are not owned or controlled by Pinterest. We don’t endorse or assume any responsibility for any such third party sites, information, materials, products, or services. If you access any third party website, service, or content from Pinterest, you do so at your own risk and you agree that Pinterest has no liability arising from your use of or access to any third party website, service, or content.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>Pinterest has links to content off of Pinterest. Most of that stuff is awesome, but we're not responsible when it's not.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-7-termination" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1470843065">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                7. Termination
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest may terminate or suspend your right to access or use Pinterest for any reason on appropriate notice. We may terminate or suspend your access immediately and without notice if we have a good reason, including any violation of our <a href="/community-guidelines">Community Guidelines</a>. Upon termination, you continue to be bound by Sections 3 and 8 of these Terms.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>Pinterest is provided to you for free. We reserve the right to refuse service to anyone, but we will provide appropriate notice.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-8-indemnity" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1652865727">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                8. Indemnity
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>If you use Pinterest for commercial purposes (i.e., you are not a consumer) without agreeing to our <a href="https://business.pinterest.com/business-terms-of-service">Business Terms</a> as required by Section 2(c) of these Terms, you agree to indemnify and hold harmless Pinterest Inc, Pinterest Europe Ltd, their affiliates and their respective officers, directors, employees and agents, from and against any claims, suits, proceedings, disputes, demands, liabilities, damages, losses, costs and expenses, including, without limitation, reasonable legal and accounting fees (including costs of defense of claims, suits or proceedings brought by third parties), in any way related to your access to or use of our Service, your User Content, or your breach of any of these Terms.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>If we are sued because of something your business does on Pinterest, you have to pay our costs. Also, you should have created a business account and agreed to our <a href="https://business.pinterest.com/business-terms-of-service">Business Terms</a> in the first place.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-9-disclaimers" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--370114805">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                9. Disclaimers
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Our Service and all content on Pinterest is provided on an "as is" basis without warranty of any kind, whether express or implied.</p>
+<p>Pinterest specifically disclaims any and all warranties and conditions of merchantability, fitness for a particular purpose, and non-infringement, and any warranties arising out of course of dealing or usage of trade.</p>
+<p>Pinterest takes no responsibility and assumes no liability for any User Content that you or any other person or third party posts or sends using our Service. You understand and agree that you may be exposed to User Content that’s inaccurate, objectionable, inappropriate for children, or otherwise unsuited to your purpose.</p>
+<p>If you're a consumer in the EEA, we don’t exclude or limit any liability for gross negligence, intent, or death or personal injury caused by our negligence or willful misconduct. <br />
+ </p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>Unfortunately, people post bad stuff on services like Pinterest. We take that kind of thing seriously but you still might run into it before we have a chance to take it down. If you see bad stuff, please report it to us <a href="https://help.pinterest.com/articles/report-something-pinterest#Web">here</a>. </p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-10-limitation-of-liability" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--73886951">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                10. Limitation of liability
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, PINTEREST SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (A) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SERVICE; (B) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICE, INCLUDING WITHOUT LIMITATION, ANY DEFAMATORY, OFFENSIVE OR ILLEGAL CONDUCT OF OTHER USERS OR THIRD PARTIES; OR (C) UNAUTHORIZED ACCESS, USE OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT. IN NO EVENT SHALL PINTEREST'S AGGREGATE LIABILITY FOR ALL CLAIMS RELATING TO THE SERVICE EXCEED ONE HUNDRED U.S. DOLLARS (U.S. $100.00).</p>
+<p>If we cause damage to you and you're a consumer in the EEA, the above doesn’t apply. Instead, Pinterest’s liability will be limited to foreseeable damages arising due to a breach of material contractual obligations typical for this type of contract. Pinterest isn’t liable for damages that result from a non-material breach of any other applicable duty of care. This limitation of liability won’t apply to any statutory liability that cannot be limited, to liability for death or personal injury caused by our negligence or willful misconduct, or if and to exclude our responsibility for something we have specifically promised to you.<br />
+ </p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>We are building the best service we can for you but we can't promise it will be perfect. We're not liable for various things. If you think we are, let's try to work it out like adults.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-11-arbitration" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--794891175">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                11. Arbitration
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>For any dispute you have with Pinterest, you agree to first contact us and try to resolve the dispute with us informally. If we need to contact you, we will do so at the email address on your Pinterest account. If Pinterest hasn’t been able to resolve the dispute with you informally, we each agree to resolve any claim, dispute, or controversy (excluding claims for injunctive or other equitable relief) arising out of or in connection with or relating to these Terms through binding arbitration or (for qualifying claims) in small claims court.</p>
+<p>Arbitration is a more informal way to resolve our disagreements than a lawsuit in court. For instance, arbitration uses a neutral arbitrator instead of a judge or jury, involves more limited discovery, and is subject to very limited review by courts. Although the process is more informal, arbitrators can award the same damages and relief that a court can award. You agree that, by agreeing to these Terms of Service, the U.S. Federal Arbitration Act governs the interpretation and enforcement of this provision, and that you and Pinterest are each waiving the right to a trial by jury or to participate in a class action. The arbitrator has exclusive authority to resolve any dispute relating to the interpretation, applicability, or enforceability of this binding arbitration agreement. This arbitration provision shall survive termination of this Agreement and the termination of your Pinterest account.</p>
+<p>Any arbitration will be administered by the American Arbitration Association ("AAA") under the Consumer Arbitration Rules then in effect for the AAA, except as provided herein. You can find their forms at <a href="https://www.adr.org/">www.adr.org</a>. Unless you and Pinterest agree otherwise, the arbitration will be conducted in the county (or parish) where you reside. Each party will be responsible for paying any AAA filing, administrative and arbitrator fees in accordance with AAA Rules, except that Pinterest will pay for your reasonable filing, administrative, and arbitrator fees if your claim for damages does not exceed $75,000 and is non-frivolous (as measured by the standards set forth in Federal Rule of Civil Procedure 11(b)). If your claim is for $10,000 or less, we agree that you may choose whether the arbitration will be conducted solely on the basis of documents submitted to the arbitrator, through a telephonic hearing, or by an in-person hearing as established by the AAA Rules. If your claim exceeds $10,000, the right to a hearing will be determined by the AAA Rules. Regardless of the manner in which the arbitration is conducted, the arbitrator shall issue a reasoned written decision explaining the essential findings and conclusions on which the award is based, and any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction. Nothing in this Section shall prevent either party from seeking injunctive or other equitable relief from the courts, including for matters related to data security, intellectual property or unauthorized access to the Service. ALL CLAIMS MUST BE BROUGHT IN THE PARTIES' INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING, AND, UNLESS WE AGREE OTHERWISE, THE ARBITRATOR MAY NOT CONSOLIDATE MORE THAN ONE PERSON'S CLAIMS. YOU AGREE THAT, BY ENTERING INTO THESE TERMS, YOU AND PINTEREST ARE EACH WAIVING THE RIGHT TO A TRIAL BY JURY OR TO PARTICIPATE IN A CLASS ACTION.</p>
+<p>NOTHING IN THESE TERMS OF SERVICE SHALL AFFECT ANY NON-WAIVABLE STATUTORY RIGHTS THAT APPLY TO YOU. To the extent any claim, dispute or controversy regarding Pinterest or our Service isn’t arbitrable under applicable laws or otherwise: you and Pinterest both agree that any claim or dispute regarding Pinterest will be resolved exclusively in accordance with Section 12 of these Terms.</p>
+<p>If you're a consumer in the EEA, Section 11 doesn't apply to you. <br />
+ </p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-12-governing-law-and-jurisdiction" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--126429070">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                12. Governing law and jurisdiction
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>These Terms shall be governed by the laws of the State of California, without respect to its conflict of laws principles. If you are not a consumer in the EEA, the exclusive place of jurisdiction for all disputes arising from or in connection with this agreement is San Francisco County, California, or the United States District Court for the Northern District of California and our dispute will be determined under California law.</p>
+<p>If you are a consumer in the EEA, this won’t deprive you of any protection you have under the law of the country where you live and access to the courts in that country. <br />
+ </p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>The Bay Area is beautiful this time of year. It doesn't matter what time of year it is, that's what's so great! Anyway, you'll have to sue us here. </p>
+<p>In the EEA, this applies if you're a merchant, but not if you're a consumer. If you are a consumer in the EEA, you can sue us in your home courts.<br />
+ </p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-13-general-terms" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--30599800">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                13. General terms
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-notification-procedures-and-changes-to-these-terms" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Notification procedures and changes to these Terms
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>We reserve the right to determine the form and means of providing notifications to you, and you agree to receive legal notices electronically if that’s what we decide. We may revise these Terms from time to time and the most current version will always be posted on our website. If a revision, in our discretion, is material, we’ll notify you. By continuing to access or use Pinterest after revisions become effective, you agree to be bound by the new Terms. If you don’t agree to the new terms, please stop using Pinterest.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>If we're making a big change to the terms, we'll let you know. If you don’t like the new terms, please stop using Pinterest.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-assignment" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Assignment
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>These Terms, and any rights and licenses granted hereunder, may not be transferred or assigned by you, but may be assigned by Pinterest without restriction. Any attempted transfer or assignment in violation hereof shall be null and void.</p>
+<p>If you’re a consumer in the EEA, either you or Pinterest may assign this agreement, and any rights and licences granted under it, to a third party. In case of such an assignment by Pinterest, you are entitled to terminate the agreement with immediate effect by deactivating your account. Pinterest will provide you with reasonable notice of any such assignment.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-entire-agreementseverability" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Entire agreement/severability
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>These Terms, together with the Privacy Policy and any amendments and any additional agreements you may enter into with Pinterest shall constitute the entire agreement between you and Pinterest concerning the Service. If any provision of these Terms is deemed invalid, then that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions of these Terms will remain in full force and effect.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-no-waiver" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          No waiver
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>No waiver of any term of these Terms shall be deemed a further or continuing waiver of such term or any other term, and Pinterest's failure to assert any right or provision under these Terms shall not constitute a waiver of such right or provision.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-parties" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Parties
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>If you live in the United States, these Terms are a contract between you and Pinterest Inc., 651 Brannan Street, San Francisco, CA 94103. If you live outside the United States, these Terms are a contract between you and Pinterest Europe Ltd., an Irish company with its registered office at Palmerston House, 2nd Floor, Fenian Street, Dublin 2, Ireland.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+  <div class="text-tile text-tile--more-simply-put u-text--policy--teal">
+  
+              
+                  <strong class="text-tile__title u-text--policy--teal">
+                        More simply put
+  
+                </strong>
+          
+                  <div class="text-tile__summary">
+                <p>Who you deal with depends on where you live.</p>
+
+  
+        </div>
+          
+              
+  </div>
+</li>
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Effective May 1, 2018</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+  
+</article>
+
+  </div>
+
+
+    
+
+      </main>
+  
+      <footer class="site__footer" role="contentinfo">
+      
+<div class="footer u-bg--cork--medium">
+  <div class="footer__inner">
+    <a href="#footer-end" class="visually-hidden focusable button" id="skip-footer">Skip Footer Menu</a>
+    <div class="footer__info">
+                    
+      <div class="footer__logo">
+        <a href="https://www.pinterest.com" aria-label="Go to Pinterest.com">
+          <img src="/profiles/contrib/pin/badge-scriptmark.svg?dpid=3c8df5f9079e46ea79c1093297169f7e" alt="Pinterest" width="300" height="72">
+        </a>
+      </div>
+
+      <div class="footer__language">
+            <div class="language-switcher-language-url" id="block-languageswitcher" role="navigation">
+  
+    
+      
+<div class="form-item">
+  <span class="select-toggle">
+    <label for="select-js-language-block" class="visually-hidden">Select language</label>
+    <select class="form-select js-language-block" id="select-js-language-block">
+                      <option hreflang="en" data-drupal-link-system-path="node/426" class="en is-active" value="/en/terms-of-service" selected="selected">English (US)</option>
+                              <option hreflang="id" data-drupal-link-system-path="node/426" class="id" value="/id/terms-of-service">Bahasa Indonesia</option>
+                              <option hreflang="ms" data-drupal-link-system-path="node/426" class="ms" value="/ms/terms-of-service">Bahasa Malaysia</option>
+                              <option hreflang="cs" data-drupal-link-system-path="node/426" class="cs" value="/cs/terms-of-service">Čeština</option>
+                              <option hreflang="da" data-drupal-link-system-path="node/426" class="da" value="/da/terms-of-service">Dansk</option>
+                              <option hreflang="de" data-drupal-link-system-path="node/426" class="de" value="/de/terms-of-service">Deutsch</option>
+                              <option hreflang="en-gb" data-drupal-link-system-path="node/426" class="en-gb" value="/en-gb/terms-of-service">English (UK)</option>
+                              <option hreflang="es" data-drupal-link-system-path="node/426" class="es" value="/es/terms-of-service">Español</option>
+                              <option hreflang="fr" data-drupal-link-system-path="node/426" class="fr" value="/fr/terms-of-service">Français</option>
+                              <option hreflang="it" data-drupal-link-system-path="node/426" class="it" value="/it/terms-of-service">Italiano</option>
+                              <option hreflang="hu" data-drupal-link-system-path="node/426" class="hu" value="/hu/terms-of-service">Magyar</option>
+                              <option hreflang="nl" data-drupal-link-system-path="node/426" class="nl" value="/nl/terms-of-service">Nederlands</option>
+                              <option hreflang="nb" data-drupal-link-system-path="node/426" class="nb" value="/nb/terms-of-service">Norsk bokmål</option>
+                              <option hreflang="pl" data-drupal-link-system-path="node/426" class="pl" value="/pl/terms-of-service">Polski</option>
+                              <option hreflang="pt-br" data-drupal-link-system-path="node/426" class="pt-br" value="/pt-br/terms-of-service">Português (Brasil)</option>
+                              <option hreflang="pt-pt" data-drupal-link-system-path="node/426" class="pt-pt" value="/pt-pt/terms-of-service">Português (Europeu)</option>
+                              <option hreflang="ro" data-drupal-link-system-path="node/426" class="ro" value="/ro/terms-of-service">Română</option>
+                              <option hreflang="sk" data-drupal-link-system-path="node/426" class="sk" value="/sk/terms-of-service">Slovenčina</option>
+                              <option hreflang="fi" data-drupal-link-system-path="node/426" class="fi" value="/fi/terms-of-service">Suomi</option>
+                              <option hreflang="sv" data-drupal-link-system-path="node/426" class="sv" value="/sv/terms-of-service">Svenska</option>
+                              <option hreflang="tl" data-drupal-link-system-path="node/426" class="tl" value="/tl/terms-of-service">Filipino</option>
+                              <option hreflang="vi" data-drupal-link-system-path="node/426" class="vi" value="/vi/terms-of-service">Tiếng Việt</option>
+                              <option hreflang="tr" data-drupal-link-system-path="node/426" class="tr" value="/tr/terms-of-service">Türkçe</option>
+                              <option hreflang="el" data-drupal-link-system-path="node/426" class="el" value="/el/terms-of-service">Ελληνικά</option>
+                              <option hreflang="ru" data-drupal-link-system-path="node/426" class="ru" value="/ru/terms-of-service">Русский</option>
+                              <option hreflang="uk" data-drupal-link-system-path="node/426" class="uk" value="/uk/terms-of-service">Українська</option>
+                              <option hreflang="hi" data-drupal-link-system-path="node/426" class="hi" value="/hi/terms-of-service">हिन्दी</option>
+                              <option hreflang="th" data-drupal-link-system-path="node/426" class="th" value="/th/terms-of-service">ภาษาไทย</option>
+                              <option hreflang="ko" data-drupal-link-system-path="node/426" class="ko" value="/ko/terms-of-service">한국어</option>
+                              <option hreflang="ja" data-drupal-link-system-path="node/426" class="ja" value="/ja/terms-of-service">日本語</option>
+                              <option hreflang="zh-hans" data-drupal-link-system-path="node/426" class="zh-hans" value="/zh-hans/terms-of-service">简体中文</option>
+                              <option hreflang="zh-hant" data-drupal-link-system-path="node/426" class="zh-hant" value="/zh-hant/terms-of-service">繁體中文</option>
+                              <option hreflang="ar" data-drupal-link-system-path="node/426" class="ar" value="/ar/terms-of-service">العربية</option>
+                              <option hreflang="bn" data-drupal-link-system-path="node/426" class="bn" value="/bn/terms-of-service">বাংলা</option>
+                              <option hreflang="te" data-drupal-link-system-path="node/426" class="te" value="/te/terms-of-service">తెలుగు</option>
+                              <option hreflang="he" data-drupal-link-system-path="node/426" class="he" value="/he/terms-of-service">עברית</option>
+                  </select>
+  </span>
+</div>
+
+  </div>
+
+        </div>
+    </div>
+
+    <div class="footer__menus">
+                        <nav class="footer__menu footer__menu--menu-1">
+            <div class="footer__menu__title">About us</div>
+            <ul class="footer__menu__list">
+                                                <li class="footer__menu__item"data-country-code=DE,AT>
+                    <a href="https://policy.pinterest.com/de/impressum" class="footer__menu__link">Impressum</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://about.pinterest.com" class="footer__menu__link">What&#039;s Pinterest</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://pinterest.com/pinterest" class="footer__menu__link">Our Pinterest page</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://medium.com/@Pinterest_Engineering" class="footer__menu__link">Engineering blog</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://business.pinterest.com/brand-guidelines" class="footer__menu__link">Brand guidelines</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://careers.pinterest.com" class="footer__menu__link">Careers</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://help.pinterest.com" class="footer__menu__link">Help Center</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://labs.pinterest.com" class="footer__menu__link">Pinterest Labs</a>
+                                      </li>
+                                          </ul>
+          </nav>
+                  <nav class="footer__menu footer__menu--menu-2">
+            <div class="footer__menu__title">Our policies</div>
+            <ul class="footer__menu__list">
+                                                <li class="footer__menu__item">
+                    <a href="https://policy.pinterest.com/copyright" class="footer__menu__link">Copyright</a>
+                                          <span class="footer__menu__combinator">&amp;</span>
+                      <ul class="footer__submenu">
+                                                  <li class="footer__submenu__item">
+                            <a href="https://policy.pinterest.com/trademark" class="footer__submenu__link">trademark</a>
+                                                      </li>
+                                              </ul>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://help.pinterest.com/articles/personalized-ads-pinterest" class="footer__menu__link">Personalized ads</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://policy.pinterest.com/terms-of-service" class="footer__menu__link">Terms of service</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://policy.pinterest.com/privacy-policy" class="footer__menu__link">Privacy</a>
+                                          <span class="footer__menu__combinator">&amp;</span>
+                      <ul class="footer__submenu">
+                                                  <li class="footer__submenu__item">
+                            <a href="https://policy.pinterest.com/cookies" class="footer__submenu__link">cookies</a>
+                                                      </li>
+                                              </ul>
+                                      </li>
+                                          </ul>
+          </nav>
+                  <nav class="footer__menu footer__menu--menu-3">
+            <div class="footer__menu__title">More info</div>
+            <ul class="footer__menu__list">
+                                                <li class="footer__menu__item">
+                    <a href="https://business.pinterest.com" class="footer__menu__link">For businesses</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://developers.pinterest.com" class="footer__menu__link">For developers</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://newsroom.pinterest.com" class="footer__menu__link">For press</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://investor.pinterestinc.com" class="footer__menu__link">For investors</a>
+                                      </li>
+                                          </ul>
+          </nav>
+                    <div id="footer-end" class="visually-hidden">End of Footer</div>
+    </div>
+
+    <p class="footer__copyright">&copy; Pinterest 2022</p>
+  </div>
+</div>
+
+
+    </footer>
+  
+  
+</div>
+  </div>
+
+    
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"node\/426","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"codesnippet\/codesnippet.highlightjs,codesnippet\/codesnippet.style.googlecode,footnotes\/footnotes,js_sha\/js_sha.sha,paragraphs\/drupal.paragraphs.unpublished,pin_base\/core,pin_captcha\/pin_captcha.recaptcha_invisible,pin_pinterest_client\/client_identification,system\/base","theme":"pin_base","theme_token":null},"ajaxTrustedUrl":[],"pin_pinformation":{"context":"general"},"user":{"uid":0,"permissionsHash":"6cf88f31a5be805fe63161d86fbd4692d21c94f169699d4cf5807bfd215dddc4"}}</script>
+<script src="/sites/pinpolicy/files/js/js_KqnBBCejm8XfgPf9R8-1QyUfeY6LaXhUiD5NK8t1yUY.js"></script>
+<script src="https://assets.pinterest.com/js/pinit.js" async defer></script>
+<script src="/sites/pinpolicy/files/js/js_4UYebBReaOTu-l3I3KtJ6McXzt4uZR0F2GKziDkL4lw.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7ea89c5a2f","applicationID":"31524682,31524683","transactionName":"MQRSZEMFX0VTVUYIDQhOc0VCEF5bHVNcFQsSGB5eXgBUGFFXXA4MDwJRXAsUXlpbVUs=","queueTime":0,"applicationTime":232,"atts":"HUNREgsfTEs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
