@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"7ea89c5a2f",applicationID:"31524682"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="alternate" hreflang="x-default" href="https://policy.pinterest.com/en/community-guidelines" />
+<meta property="og:site_name" content="Pinterest Policy" />
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="274266067164" />
+<meta property="og:url" content="https://policy.pinterest.com/en/community-guidelines" />
+<meta property="og:title" content="Community guidelines" />
+<link rel="image_src" href="https://policy.pinterest.com/sub/meta/artboard_horizontal.jpg" />
+<meta property="pin:media" content="https://policy.pinterest.com/sub/meta/artboard_vertical.jpg" />
+<meta property="pin:url" content="https://policy.pinterest.com/en/community-guidelines" />
+<meta property="og:image" content="https://policy.pinterest.com/sub/meta/artboard_horizontal.jpg" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/profiles/contrib/pin/favicon.png" />
+<link rel="alternate" hreflang="en" href="https://policy.pinterest.com/en/community-guidelines" />
+<link rel="alternate" hreflang="id" href="https://policy.pinterest.com/id/community-guidelines" />
+<link rel="alternate" hreflang="ms" href="https://policy.pinterest.com/ms/community-guidelines" />
+<link rel="alternate" hreflang="cs" href="https://policy.pinterest.com/cs/community-guidelines" />
+<link rel="alternate" hreflang="da" href="https://policy.pinterest.com/da/community-guidelines" />
+<link rel="alternate" hreflang="de" href="https://policy.pinterest.com/de/community-guidelines" />
+<link rel="alternate" hreflang="en-gb" href="https://policy.pinterest.com/en-gb/community-guidelines" />
+<link rel="alternate" hreflang="es" href="https://policy.pinterest.com/es/community-guidelines" />
+<link rel="alternate" hreflang="fr" href="https://policy.pinterest.com/fr/community-guidelines" />
+<link rel="alternate" hreflang="it" href="https://policy.pinterest.com/it/community-guidelines" />
+<link rel="alternate" hreflang="hu" href="https://policy.pinterest.com/hu/community-guidelines" />
+<link rel="alternate" hreflang="nl" href="https://policy.pinterest.com/nl/community-guidelines" />
+<link rel="alternate" hreflang="nb" href="https://policy.pinterest.com/nb/community-guidelines" />
+<link rel="alternate" hreflang="pl" href="https://policy.pinterest.com/pl/community-guidelines" />
+<link rel="alternate" hreflang="pt-br" href="https://policy.pinterest.com/pt-br/community-guidelines" />
+<link rel="alternate" hreflang="pt-pt" href="https://policy.pinterest.com/pt-pt/community-guidelines" />
+<link rel="alternate" hreflang="ro" href="https://policy.pinterest.com/ro/community-guidelines" />
+<link rel="alternate" hreflang="sk" href="https://policy.pinterest.com/sk/community-guidelines" />
+<link rel="alternate" hreflang="fi" href="https://policy.pinterest.com/fi/community-guidelines" />
+<link rel="alternate" hreflang="sv" href="https://policy.pinterest.com/sv/community-guidelines" />
+<link rel="alternate" hreflang="tl" href="https://policy.pinterest.com/tl/community-guidelines" />
+<link rel="alternate" hreflang="vi" href="https://policy.pinterest.com/vi/community-guidelines" />
+<link rel="alternate" hreflang="tr" href="https://policy.pinterest.com/tr/community-guidelines" />
+<link rel="alternate" hreflang="el" href="https://policy.pinterest.com/el/community-guidelines" />
+<link rel="alternate" hreflang="ru" href="https://policy.pinterest.com/ru/community-guidelines" />
+<link rel="alternate" hreflang="uk" href="https://policy.pinterest.com/uk/community-guidelines" />
+<link rel="alternate" hreflang="hi" href="https://policy.pinterest.com/hi/community-guidelines" />
+<link rel="alternate" hreflang="th" href="https://policy.pinterest.com/th/community-guidelines" />
+<link rel="alternate" hreflang="ko" href="https://policy.pinterest.com/ko/community-guidelines" />
+<link rel="alternate" hreflang="ja" href="https://policy.pinterest.com/ja/community-guidelines" />
+<link rel="alternate" hreflang="zh-hans" href="https://policy.pinterest.com/zh-hans/community-guidelines" />
+<link rel="alternate" hreflang="zh-hant" href="https://policy.pinterest.com/zh-hant/community-guidelines" />
+<link rel="alternate" hreflang="ar" href="https://policy.pinterest.com/ar/community-guidelines" />
+<link rel="alternate" hreflang="bn" href="https://policy.pinterest.com/bn/community-guidelines" />
+<link rel="alternate" hreflang="te" href="https://policy.pinterest.com/te/community-guidelines" />
+<link rel="alternate" hreflang="he" href="https://policy.pinterest.com/he/community-guidelines" />
+<link rel="alternate" hreflang="af" href="https://policy.pinterest.com/af/community-guidelines" />
+<link rel="alternate" hreflang="hr" href="https://policy.pinterest.com/hr/community-guidelines" />
+<link rel="alternate" hreflang="bg" href="https://policy.pinterest.com/bg/community-guidelines" />
+<link rel="canonical" href="https://policy.pinterest.com/en/community-guidelines" />
+<link rel="shortlink" href="https://policy.pinterest.com/en/node/16" />
+
+    <title>Community guidelines | Pinterest Policy</title>
+    <link rel="stylesheet" media="all" href="/sites/pinpolicy/files/css/css_hkMBx1PHvJ_wGfa026friHbuYyByzoPha3poL-70hVI.css" />
+<link rel="stylesheet" media="all" href="/sites/pinpolicy/files/css/css_1wbLd6BcLrekNJB3QVfwPyDDi56cLdCydgKjzwu3Q3c.css" />
+
+    <script>document.documentElement.classList.add('js');</script>
+    
+  </head>
+  <body class="policy-section policy-section--community u-section--policy--pink pinterest-policy">
+        <a id="skip-link" href="#main-content" class="visually-hidden focusable button">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="site">
+
+    <header class="site__header" role="banner">
+    <div class="navigation navigation--white-bg"
+   data-nav-overlay="false">
+  <div class="navigation__inner">
+
+      <div id="block-sitebranding">
+  
+    
+    <aside class="branding">
+            <div class="branding__logo">
+        <a href="/en" title="Home" rel="home">
+          <img src="/profiles/contrib/pin/logo.svg?dpid=b1b2274ddc2a2fd332c452aeb4733b61" alt="Home" width="24" height="24" />
+        </a>
+      </div>
+      
+            <div class="branding__name">
+        <a href="/en" title="Home" rel="home">Policy</a>
+      </div>
+      
+        </aside>
+</div>
+<nav role="navigation" aria-labelledby="block-headernavigationactions-menu" id="block-headernavigationactions" class="menu--tools-nav">
+            
+  <h2 class="visually-hidden" id="block-headernavigationactions-menu">Header navigation - actions</h2>
+  
+
+        
+
+  
+      
+            <ul class="menu--tools menu">
+              <li class="menu__item">
+        <a href="https://www.pinterest.com">Sign up</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+   <button class="menu__toggle menu__toggle--collapsed " data-menu-target="nav-circles--mobile">
+  <div class="menu__toggle-text">Open menu</div>
+</button>
+
+
+
+  
+
+
+<div class="nav-circles nav-circles--mobile">
+  <div class="nav-circles__inner">
+      
+    
+            <ul class="menu--circles menu--circles-mobile menu menu--has-active-links">
+            <li class="menu__item" data-hover-bg="u-bg--policy--teal">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/terms-of-service" class="js-nav-circle__target" data-drupal-link-system-path="node/426">Terms</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--yellow">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/privacy-policy" class="js-nav-circle__target" data-drupal-link-system-path="node/481">Privacy</a>
+        </span>
+      </li>
+          <li class="menu__item menu__item--active" data-hover-bg="u-bg--policy--pink">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/community-guidelines" class="js-nav-circle__target is-active" data-drupal-link-system-path="node/16">Community</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--blue">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/merchant-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/476">Merchant</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--orange">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/advertising-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/471">Advertising</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--gray">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/developer-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/31">Developers</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lilac">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/copyright" class="js-nav-circle__target" data-drupal-link-system-path="node/36">Copyright</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lime">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/trademark" class="js-nav-circle__target" data-drupal-link-system-path="node/41">Trademark</a>
+        </span>
+      </li>
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+  
+  </div>
+</div>
+
+      
+
+  
+
+
+<div class="nav-circles nav-circles--policy">
+  <div class="nav-circles__inner">
+      
+    
+                  <ul class="menu--circles menu menu--has-active-links">
+              <li class="menu__item" data-hover-bg="u-bg--policy--teal">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/terms-of-service" class="js-nav-circle__target" data-drupal-link-system-path="node/426">Terms</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--yellow">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/privacy-policy" class="js-nav-circle__target" data-drupal-link-system-path="node/481">Privacy</a>
+        </span>
+      </li>
+          <li class="menu__item menu__item--active" data-hover-bg="u-bg--policy--pink">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/community-guidelines" class="js-nav-circle__target is-active" data-drupal-link-system-path="node/16">Community</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--blue">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/merchant-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/476">Merchant</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--orange">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/advertising-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/471">Advertising</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--gray">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/developer-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/31">Developers</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lilac">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/copyright" class="js-nav-circle__target" data-drupal-link-system-path="node/36">Copyright</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lime">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/en/trademark" class="js-nav-circle__target" data-drupal-link-system-path="node/41">Trademark</a>
+        </span>
+      </li>
+        </ul>
+  
+  </div>
+</div>
+
+
+
+
+
+  </header>  
+    <div class="site__utility">
+      <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+  </div>  
+  <main class="site__content" role="main">
+        <a id="main-content" tabindex="-1" aria-hidden="true"></a>
+
+      <div>
+    <article role="article" about="/en/community-guidelines">
+      
+
+
+<header class="header   header--large-text     u-full-width header--full-width u-anim-staggered-start" data-anim-trigger="view">
+
+        
+        
+  <div class="header__inner">
+              <h1 class="header__text u-anim-fade-in-and-slide-up u-anim-staggered-start__item"><span>Community guidelines</span>
+</h1>
+        
+            
+            
+            
+                </div>
+
+</header>
+            <a id="section-our-mission" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--663880314">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Our mission
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest's mission is to bring everyone the inspiration to create a life they love. That being said, not all content is inspiring - so we have community guidelines to outline what we do and don’t allow on Pinterest. These guidelines are our acceptable use policy, so if you find content that shouldn’t be on Pinterest, please <a href="https://help.pinterest.com/articles/report-something-pinterest#Web" target="_blank">report it to us</a>. We use your reports to learn and evolve our standards, and work with subject matter experts to inform and update our guidelines. You can learn more about how we enforce these guidelines in our biannual <a href="https://policy.pinterest.com/transparency-report">transparency report</a>.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-content-safety" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--182946722">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Content safety
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place for antagonistic, explicit, false or misleading, harmful, hateful, or violent content or behavior. We may remove, limit, or block the distribution of such content and the accounts, individuals, groups and domains that create or spread it based on how much harm it poses.</p>
+<p>We’re committed to presenting you with clear and transparent expectations that are easy to understand and follow. If you have questions or encounter problems on Pinterest, please <a href="https://help.pinterest.com/en/contact?page=about_you_page" target="_blank">contact us</a>.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-adult-content" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Adult content
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place for pornography. We limit the distribution of or remove mature and explicit content, including:</p>
+<ul><li>Fetish imagery</li>
+<li>Vivid sexual descriptions</li>
+<li>Graphic depictions of sexual activity</li>
+<li>Images of nudity where the poses, camera angles, or props suggest pornographic intent</li>
+</ul><p>We do our best to to differentiate between pornography and other mature content. For example, you can save content about sexual health, breastfeeding, mastectomies, art, education and well-being with adult nudity given the non-pornographic context, but we may limit its distribution so people don’t run into it accidentally.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-exploitation" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Exploitation
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place for exploitation of people or animals. We’ll remove or limit the distribution of content and accounts involved in<span><span><span><span><span><span><span> practices that risk harm to people or animals, including </span></span></span></span></span></span></span>sexual, physical, or financial exploitation. That includes:</p>
+<ul><li>Sexualization or sexual exploitation of minors, like grooming, sexual remarks or inappropriate imagery. If we find it, we’ll report it to relevant authorities such as the National Center for Missing and Exploited Children.</li>
+<li>Non-consensual images, meaning images of a private or sexual nature obtained or published without consent. This includes revenge porn and up-skirt images.</li>
+<li>Adult sexual services that may involve sexual or physical exploitation or trafficking, like sex cams and escort services.</li>
+<li>Human trafficking, slavery, servitude and forced or compulsory labor.</li>
+<li>Other illegal commercial exploitation, like trading in organs or products made from human remains or body parts.</li>
+<li>The sale of wild animals or protected and endangered wildlife. For a full list of prohibited wildlife products, please visit our partner, the <a href="https://www.endwildlifetraffickingonline.org/coalition-prohibited-wildlife-policy">World Wildlife Fund</a>.</li>
+<li>Corpses, animal parts or products derived from cat or dog parts, or protected and endangered wildlife, including ivory.</li>
+<li>Irresponsible and harmful animal tourism or otherwise exploitative practices like organized animal fighting.</li>
+</ul>
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-hateful-activities" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Hateful activities
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place for hateful content or the people and groups that promote hateful activities. We limit the distribution of or remove such content and accounts, including:</p>
+<ul><li>Slurs or negative stereotypes, caricatures and generalizations</li>
+<li>Support for hate groups and people promoting hateful activities, prejudice and conspiracy theories</li>
+<li>Condoning or trivializing violence because of a victim’s membership in a vulnerable or protected group</li>
+<li>Support for white supremacy, limiting women’s rights and other discriminatory ideas</li>
+<li>Hate-based conspiracy theories and misinformation, like Holocaust denial</li>
+<li>Denial of an individual’s gender identity or sexual orientation, and support for conversion therapy and related programs</li>
+<li>Attacks on individuals including public figures based on their membership in a vulnerable or protected group</li>
+<li>Mocking or attacking the beliefs, sacred symbols, movements, or institutions of the protected or vulnerable groups identified below</li>
+</ul><p>Protected and vulnerable groups include: People grouped together based on their actual or perceived race, color, caste, ethnicity, immigration status, national origin, religion or faith, sex or gender identity, sexual orientation, disability or medical condition. It also includes people who are grouped together based on lower socio-economic status, age, weight or size, pregnancy or veteran status.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-misinformation" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Misinformation
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place for misinformation, disinformation, mal-information or the individuals or groups spreading or creating it. We remove or limit distribution of false or misleading content that may harm Pinners’ or the public’s well-being, safety or trust, including:</p>
+<ul><li>Medically unsupported health claims that risk public health and safety, including the promotion of false cures, anti-vaccination advice, or misinformation about public health or safety emergencies</li>
+<li>False or misleading content about individuals or protected groups that promotes fear, hate or prejudice</li>
+<li>False or misleading content that encourages turning individuals, groups of people, places or organizations into targets of harassment or physical violence</li>
+<li>Conspiracy theories, including about climate change or civic participation</li>
+<li>Content that originates from disinformation campaigns, including about climate change or civic participation</li>
+<li>Factual information that’s published or deliberately modified to erode trust or inflict harm, such as changing or omitting of context, date or time</li>
+<li>Fabricated or meaningfully manipulated visual or audio content that erodes trust or causes harm</li>
+</ul><h4>Civic participation misinformation:</h4>
+<ul><li>False or misleading content that impedes an election’s integrity or an individual's or group's civic participation, including registering to vote, voting and being counted in a census.</li>
+<li>False or misleading information about the dates, times, locations and procedure for voting or census participation.</li>
+<li>Content that misleads voters about how to correctly fill-out and submit a ballot, including a mail-in ballot, or census form.</li>
+<li>False or misleading information about who can vote or participate in the census and what information must be provided to participate.</li>
+<li>False or misleading statements about who is collecting information and/or how it will be used.</li>
+<li>False or misleading information about public safety that is intended to deter people from exercising their right to vote or participate in a census.</li>
+<li>Content that encourages or instructs voters or participants to misrepresent themselves or illegally participate.</li>
+<li>Content apparently intended to delegitimize election results on the basis of false or misleading claims.</li>
+<li>Threats against voting locations, census or voting personnel, voters or census participants, including intimidation of vulnerable or protected group voters or participants.</li>
+</ul><p><strong>Climate misinformation:</strong></p>
+<ul><li>Content that denies the existence or impacts of climate change, the human influence on climate change, or that climate change is backed by scientific consensus.</li>
+<li>False or misleading content about climate change solutions that contradict well-established scientific consensus.</li>
+<li>Content that misrepresents scientific data, including by omission or cherry-picking, in order to erode trust in climate science and experts.</li>
+<li>Harmful false or misleading content about public safety emergencies including natural disasters and extreme weather events.</li>
+</ul>
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-harassment-and-criticism" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Harassment and criticism
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place to insult, hurt or antagonize individuals or groups of people. There are good reasons to express criticism, but we may limit the distribution of or remove insulting content to keep Pinterest a positive, inspiring place; this includes:</p>
+<ul><li>Manipulated images intended to degrade or shame</li>
+<li>Shaming people for their bodies or assumed sexual or romantic history</li>
+<li>Sexual remarks about people’s bodies and solicitations or offers of sexual acts</li>
+<li>Criticisms involving name-calling, profanity and other insulting language or imagery</li>
+<li>Mocking someone for experiencing sadness, grief, loss or outrage</li>
+</ul><p>We’ve also put together <a href="https://help.pinterest.com/article/report-harassment-and-cyberbullying" target="_blank">some resources</a> for you to protect yourself.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-private-information" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Private information
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>We don’t allow content that reveals personal or sensitive information. We remove:</p>
+<ul><li>Personal ID and passport information</li>
+<li>Private contact information and addresses</li>
+<li>Online login information (usernames and passwords)</li>
+<li>Photos of private people that they don’t want posted online</li>
+<li>Personal financial or medical history</li>
+</ul><p>If you come across unwanted photos of or information about you, you can <a href="https://help.pinterest.com/contact?page=about_you_page" target="_blank">reach out to us through our Help Center</a>. You’ll find an option for exposed private information under “Report a policy violation.”</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-self-injury-and-harmful-behavior" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Self-injury and harmful behavior
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place for content that displays, rationalizes or encourages suicide, self-injury, eating disorders or substance abuse. We’ll limit the distribution of or remove such content, including:</p>
+<ul><li>Self-harm instructions</li>
+<li>Suicidal thinking and quotes</li>
+<li>Graphic or otherwise triggering imagery or descriptions of self-harm</li>
+<li>Promotion of self-harm</li>
+<li>Mocking of people who self-harm or who have attempted or died by suicide</li>
+<li>Images of accessories used to self-harm</li>
+<li>Negative self-talk and insensitive humor about self-harming behavior</li>
+<li>Suicide pacts, challenges and hoaxes</li>
+</ul><p>If you or someone you know is struggling with suicidal thoughts or is considering hurting themselves, we have <a href="https://help.pinterest.com/article/suicide-and-self-harm-prevention" target="_blank">resources</a> in our Help Center where you can get free, confidential and immediate support.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-graphic-violence-and-threats" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Graphic Violence and Threats
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place for graphic violence or threatening language. We limit the distribution of or remove such content, including:</p>
+<ul><li>Content that shows the use of violence</li>
+<li>Disturbing scenes from before or after violent events</li>
+<li>Threats or language that glorifies violence</li>
+</ul><p>In a few cases, we allow the saving of disturbing images dedicated to remembrance and advocacy, but limit distribution of such content in public parts of the platform.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-violent-actors" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Violent actors
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place for violent content, groups or individuals. We limit the distribution of or remove content and accounts that encourage, praise, promote, or provide aid to dangerous actors or groups and their activities. This includes:</p>
+<ul><li>Extremists</li>
+<li>Terrorist organizations</li>
+<li>Gangs and other criminal organizations</li>
+</ul><p>We work with industry, government and security experts to help us identify these groups.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-dangerous-goods-and-activities" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Dangerous goods and activities
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place for trading or selling of certain regulated goods—products or substances that can cause harm when used, altered or manufactured irresponsibly—or for the display or encouragement of dangerous activities. We limit the distribution of or remove such content and accounts, including:</p>
+<ul><li>Individuals and unlicensed retailers offering to sell, purchase or trade alcohol, tobacco, drugs and weapons, including firearms and accessories, <span><span><span><span><span><span><span>firearm parts or attachments, or ammunition</span></span></span></span></span></span></span></li>
+<li>Content from or about <span><span><span><span><span><span><span>unverified, unapproved or rogue </span></span></span></span></span></span></span>online pharmacies</li>
+<li>Offers, attempts, or instructions to bypass purchasing laws and regulation</li>
+<li>Instructions for creating lethal or toxic substances</li>
+<li>Instructions for creating lethal weapons, like bombs or grenades, including 3d printed weapons</li>
+<li>Commercial sales of marijuana, marijuana products and paraphernalia</li>
+<li>Commercial sales of certain weapons and attachments </li>
+<li>Harmful pranks or challenges that risk imminent physical harm or extreme emotional distress, especially if showing or encouraging the participation of minors<br />
+	 </li>
+</ul>
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-harmful-or-deceptive-products-practices" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Harmful or Deceptive Products &amp; Practices
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Pinterest isn’t a place for practices and products that may be harmful or deceptive. We limit the distribution of or remove such content and accounts, including, but not limited to:</p>
+<ul><li>Instructions and products for hacking or breaching security measures</li>
+<li>Online gambling and lotteries</li>
+<li>Counterfeit documents</li>
+<li>Privacy violating products or services</li>
+<li>Exploitative financial practices</li>
+</ul>
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-impersonation" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Impersonation
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>We don’t allow accounts that impersonate or misrepresent their affiliation with any person or organization. If you have a fan or commentary account for a public figure or brand, make it clear through your username or Pinterest profile that you aren’t officially affiliated with them.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-comments" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Comments
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>All of our Community Guidelines apply in comments posted on Pins. In addition, comments should be relevant. We may remove comments that violate our guidelines, including those that contain:</p>
+<ul><li>Irrelevant or non-purposeful material</li>
+<li>Spam</li>
+<li>Sexuallly explicit content</li>
+<li>Self-harm content</li>
+<li>Misinformation</li>
+<li>Hateful activities</li>
+<li>Harassment or privacy violations</li>
+<li>Copyright or trademark infringement</li>
+</ul>
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item">
+
+
+  <a id="sub-section-messages" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+
+  <h2 class="subhead-list__subhead u-text--grey--medium u-no-spacing-up">
+          Messages
+  
+  </h2>
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>All of our <a href="https://policy.pinterest.com/messages-comments-tries">Community Guidelines</a> apply to messages sent between Pinners. Messages should also be welcomed and relevant. In addition to Pinners’ ability to <a href="https://help.pinterest.com/article/block-or-unblock-someone">block someone from sending additional</a> unwelcome messages, we may warn or suspend accounts that violate our guidelines, including by sending messages that contain:</p>
+<ul><li>Spam</li>
+<li>Sharing or solicitation of sexually explicit content</li>
+<li>Self-harm or suicide content</li>
+<li>Misinformation</li>
+<li>Hateful activities like racial slurs</li>
+<li>Harassing content or behavior</li>
+<li>Exploitation of private information</li>
+</ul>
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-intellectual-property-and-other-rights" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1004349798">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Intellectual property and other rights
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>To respect the rights of people on and off Pinterest, please:</p>
+<ul><li>Don’t infringe anyone's intellectual property, privacy or other rights.</li>
+<li>Don’t do anything or post any content that violates laws or regulations.</li>
+<li>Don’t use Pinterest’s name, logo or trademark in a way that confuses people (check out our <a href="https://business.pinterest.com/brand-guidelines">brand guidelines</a> for more details).</li>
+</ul><p> </p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-site-security-and-access" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--493506557">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Site security and access
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>To protect the Pinterest platform, we ask that you please:</p>
+<ul><li>Don’t access, use or tamper with our systems or our technical providers’ systems.</li>
+<li>Don’t break or circumvent our security measures or test the vulnerability of our systems or networks, except as part of an authorized Pinterest <a href="https://policy.pinterest.com/responsible-disclosure-statement">bug bounty program</a>.</li>
+<li>Don’t use any undocumented or unsupported method to access, search, scrape, download or change any part of Pinterest.</li>
+<li>Don’t try to reverse engineer our software.</li>
+<li>Don’t try to interfere with people on Pinterest or our hosts or networks, like sending a virus, overloading, spamming or mail-bombing.</li>
+<li>
+<p>Don’t collect or store personally identifiable information from Pinterest or people on Pinterest without permission.</p>
+</li>
+<li>
+<p>Don’t share your password, let anyone access your account or do anything that might put your account at risk.</p>
+</li>
+<li>
+<p>Don’t attempt to buy or sell access to your account, boards, or usernames, or otherwise transfer account features for compensation.</p>
+</li>
+</ul><p>You can’t use Pinterest if it would be prohibited by <a href="https://www.treasury.gov/resource-center/sanctions/Pages/default.aspx">US sanctions</a>. Personal accounts and business accounts are currently not available in North Korea.  Business accounts are currently not available in Crimea, Cuba, Iran, North Korea or Syria.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-spam" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1393839394">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Spam
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>We want the inspiration and ideas on Pinterest to be high-quality and useful, so we remove spam when we find it. We ask that you be considerate of others' experiences on Pinterest and don't spread spam or engage in spammy behavior. </p>
+<p>Our guidelines around spam are:</p>
+<ul><li>Don't use automation that hasn't been explicitly approved by Pinterest. This includes unauthorized services that automatically perform actions on your behalf. You can find information on approved partner tools on our <a href="https://business.pinterest.com/pinterest-partners">Partners website</a>.</li>
+<li>Don't create or operate accounts that aren't authentic, create accounts en masse, or create new accounts for the purpose of violating these guidelines.</li>
+<li>Don't create or save content that is repetitive, deceptive, or irrelevant in an attempt to make money. To learn how to make great Pins, you can always refer to our <a href="https://business.pinterest.com/creative-best-practices">creative best practices</a>.</li>
+<li>In general, don't attempt to make money from Pinners or Pinner web traffic in ways that are misleading, detract from the Pinner experience, or don't add value for Pinners.</li>
+<li>Don't link to websites that are unsafe, deceptive, untrustworthy, unoriginal, or that facilitate or encourage spam. Websites should have original content that adds unique value for Pinners.</li>
+<li>Don't send repeated, unsolicited messages, especially if your messages are commercial or deceptive in nature.</li>
+<li>Don’t make repetitive or irrelevant comments. Comments should be authentic and original. We also ask that you be kind to others by keeping your commentary respectful and constructive.</li>
+<li>Don't operate multiple accounts or coordinate with other people with the purpose of manipulating the Pinterest platform.</li>
+<li>Don’t use any other unscrupulous tactics to attempt to improperly influence distribution, clicks, or other metrics, including: buying or selling engagement, "stuffing" irrelevant keywords, generating inauthentic traffic, or redirecting existing Pins to new destinations.</li>
+<li>Don't attempt to evade our anti-spam systems. For example, don’t use redirection to attempt to link to a site that is not permitted on Pinterest.
+<ul><li>With respect to redirection, we encourage you to follow a “no surprises” principle — Pinners should be able to reasonably anticipate where your link will take them. Links that exhibit excessive or deceptive redirection, as well as shortener services that are abused for spam, may be blocked.</li>
+</ul></li>
+</ul>
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-paid-partnership-guidelines" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--438675780">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Paid Partnership guidelines
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <h2 class="hc-article-subheading">What is a Paid Partnership?</h2>
+<p>We define a Paid Partnership as any sponsored or branded content on Pinterest that features or is influenced by a business partner for an exchange of value, such as if a business partner has paid or otherwise incentivized a user to save the content.</p>
+<h2 class="hc-article-subheading">What are the Guidelines?</h2>
+<p>All Paid Partnerships must disclose the commercial nature of their content. In addition to abiding by the <a href="https://policy.pinterest.com/community-guidelines">Community Guidelines</a>, users that participate in Paid Partnerships are responsible for complying with:</p>
+<ul><li>All applicable laws and regulations, including but not limited to, all advertising laws and Federal Trade Commission regulations including the <a href="https://www.ftc.gov/tips-advice/business-center/guidance/ftcs-endorsement-guides-what-people-are-asking">FTC’s Endorsement Guidelines</a>.</li>
+<li>All applicable disclosures required to indicate the commercial nature of your content (such as the use of #ad to indicate that your content is a Paid Partnership).</li>
+<li>Paid Partnerships must adhere to our <a href="https://policy.pinterest.com/advertising-guidelines">Advertising guidelines</a>, including the Prohibited and Restricted content guidelines.</li>
+</ul><p>To prevent inauthentic content and behavior:</p>
+<ul><li>Make sure you’re posting relevant content to relevant boards. </li>
+<li>Keep the content of your posts high-quality and avoid spammy behavior. </li>
+<li>Save content you have an authentic interest in.</li>
+</ul><p>Don't incentivize or pay people to distribute content in large volumes, in spammy ways or for each Pin they save.</p>
+<ul><li>For example, a business can't pay people for each board they follow or Pin they save. It's okay for a business to pay a guest blogger to curate a board for their brand or through pay-per-click payment structures (such as affiliate links), but they can't pay large groups of people to save specific Pins to artificially inflate the popularity of their content.</li>
+</ul>
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-affiliate-guidelines" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--864592642">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Affiliate guidelines
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Affiliate links help content creators measure the impact of their contributions and get paid for the work that they do to bring inspiring content to Pinners. However, affiliate programs can be targeted by spammers trying to make money by abusing the program and manipulating the Pinterest platform.</p>
+<p>Our guidelines for affiliates are:</p>
+<ul><li>Always follow our <a href="https://policy.pinterest.com/en/community-guidelines#section-paid-partnership-guidelines">Paid Partnership Guidelines</a>.</li>
+<li>In general, you should operate only one Pinterest account. That account should be your authentic presence on Pinterest.</li>
+<li>Affiliate content should be original and add unique value for Pinners.</li>
+<li>Be transparent about the commercial nature of your content and about your links and their behavior. Some shortener services are not currently supported on Pinterest - if your Pin’s link is blocked, you can <a href="https://help.pinterest.com/article/fix-a-broken-link">edit it</a>.</li>
+<li>Don't try to artificially manipulate Pinterest algorithms or Pinner traffic. Some examples of prohibited behavior include:
+<ul><li>Using fake accounts to create or save your affiliate links.</li>
+<li>Asking other users to save your affiliate Pins in a quid pro quo.</li>
+<li>Asking other users to create Pins with links that include your affiliate identifier.</li>
+<li>Creating affiliate Pins repetitively or in large volumes - marketers should follow our <a href="https://policy.pinterest.com/community-guidelines#section-spam">spam policy</a> and use affiliate links in moderation</li>
+</ul></li>
+</ul><p>We may remove, limit or block the distribution of content or accounts that violate our Affiliate Guidelines. If you have questions or encounter problems on Pinterest, you can <a href="https://help.pinterest.com/contact">contact us</a>.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-contest-guidelines" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1502522795">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Contest guidelines
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <ul><li>Don't require people to save a specific image. Give people the ability to choose Pins based on their tastes and preferences, even if it's from a selection or a given website.</li>
+<li>Don't allow more than one entry per person.</li>
+<li>
+<p>Don't suggest that Pinterest sponsors or endorses you or the promotion.</p>
+</li>
+<li>
+<p>Do review our <a href="https://business.pinterest.com/brand-guidelines">brand guidelines</a> for general rules about using the Pinterest brand.</p>
+</li>
+</ul><p>Lastly, be sure to follow all relevant laws and regulations.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+  
+</article>
+
+  </div>
+
+
+    
+
+      </main>
+  
+      <footer class="site__footer" role="contentinfo">
+      
+<div class="footer u-bg--cork--medium">
+  <div class="footer__inner">
+    <a href="#footer-end" class="visually-hidden focusable button" id="skip-footer">Skip Footer Menu</a>
+    <div class="footer__info">
+                    
+      <div class="footer__logo">
+        <a href="https://www.pinterest.com" aria-label="Go to Pinterest.com">
+          <img src="/profiles/contrib/pin/badge-scriptmark.svg?dpid=b1b2274ddc2a2fd332c452aeb4733b61" alt="Pinterest" width="300" height="72">
+        </a>
+      </div>
+
+      <div class="footer__language">
+            <div class="language-switcher-language-url" id="block-languageswitcher" role="navigation">
+  
+    
+      
+<div class="form-item">
+  <span class="select-toggle">
+    <label for="select-js-language-block" class="visually-hidden">Select language</label>
+    <select class="form-select js-language-block" id="select-js-language-block">
+                      <option hreflang="en" data-drupal-link-system-path="node/16" class="en is-active" value="/en/community-guidelines" selected="selected">English (US)</option>
+                              <option hreflang="id" data-drupal-link-system-path="node/16" class="id" value="/id/community-guidelines">Bahasa Indonesia</option>
+                              <option hreflang="ms" data-drupal-link-system-path="node/16" class="ms" value="/ms/community-guidelines">Bahasa Malaysia</option>
+                              <option hreflang="cs" data-drupal-link-system-path="node/16" class="cs" value="/cs/community-guidelines">Čeština</option>
+                              <option hreflang="da" data-drupal-link-system-path="node/16" class="da" value="/da/community-guidelines">Dansk</option>
+                              <option hreflang="de" data-drupal-link-system-path="node/16" class="de" value="/de/community-guidelines">Deutsch</option>
+                              <option hreflang="en-gb" data-drupal-link-system-path="node/16" class="en-gb" value="/en-gb/community-guidelines">English (UK)</option>
+                              <option hreflang="es" data-drupal-link-system-path="node/16" class="es" value="/es/community-guidelines">Español</option>
+                              <option hreflang="fr" data-drupal-link-system-path="node/16" class="fr" value="/fr/community-guidelines">Français</option>
+                              <option hreflang="it" data-drupal-link-system-path="node/16" class="it" value="/it/community-guidelines">Italiano</option>
+                              <option hreflang="hu" data-drupal-link-system-path="node/16" class="hu" value="/hu/community-guidelines">Magyar</option>
+                              <option hreflang="nl" data-drupal-link-system-path="node/16" class="nl" value="/nl/community-guidelines">Nederlands</option>
+                              <option hreflang="nb" data-drupal-link-system-path="node/16" class="nb" value="/nb/community-guidelines">Norsk bokmål</option>
+                              <option hreflang="pl" data-drupal-link-system-path="node/16" class="pl" value="/pl/community-guidelines">Polski</option>
+                              <option hreflang="pt-br" data-drupal-link-system-path="node/16" class="pt-br" value="/pt-br/community-guidelines">Português (Brasil)</option>
+                              <option hreflang="pt-pt" data-drupal-link-system-path="node/16" class="pt-pt" value="/pt-pt/community-guidelines">Português (Europeu)</option>
+                              <option hreflang="ro" data-drupal-link-system-path="node/16" class="ro" value="/ro/community-guidelines">Română</option>
+                              <option hreflang="sk" data-drupal-link-system-path="node/16" class="sk" value="/sk/community-guidelines">Slovenčina</option>
+                              <option hreflang="fi" data-drupal-link-system-path="node/16" class="fi" value="/fi/community-guidelines">Suomi</option>
+                              <option hreflang="sv" data-drupal-link-system-path="node/16" class="sv" value="/sv/community-guidelines">Svenska</option>
+                              <option hreflang="tl" data-drupal-link-system-path="node/16" class="tl" value="/tl/community-guidelines">Filipino</option>
+                              <option hreflang="vi" data-drupal-link-system-path="node/16" class="vi" value="/vi/community-guidelines">Tiếng Việt</option>
+                              <option hreflang="tr" data-drupal-link-system-path="node/16" class="tr" value="/tr/community-guidelines">Türkçe</option>
+                              <option hreflang="el" data-drupal-link-system-path="node/16" class="el" value="/el/community-guidelines">Ελληνικά</option>
+                              <option hreflang="ru" data-drupal-link-system-path="node/16" class="ru" value="/ru/community-guidelines">Русский</option>
+                              <option hreflang="uk" data-drupal-link-system-path="node/16" class="uk" value="/uk/community-guidelines">Українська</option>
+                              <option hreflang="hi" data-drupal-link-system-path="node/16" class="hi" value="/hi/community-guidelines">हिन्दी</option>
+                              <option hreflang="th" data-drupal-link-system-path="node/16" class="th" value="/th/community-guidelines">ภาษาไทย</option>
+                              <option hreflang="ko" data-drupal-link-system-path="node/16" class="ko" value="/ko/community-guidelines">한국어</option>
+                              <option hreflang="ja" data-drupal-link-system-path="node/16" class="ja" value="/ja/community-guidelines">日本語</option>
+                              <option hreflang="zh-hans" data-drupal-link-system-path="node/16" class="zh-hans" value="/zh-hans/community-guidelines">简体中文</option>
+                              <option hreflang="zh-hant" data-drupal-link-system-path="node/16" class="zh-hant" value="/zh-hant/community-guidelines">繁體中文</option>
+                              <option hreflang="ar" data-drupal-link-system-path="node/16" class="ar" value="/ar/community-guidelines">العربية</option>
+                              <option hreflang="bn" data-drupal-link-system-path="node/16" class="bn" value="/bn/community-guidelines">বাংলা</option>
+                              <option hreflang="te" data-drupal-link-system-path="node/16" class="te" value="/te/community-guidelines">తెలుగు</option>
+                              <option hreflang="he" data-drupal-link-system-path="node/16" class="he" value="/he/community-guidelines">עברית</option>
+                              <option hreflang="af" data-drupal-link-system-path="node/16" class="af" value="/af/community-guidelines">Afrikaans</option>
+                              <option hreflang="hr" data-drupal-link-system-path="node/16" class="hr" value="/hr/community-guidelines">Hrvatski</option>
+                              <option hreflang="bg" data-drupal-link-system-path="node/16" class="bg" value="/bg/community-guidelines">български</option>
+                  </select>
+  </span>
+</div>
+
+  </div>
+
+        </div>
+    </div>
+
+    <div class="footer__menus">
+                        <nav class="footer__menu footer__menu--menu-1">
+            <div class="footer__menu__title">About us</div>
+            <ul class="footer__menu__list">
+                                                <li class="footer__menu__item"data-country-code=DE,AT>
+                    <a href="https://policy.pinterest.com/de/impressum" class="footer__menu__link">Impressum</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://about.pinterest.com" class="footer__menu__link">What&#039;s Pinterest</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://pinterest.com/pinterest" class="footer__menu__link">Our Pinterest page</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://medium.com/@Pinterest_Engineering" class="footer__menu__link">Engineering blog</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://business.pinterest.com/brand-guidelines" class="footer__menu__link">Brand guidelines</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://careers.pinterest.com" class="footer__menu__link">Careers</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://help.pinterest.com" class="footer__menu__link">Help Center</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://labs.pinterest.com" class="footer__menu__link">Pinterest Labs</a>
+                                      </li>
+                                          </ul>
+          </nav>
+                  <nav class="footer__menu footer__menu--menu-2">
+            <div class="footer__menu__title">Our policies</div>
+            <ul class="footer__menu__list">
+                                                <li class="footer__menu__item">
+                    <a href="https://policy.pinterest.com/copyright" class="footer__menu__link">Copyright</a>
+                                          <span class="footer__menu__combinator">&amp;</span>
+                      <ul class="footer__submenu">
+                                                  <li class="footer__submenu__item">
+                            <a href="https://policy.pinterest.com/trademark" class="footer__submenu__link">trademark</a>
+                                                      </li>
+                                              </ul>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://help.pinterest.com/articles/personalized-ads-pinterest" class="footer__menu__link">Personalized ads</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://policy.pinterest.com/terms-of-service" class="footer__menu__link">Terms of service</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://policy.pinterest.com/privacy-policy" class="footer__menu__link">Privacy</a>
+                                          <span class="footer__menu__combinator">&amp;</span>
+                      <ul class="footer__submenu">
+                                                  <li class="footer__submenu__item">
+                            <a href="https://policy.pinterest.com/cookies" class="footer__submenu__link">cookies</a>
+                                                      </li>
+                                              </ul>
+                                      </li>
+                                          </ul>
+          </nav>
+                  <nav class="footer__menu footer__menu--menu-3">
+            <div class="footer__menu__title">More info</div>
+            <ul class="footer__menu__list">
+                                                <li class="footer__menu__item">
+                    <a href="https://business.pinterest.com" class="footer__menu__link">For businesses</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://developers.pinterest.com" class="footer__menu__link">For developers</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://newsroom.pinterest.com" class="footer__menu__link">For press</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://investor.pinterestinc.com" class="footer__menu__link">For investors</a>
+                                      </li>
+                                          </ul>
+          </nav>
+                    <div id="footer-end" class="visually-hidden">End of Footer</div>
+    </div>
+
+    <p class="footer__copyright">&copy; Pinterest 2022</p>
+  </div>
+</div>
+
+
+    </footer>
+  
+  
+</div>
+  </div>
+
+    
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"node\/16","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"codesnippet\/codesnippet.highlightjs,codesnippet\/codesnippet.style.googlecode,footnotes\/footnotes,js_sha\/js_sha.sha,paragraphs\/drupal.paragraphs.unpublished,pin_base\/core,pin_captcha\/pin_captcha.recaptcha_invisible,pin_pinterest_client\/client_identification,system\/base","theme":"pin_base","theme_token":null},"ajaxTrustedUrl":[],"pin_environment_indicator":{"env":"prod"},"pin_analytics":{"bypass_country_check":false},"pin_pinformation":{"context":"general"},"user":{"uid":0,"permissionsHash":"7a74bcb4a57987f777d7efba7b6cef504688f238dcb16b3f435bb67f9156bb27"}}</script>
+<script src="/sites/pinpolicy/files/js/js_KqnBBCejm8XfgPf9R8-1QyUfeY6LaXhUiD5NK8t1yUY.js"></script>
+<script src="https://assets.pinterest.com/js/pinit.js" async defer></script>
+<script src="/sites/pinpolicy/files/js/js_4UYebBReaOTu-l3I3KtJ6McXzt4uZR0F2GKziDkL4lw.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7ea89c5a2f","applicationID":"31524682,31524683","transactionName":"MQRSZEMFX0VTVUYIDQhOc0VCEF5bHVNcFQsSGB5eXgBUGFFXXA4MDwJRXAsUXlpbVUs=","queueTime":0,"applicationTime":287,"atts":"HUNREgsfTEs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
