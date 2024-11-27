@@ -39,7 +39,7 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 <link rel="stylesheet" href="https://redditinc.com/hs-fs/hub/40687240/hub_generated/template_assets/175075265395/1730233728065/redditinc/css/theme-overrides.css">
 <link rel="stylesheet" href="https://redditinc.com/hs-fs/hub/40687240/hub_generated/template_assets/175080379059/1730233722696/redditinc/css/child.min.css">
 <link rel="stylesheet" href="https://redditinc.com/hs-fs/hub/40687240/hub_generated/module_assets/175072288043/1724914401855/module_175072288043_website-header.min.css">
-<link rel="stylesheet" href="https://cdn2.hubspot.net/hub/-1/hub_generated/module_assets/-2712622/1732054513750/module_-2712622_Site_search_input.min.css">
+<link rel="stylesheet" href="https://cdn2.hubspot.net/hub/-1/hub_generated/module_assets/-2712622/1732567133558/module_-2712622_Site_search_input.min.css">
 
 <style>
   #hs_cos_wrapper_site_search .hs-search-field__bar>form { border-radius:px; }
@@ -64,7 +64,7 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 </style>
 
 <link rel="stylesheet" href="https://redditinc.com/hs-fs/hub/40687240/hub_generated/module_assets/175260560940/1730881491649/module_175260560940_sticky-content.min.css">
-<link rel="stylesheet" href="/hs/hsstatic/cos-LanguageSwitcher/static-1.11/sass/LanguageSwitcher.css">
+<link rel="stylesheet" href="/hs/hsstatic/cos-LanguageSwitcher/static-1.336/sass/LanguageSwitcher.css">
 <link rel="stylesheet" href="https://redditinc.com/hs-fs/hub/40687240/hub_generated/module_assets/175080431218/1723441940308/module_175080431218_social-share.min.css">
 <style>
 @font-face {
@@ -83,16 +83,16 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 
 @font-face {
   font-family: "RedditSans";
-  src: url("https://redditinc.com/hubfs/RedditSans-SemiBold.woff") format("woff");
+  src: url("https://redditinc.com/hubfs/RedditSans-Regular.woff") format("woff");
   font-display: swap;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "RedditSans";
-  src: url("https://redditinc.com/hubfs/RedditSans-Regular.woff") format("woff");
+  src: url("https://redditinc.com/hubfs/RedditSans-SemiBold.woff") format("woff");
   font-display: swap;
-  font-weight: 400;
+  font-weight: 600;
 }
 </style>
 
@@ -242,16 +242,34 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 }
 </style>
     
-<script data-search_input-config="config_site_search" type="application/json">
-{
-  "autosuggest_results_message": "Results for \u201C[[search_term]]\u201D",
-  "autosuggest_no_results_message": "There are no autosuggest results for \u201C[[search_term]]\u201D",
-  "sr_empty_search_field_message": "There are no suggestions because the search field is empty.",
-  "sr_autosuggest_results_message": "There are currently [[number_of_results]] auto-suggested results for [[search_term]]. Navigate to the results list by pressing the down arrow key, or press return to search for all results.",
-  "sr_search_field_aria_label": "This is a search field with an auto-suggest feature attached.",
-  "sr_search_button_aria_label": "Search"
-}
-</script>
+  <script data-search_input-config="config_site_search" type="application/json">
+  {
+    "autosuggest_results_message": "Results for \u201C[[search_term]]\u201D",
+    "autosuggest_no_results_message": "There are no autosuggest results for \u201C[[search_term]]\u201D",
+    "sr_empty_search_field_message": "There are no suggestions because the search field is empty.",
+    "sr_autosuggest_results_message": "There are currently [[number_of_results]] auto-suggested results for [[search_term]]. Navigate to the results list by pressing the down arrow key, or press return to search for all results.",
+    "sr_search_field_aria_label": "This is a search field with an auto-suggest feature attached.",
+    "sr_search_button_aria_label": "Search"
+  }
+  </script>
+
+  <script id="hs-search-input__valid-content-types" type="application/json">
+    [
+      
+        "SITE_PAGE",
+      
+        "LANDING_PAGE",
+      
+        "BLOG_POST",
+      
+        "LISTING_PAGE",
+      
+        "KNOWLEDGE_ARTICLE",
+      
+        "HS_CASE_STUDY"
+      
+    ]
+  </script>
 
 
     
@@ -859,6 +877,9 @@ _hsp.push(['addPrivacyConsentListener', function(consent){
 
 
 
+
+
+
 <div class="hs-search-field">
     <div class="hs-search-field__bar hs-search-field__bar--button-inline  ">
       <form data-hs-do-not-collect="true" class="hs-search-field__form" action="/hs-search-results">
@@ -868,15 +889,25 @@ _hsp.push(['addPrivacyConsentListener', function(consent){
         <input role="combobox" aria-expanded="false" aria-controls="autocomplete-results" aria-label="This is a search field with an auto-suggest feature attached." type="search" class="hs-search-field__input" id="site_search-input" name="q" autocomplete="off" aria-autocomplete="list" placeholder="Search articles">
 
         
-          <input type="hidden" name="type" value="SITE_PAGE">
+          
+            <input type="hidden" name="type" value="SITE_PAGE">
+          
         
+          
         
+          
+            <input type="hidden" name="type" value="BLOG_POST">
+          
         
-          <input type="hidden" name="type" value="BLOG_POST">
-          <input type="hidden" name="type" value="LISTING_PAGE">
+          
+            <input type="hidden" name="type" value="LISTING_PAGE">
+          
         
+          
         
+          
         
+
         
 
         <button class="hs-search-field__button " aria-label="Search">
@@ -3889,7 +3920,7 @@ var hsVars = hsVars || {}; hsVars['language'] = 'en';
 
 <script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
 <script src="https://redditinc.com/hs-fs/hub/40687240/hub_generated/module_assets/175072288043/1724914401091/module_175072288043_website-header.min.js"></script>
-<script src="https://cdn2.hubspot.net/hub/-1/hub_generated/module_assets/-2712622/1732054512989/module_-2712622_Site_search_input.min.js"></script>
+<script src="https://cdn2.hubspot.net/hub/-1/hub_generated/module_assets/-2712622/1732567132935/module_-2712622_Site_search_input.min.js"></script>
 <script src="https://redditinc.com/hs-fs/hub/40687240/hub_generated/module_assets/175260560940/1730881490935/module_175260560940_sticky-content.min.js"></script>
 
 <!-- Start of HubSpot Analytics Code -->
@@ -3917,8 +3948,8 @@ _hsq.push(["setContentMetadata", {
 
 <script type="text/javascript">
 var hsVars = {
-    render_id: "961615e8-0685-4d98-95cc-2439d53841b8",
-    ticks: 1732228834377,
+    render_id: "06f97a1e-ffce-4ab5-a197-51a43d3cc218",
+    ticks: 1732629232227,
     page_id: 177330998823,
     
     content_group_id: 0,
