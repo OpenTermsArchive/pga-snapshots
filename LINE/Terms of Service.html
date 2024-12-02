@@ -386,9 +386,30 @@
   </script>
 <!--/SCRIPT-->
 
+<!-- UTS -->
+<script src="https://static.line-scdn.net/uts/edge/stable/uts.js"></script>
+<script>
+    uts.init(
+        {
+            utsId: 'line_notification',
+            appName: 'terms.line.me',
+            appEnv: 'release'
+        },
+        {
+            endpoint: 'https://uts-front.line-apps.com'
+        }
+    );
+
+    uts.send('pageview', {
+        screenName: 'terms',
+        params: { lang: 'en', app_id:'line', terms_id: 'line_terms' }
+    }, (err) => {
+        if (err) {
+            console.error(err);
+        }
+    });
+</script>
+
 </body>
 </html>
 
-
-</body>
-</html>
