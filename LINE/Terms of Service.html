@@ -406,7 +406,12 @@
 
     uts.send('pageview', {
         screenName: 'terms',
-        params: { lang: 'en', app_id:'line', terms_id: 'line_terms' }
+        params: {
+            lang: 'en',
+            app_id:'line',
+            terms_id: 'line_terms',
+            terms_title: 'LY Corporation Common Terms of Use'
+        }
     }, (err) => {
         if (err) {
             console.error(err);
