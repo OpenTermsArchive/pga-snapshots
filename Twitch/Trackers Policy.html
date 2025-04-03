@@ -126,7 +126,7 @@
   <a id="skip-to-content" href="#main-content" tabindex="0" class="absolute top-0 transition-all focus:translate-y-0 -translate-y-full text-white text-base px-3 flex items-center gap-[10px] border-2 border-white rounded-lg p-[14px_12px] leading-[20px]">
     Skip to content
   </a>
-  <div class="max-w-[1440px] w-full px-5 lg:px-8 py-6 max-[479px]:flex-col flex-row flex gap-4 items-center col-start-2" x-data="{mobileSubNavOpen: false, mobileAccountNavOpen: false}">
+  <div class="max-w-[2000px] w-full px-5 lg:px-8 py-6 max-[479px]:flex-col flex-row flex gap-4 items-center col-start-2" x-data="{mobileSubNavOpen: false, mobileAccountNavOpen: false}">
     
     <a href="/en/legal/" class="flex flex-col items-center mr-auto" aria-label="Twitch - Visit About page">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1139.43 379.04" height="32px" alt="Twitch">
@@ -288,7 +288,7 @@
       <main>
         <div class="flex w-full">
           <div class="flex-grow bg-brand-ice"></div>
-          <div class="grid grid-cols-1 lg:grid-cols-[362px_1fr] w-full max-w-[1440px]">
+          <div class="grid grid-cols-1 lg:grid-cols-[350px_1fr] w-full max-w-[2000px]">
             <aside class="lg:sticky top-0 self-start lg:h-[100vh] col-span-2 lg:col-span-1 col-start-1 bg-brand-ice pl-4 lg:pl-8 pt-4 pb-4 lg:pb-0 lg:pt-8 pr-4"><div class="w-full text-base font-[700]" x-data="{mobileSubNavOpen: false}">
     <div class="relative flex items-center justify-between w-full">
         <div class="flex items-center lg:hidden">
@@ -533,7 +533,7 @@
          
       
       
-      <div class="grid grid-cols-1 xl:grid-cols-[676px_1fr] pb-16">
+      <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
         
         
         
@@ -550,21 +550,21 @@
         
 
         <h1 class="pt-12  pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 col-span-2 row-span-2 xl:row-span-1">Cookie Notice</h1>
-        <div class="pr-5 pl-5 xl:pr-0">
+        <div class="pl-5 pr-5 xl:pr-0">
           
             
-              <div class="flex justify-between items-center mb-5">
+              <div class="flex items-center justify-between mb-5">
                 <p class="text-xs">
                   
                     
-                    <span data-i18n="legal-enlegalcookie-notice20210209:modified">
-                        [Last modified on] 02/09/2021
+                    <span data-i18n="legal-enlegalcookie-notice20210209:modified" style="display: block;">
+                        Last modified on 02/09/2021
                     </span>
                     
                   
                   
-                      <span data-i18n="legal-enlegalcookie-notice20210209:modified">
-                          <a class="font-bold text-brand-purple" href="/en/legal/cookie-notice/archive"> Cookie Notice</a>
+                      <span data-i18n="legal-enlegalcookie-notice20210209:modified" style="display: block;">
+                          <a class="font-bold text-brand-purple" href="/en/legal/cookie-notice/archive">See prior versions of Cookie Notice</a>
                       </span>
                   
                 </p>
@@ -574,7 +574,7 @@
           <article 
             data-pagefind-body
             data-pagefind-meta="title:Cookie Notice"
-            class="max-w-none prose prose-brand-purple prose-base prose-headings:text-brand-purple-dark prose-a:text-brand-black hover:prose-a:underline">
+            class="prose max-w-none prose-brand-purple prose-base prose-headings:text-brand-purple-dark prose-a:text-brand-black hover:prose-a:underline">
             <h2 id="cookie-notice"><strong>Cookie Notice</strong></h2>
 <p>This Cookie Notice applies to your use of <a href="http://www.twitch.tv">www.twitch.tv</a>, and any other websites, applications, or services provided by Twitch Interactive, Inc. (with its affiliates, “Twitch”, “we” or “us”) that link to this Cookie Notice (collectively, the “Twitch Services”). Twitch uses certain technologies to collect information through the Twitch Services. In this Cookie Notice, we refer to these technologies, which include HTTP cookies, local storage, pixel tags and web beacons, collectively as “cookies.” This notice explains the different types of cookies used on Twitch Services and how you can control them. We may change this Cookie Notice at any time: please take a look at the “last modified” legend at the top of this page to see when this Cookie Notice was last revised. </p>
 <p>By visiting <a href="https://www.twitch.tv">www.twitch.tv</a>, setting up your Twitch account, or using the Twitch Services, you are accepting the information handling practices and storage and access of cookies as described in this Cookie Notice.</p>
@@ -601,14 +601,21 @@
 
           </article>
         </div>
-        <div class="xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:pt-12 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2" x-data="{mobileTOCOpen: false}">
-          <div class="text-sm font-[500] mb-[13px] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4" @click="mobileTOCOpen = !mobileTOCOpen">
+        <div class="xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2 max-w-[350px]" x-data="{mobileTOCOpen: false}">
+          <style>
+            @media (max-width: 1023px) {
+              .toc-header {
+                margin-bottom: 13px;
+              }
+            }
+          </style>
+          <div class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header" @click="mobileTOCOpen = !mobileTOCOpen">
             ON THIS PAGE
             <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'">
               <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <div :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'">
+          <div :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
             <nav id="TableOfContents">
   <ul>
     <li><a href="#cookie-notice"><strong>Cookie Notice</strong></a></li>
@@ -620,28 +627,64 @@
     
 
     <script>
+      
       const io_options = {
-        rootMargin: '-32px'
+        rootMargin: '0px 0px -80% 0px',
+        threshold: [0.1, 0.5]
       }
+      
+      
       const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
+        
+        const intersectingEntries = entries.filter(entry => entry.isIntersecting);
+        
+        if (intersectingEntries.length > 0) {
+          
+          const entry = intersectingEntries[0];
           const id = entry.target.getAttribute('id');
-          const ratio = entry.intersectionRatio;
-          const boundingRect = entry.boundingClientRect;
-          const intersectionRect = entry.intersectionRect;
-          if (ratio < 1) {
-            if (boundingRect.top < intersectionRect.top) {
-              document.querySelectorAll(`nav li`).forEach(li => {
-                li.classList.remove('active');
-              })
-              document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+          
+          
+          if (id) {
+            
+            document.querySelectorAll(`nav li`).forEach(li => {
+              li.classList.remove('active');
+            });
+            
+            
+            const activeLink = document.querySelector(`nav li a[href="#${id}"]`);
+            if (activeLink) {
+              activeLink.parentElement.classList.add('active');
             }
           }
-        });
+        }
       }, io_options);
-    
-      document.querySelectorAll('main h2').forEach((section) => {
-        observer.observe(section);
+      
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('main h2').forEach((section) => {
+          observer.observe(section);
+        });
+        
+        
+        const tocLinks = document.querySelectorAll('.toc-header + div a');
+        tocLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            
+            
+          });
+        });
+        
+        
+        if (window.location.hash) {
+          const hash = window.location.hash;
+          const activeLink = document.querySelector(`nav li a[href="${hash}"]`);
+          if (activeLink) {
+            document.querySelectorAll('nav li').forEach(li => {
+              li.classList.remove('active');
+            });
+            activeLink.parentElement.classList.add('active');
+          }
+        }
       });
     </script>
 
@@ -683,7 +726,7 @@
       </div>
     </template>
     <footer tw-impression-id="footer" class="bg-black text-white text-sm font-[700] leading-6 pt-12 pb-12 w-full flex justify-center">
-    <div class="grid max-w-[1440px] grid-cols-1 md:grid-cols-[auto_1fr] lg:grid-cols-2 w-full px-8 py-6 gap-8">
+    <div class="grid max-w-[2000px] grid-cols-1 md:grid-cols-[auto_1fr] lg:grid-cols-2 w-full px-8 py-6 gap-8">
         <div class="flex justify-center pb-6 md:justify-start lg:pb-0">
             <a href="https://www.twitch.tv/p/en/about" aria-label="Twitch - Visit About page">
                 <svg width="48" height="53" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg" alt="">
