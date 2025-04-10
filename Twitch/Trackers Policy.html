@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" x-data="geotargeting">
-  <head>
+<!DOCTYPE html><html lang="en" x-data="geotargeting"><head>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +17,7 @@
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="">
 
-<link href="/icons/favicon.ico" rel="shortcut icon" type="image/x-icon" data-rewrite-ignore-locale>
+<link href="/icons/favicon.ico" rel="shortcut icon" type="image/x-icon" data-rewrite-ignore-locale="">
 <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
 
@@ -84,11 +82,11 @@
 
 
     
-    <script defer src="/js/build.js"></script>
+    <script defer="" src="/js/build.js"></script>
     
     
     
-    <link rel="stylesheet" href="/css/bookshop.min.343054bb7b6f3846b2cb5bc8747d8376b8ec592f9c5e0dff07e2eb6ea651e44d.css" />
+    <link rel="stylesheet" href="/css/bookshop.min.343054bb7b6f3846b2cb5bc8747d8376b8ec592f9c5e0dff07e2eb6ea651e44d.css">
 
     
   <link rel="stylesheet" href="/sass/main.css">
@@ -99,7 +97,7 @@
     <link href="/pagefind/pagefind-modular-ui.css" rel="stylesheet">
     <script src="/pagefind/pagefind-modular-ui.js"></script>
 
-    <script async src="https://analytics.m7g.twitch.tv/270fb0ae91e9890ee407/"></script>
+    <script async="" src="https://analytics.m7g.twitch.tv/270fb0ae91e9890ee407/"></script>
   </head>
   
   
@@ -112,9 +110,7 @@
       
   
 
-  <body class="font-default" x-data='{ geo_targeting: "", redirectUrl: $el.dataset.redirectUrl }' 
-    data-redirect-url='/en/legal/'
-    x-init="init();$watch('isVisible', value => {
+  <body class="font-default" x-data="{ geo_targeting: &quot;&quot;, redirectUrl: $el.dataset.redirectUrl }" data-redirect-url="/en/legal/" x-init="init();$watch('isVisible', value => {
     if (value === false) { // Ensure it only redirects when explicitly false
         setTimeout(() => {
             window.location.href = redirectUrl;
@@ -143,24 +139,14 @@
     
 
   <div class="relative max-[479px]:w-full" x-data="{languageModalOpen: false}">
-    <button class="max-[479px]:w-full max-[479px]:justify-center text-white text-base px-3 flex items-center gap-[10px] border-2 border-white rounded-lg p-[14px_12px] leading-[20px]" 
-    @click="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" :aria-expanded="languageModalOpen" 
-    @keydown.down="languageModalOpen = true;$focus.within($refs.language_dropdown).first()"
-    @keydown.up="languageModalOpen = true;$focus.within($refs.language_dropdown).last()"
-    x-ref="language_button"
-    >
+    <button class="max-[479px]:w-full max-[479px]:justify-center text-white text-base px-3 flex items-center gap-[10px] border-2 border-white rounded-lg p-[14px_12px] leading-[20px]" @click="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" :aria-expanded="languageModalOpen" @keydown.down="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" @keydown.up="languageModalOpen = true;$focus.within($refs.language_dropdown).last()" x-ref="language_button" aria-expanded="false">
         <div>
           Languages
         </div>
-        <img src="/images/icons/arrow.svg" alt="" />
+        <img src="/images/icons/arrow.svg" alt="">
     </button>
 
-    <ul class="max-[479px]:w-full border-brand-purple border rounded-lg bg-white p-2 absolute z-[200] top-[calc(100%+7.5px)]" x-show="languageModalOpen" x-cloak @click.outside="languageModalOpen = !languageModalOpen" x-ref="language_dropdown"
-    @keydown.down="$focus.wrap().next()"
-    @keydown.up="$focus.wrap().previous()"
-    @keydown.prevent.tab="languageModalOpen = !languageModalOpen;$focus.within($refs.language_button)"
-    x-trap.inert="languageModalOpen"
-    >
+    <ul class="max-[479px]:w-full border-brand-purple border rounded-lg bg-white p-2 absolute z-[200] top-[calc(100%+7.5px)]" x-show="languageModalOpen" @click.outside="languageModalOpen = !languageModalOpen" x-ref="language_dropdown" @keydown.down="$focus.wrap().next()" @keydown.up="$focus.wrap().previous()" @keydown.prevent.tab="languageModalOpen = !languageModalOpen;$focus.within($refs.language_button)" x-trap.inert="languageModalOpen" style="display: none;">
       
           
           
@@ -272,7 +258,7 @@
               
               <span data-i18n="menu:back-to-twitch">Back to Twitch</span>
               <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-[225deg] stroke-brand-purple">
-                <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </a>
           </li>
@@ -294,7 +280,7 @@
         <div class="flex items-center lg:hidden">
             Contents
             <button aria-label="Site menu" class="flex-none lg:hidden fill-white z-100" id="menu" @click="mobileSubNavOpen = !mobileSubNavOpen">
-                <svg height="32" viewBox="0 0 48 48" width="48"  xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"/><path fill="#8D41F9" d="M6 36h36v-4h-36v4zm0-10h36v-4h-36v4zm0-14v4h36v-4h-36z"/></svg>
+                <svg height="32" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"></path><path fill="#8D41F9" d="M6 36h36v-4h-36v4zm0-10h36v-4h-36v4zm0-14v4h36v-4h-36z"></path></svg>
             </button>
         </div>
         <script>
@@ -380,7 +366,7 @@
     <ul class="mt-4" :class="mobileSubNavOpen ? 'block lg:block' : 'hidden lg:block'">
         <li class="pt-[6px] pb-[6px] border-b border-brand-widow flex items-center stroke-black">
             <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.25 11L10.204 2.04501C10.644 1.60601 11.356 1.60601 11.795 2.04501L20.75 11M3.5 8.75001V18.875C3.5 19.496 4.004 20 4.625 20H8.75V15.125C8.75 14.504 9.254 14 9.875 14H12.125C12.746 14 13.25 14.504 13.25 15.125V20H17.375C17.996 20 18.5 19.496 18.5 18.875V8.75001M7.25 20H15.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.25 11L10.204 2.04501C10.644 1.60601 11.356 1.60601 11.795 2.04501L20.75 11M3.5 8.75001V18.875C3.5 19.496 4.004 20 4.625 20H8.75V15.125C8.75 14.504 9.254 14 9.875 14H12.125C12.746 14 13.25 14.504 13.25 15.125V20H17.375C17.996 20 18.5 19.496 18.5 18.875V8.75001M7.25 20H15.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
             <a class="p-2 " href="/en/legal/">
                 All Legal Docs
@@ -415,7 +401,7 @@
                 
                 
 
-                <a class="p-3  "  href="/en/legal/terms-of-service/" data-i18n="menu:terms-of-service">Terms of Service</a>
+                <a class="p-3  " href="/en/legal/terms-of-service/" data-i18n="menu:terms-of-service">Terms of Service</a>
             
 
             
@@ -447,7 +433,7 @@
                 
                 
 
-                <a class="p-3  "  href="/en/legal/terms-of-sale/" data-i18n="menu:terms-of-sale">Terms of Sale</a>
+                <a class="p-3  " href="/en/legal/terms-of-sale/" data-i18n="menu:terms-of-sale">Terms of Sale</a>
             
 
             
@@ -479,7 +465,7 @@
                 
                 
 
-                <a class="p-3  "  href="/en/legal/privacy-notice/" data-i18n="menu:privacy-notice">Privacy Notice</a>
+                <a class="p-3  " href="/en/legal/privacy-notice/" data-i18n="menu:privacy-notice">Privacy Notice</a>
             
 
             
@@ -511,7 +497,7 @@
                 
                 
 
-                <a class="p-3  "  href="/en/legal/privacy-choices/" data-i18n="menu:privacy-choices">Privacy Choices</a>
+                <a class="p-3  " href="/en/legal/privacy-choices/" data-i18n="menu:privacy-choices">Privacy Choices</a>
             
 
             
@@ -536,7 +522,7 @@
                 
                 
 
-                <a class="p-3  "  href="/en/legal/monetized-streamer-agreement/" data-i18n="menu:monetized-streamer-agreement">Monetized Streamer Agreement</a>
+                <a class="p-3  " href="/en/legal/monetized-streamer-agreement/" data-i18n="menu:monetized-streamer-agreement">Monetized Streamer Agreement</a>
             
 
             
@@ -596,12 +582,9 @@
               </div>
           
 
-          <article 
-            data-pagefind-body
-            data-pagefind-meta="title:Cookie Notice"
-            class="prose max-w-none prose-brand-purple prose-base prose-headings:text-brand-purple-dark prose-a:text-brand-black hover:prose-a:underline">
+          <article data-pagefind-body="" data-pagefind-meta="title:Cookie Notice" class="prose max-w-none prose-brand-purple prose-base prose-headings:text-brand-purple-dark prose-a:text-brand-black hover:prose-a:underline">
             <h2 id="cookie-notice"><strong>Cookie Notice</strong></h2>
-<p>This Cookie Notice applies to your use of <a href="http://www.twitch.tv">www.twitch.tv</a>, and any other websites, applications, or services provided by Twitch Interactive, Inc. (with its affiliates, “Twitch”, “we” or “us”) that link to this Cookie Notice (collectively, the “Twitch Services”). Twitch uses certain technologies to collect information through the Twitch Services. In this Cookie Notice, we refer to these technologies, which include HTTP cookies, local storage, pixel tags and web beacons, collectively as “cookies.” This notice explains the different types of cookies used on Twitch Services and how you can control them. We may change this Cookie Notice at any time: please take a look at the “last modified” legend at the top of this page to see when this Cookie Notice was last revised. </p>
+<p>This Cookie Notice applies to your use of <a href="http://www.twitch.tv">www.twitch.tv</a>, and any other websites, applications, or services provided by Twitch Interactive, Inc. (with its affiliates, “Twitch”, “we” or “us”) that link to this Cookie Notice (collectively, the “Twitch Services”). Twitch uses certain technologies to collect information through the Twitch Services. In this Cookie Notice, we refer to these technologies, which include HTTP cookies, local storage, pixel tags and web beacons, collectively as “cookies.” This notice explains the different types of cookies used on Twitch Services and how you can control them. We may change this Cookie Notice at any time: please take a look at the “last modified” legend at the top of this page to see when this Cookie Notice was last revised.&nbsp;</p>
 <p>By visiting <a href="https://www.twitch.tv">www.twitch.tv</a>, setting up your Twitch account, or using the Twitch Services, you are accepting the information handling practices and storage and access of cookies as described in this Cookie Notice.</p>
 <p>We hope that this notice helps you understand, and feel more confident about, our use of cookies. If you have any further queries, please contact us at <a href="mailto:privacy@twitch.tv">privacy@twitch.tv</a>.</p>
 <h4 id="what-is-a-cookie"><strong>What is a Cookie?</strong></h4>
@@ -610,7 +593,7 @@
 <p>Below we list the different types of cookies we may use on the Twitch Services.</p>
 <p>We use session cookies (that last until you close your browser) and persistent cookies (that last until you delete them from your browser, or until they expire in accordance with their lifespan). Twitch-originated persistent cookies on Twitch Services will have a maximum lifespan of thirteen months from the time you last used the Twitch Services. Cookies used to remember your privacy settings (such as Advertising Preferences), may remain on your browser for up to 5 years.</p>
 <p>We use first party and third party cookies. First-party cookies are created and accessed by the host domain - the domain the user is visiting, in this case, Twitch. Third-party cookies are those created and accessed by domains other than the one the user is visiting at the time.</p>
-<p><em>Operational Cookies:</em> These cookies are critical to the operation of the Twitch Services. These cookies are used, for example, to maintain your login state and remember your preferences. These cookies cannot be disabled without severely affecting your use of the Twitch Services. </p>
+<p><em>Operational Cookies:</em> These cookies are critical to the operation of the Twitch Services. These cookies are used, for example, to maintain your login state and remember your preferences. These cookies cannot be disabled without severely affecting your use of the Twitch Services.&nbsp;</p>
 <p>Examples of operational cookies include the following:</p>
 <table><tbody><tr><td colspan="2"><p><strong><em>Operational cookie examples</em></strong></p></td></tr><tr><td><p><strong><em>Cookie ID</em></strong></p></td><td><p><strong><em>Purpose</em></strong></p></td></tr><tr><td><p>auth-token</p></td><td><p>Authentication &amp; authorization</p></td></tr><tr><td><p>api_token</p></td><td><p>Security</p></td></tr><tr><td><p>language</p></td><td><p>User preferences</p></td></tr><tr><td><p>twitch.lohp.countryCode</p></td><td><p>Country determination</p></td></tr><tr><td><p>enable-compact-scene-listing</p></td><td><p>User preferences</p></td></tr><tr><td><p>videoChat.notice_dismissed</p></td><td><p>User preferences</p></td></tr><tr><td><p>chat_rules_shown</p></td><td><p>User preferences</p></td></tr><tr><td><p>algoliasearch-client-js</p></td><td><p>Search optimization</p></td></tr></tbody></table>
 <p><em>Analytics Cookies:</em> Third parties may use cookies to analyze user activity. For example, third party developers of Twitch Extensions may use Google Analytics to understand how users use their Extensions.</p>
@@ -621,7 +604,7 @@
 <p>Third parties may use cookies in the process of delivering and measuring content, including ads, relevant to your interests on Twitch and third-party sites.</p>
 <p>Third parties may also use cookies to assist us in acquiring new users and measuring the effectiveness of our marketing campaigns.</p>
 <h4 id="how-do-i-control-cookies"><strong>How do I control Cookies?</strong></h4>
-<p>Users from the European Economic Area (EEA) and the UK can revisit their cookie choices through their Settings &gt; Security and Privacy &gt; Cookie Preferences. There are also online tools such as <a href="https://optout.aboutads.info/?c=2&lang=EN">Digital Advertising Alliance’s Browser Check</a> and <a href="https://www.youronlinechoices.com/">European Digital Advertising Alliance’s Your Online Choices site</a> that explain digital advertising and allow you to choose how cookies are used throughout the web based on your location and the device and browser you are using. All users can also <a href="https://tools.google.com/dlpage/gaoptout">enable Google’s browser extension</a> to disable Google Analytics across any website that you visit.</p>
+<p>Users from the European Economic Area (EEA) and the UK can revisit their cookie choices through their Settings &gt; Security and Privacy &gt; Cookie Preferences. There are also online tools such as <a href="https://optout.aboutads.info/?c=2&amp;lang=EN">Digital Advertising Alliance’s Browser Check</a>&nbsp;and <a href="https://www.youronlinechoices.com/">European Digital Advertising Alliance’s Your Online Choices site</a> that explain digital advertising and allow you to choose how cookies are used throughout the web based on your location and the device and browser you are using. All users can also <a href="https://tools.google.com/dlpage/gaoptout">enable Google’s browser extension</a>&nbsp;to disable Google Analytics across any website that you visit.</p>
 <p>You may also refuse to accept cookies from the Twitch Services or Extension developers at any time by activating the setting on your browser which allows you to refuse cookies. Further information about the procedure to follow in order to disable cookies can be found on your Internet browser provider’s website via your help screen. For additional guidance please visit the Digital Advertising Alliance’s Ad Choices [<a href="https://youradchoices.com/choices-faq">https://youradchoices.com/choices-faq</a>] page. Please be aware that if cookies are disabled, not all features of the Twitch Services or Extensions may operate as intended.</p>
 
           </article>
@@ -637,7 +620,7 @@
           <div class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header" @click="mobileTOCOpen = !mobileTOCOpen">
             ON THIS PAGE
             <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'">
-              <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </div>
           <div :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
@@ -718,15 +701,444 @@
           <div class="flex-grow"></div>
         </div>
       </main>
-    </template>
+    </template><main>
+        <div class="flex w-full">
+          <div class="flex-grow bg-brand-ice"></div>
+          <div class="grid grid-cols-1 lg:grid-cols-[350px_1fr] w-full max-w-[2000px]">
+            <aside class="lg:sticky top-0 self-start lg:h-[100vh] col-span-2 lg:col-span-1 col-start-1 bg-brand-ice pl-4 lg:pl-8 pt-4 pb-4 lg:pb-0 lg:pt-8 pr-4"><div class="w-full text-base font-[700]" x-data="{mobileSubNavOpen: false}">
+    <div class="relative flex items-center justify-between w-full">
+        <div class="flex items-center lg:hidden">
+            Contents
+            <button aria-label="Site menu" class="flex-none lg:hidden fill-white z-100" id="menu" @click="mobileSubNavOpen = !mobileSubNavOpen">
+                <svg height="32" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"></path><path fill="#8D41F9" d="M6 36h36v-4h-36v4zm0-10h36v-4h-36v4zm0-14v4h36v-4h-36z"></path></svg>
+            </button>
+        </div>
+        <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const instance = new PagefindModularUI.Instance();
+        window.instance = instance;
+        let resultContainer = document.getElementById("results")
+
+        instance.add(new PagefindModularUI.Input({
+            containerElement: "#search",
+            debounceTimeoutMs: 500
+        }));
+        instance.on("results", async (results) => {
+            let resultsCount = results.results.length
+            resultContainer.innerHTML = "";
+            let cutDownResults = results.results.slice(0,5)
+            let innerContainer = document.createElement("div")
+            for(const result of cutDownResults){
+                let data = await result.data();
+                let content_array = data.excerpt.split(" ")
+                let idx = 0;
+                for(let i=0;i<content_array.length;i++)
+                {
+                    if(content_array[i].indexOf("<mark>") != -1)
+                    {
+                        idx = i;
+                        break;
+                    }
+                }
+                idx = idx == 0 ? idx : idx - 1;
+                content_array = content_array.slice(idx, -1)
+                let excerpt_text = content_array.join(" ")
+                let resultDiv = document.createElement("a")
+                resultDiv.href = data.url
+                let title = document.createElement("div")
+                title.classList.add("underline")
+                title.innerText = data.meta.title
+                resultDiv.append(title)
+                let excerpt = document.createElement("div")
+                excerpt.classList.add("overflow-hidden","text-ellipsis","whitespace-nowrap")
+                excerpt.innerHTML = excerpt_text
+                resultDiv.append(excerpt)
+                resultDiv.classList.add("pagefind-result")
+                innerContainer.append(resultDiv)
+            }
+            innerContainer.classList.add("p-6")
+            resultContainer.append(innerContainer)
+
+            let bottom = document.createElement("div")
+            bottom.classList.add("bg-brand-ice","p-5","flex","items-center","justify-between")
+            let text = document.createElement("a")
+            text.classList.add("underline")
+            text.innerHTML = `See all ${resultsCount} results`
+            text.href = "\/en/legal/search?term=" + instance.searchTerm
+            let logo = document.createElement("img")
+            logo.src = "/images/icons/pagefind-logo.svg"
+            bottom.append(text, logo)
+
+            resultContainer.append(bottom)
+            resultContainer.classList.remove("hidden")
+        });
+        const input = document.querySelector(".pagefind-modular-input");
+        input.placeholder = "Search legal docs";
+        document.addEventListener("click", e => {
+            if(e.target.matches("input.pagefind-modular-input") || e.target.matches("#results"))
+            {    
+                if(e.target.value){
+                    instance.triggerSearch(e.target.value);
+                    resultContainer.classList.remove("hidden");
+                }
+            }
+            else
+                resultContainer.classList.add("hidden");
+        })        
+    });
+</script>
+
+<div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"><form class="pagefind-modular-input-wrapper" role="search" aria-label="Search this site" action="javascript:void(0);"><label for="pfmod-input-0" data-pfmod-sr-hidden="true">Search this site</label><input id="pfmod-input-0" class="pagefind-modular-input" autocapitalize="none" enterkeyhint="search" placeholder="Search legal docs"><button class="pagefind-modular-input-clear" data-pfmod-suppressed="true">Clear</button></form></div>
+<div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0"></div>
+    </div>
+    
+    
+    <ul class="mt-4 hidden lg:block" :class="mobileSubNavOpen ? 'block lg:block' : 'hidden lg:block'">
+        <li class="pt-[6px] pb-[6px] border-b border-brand-widow flex items-center stroke-black">
+            <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.25 11L10.204 2.04501C10.644 1.60601 11.356 1.60601 11.795 2.04501L20.75 11M3.5 8.75001V18.875C3.5 19.496 4.004 20 4.625 20H8.75V15.125C8.75 14.504 9.254 14 9.875 14H12.125C12.746 14 13.25 14.504 13.25 15.125V20H17.375C17.996 20 18.5 19.496 18.5 18.875V8.75001M7.25 20H15.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <a class="p-2 " href="/en/legal/">
+                All Legal Docs
+            </a>
+        </li>
+        
+        
+        
+        
+        
+            
+            
+            
+    
+        
+        
+            
+                
+                    
+
+                    
+                    
+                    
+                    
+                
+            
+        
+        <li class="pt-[6px] pb-[6px] border-b border-brand-widow flex ">
+            
+            
+            
+                
+                
+
+                <a class="p-3  " href="/en/legal/terms-of-service/" data-i18n="menu:terms-of-service">Terms of Service</a>
+            
+
+            
+        </li>
+    
+
+        
+            
+            
+            
+    
+        
+        
+            
+                
+                    
+
+                    
+                    
+                    
+                    
+                
+            
+        
+        <li class="pt-[6px] pb-[6px] border-b border-brand-widow flex ">
+            
+            
+            
+                
+                
+
+                <a class="p-3  " href="/en/legal/terms-of-sale/" data-i18n="menu:terms-of-sale">Terms of Sale</a>
+            
+
+            
+        </li>
+    
+
+        
+            
+            
+            
+    
+        
+        
+            
+                
+                    
+
+                    
+                    
+                    
+                    
+                
+            
+        
+        <li class="pt-[6px] pb-[6px] border-b border-brand-widow flex ">
+            
+            
+            
+                
+                
+
+                <a class="p-3  " href="/en/legal/privacy-notice/" data-i18n="menu:privacy-notice">Privacy Notice</a>
+            
+
+            
+        </li>
+    
+
+        
+            
+            
+            
+    
+        
+        
+            
+                
+                    
+
+                    
+                    
+                    
+                    
+                
+            
+        
+        <li class="pt-[6px] pb-[6px] border-b border-brand-widow flex ">
+            
+            
+            
+                
+                
+
+                <a class="p-3  " href="/en/legal/privacy-choices/" data-i18n="menu:privacy-choices">Privacy Choices</a>
+            
+
+            
+        </li>
+    
+
+        
+            
+            
+            
+    
+        
+        
+            
+                
+            
+        
+        <li class="pt-[6px] pb-[6px] border-b border-brand-widow flex ">
+            
+            
+            
+                
+                
+
+                <a class="p-3  " href="/en/legal/monetized-streamer-agreement/" data-i18n="menu:monetized-streamer-agreement">Monetized Streamer Agreement</a>
+            
+
+            
+        </li>
+    
+
+        
+    </ul>
+</div>
+
+</aside>
+            <div id="main-content">
+              
+    
+    
+
+    
+        
+         
+      
+      
+      <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
+        
+        
+        
+
+
+
+        
+          
+          
+
+          
+            
+          
+        
+
+        <h1 class="pt-12  pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 col-span-2 row-span-2 xl:row-span-1">Cookie Notice</h1>
+        <div class="pl-5 pr-5 xl:pr-0">
+          
+            
+              <div class="flex items-center justify-between mb-5">
+                <p class="text-xs">
+                  
+                    
+                    <span data-i18n="legal-enlegalcookie-notice20210209:modified" style="display: block;">
+                        Last modified on 02/09/2021
+                    </span>
+                    
+                  
+                  
+                      <span data-i18n="legal-enlegalcookie-notice20210209:modified" style="display: block;">
+                          <a class="font-bold text-brand-purple" href="/en/legal/cookie-notice/archive">See prior versions of Cookie Notice</a>
+                      </span>
+                  
+                </p>
+              </div>
+          
+
+          <article data-pagefind-body="" data-pagefind-meta="title:Cookie Notice" class="prose max-w-none prose-brand-purple prose-base prose-headings:text-brand-purple-dark prose-a:text-brand-black hover:prose-a:underline">
+            <h2 id="cookie-notice"><strong>Cookie Notice</strong></h2>
+<p>This Cookie Notice applies to your use of <a href="http://www.twitch.tv">www.twitch.tv</a>, and any other websites, applications, or services provided by Twitch Interactive, Inc. (with its affiliates, “Twitch”, “we” or “us”) that link to this Cookie Notice (collectively, the “Twitch Services”). Twitch uses certain technologies to collect information through the Twitch Services. In this Cookie Notice, we refer to these technologies, which include HTTP cookies, local storage, pixel tags and web beacons, collectively as “cookies.” This notice explains the different types of cookies used on Twitch Services and how you can control them. We may change this Cookie Notice at any time: please take a look at the “last modified” legend at the top of this page to see when this Cookie Notice was last revised.&nbsp;</p>
+<p>By visiting <a href="https://www.twitch.tv">www.twitch.tv</a>, setting up your Twitch account, or using the Twitch Services, you are accepting the information handling practices and storage and access of cookies as described in this Cookie Notice.</p>
+<p>We hope that this notice helps you understand, and feel more confident about, our use of cookies. If you have any further queries, please contact us at <a href="mailto:privacy@twitch.tv">privacy@twitch.tv</a>.</p>
+<h4 id="what-is-a-cookie"><strong>What is a Cookie?</strong></h4>
+<p>Cookies are small text files that are stored on your device. They are widely used in order to make websites and software applications work, or work in a better, more efficient way. They can do this because websites and software applications can read and write these files, enabling them to recognize a particular device and remember important information that will make your use of a website or software application more convenient (e.g., by remembering your user preferences).</p>
+<h4 id="what-cookies-do-we-use-and-why-do-we-use-them"><strong>What Cookies do we use and why do we use them?</strong></h4>
+<p>Below we list the different types of cookies we may use on the Twitch Services.</p>
+<p>We use session cookies (that last until you close your browser) and persistent cookies (that last until you delete them from your browser, or until they expire in accordance with their lifespan). Twitch-originated persistent cookies on Twitch Services will have a maximum lifespan of thirteen months from the time you last used the Twitch Services. Cookies used to remember your privacy settings (such as Advertising Preferences), may remain on your browser for up to 5 years.</p>
+<p>We use first party and third party cookies. First-party cookies are created and accessed by the host domain - the domain the user is visiting, in this case, Twitch. Third-party cookies are those created and accessed by domains other than the one the user is visiting at the time.</p>
+<p><em>Operational Cookies:</em> These cookies are critical to the operation of the Twitch Services. These cookies are used, for example, to maintain your login state and remember your preferences. These cookies cannot be disabled without severely affecting your use of the Twitch Services.&nbsp;</p>
+<p>Examples of operational cookies include the following:</p>
+<table><tbody><tr><td colspan="2"><p><strong><em>Operational cookie examples</em></strong></p></td></tr><tr><td><p><strong><em>Cookie ID</em></strong></p></td><td><p><strong><em>Purpose</em></strong></p></td></tr><tr><td><p>auth-token</p></td><td><p>Authentication &amp; authorization</p></td></tr><tr><td><p>api_token</p></td><td><p>Security</p></td></tr><tr><td><p>language</p></td><td><p>User preferences</p></td></tr><tr><td><p>twitch.lohp.countryCode</p></td><td><p>Country determination</p></td></tr><tr><td><p>enable-compact-scene-listing</p></td><td><p>User preferences</p></td></tr><tr><td><p>videoChat.notice_dismissed</p></td><td><p>User preferences</p></td></tr><tr><td><p>chat_rules_shown</p></td><td><p>User preferences</p></td></tr><tr><td><p>algoliasearch-client-js</p></td><td><p>Search optimization</p></td></tr></tbody></table>
+<p><em>Analytics Cookies:</em> Third parties may use cookies to analyze user activity. For example, third party developers of Twitch Extensions may use Google Analytics to understand how users use their Extensions.</p>
+<table><tbody><tr><td colspan="2"><p><strong><em>Analytics cookie examples</em></strong></p></td></tr><tr><td><p>Google Analytics e.g. _ga, _gid, _gat</p></td><td><p>Used by developers of extensions you may choose to install. Helps developers analyze usage to improve extensions.</p></td></tr></tbody></table>
+<p><em>Advertising or Marketing Cookies:</em> Twitch uses first and third party cookies to personalize, measure, and deliver advertising and marketing messages.</p>
+<table><tbody><tr><td colspan="2"><strong><em>Advertising &amp; Marketing cookie examples</em></strong></td></tr><tr><td><p>ad-id, ad-privacy (Amazon)</p></td><td><p>Informs advertising activity, the delivery of ads on Twitch (including interest-based ads), through Amazon advertising systems and other partners.</p></td></tr><tr><td><p>_s; branch_session (Branch)<br>&nbsp;</p><p>kxsegs, kxuser,</p><p>kxtwitch_* (Salesforce DMP)</p></td><td>Helps Twitch (1) acquire new users by delivering targeted Ads to users off Twitch properties (2) Measure marketing campaign ROI to determine the sources of new Twitch users.&nbsp;</td></tr><tr><td><p>uid, uidr (comScore)</p></td><td><p>Ads measurement and analytics partner.</p></td></tr></tbody></table>
+<p><strong>How does Twitch use third party cookies?</strong></p>
+<p>Third parties may use cookies in the process of delivering and measuring content, including ads, relevant to your interests on Twitch and third-party sites.</p>
+<p>Third parties may also use cookies to assist us in acquiring new users and measuring the effectiveness of our marketing campaigns.</p>
+<h4 id="how-do-i-control-cookies"><strong>How do I control Cookies?</strong></h4>
+<p>Users from the European Economic Area (EEA) and the UK can revisit their cookie choices through their Settings &gt; Security and Privacy &gt; Cookie Preferences. There are also online tools such as <a href="https://optout.aboutads.info/?c=2&amp;lang=EN">Digital Advertising Alliance’s Browser Check</a>&nbsp;and <a href="https://www.youronlinechoices.com/">European Digital Advertising Alliance’s Your Online Choices site</a> that explain digital advertising and allow you to choose how cookies are used throughout the web based on your location and the device and browser you are using. All users can also <a href="https://tools.google.com/dlpage/gaoptout">enable Google’s browser extension</a>&nbsp;to disable Google Analytics across any website that you visit.</p>
+<p>You may also refuse to accept cookies from the Twitch Services or Extension developers at any time by activating the setting on your browser which allows you to refuse cookies. Further information about the procedure to follow in order to disable cookies can be found on your Internet browser provider’s website via your help screen. For additional guidance please visit the Digital Advertising Alliance’s Ad Choices [<a href="https://youradchoices.com/choices-faq">https://youradchoices.com/choices-faq</a>] page. Please be aware that if cookies are disabled, not all features of the Twitch Services or Extensions may operate as intended.</p>
+
+          </article>
+        </div>
+        <div class="xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2 max-w-[350px]" x-data="{mobileTOCOpen: false}">
+          <style>
+            @media (max-width: 1023px) {
+              .toc-header {
+                margin-bottom: 13px;
+              }
+            }
+          </style>
+          <div class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header" @click="mobileTOCOpen = !mobileTOCOpen">
+            ON THIS PAGE
+            <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden rotate-[270deg]" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'">
+              <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;" class="hidden xl:block">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cookie-notice"><strong>Cookie Notice</strong></a></li>
+  </ul>
+</nav>
+          </div>
+        </div>
+      </div>
+    
+
+    <script>
+      
+      const io_options = {
+        rootMargin: '0px 0px -80% 0px',
+        threshold: [0.1, 0.5]
+      }
+      
+      
+      const observer = new IntersectionObserver(entries => {
+        
+        const intersectingEntries = entries.filter(entry => entry.isIntersecting);
+        
+        if (intersectingEntries.length > 0) {
+          
+          const entry = intersectingEntries[0];
+          const id = entry.target.getAttribute('id');
+          
+          
+          if (id) {
+            
+            document.querySelectorAll(`nav li`).forEach(li => {
+              li.classList.remove('active');
+            });
+            
+            
+            const activeLink = document.querySelector(`nav li a[href="#${id}"]`);
+            if (activeLink) {
+              activeLink.parentElement.classList.add('active');
+            }
+          }
+        }
+      }, io_options);
+      
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('main h2').forEach((section) => {
+          observer.observe(section);
+        });
+        
+        
+        const tocLinks = document.querySelectorAll('.toc-header + div a');
+        tocLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            
+            
+          });
+        });
+        
+        
+        if (window.location.hash) {
+          const hash = window.location.hash;
+          const activeLink = document.querySelector(`nav li a[href="${hash}"]`);
+          if (activeLink) {
+            document.querySelectorAll('nav li').forEach(li => {
+              li.classList.remove('active');
+            });
+            activeLink.parentElement.classList.add('active');
+          }
+        }
+      });
+    </script>
+
+            </div>
+          </div>
+          <div class="flex-grow"></div>
+        </div>
+      </main>
     <template x-if="isVisible === false">
       <div>
-        <link rel="canonical" href='/en/legal/'>
+        <link rel="canonical" href="/en/legal/">
 
         <div class="mo__center_content align-center">
           <h3>…</h3>
           <p>You’re not in a country this is intended for. You will be redirected shortly.</p>
-          <a href='/en/legal/'>Click here if you are not redirected.</a>
+          <a href="/en/legal/">Click here if you are not redirected.</a>
         </div>
       
         <script>
@@ -785,7 +1197,7 @@
             <div class="md:col-start-2">
                 <a href="https://twitch.tv" class="flex gap-1 pb-2 text-xs">
                     Twitch
-                    <img src="/images/icons/arrow.svg" class="rotate-[225deg] mt-[-5px]" alt="" />
+                    <img src="/images/icons/arrow.svg" class="rotate-[225deg] mt-[-5px]" alt="">
                 </a>
                 <div class="columns-2">
                     
@@ -832,5 +1244,6 @@
 </footer>
   
     <div class="hidden">Page(/legal/cookie-notice)</div>
-  </body>
-</html>
+  
+
+</body></html>
