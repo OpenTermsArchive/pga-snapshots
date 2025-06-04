@@ -95,7 +95,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 
     <link href="/pagefind/pagefind-modular-ui.css" rel="stylesheet">
-    <script src="/pagefind/pagefind-modular-ui.js"></script>
+    <script src="/pagefind/pagefind-modular-ui.js" defer=""></script>
 
     <script async="" src="https://analytics.m7g.twitch.tv/270fb0ae91e9890ee407/"></script>
   </head>
@@ -531,79 +531,124 @@
             </button>
         </div>
         <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const instance = new PagefindModularUI.Instance();
-        window.instance = instance;
-        let resultContainer = document.getElementById("results")
+    
+    function initializeSearch() {
+       
+        try {
+            if (typeof PagefindModularUI !== 'undefined') {
+                window.instance = new PagefindModularUI.Instance();
+                let resultContainer = document.getElementById("results");
 
-        instance.add(new PagefindModularUI.Input({
-            containerElement: "#search",
-            debounceTimeoutMs: 500
-        }));
-        instance.on("results", async (results) => {
-            let resultsCount = results.results.length
-            resultContainer.innerHTML = "";
-            let cutDownResults = results.results.slice(0,5)
-            let innerContainer = document.createElement("div")
-            for(const result of cutDownResults){
-                let data = await result.data();
-                let content_array = data.excerpt.split(" ")
-                let idx = 0;
-                for(let i=0;i<content_array.length;i++)
-                {
-                    if(content_array[i].indexOf("<mark>") != -1)
-                    {
-                        idx = i;
-                        break;
+                window.instance.add(new PagefindModularUI.Input({
+                    containerElement: "#search",
+                    debounceTimeoutMs: 500
+                }));
+
+                window.instance.on("results", async (results) => {
+                    let resultsCount = results.results.length;
+                    resultContainer.innerHTML = "";
+                    let cutDownResults = results.results.slice(0, 5);
+                    let innerContainer = document.createElement("div");
+
+                    for (const result of cutDownResults) {
+                        let data = await result.data();
+                        let content_array = data.excerpt.split(" ");
+                        let idx = 0;
+                        for (let i = 0; i < content_array.length; i++) {
+                            if (content_array[i].indexOf("<mark>") != -1) {
+                                idx = i;
+                                break;
+                            }
+                        }
+                        idx = idx == 0 ? idx : idx - 1;
+                        content_array = content_array.slice(idx, -1);
+                        let excerpt_text = content_array.join(" ");
+
+                        let resultDiv = document.createElement("a");
+                        resultDiv.href = data.url;
+                        let title = document.createElement("div");
+                        title.classList.add("underline");
+                        title.innerText = data.meta.title;
+                        resultDiv.append(title);
+                        let excerpt = document.createElement("div");
+                        excerpt.classList.add("overflow-hidden", "text-ellipsis", "whitespace-nowrap");
+                        excerpt.innerHTML = excerpt_text;
+                        resultDiv.append(excerpt);
+                        resultDiv.classList.add("pagefind-result");
+                        innerContainer.append(resultDiv);
                     }
-                }
-                idx = idx == 0 ? idx : idx - 1;
-                content_array = content_array.slice(idx, -1)
-                let excerpt_text = content_array.join(" ")
-                let resultDiv = document.createElement("a")
-                resultDiv.href = data.url
-                let title = document.createElement("div")
-                title.classList.add("underline")
-                title.innerText = data.meta.title
-                resultDiv.append(title)
-                let excerpt = document.createElement("div")
-                excerpt.classList.add("overflow-hidden","text-ellipsis","whitespace-nowrap")
-                excerpt.innerHTML = excerpt_text
-                resultDiv.append(excerpt)
-                resultDiv.classList.add("pagefind-result")
-                innerContainer.append(resultDiv)
-            }
-            innerContainer.classList.add("p-6")
-            resultContainer.append(innerContainer)
 
-            let bottom = document.createElement("div")
-            bottom.classList.add("bg-brand-ice","p-5","flex","items-center","justify-between")
-            let text = document.createElement("a")
-            text.classList.add("underline")
-            text.innerHTML = `See all ${resultsCount} results`
-            text.href = "\/en/legal/search?term=" + instance.searchTerm
-            let logo = document.createElement("img")
-            logo.src = "/images/icons/pagefind-logo.svg"
-            bottom.append(text, logo)
+                    innerContainer.classList.add("p-6");
+                    resultContainer.append(innerContainer);
 
-            resultContainer.append(bottom)
-            resultContainer.classList.remove("hidden")
-        });
-        const input = document.querySelector(".pagefind-modular-input");
-        input.placeholder = "Search legal docs";
-        document.addEventListener("click", e => {
-            if(e.target.matches("input.pagefind-modular-input") || e.target.matches("#results"))
-            {    
-                if(e.target.value){
-                    instance.triggerSearch(e.target.value);
+                    let bottom = document.createElement("div");
+                    bottom.classList.add("bg-brand-ice", "p-5", "flex", "items-center", "justify-between");
+                    let text = document.createElement("a");
+                    text.classList.add("underline");
+                    text.innerHTML = `See all ${resultsCount} results`;
+                    text.href = "\/en/legal/search?term=" + window.instance.searchTerm;
+                    bottom.append(text);
+
+                    resultContainer.append(bottom);
                     resultContainer.classList.remove("hidden");
-                }
+                });
+
+                
+                setTimeout(() => {
+                    const input = document.querySelector(".pagefind-modular-input");
+                    if (input) {
+                        input.placeholder = "Search legal docs";
+                    }
+                }, 100);
+
+                document.addEventListener("click", e => {
+                    if (e.target.matches("input.pagefind-modular-input") || e.target.matches("#results")) {
+                        if (e.target.value) {
+                            window.instance.triggerSearch(e.target.value);
+                            resultContainer.classList.remove("hidden");
+                        }
+                    } else {
+                        resultContainer.classList.add("hidden");
+                    }
+                });
+
+                return true;
             }
-            else
-                resultContainer.classList.add("hidden");
-        })        
-    });
+            return false;
+        } catch (error) {
+            console.error("Error initializing search:", error);
+            return false;
+        }
+    }
+
+    
+    function tryInitializeSearch() {
+        
+        if (initializeSearch()) return;
+
+        
+        let attempts = 0;
+        const maxAttempts = 20;
+        const interval = setInterval(function () {
+            attempts++;
+            attempts++;
+
+            if (initializeSearch() || attempts >= maxAttempts) {
+                clearInterval(interval);
+            }
+        }, 250);
+    }
+
+    
+    tryInitializeSearch();
+
+    
+    document.addEventListener('DOMContentLoaded', tryInitializeSearch);
+
+    
+    window.addEventListener('load', tryInitializeSearch);
 </script>
+
 
 <div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"></div>
 <div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0"></div>
@@ -4080,81 +4125,126 @@ This section explains the required process for requesting information or documen
             </button>
         </div>
         <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const instance = new PagefindModularUI.Instance();
-        window.instance = instance;
-        let resultContainer = document.getElementById("results")
+    
+    function initializeSearch() {
+       
+        try {
+            if (typeof PagefindModularUI !== 'undefined') {
+                window.instance = new PagefindModularUI.Instance();
+                let resultContainer = document.getElementById("results");
 
-        instance.add(new PagefindModularUI.Input({
-            containerElement: "#search",
-            debounceTimeoutMs: 500
-        }));
-        instance.on("results", async (results) => {
-            let resultsCount = results.results.length
-            resultContainer.innerHTML = "";
-            let cutDownResults = results.results.slice(0,5)
-            let innerContainer = document.createElement("div")
-            for(const result of cutDownResults){
-                let data = await result.data();
-                let content_array = data.excerpt.split(" ")
-                let idx = 0;
-                for(let i=0;i<content_array.length;i++)
-                {
-                    if(content_array[i].indexOf("<mark>") != -1)
-                    {
-                        idx = i;
-                        break;
+                window.instance.add(new PagefindModularUI.Input({
+                    containerElement: "#search",
+                    debounceTimeoutMs: 500
+                }));
+
+                window.instance.on("results", async (results) => {
+                    let resultsCount = results.results.length;
+                    resultContainer.innerHTML = "";
+                    let cutDownResults = results.results.slice(0, 5);
+                    let innerContainer = document.createElement("div");
+
+                    for (const result of cutDownResults) {
+                        let data = await result.data();
+                        let content_array = data.excerpt.split(" ");
+                        let idx = 0;
+                        for (let i = 0; i < content_array.length; i++) {
+                            if (content_array[i].indexOf("<mark>") != -1) {
+                                idx = i;
+                                break;
+                            }
+                        }
+                        idx = idx == 0 ? idx : idx - 1;
+                        content_array = content_array.slice(idx, -1);
+                        let excerpt_text = content_array.join(" ");
+
+                        let resultDiv = document.createElement("a");
+                        resultDiv.href = data.url;
+                        let title = document.createElement("div");
+                        title.classList.add("underline");
+                        title.innerText = data.meta.title;
+                        resultDiv.append(title);
+                        let excerpt = document.createElement("div");
+                        excerpt.classList.add("overflow-hidden", "text-ellipsis", "whitespace-nowrap");
+                        excerpt.innerHTML = excerpt_text;
+                        resultDiv.append(excerpt);
+                        resultDiv.classList.add("pagefind-result");
+                        innerContainer.append(resultDiv);
                     }
-                }
-                idx = idx == 0 ? idx : idx - 1;
-                content_array = content_array.slice(idx, -1)
-                let excerpt_text = content_array.join(" ")
-                let resultDiv = document.createElement("a")
-                resultDiv.href = data.url
-                let title = document.createElement("div")
-                title.classList.add("underline")
-                title.innerText = data.meta.title
-                resultDiv.append(title)
-                let excerpt = document.createElement("div")
-                excerpt.classList.add("overflow-hidden","text-ellipsis","whitespace-nowrap")
-                excerpt.innerHTML = excerpt_text
-                resultDiv.append(excerpt)
-                resultDiv.classList.add("pagefind-result")
-                innerContainer.append(resultDiv)
-            }
-            innerContainer.classList.add("p-6")
-            resultContainer.append(innerContainer)
 
-            let bottom = document.createElement("div")
-            bottom.classList.add("bg-brand-ice","p-5","flex","items-center","justify-between")
-            let text = document.createElement("a")
-            text.classList.add("underline")
-            text.innerHTML = `See all ${resultsCount} results`
-            text.href = "\/en/legal/search?term=" + instance.searchTerm
-            let logo = document.createElement("img")
-            logo.src = "/images/icons/pagefind-logo.svg"
-            bottom.append(text, logo)
+                    innerContainer.classList.add("p-6");
+                    resultContainer.append(innerContainer);
 
-            resultContainer.append(bottom)
-            resultContainer.classList.remove("hidden")
-        });
-        const input = document.querySelector(".pagefind-modular-input");
-        input.placeholder = "Search legal docs";
-        document.addEventListener("click", e => {
-            if(e.target.matches("input.pagefind-modular-input") || e.target.matches("#results"))
-            {    
-                if(e.target.value){
-                    instance.triggerSearch(e.target.value);
+                    let bottom = document.createElement("div");
+                    bottom.classList.add("bg-brand-ice", "p-5", "flex", "items-center", "justify-between");
+                    let text = document.createElement("a");
+                    text.classList.add("underline");
+                    text.innerHTML = `See all ${resultsCount} results`;
+                    text.href = "\/en/legal/search?term=" + window.instance.searchTerm;
+                    bottom.append(text);
+
+                    resultContainer.append(bottom);
                     resultContainer.classList.remove("hidden");
-                }
+                });
+
+                
+                setTimeout(() => {
+                    const input = document.querySelector(".pagefind-modular-input");
+                    if (input) {
+                        input.placeholder = "Search legal docs";
+                    }
+                }, 100);
+
+                document.addEventListener("click", e => {
+                    if (e.target.matches("input.pagefind-modular-input") || e.target.matches("#results")) {
+                        if (e.target.value) {
+                            window.instance.triggerSearch(e.target.value);
+                            resultContainer.classList.remove("hidden");
+                        }
+                    } else {
+                        resultContainer.classList.add("hidden");
+                    }
+                });
+
+                return true;
             }
-            else
-                resultContainer.classList.add("hidden");
-        })        
-    });
+            return false;
+        } catch (error) {
+            console.error("Error initializing search:", error);
+            return false;
+        }
+    }
+
+    
+    function tryInitializeSearch() {
+        
+        if (initializeSearch()) return;
+
+        
+        let attempts = 0;
+        const maxAttempts = 20;
+        const interval = setInterval(function () {
+            attempts++;
+            attempts++;
+
+            if (initializeSearch() || attempts >= maxAttempts) {
+                clearInterval(interval);
+            }
+        }, 250);
+    }
+
+    
+    tryInitializeSearch();
+
+    
+    document.addEventListener('DOMContentLoaded', tryInitializeSearch);
+
+    
+    window.addEventListener('load', tryInitializeSearch);
 </script>
 
-<div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"></div>
+
+<div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"><form class="pagefind-modular-input-wrapper" role="search" aria-label="Search this site" action="javascript:void(0);"><label for="pfmod-input-0" data-pfmod-sr-hidden="true">Search this site</label><input id="pfmod-input-0" class="pagefind-modular-input" autocapitalize="none" enterkeyhint="search" placeholder="Search legal docs"><button class="pagefind-modular-input-clear" data-pfmod-suppressed="true">Clear</button></form></div>
 <div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0"></div>
     </div>
     
@@ -7734,4 +7824,4 @@ This section explains the required process for requesting information or documen
     <div class="hidden">Page(/legal/terms-of-service)</div>
   
 
-<div class="pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links" style="width: 1px !important; height: 1px !important; position: absolute !important; left: -10000px !important; top: -1000px !important;" width="1" height="1"></div></body></html>
+</body></html>
