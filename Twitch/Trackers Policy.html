@@ -95,7 +95,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 
     <link href="/pagefind/pagefind-modular-ui.css" rel="stylesheet">
-    <script src="/pagefind/pagefind-modular-ui.js"></script>
+    <script src="/pagefind/pagefind-modular-ui.js" defer=""></script>
 
     <script async="" src="https://analytics.m7g.twitch.tv/270fb0ae91e9890ee407/"></script>
   </head>
@@ -284,79 +284,124 @@
             </button>
         </div>
         <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const instance = new PagefindModularUI.Instance();
-        window.instance = instance;
-        let resultContainer = document.getElementById("results")
+    
+    function initializeSearch() {
+       
+        try {
+            if (typeof PagefindModularUI !== 'undefined') {
+                window.instance = new PagefindModularUI.Instance();
+                let resultContainer = document.getElementById("results");
 
-        instance.add(new PagefindModularUI.Input({
-            containerElement: "#search",
-            debounceTimeoutMs: 500
-        }));
-        instance.on("results", async (results) => {
-            let resultsCount = results.results.length
-            resultContainer.innerHTML = "";
-            let cutDownResults = results.results.slice(0,5)
-            let innerContainer = document.createElement("div")
-            for(const result of cutDownResults){
-                let data = await result.data();
-                let content_array = data.excerpt.split(" ")
-                let idx = 0;
-                for(let i=0;i<content_array.length;i++)
-                {
-                    if(content_array[i].indexOf("<mark>") != -1)
-                    {
-                        idx = i;
-                        break;
+                window.instance.add(new PagefindModularUI.Input({
+                    containerElement: "#search",
+                    debounceTimeoutMs: 500
+                }));
+
+                window.instance.on("results", async (results) => {
+                    let resultsCount = results.results.length;
+                    resultContainer.innerHTML = "";
+                    let cutDownResults = results.results.slice(0, 5);
+                    let innerContainer = document.createElement("div");
+
+                    for (const result of cutDownResults) {
+                        let data = await result.data();
+                        let content_array = data.excerpt.split(" ");
+                        let idx = 0;
+                        for (let i = 0; i < content_array.length; i++) {
+                            if (content_array[i].indexOf("<mark>") != -1) {
+                                idx = i;
+                                break;
+                            }
+                        }
+                        idx = idx == 0 ? idx : idx - 1;
+                        content_array = content_array.slice(idx, -1);
+                        let excerpt_text = content_array.join(" ");
+
+                        let resultDiv = document.createElement("a");
+                        resultDiv.href = data.url;
+                        let title = document.createElement("div");
+                        title.classList.add("underline");
+                        title.innerText = data.meta.title;
+                        resultDiv.append(title);
+                        let excerpt = document.createElement("div");
+                        excerpt.classList.add("overflow-hidden", "text-ellipsis", "whitespace-nowrap");
+                        excerpt.innerHTML = excerpt_text;
+                        resultDiv.append(excerpt);
+                        resultDiv.classList.add("pagefind-result");
+                        innerContainer.append(resultDiv);
                     }
-                }
-                idx = idx == 0 ? idx : idx - 1;
-                content_array = content_array.slice(idx, -1)
-                let excerpt_text = content_array.join(" ")
-                let resultDiv = document.createElement("a")
-                resultDiv.href = data.url
-                let title = document.createElement("div")
-                title.classList.add("underline")
-                title.innerText = data.meta.title
-                resultDiv.append(title)
-                let excerpt = document.createElement("div")
-                excerpt.classList.add("overflow-hidden","text-ellipsis","whitespace-nowrap")
-                excerpt.innerHTML = excerpt_text
-                resultDiv.append(excerpt)
-                resultDiv.classList.add("pagefind-result")
-                innerContainer.append(resultDiv)
-            }
-            innerContainer.classList.add("p-6")
-            resultContainer.append(innerContainer)
 
-            let bottom = document.createElement("div")
-            bottom.classList.add("bg-brand-ice","p-5","flex","items-center","justify-between")
-            let text = document.createElement("a")
-            text.classList.add("underline")
-            text.innerHTML = `See all ${resultsCount} results`
-            text.href = "\/en/legal/search?term=" + instance.searchTerm
-            let logo = document.createElement("img")
-            logo.src = "/images/icons/pagefind-logo.svg"
-            bottom.append(text, logo)
+                    innerContainer.classList.add("p-6");
+                    resultContainer.append(innerContainer);
 
-            resultContainer.append(bottom)
-            resultContainer.classList.remove("hidden")
-        });
-        const input = document.querySelector(".pagefind-modular-input");
-        input.placeholder = "Search legal docs";
-        document.addEventListener("click", e => {
-            if(e.target.matches("input.pagefind-modular-input") || e.target.matches("#results"))
-            {    
-                if(e.target.value){
-                    instance.triggerSearch(e.target.value);
+                    let bottom = document.createElement("div");
+                    bottom.classList.add("bg-brand-ice", "p-5", "flex", "items-center", "justify-between");
+                    let text = document.createElement("a");
+                    text.classList.add("underline");
+                    text.innerHTML = `See all ${resultsCount} results`;
+                    text.href = "\/en/legal/search?term=" + window.instance.searchTerm;
+                    bottom.append(text);
+
+                    resultContainer.append(bottom);
                     resultContainer.classList.remove("hidden");
-                }
+                });
+
+                
+                setTimeout(() => {
+                    const input = document.querySelector(".pagefind-modular-input");
+                    if (input) {
+                        input.placeholder = "Search legal docs";
+                    }
+                }, 100);
+
+                document.addEventListener("click", e => {
+                    if (e.target.matches("input.pagefind-modular-input") || e.target.matches("#results")) {
+                        if (e.target.value) {
+                            window.instance.triggerSearch(e.target.value);
+                            resultContainer.classList.remove("hidden");
+                        }
+                    } else {
+                        resultContainer.classList.add("hidden");
+                    }
+                });
+
+                return true;
             }
-            else
-                resultContainer.classList.add("hidden");
-        })        
-    });
+            return false;
+        } catch (error) {
+            console.error("Error initializing search:", error);
+            return false;
+        }
+    }
+
+    
+    function tryInitializeSearch() {
+        
+        if (initializeSearch()) return;
+
+        
+        let attempts = 0;
+        const maxAttempts = 20;
+        const interval = setInterval(function () {
+            attempts++;
+            attempts++;
+
+            if (initializeSearch() || attempts >= maxAttempts) {
+                clearInterval(interval);
+            }
+        }, 250);
+    }
+
+    
+    tryInitializeSearch();
+
+    
+    document.addEventListener('DOMContentLoaded', tryInitializeSearch);
+
+    
+    window.addEventListener('load', tryInitializeSearch);
 </script>
+
 
 <div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"></div>
 <div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0"></div>
@@ -622,7 +667,7 @@
 <p><em>Analytics Cookies:</em> Third parties may use cookies to analyze user activity. For example, third party developers of Twitch Extensions may use Google Analytics to understand how users use their Extensions.</p>
 <table><tbody><tr><td colspan="2"><p><strong><em>Analytics cookie examples</em></strong></p></td></tr><tr><td><p>Google Analytics e.g. _ga, _gid, _gat</p></td><td><p>Used by developers of extensions you may choose to install. Helps developers analyze usage to improve extensions.</p></td></tr></tbody></table>
 <p><em>Advertising or Marketing Cookies:</em> Twitch uses first and third party cookies to personalize, measure, and deliver advertising and marketing messages.</p>
-<table><tbody><tr><td colspan="2"><strong><em>Advertising &amp; Marketing cookie examples</em></strong></td></tr><tr><td><p>ad-id, ad-privacy (Amazon)</p></td><td><p>Informs advertising activity, the delivery of ads on Twitch (including interest-based ads), through Amazon advertising systems and other partners.</p></td></tr><tr><td><p>_s; branch_session (Branch)<br>&nbsp;</p><p>kxsegs, kxuser,</p><p>kxtwitch_* (Salesforce DMP)</p></td><td>Helps Twitch (1) acquire new users by delivering targeted Ads to users off Twitch properties (2) Measure marketing campaign ROI to determine the sources of new Twitch users.&nbsp;</td></tr><tr><td><p>uid, uidr (comScore)</p></td><td><p>Ads measurement and analytics partner.</p></td></tr></tbody></table>
+<table><tbody><tr><td colspan="2"><strong><em>Advertising &amp; Marketing cookie examples</em></strong></td></tr><tr><td><p>ad-id, ad-privacy (Amazon)</p></td><td><p>Informs advertising activity, the delivery of ads on Twitch (including interest-based ads), through Amazon advertising systems and other partners.</p></td></tr><tr><td><p>_s; branch_session (Branch)<br> </p><p>kxsegs, kxuser,</p><p>kxtwitch_* (Salesforce DMP)</p></td><td>Helps Twitch (1) acquire new users by delivering targeted Ads to users off Twitch properties (2) Measure marketing campaign ROI to determine the sources of new Twitch users. </td></tr><tr><td><p>uid, uidr (comScore)</p></td><td><p>Ads measurement and analytics partner.</p></td></tr></tbody></table>
 <p><strong>How does Twitch use third party cookies?</strong></p>
 <p>Third parties may use cookies in the process of delivering and measuring content, including ads, relevant to your interests on Twitch and third-party sites.</p>
 <p>Third parties may also use cookies to assist us in acquiring new users and measuring the effectiveness of our marketing campaigns.</p>
@@ -741,81 +786,126 @@
             </button>
         </div>
         <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const instance = new PagefindModularUI.Instance();
-        window.instance = instance;
-        let resultContainer = document.getElementById("results")
+    
+    function initializeSearch() {
+       
+        try {
+            if (typeof PagefindModularUI !== 'undefined') {
+                window.instance = new PagefindModularUI.Instance();
+                let resultContainer = document.getElementById("results");
 
-        instance.add(new PagefindModularUI.Input({
-            containerElement: "#search",
-            debounceTimeoutMs: 500
-        }));
-        instance.on("results", async (results) => {
-            let resultsCount = results.results.length
-            resultContainer.innerHTML = "";
-            let cutDownResults = results.results.slice(0,5)
-            let innerContainer = document.createElement("div")
-            for(const result of cutDownResults){
-                let data = await result.data();
-                let content_array = data.excerpt.split(" ")
-                let idx = 0;
-                for(let i=0;i<content_array.length;i++)
-                {
-                    if(content_array[i].indexOf("<mark>") != -1)
-                    {
-                        idx = i;
-                        break;
+                window.instance.add(new PagefindModularUI.Input({
+                    containerElement: "#search",
+                    debounceTimeoutMs: 500
+                }));
+
+                window.instance.on("results", async (results) => {
+                    let resultsCount = results.results.length;
+                    resultContainer.innerHTML = "";
+                    let cutDownResults = results.results.slice(0, 5);
+                    let innerContainer = document.createElement("div");
+
+                    for (const result of cutDownResults) {
+                        let data = await result.data();
+                        let content_array = data.excerpt.split(" ");
+                        let idx = 0;
+                        for (let i = 0; i < content_array.length; i++) {
+                            if (content_array[i].indexOf("<mark>") != -1) {
+                                idx = i;
+                                break;
+                            }
+                        }
+                        idx = idx == 0 ? idx : idx - 1;
+                        content_array = content_array.slice(idx, -1);
+                        let excerpt_text = content_array.join(" ");
+
+                        let resultDiv = document.createElement("a");
+                        resultDiv.href = data.url;
+                        let title = document.createElement("div");
+                        title.classList.add("underline");
+                        title.innerText = data.meta.title;
+                        resultDiv.append(title);
+                        let excerpt = document.createElement("div");
+                        excerpt.classList.add("overflow-hidden", "text-ellipsis", "whitespace-nowrap");
+                        excerpt.innerHTML = excerpt_text;
+                        resultDiv.append(excerpt);
+                        resultDiv.classList.add("pagefind-result");
+                        innerContainer.append(resultDiv);
                     }
-                }
-                idx = idx == 0 ? idx : idx - 1;
-                content_array = content_array.slice(idx, -1)
-                let excerpt_text = content_array.join(" ")
-                let resultDiv = document.createElement("a")
-                resultDiv.href = data.url
-                let title = document.createElement("div")
-                title.classList.add("underline")
-                title.innerText = data.meta.title
-                resultDiv.append(title)
-                let excerpt = document.createElement("div")
-                excerpt.classList.add("overflow-hidden","text-ellipsis","whitespace-nowrap")
-                excerpt.innerHTML = excerpt_text
-                resultDiv.append(excerpt)
-                resultDiv.classList.add("pagefind-result")
-                innerContainer.append(resultDiv)
-            }
-            innerContainer.classList.add("p-6")
-            resultContainer.append(innerContainer)
 
-            let bottom = document.createElement("div")
-            bottom.classList.add("bg-brand-ice","p-5","flex","items-center","justify-between")
-            let text = document.createElement("a")
-            text.classList.add("underline")
-            text.innerHTML = `See all ${resultsCount} results`
-            text.href = "\/en/legal/search?term=" + instance.searchTerm
-            let logo = document.createElement("img")
-            logo.src = "/images/icons/pagefind-logo.svg"
-            bottom.append(text, logo)
+                    innerContainer.classList.add("p-6");
+                    resultContainer.append(innerContainer);
 
-            resultContainer.append(bottom)
-            resultContainer.classList.remove("hidden")
-        });
-        const input = document.querySelector(".pagefind-modular-input");
-        input.placeholder = "Search legal docs";
-        document.addEventListener("click", e => {
-            if(e.target.matches("input.pagefind-modular-input") || e.target.matches("#results"))
-            {    
-                if(e.target.value){
-                    instance.triggerSearch(e.target.value);
+                    let bottom = document.createElement("div");
+                    bottom.classList.add("bg-brand-ice", "p-5", "flex", "items-center", "justify-between");
+                    let text = document.createElement("a");
+                    text.classList.add("underline");
+                    text.innerHTML = `See all ${resultsCount} results`;
+                    text.href = "\/en/legal/search?term=" + window.instance.searchTerm;
+                    bottom.append(text);
+
+                    resultContainer.append(bottom);
                     resultContainer.classList.remove("hidden");
-                }
+                });
+
+                
+                setTimeout(() => {
+                    const input = document.querySelector(".pagefind-modular-input");
+                    if (input) {
+                        input.placeholder = "Search legal docs";
+                    }
+                }, 100);
+
+                document.addEventListener("click", e => {
+                    if (e.target.matches("input.pagefind-modular-input") || e.target.matches("#results")) {
+                        if (e.target.value) {
+                            window.instance.triggerSearch(e.target.value);
+                            resultContainer.classList.remove("hidden");
+                        }
+                    } else {
+                        resultContainer.classList.add("hidden");
+                    }
+                });
+
+                return true;
             }
-            else
-                resultContainer.classList.add("hidden");
-        })        
-    });
+            return false;
+        } catch (error) {
+            console.error("Error initializing search:", error);
+            return false;
+        }
+    }
+
+    
+    function tryInitializeSearch() {
+        
+        if (initializeSearch()) return;
+
+        
+        let attempts = 0;
+        const maxAttempts = 20;
+        const interval = setInterval(function () {
+            attempts++;
+            attempts++;
+
+            if (initializeSearch() || attempts >= maxAttempts) {
+                clearInterval(interval);
+            }
+        }, 250);
+    }
+
+    
+    tryInitializeSearch();
+
+    
+    document.addEventListener('DOMContentLoaded', tryInitializeSearch);
+
+    
+    window.addEventListener('load', tryInitializeSearch);
 </script>
 
-<div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"></div>
+
+<div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"><form class="pagefind-modular-input-wrapper" role="search" aria-label="Search this site" action="javascript:void(0);"><label for="pfmod-input-0" data-pfmod-sr-hidden="true">Search this site</label><input id="pfmod-input-0" class="pagefind-modular-input" autocapitalize="none" enterkeyhint="search" placeholder="Search legal docs"><button class="pagefind-modular-input-clear" data-pfmod-suppressed="true">Clear</button></form></div>
 <div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0"></div>
     </div>
     
@@ -1079,7 +1169,7 @@
 <p><em>Analytics Cookies:</em> Third parties may use cookies to analyze user activity. For example, third party developers of Twitch Extensions may use Google Analytics to understand how users use their Extensions.</p>
 <table><tbody><tr><td colspan="2"><p><strong><em>Analytics cookie examples</em></strong></p></td></tr><tr><td><p>Google Analytics e.g. _ga, _gid, _gat</p></td><td><p>Used by developers of extensions you may choose to install. Helps developers analyze usage to improve extensions.</p></td></tr></tbody></table>
 <p><em>Advertising or Marketing Cookies:</em> Twitch uses first and third party cookies to personalize, measure, and deliver advertising and marketing messages.</p>
-<table><tbody><tr><td colspan="2"><strong><em>Advertising &amp; Marketing cookie examples</em></strong></td></tr><tr><td><p>ad-id, ad-privacy (Amazon)</p></td><td><p>Informs advertising activity, the delivery of ads on Twitch (including interest-based ads), through Amazon advertising systems and other partners.</p></td></tr><tr><td><p>_s; branch_session (Branch)<br>&nbsp;</p><p>kxsegs, kxuser,</p><p>kxtwitch_* (Salesforce DMP)</p></td><td>Helps Twitch (1) acquire new users by delivering targeted Ads to users off Twitch properties (2) Measure marketing campaign ROI to determine the sources of new Twitch users.&nbsp;</td></tr><tr><td><p>uid, uidr (comScore)</p></td><td><p>Ads measurement and analytics partner.</p></td></tr></tbody></table>
+<table><tbody><tr><td colspan="2"><strong><em>Advertising &amp; Marketing cookie examples</em></strong></td></tr><tr><td><p>ad-id, ad-privacy (Amazon)</p></td><td><p>Informs advertising activity, the delivery of ads on Twitch (including interest-based ads), through Amazon advertising systems and other partners.</p></td></tr><tr><td><p>_s; branch_session (Branch)<br> </p><p>kxsegs, kxuser,</p><p>kxtwitch_* (Salesforce DMP)</p></td><td>Helps Twitch (1) acquire new users by delivering targeted Ads to users off Twitch properties (2) Measure marketing campaign ROI to determine the sources of new Twitch users. </td></tr><tr><td><p>uid, uidr (comScore)</p></td><td><p>Ads measurement and analytics partner.</p></td></tr></tbody></table>
 <p><strong>How does Twitch use third party cookies?</strong></p>
 <p>Third parties may use cookies in the process of delivering and measuring content, including ads, relevant to your interests on Twitch and third-party sites.</p>
 <p>Third parties may also use cookies to assist us in acquiring new users and measuring the effectiveness of our marketing campaigns.</p>
