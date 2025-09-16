@@ -675,19 +675,20 @@
             }
           </style>
           
-          <div class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header" @click="mobileTOCOpen = !mobileTOCOpen">
-            ON THIS PAGE
-            <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'">
-              <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-          <div :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
-            <nav id="TableOfContents">
+<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
+  ON THIS PAGE
+  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
+    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+  <span class="sr-only" x-text="mobileTOCOpen ? 'Collapse table of contents' : 'Expand table of contents'"></span>
+</button>
+<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
+  <nav id="TableOfContents">
   <ul>
     <li><a href="#cookie-notice"><strong>Cookie Notice</strong></a></li>
   </ul>
 </nav>
-          </div>
+</div>
           
         </div>
       </div>
@@ -892,7 +893,7 @@
 </script>
 
 
-<div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"><form class="pagefind-modular-input-wrapper" role="search" aria-label="Search this site" action="javascript:void(0);"><label for="pfmod-input-0" data-pfmod-sr-hidden="true">Search this site</label><input id="pfmod-input-0" class="pagefind-modular-input" autocapitalize="none" enterkeyhint="search"><button class="pagefind-modular-input-clear" data-pfmod-suppressed="true">Clear</button></form></div>
+<div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"><form class="pagefind-modular-input-wrapper" role="search" aria-label="Search this site" action="javascript:void(0);"><label for="pfmod-input-0" data-pfmod-sr-hidden="true">Search this site</label><input id="pfmod-input-0" class="pagefind-modular-input" autocapitalize="none" enterkeyhint="search" placeholder="Search legal docs"><button class="pagefind-modular-input-clear" data-pfmod-suppressed="true">Clear</button></form></div>
 <div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0"></div>
     </div>
     
@@ -1159,19 +1160,20 @@
             }
           </style>
           
-          <div class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header" @click="mobileTOCOpen = !mobileTOCOpen">
-            ON THIS PAGE
-            <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden rotate-[270deg]" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'">
-              <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-          <div :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;" class="hidden xl:block">
-            <nav id="TableOfContents">
+<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
+  ON THIS PAGE
+  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden rotate-[270deg]" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
+    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+  <span class="sr-only" x-text="mobileTOCOpen ? 'Collapse table of contents' : 'Expand table of contents'">Expand table of contents</span>
+</button>
+<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;" class="hidden xl:block">
+  <nav id="TableOfContents">
   <ul>
     <li><a href="#cookie-notice"><strong>Cookie Notice</strong></a></li>
   </ul>
 </nav>
-          </div>
+</div>
           
         </div>
       </div>
@@ -1362,4 +1364,4 @@
     <div class="hidden">/home/ubuntu/actions-runner/_work/legal-hugo/legal-hugo/content/en/legal/cookie-notice.md</div>
   
 
-</body></html>
+<div class="pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links" style="width: 1px !important; height: 1px !important; position: absolute !important; left: -10000px !important; top: -1000px !important;" width="1" height="1"></div></body></html>
