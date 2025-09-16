@@ -778,14 +778,15 @@
             }
           </style>
           
-          <div class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header" @click="mobileTOCOpen = !mobileTOCOpen">
-            ON THIS PAGE
-            <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'">
-              <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-          <div :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
-            <nav id="TableOfContents">
+<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
+  ON THIS PAGE
+  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
+    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+  <span class="sr-only" x-text="mobileTOCOpen ? 'Collapse table of contents' : 'Expand table of contents'"></span>
+</button>
+<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
+  <nav id="TableOfContents">
   <ul>
     <li><a href="#table-of-contents">Table of Contents</a></li>
     <li><a href="#personal-information-twitch-collects-about-you">Personal Information Twitch Collects About You</a></li>
@@ -807,7 +808,7 @@
     <li><a href="#additional-information-for-certain-jurisdictions">Additional Information for Certain Jurisdictions</a></li>
   </ul>
 </nav>
-          </div>
+</div>
           
         </div>
       </div>
@@ -1358,14 +1359,15 @@
             }
           </style>
           
-          <div class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header" @click="mobileTOCOpen = !mobileTOCOpen">
-            ON THIS PAGE
-            <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden rotate-[270deg]" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'">
-              <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-          <div :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;" class="hidden xl:block">
-            <nav id="TableOfContents">
+<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
+  ON THIS PAGE
+  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden rotate-[270deg]" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
+    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+  <span class="sr-only" x-text="mobileTOCOpen ? 'Collapse table of contents' : 'Expand table of contents'">Expand table of contents</span>
+</button>
+<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;" class="hidden xl:block">
+  <nav id="TableOfContents">
   <ul>
     <li><a href="#table-of-contents">Table of Contents</a></li>
     <li><a href="#personal-information-twitch-collects-about-you">Personal Information Twitch Collects About You</a></li>
@@ -1387,7 +1389,7 @@
     <li><a href="#additional-information-for-certain-jurisdictions">Additional Information for Certain Jurisdictions</a></li>
   </ul>
 </nav>
-          </div>
+</div>
           
         </div>
       </div>
