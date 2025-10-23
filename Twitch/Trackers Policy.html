@@ -113,9 +113,9 @@
       
   
 
-  <body class="font-default" x-data="{ geo_targeting: &quot;&quot;, redirectUrl: $el.dataset.redirectUrl }" data-redirect-url="/en/legal/" x-init="init();$watch('isVisible', value => {
+  <body class="font-default" x-data="{ geo_targeting: &quot;&quot;, redirectUrl: $el.dataset.redirectUrl }" data-redirect-url="/en/legal/" x-init="init();$watch('isVisible', value =&gt; {
     if (value === false) { // Ensure it only redirects when explicitly false
-        setTimeout(() => {
+        setTimeout(() =&gt; {
             window.location.href = redirectUrl;
         }, 10000);
     }
@@ -127,8 +127,9 @@
   </a>
   <div class="max-w-[2000px] w-full px-5 lg:px-8 py-6 max-[479px]:flex-col flex-row flex gap-4 items-center col-start-2" x-data="{mobileSubNavOpen: false, mobileAccountNavOpen: false}">
     
-    <a href="/en/legal/" class="flex flex-col items-center mr-auto" aria-label="Twitch">
+    <a href="/en/legal/" class="flex flex-col items-center mr-auto" aria-label="Twitch Legal Home">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1139.43 379.04" height="32px">
+        <title>Twitch Legal Home</title>
         <g data-name="Layer 2">
           <g data-name="Layer 1">
             <path class="wordmark-logo__bg fill-purple" d="M1119.44 269.32h-80v-99.75h-20v99.75h-80V20h80v69.78h60l40 39.9zm-199.9-99.75h-80v20h80v79.8H799.6l-40-39.9v-99.79l40-39.9h119.94zm-179.91 0h-70v20h70v79.8H629.69l-40-39.9V20h80v69.78h70zM569.72 69.83h-80V20h80zm0 199.49h-80V89.78h80zm-100 0H229.89l-40-39.9V89.78h80v99.74h20V89.78h80v99.74h20V89.78h80zm-299.8-99.75H100v20h70v79.8H60l-40-39.9V20h80v69.78h70zm919.54-99.74h-50V0H929.75l-50.47 69.83h-89.67l-30 29.92V69.83h-70V0H469.77v69.83H160.42L110 0H0v239.4L139.93 379h139.93v-39.9l40 39.9h269.85v-39.9l40 39.9h129.91v-39.9l40 39.9h249.88l90-89.78V119.7z" fill="#9145ff"></path>
@@ -409,7 +410,8 @@
 
 
 <div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"></div>
-<div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0"></div>
+<div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0" role="dialog" aria-label="Search results"></div>
+
     </div>
     
     
@@ -894,7 +896,8 @@
 
 
 <div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"><form class="pagefind-modular-input-wrapper" role="search" aria-label="Search this site" action="javascript:void(0);"><label for="pfmod-input-0" data-pfmod-sr-hidden="true">Search this site</label><input id="pfmod-input-0" class="pagefind-modular-input" autocapitalize="none" enterkeyhint="search" placeholder="Search legal docs"><button class="pagefind-modular-input-clear" data-pfmod-suppressed="true">Clear</button></form></div>
-<div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0"></div>
+<div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0" role="dialog" aria-label="Search results"></div>
+
     </div>
     
     
@@ -1282,6 +1285,7 @@
         <div class="flex justify-center pb-6 md:justify-start lg:pb-0">
             <a href="https://www.twitch.tv/p/en/about" aria-label="About Twitch">
                 <svg width="48" height="53" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <title>About Twitch</title>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M27.4994 15.3919L22.5006 20.1262H17.4994L13.1233 24.2708V20.1262H7.49939V2.36833H27.4994V15.3919ZM6.24909 0L0 5.91853V27.2289H7.49939V33.1475L13.7485 27.2289H18.7497L30 16.5737V0H6.24909ZM23.7509 6.69873H21.2502V13.8008H23.7509V6.69873ZM14.3766 6.6709H16.8773V13.7739H14.3766V6.6709Z" fill="#FFFFFF"></path>
                 </svg>
             </a>
