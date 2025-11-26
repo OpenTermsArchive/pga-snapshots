@@ -124,7 +124,7 @@
   });">
     <header>
       <nav class="flex justify-center bg-brand-purple">
-  <a id="skip-to-content" href="#main-content" tabindex="0" class="absolute top-0 transition-all focus:translate-y-0 -translate-y-full text-white text-base px-3 flex items-center gap-[10px] border-2 border-white rounded-lg p-[14px_12px] leading-[20px]">
+  <a id="skip-to-content" href="#table-of-contents" tabindex="0" class="absolute top-0 transition-all focus:translate-y-0 -translate-y-full text-white text-base px-3 flex items-center gap-[10px] border-2 border-white rounded-lg p-[14px_12px] leading-[20px]">
     Skip to content
   </a>
   <div class="max-w-[2000px] w-full px-5 lg:px-8 py-6 max-[479px]:flex-col flex-row flex gap-4 items-center col-start-2" x-data="{mobileSubNavOpen: false, mobileAccountNavOpen: false}">
@@ -146,14 +146,14 @@
       
 
   <div class="relative max-[479px]:w-full" x-data="{languageModalOpen: false}">
-    <button class="max-[479px]:w-full max-[479px]:justify-center text-white text-base px-3 flex items-center gap-[10px] border-2 border-white rounded-lg p-[14px_12px] leading-[20px] " @click="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" :aria-expanded="languageModalOpen" @keydown.down="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" @keydown.up="languageModalOpen = true;$focus.within($refs.language_dropdown).last()" x-ref="language_button" aria-expanded="false">
+    <button class="max-[479px]:w-full max-[479px]:justify-center text-white text-base px-3 flex items-center gap-[10px] border-2 border-white rounded-lg p-[14px_12px] leading-[20px] " @click="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" :aria-expanded="languageModalOpen" aria-haspopup="true" aria-label="Languages" @keydown.down.prevent="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" @keydown.up.prevent="languageModalOpen = true;$focus.within($refs.language_dropdown).last()" @keydown.escape="languageModalOpen = false" x-ref="language_button" aria-expanded="false">
         <div>
           Languages
         </div>
         <img src="/images/icons/arrow.svg" alt="">
     </button>
 
-    <ul class="max-[479px]:w-full border-brand-purple border rounded-lg bg-white p-2 absolute z-[200] top-[calc(100%+7.5px)]" x-show="languageModalOpen" @click.outside="languageModalOpen = !languageModalOpen" x-ref="language_dropdown" @keydown.down="$focus.wrap().next()" @keydown.up="$focus.wrap().previous()" @keydown.prevent.tab="languageModalOpen = !languageModalOpen;$focus.within($refs.language_button)" x-trap.inert="languageModalOpen" style="display: none;">
+    <ul class="max-[479px]:w-full border-brand-purple border rounded-lg bg-white p-2 absolute z-[200] top-[calc(100%+7.5px)]" role="menu" x-show="languageModalOpen" @click.outside="languageModalOpen = false" @keydown.escape="languageModalOpen = false;$focus.within($refs.language_button)" @keydown.down.prevent="$focus.wrap().next()" @keydown.up.prevent="$focus.wrap().previous()" x-ref="language_dropdown" x-trap.inert="languageModalOpen" style="display: none;">
       
           
           
@@ -161,9 +161,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/ar-sa/legal/terms-of-service" lang="ar">العربية</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/ar-sa/legal/terms-of-service" lang="ar">العربية</a>
           </li>
           
       
@@ -173,9 +173,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/bg-bg/legal/terms-of-service" lang="bg">Български</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/bg-bg/legal/terms-of-service" lang="bg">Български</a>
           </li>
           
       
@@ -185,9 +185,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/cs-cz/legal/terms-of-service" lang="cs">Čeština</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/cs-cz/legal/terms-of-service" lang="cs">Čeština</a>
           </li>
           
       
@@ -197,9 +197,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/da-dk/legal/terms-of-service" lang="da">Dansk</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/da-dk/legal/terms-of-service" lang="da">Dansk</a>
           </li>
           
       
@@ -209,9 +209,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/de-de/legal/terms-of-service" lang="de">Deutsch</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/de-de/legal/terms-of-service" lang="de">Deutsch</a>
           </li>
           
       
@@ -221,9 +221,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/el-gr/legal/terms-of-service" lang="el">Ελληνικά</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/el-gr/legal/terms-of-service" lang="el">Ελληνικά</a>
           </li>
           
       
@@ -233,9 +233,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/en/legal/terms-of-service" lang="en">English</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/en/legal/terms-of-service" lang="en">English</a>
           </li>
           
       
@@ -245,9 +245,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/es-es/legal/terms-of-service" lang="es">Español</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/es-es/legal/terms-of-service" lang="es">Español</a>
           </li>
           
       
@@ -257,9 +257,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/es-mx/legal/terms-of-service" lang="es">Español - Latinoamérica</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/es-mx/legal/terms-of-service" lang="es">Español - Latinoamérica</a>
           </li>
           
       
@@ -269,9 +269,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/fi-fi/legal/terms-of-service" lang="fi">Suomi</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/fi-fi/legal/terms-of-service" lang="fi">Suomi</a>
           </li>
           
       
@@ -281,9 +281,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/fr-fr/legal/terms-of-service" lang="fr">Français</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/fr-fr/legal/terms-of-service" lang="fr">Français</a>
           </li>
           
       
@@ -293,9 +293,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/hu-hu/legal/terms-of-service" lang="hu">Magyar</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/hu-hu/legal/terms-of-service" lang="hu">Magyar</a>
           </li>
           
       
@@ -305,9 +305,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/it-it/legal/terms-of-service" lang="it">Italiano</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/it-it/legal/terms-of-service" lang="it">Italiano</a>
           </li>
           
       
@@ -317,9 +317,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/ja-jp/legal/terms-of-service" lang="ja">日本語</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/ja-jp/legal/terms-of-service" lang="ja">日本語</a>
           </li>
           
       
@@ -329,9 +329,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/ko-kr/legal/terms-of-service" lang="ko">한국어</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/ko-kr/legal/terms-of-service" lang="ko">한국어</a>
           </li>
           
       
@@ -341,9 +341,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/nl-nl/legal/terms-of-service" lang="nl">Nederlands</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/nl-nl/legal/terms-of-service" lang="nl">Nederlands</a>
           </li>
           
       
@@ -353,9 +353,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/no-no/legal/terms-of-service" lang="no">Norsk</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/no-no/legal/terms-of-service" lang="no">Norsk</a>
           </li>
           
       
@@ -365,9 +365,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/pl-pl/legal/terms-of-service" lang="pl">Polski</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/pl-pl/legal/terms-of-service" lang="pl">Polski</a>
           </li>
           
       
@@ -377,9 +377,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/pt-br/legal/terms-of-service" lang="pt">Português Brasileiro</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/pt-br/legal/terms-of-service" lang="pt">Português Brasileiro</a>
           </li>
           
       
@@ -389,9 +389,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/pt-pt/legal/terms-of-service" lang="pt">Português</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/pt-pt/legal/terms-of-service" lang="pt">Português</a>
           </li>
           
       
@@ -401,9 +401,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/ro-ro/legal/terms-of-service" lang="ro">Română</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/ro-ro/legal/terms-of-service" lang="ro">Română</a>
           </li>
           
       
@@ -413,9 +413,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/ru-ru/legal/terms-of-service" lang="ru">Русский</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/ru-ru/legal/terms-of-service" lang="ru">Русский</a>
           </li>
           
       
@@ -425,9 +425,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/sk-sk/legal/terms-of-service" lang="sk">Slovenčina</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/sk-sk/legal/terms-of-service" lang="sk">Slovenčina</a>
           </li>
           
       
@@ -437,9 +437,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/sv-se/legal/terms-of-service" lang="sv">Svenska</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/sv-se/legal/terms-of-service" lang="sv">Svenska</a>
           </li>
           
       
@@ -449,9 +449,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/th-th/legal/terms-of-service" lang="th">ภาษาไทย</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/th-th/legal/terms-of-service" lang="th">ภาษาไทย</a>
           </li>
           
       
@@ -461,9 +461,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/tr-tr/legal/terms-of-service" lang="tr">Türkçe</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/tr-tr/legal/terms-of-service" lang="tr">Türkçe</a>
           </li>
           
       
@@ -473,9 +473,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/vi-vn/legal/terms-of-service" lang="vi">Tiếng Việt</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/vi-vn/legal/terms-of-service" lang="vi">Tiếng Việt</a>
           </li>
           
       
@@ -485,9 +485,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/zh-cn/legal/terms-of-service" lang="zh">中文 简体</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/zh-cn/legal/terms-of-service" lang="zh">中文 简体</a>
           </li>
           
       
@@ -497,9 +497,9 @@
           
           
           
-          <li class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
+          <li role="none" class="flex hover:bg-brand-purple hover:text-white text-base text-brand-black">
             
-            <a class="p-2 w-full whitespace-nowrap" href="/zh-tw/legal/terms-of-service" lang="zh">中文 繁體</a>
+            <a role="menuitem" tabindex="0" class="p-2 w-full whitespace-nowrap" href="/zh-tw/legal/terms-of-service" lang="zh">中文 繁體</a>
           </li>
           
       
@@ -644,7 +644,6 @@
         const maxAttempts = 20;
         const interval = setInterval(function () {
             attempts++;
-            attempts++;
 
             if (initializeSearch() || attempts >= maxAttempts) {
                 clearInterval(interval);
@@ -664,7 +663,7 @@
 
 
 <div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"></div>
-<div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0" role="dialog" aria-label="Search results"></div>
+<div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" role="dialog" aria-label="Search results"></div>
 
     </div>
     
@@ -856,7 +855,7 @@
     
       
       
-      
+        
       <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
         
         
@@ -955,7 +954,9 @@ To help you understand the subject matters covered by our Terms of Service, we h
   </div>
 </div>
 
-<h2 id="1-introduction-your-agreement-to-these-terms-of-service">1. Introduction; Your Agreement to these Terms of Service</h2>
+<h2 id="1-introduction-your-agreement-to-these-terms-of-service" tabindex="-1">
+  1. Introduction; Your Agreement to these Terms of Service
+</h2>
 
 
 <style>
@@ -1137,7 +1138,9 @@ Your use of Twitch is also subject to (a) our Community Guidelines, which detail
 <p>When using the Twitch Services, you will be subject to Twitch’s <a href="https://legal.twitch.com/legal/community-guidelines/">Community Guidelines</a> and additional guidelines or rules that are posted on the Twitch Services, made available to you, or disclosed to you in connection with specific services and features you may be offered. Twitch may also offer certain paid services, which are subject to the <a href="https://legal.twitch.com/legal/terms-of-sale">Twitch Terms of Sale</a> as well as any additional terms or conditions that are disclosed to you in connection with such services. All such terms and guidelines (the “Guidelines”) are incorporated into these Terms of Service by reference.</p>
 <p>The Terms of Service apply whether you are a user that registers an account with the Twitch Services or an unregistered user. You agree that by clicking “Sign Up” or otherwise registering, downloading, accessing, or using the Twitch Services, you are entering into a legally binding agreement between you and Twitch regarding your use of the Twitch Services. You acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these Terms of Service, do not access or otherwise use any of the Twitch Services.</p>
 <p>When using Twitch or opening an account with Twitch on behalf of a company, entity, or organization (collectively, “Subscribing Organization”), you represent and warrant that you: (i) are an authorized representative of that Subscribing Organization with the authority to bind that organization to these Terms of Service and grant the licenses set forth herein; and (ii) agree to these Terms of Service on behalf of such Subscribing Organization.</p>
-<h2 id="2-use-of-twitch-by-minors-and-blocked-persons">2. Use of Twitch by Minors and Blocked Persons</h2>
+<h2 id="2-use-of-twitch-by-minors-and-blocked-persons" tabindex="-1">
+  2. Use of Twitch by Minors and Blocked Persons
+</h2>
 
 
 <style>
@@ -1259,7 +1262,9 @@ If you are between 13 and the age you legally become an adult where you live, yo
 <p>The Twitch Services are not available to persons under the age of 13. If you are between the ages of 13 and the age of legal majority in your jurisdiction of residence, you may only use the Twitch Services under the supervision of a parent or legal guardian who agrees to be bound by these Terms of Service.</p>
 <p>The Twitch Services are also not available to any users previously removed from the Twitch Services by Twitch or to any persons barred from receiving them under the laws of the United States (such as its export and re-export restrictions and regulations) or applicable laws in any other jurisdiction.</p>
 <p>BY DOWNLOADING, INSTALLING, OR OTHERWISE USING THE TWITCH SERVICES, YOU REPRESENT THAT YOU ARE AT LEAST 13 YEARS OF AGE, THAT YOUR PARENT OR LEGAL GUARDIAN AGREES TO BE BOUND BY THESE TERMS OF SERVICE IF YOU ARE BETWEEN 13 AND THE AGE OF LEGAL MAJORITY IN YOUR JURISDICTION OF RESIDENCE, AND THAT YOU HAVE NOT BEEN PREVIOUSLY REMOVED FROM AND ARE NOT PROHIBITED FROM RECEIVING THE TWITCH SERVICES.</p>
-<h2 id="3-privacy-notice">3. Privacy Notice</h2>
+<h2 id="3-privacy-notice" tabindex="-1">
+  3. Privacy Notice
+</h2>
 
 
 <style>
@@ -1320,8 +1325,12 @@ Our Privacy Notice covers how we collect, use, and share your personal informati
 </div>
 
 <p>Your privacy is important to Twitch. Please see our <a href="https://legal.twitch.com/legal/privacy-policy">Privacy Notice</a> for information relating to how we collect, use, and disclose your personal information, and our <a href="https://legal.twitch.com/legal/privacy-choices">Privacy Choices</a> on how you can manage your online privacy when you use the Twitch Services.</p>
-<h2 id="4-account">4. Account</h2>
-<h4 id="a-account-and-password"><strong>a. Account and Password</strong></h4>
+<h2 id="4-account" tabindex="-1">
+  4. Account
+</h2>
+<h4 id="a-account-and-password">
+  <strong>a. Account and Password</strong>
+</h4>
 
 
 <style>
@@ -1561,7 +1570,9 @@ You promise not to sell, rent, or transfer your account to anyone else.
 <p>In order to open an account, you will be asked to provide us with certain information such as an account name and password. Please make sure the information you provide to Twitch upon registration and at all other times is true, accurate, current, and complete to the best of your knowledge.</p>
 <p>You are solely responsible for maintaining the confidentiality of your account, your password and for restricting access to the device(s) on which you use your account. If you permit others to use your account credentials, you agree to these Terms of Service on behalf of all other persons who use the Services under your account or password, and you are responsible for all activities that occur under your account or password.</p>
 <p>Unless expressly permitted in writing by Twitch, you may not sell, rent, lease, transfer, share, or provide access to your account to anyone else, including without limitation, charging anyone for access to administrative rights on your account. Twitch reserves all available legal rights and remedies to prevent unauthorized use of the Twitch Services, including, but not limited to, technological barriers, IP mapping, and, in serious cases, directly contacting your Internet Service Provider (ISP) regarding such unauthorized use.</p>
-<h4 id="b-third-party-accounts"><strong>b. Third-Party Accounts</strong></h4>
+<h4 id="b-third-party-accounts">
+  <strong>b. Third-Party Accounts</strong>
+</h4>
 
 
 <style>
@@ -1622,7 +1633,9 @@ If you access Twitch through another service or link your Twitch account to your
 </div>
 
 <p>Twitch may permit you to register for and log on to the Twitch Services via certain third-party services. The third party’s collection, use, and disclosure of your information will be subject to that third-party service’s privacy notice. Further information about how Twitch collects, uses, and discloses your personal information when you link your Twitch account with your account on any third-party service can be found in our Privacy Notice.</p>
-<h2 id="5-use-of-devices-and-services">5. Use of Devices and Services</h2>
+<h2 id="5-use-of-devices-and-services" tabindex="-1">
+  5. Use of Devices and Services
+</h2>
 
 
 <style>
@@ -1683,7 +1696,9 @@ You are responsible for paying any fees or charges from other companies that you
 </div>
 
 <p>Access to the Twitch Services may require the use of your personal computer or mobile device, as well as communications with or use of space on such devices. You are responsible for any Internet connection or mobile fees and charges from third parties that you incur when accessing the Twitch Services.</p>
-<h2 id="6-modification-of-these-terms-of-service">6. Modification of these Terms of Service</h2>
+<h2 id="6-modification-of-these-terms-of-service" tabindex="-1">
+  6. Modification of these Terms of Service
+</h2>
 
 
 <style>
@@ -1745,7 +1760,9 @@ This section explains how we may make changes to this contract and how you agree
 
 <p>Twitch may amend any of the terms of these Terms of Service by posting the amended terms and updating the “Last modified” date above. Your continued use of the Twitch Services after the effective date of the revised Terms of Service constitutes your acceptance of the terms.</p>
 <p>For residents of the European Union or the European Economic Area, the United Kingdom, or Switzerland, who are acting as a consumer (i.e., for a purpose which can be regarded as being outside your trade, craft or profession) (“Consumer”) and have registered a Twitch account, Twitch will provide reasonable prior notice of amendments to these Terms of Service. To the extent permitted by applicable law, not canceling your agreement to use the Twitch Services under these Terms of Service before the effective date will be deemed your consent to the amended terms. Where required by applicable law, Twitch will ask for your consent to the amended terms.</p>
-<h2 id="7-license">7. License</h2>
+<h2 id="7-license" tabindex="-1">
+  7. License
+</h2>
 
 
 <style>
@@ -1925,7 +1942,9 @@ We are giving you limited permission to access and use Twitch for either persona
 
 <p>The Twitch Services are owned and operated by Twitch. Unless otherwise indicated, all content, information, and other materials on the Twitch Services (excluding User Content, set out in Section 8 below), including, without limitation, Twitch’s trademarks and logos, the visual interfaces, graphics, design, compilation, information, software, computer code (including source code or object code), services, text, pictures, information, data, sound files, other files, and the selection and arrangement thereof (collectively, the “Materials”) are protected by relevant intellectual property and proprietary rights and laws. All Materials are the property of Twitch or its subsidiaries or affiliated companies and/or third-party licensors. Unless otherwise expressly stated in writing by Twitch, by agreeing to these Terms of Service you are granted a limited, non-sublicensable, and non-transferable license (i.e., a personal and limited right) to access and use the Twitch Services for your personal use or internal business use only.</p>
 <p>Twitch reserves all rights not expressly granted in these Terms of Service. This license is subject to these Terms of Service and does not permit you to engage in any of the following: (a) resale or commercial use of the Twitch Services or the Materials; (b) distribution, public performance or public display of any Materials; (c) modifying or otherwise making any derivative uses of the Twitch Services or the Materials, or any portion of them; (d) use of any data mining, robots, or similar data gathering or extraction methods; (e) downloading (except page caching) of any portion of the Twitch Services, the Materials, or any information contained in them, except as expressly permitted on the Twitch Services; or (f) any use of the Twitch Services or the Materials except for their intended purposes. Any use of the Twitch Services or the Materials except as specifically authorized in these Terms of Service, without the prior written permission of Twitch, is strictly prohibited and may violate intellectual property rights or other laws. Unless explicitly stated in these Terms of Service, nothing in them shall be interpreted as conferring any license to intellectual property rights, whether by estoppel, implication, or other legal principles. Twitch can terminate this license as set out in Section 18.</p>
-<h2 id="8-user-content">8. User Content</h2>
+<h2 id="8-user-content" tabindex="-1">
+  8. User Content
+</h2>
 
 
 <style>
@@ -1986,7 +2005,9 @@ We refer to everything you create on Twitch or provide to us as “User Content�
 </div>
 
 <p>Twitch allows you to distribute streaming live and pre-recorded audio-visual works; to use services, such as chat, bulletin boards, forum postings, wiki contributions, and voice interactive services; and to participate in other activities in which you may create, post, transmit, perform, or store content, messages, text, sound, images, applications, code, or other data or materials on the Twitch Services (“User Content”).</p>
-<h4 id="a-license-to-twitch--other-twitch-users"><strong>a. License to Twitch &amp; Other Twitch Users</strong></h4>
+<h4 id="a-license-to-twitch--other-twitch-users">
+  <strong>a. License to Twitch &amp; Other Twitch Users</strong>
+</h4>
 
 
 <style>
@@ -2169,7 +2190,9 @@ If your User Content contains anyone else’s biographical information, then you
 <p>(iii) Should your User Content contain the name, identity, likeness, and voice (or other biographical information) of third parties, you represent and warrant that you have obtained the appropriate consents and/or licenses for your use of such elements and that Twitch, other users (as described in section (a)(ii) above), and their respective sub-licensees (as applicable) are allowed to use them to the extent indicated in these Terms of Service.</p>
 <p>(iv) With respect to User Content known as “add-ons”, “maps”, “mods”, or other types of projects submitted through CurseForge.com or similar sites (the “Submitted Projects”), the rights granted by you hereunder terminate once you remove or delete such Submitted Projects from the Twitch Services. You also acknowledge that Twitch may retain, but not display, distribute, or perform, server copies of Submitted Projects that have been removed or deleted.</p>
 <p>(v) With respect to streaming live and pre-recorded audio-visual works, the rights granted by you hereunder terminate once you delete such User Content from the Twitch Services, or generally by closing your account, except: (a) to the extent you shared it with others as part of the Twitch Services and others copied or stored portions of the User Content (e.g., made a Clip); (b) to the extent others accessed, used, and/or shared your User Content outside the Twitch Services pursuant to the license granted in Section 8(a) above, (c) to the extent Twitch used it for promotional purposes; (d) for the reasonable time it takes to remove from backup and other systems; or (e) to the extent Twitch is required by applicable law to retain it.</p>
-<h4 id="b-user-content-representations-and-warranties"><strong>b. User Content Representations and Warranties</strong></h4>
+<h4 id="b-user-content-representations-and-warranties">
+  <strong>b. User Content Representations and Warranties</strong>
+</h4>
 
 
 <style>
@@ -2230,7 +2253,9 @@ You are responsible for your User Content and the consequences of publishing it.
 </div>
 
 <p>You are solely responsible for your User Content and the consequences of posting or publishing it. You represent and warrant that: (1) you are the creator or own or control all rights in and to the User Content or otherwise have sufficient rights and authority to grant the rights granted herein; (2) your User Content does not and will not: (a) infringe, violate, or misappropriate any third-party right, including any copyright, trademark, patent, trade secret, moral right, privacy right, right of publicity, or any other intellectual property or proprietary right, or (b) defame any other person; (3) your User Content does not contain any viruses, adware, spyware, worms, or other harmful or malicious code; and (4) unless you have received prior written authorization, your User Content specifically does not contain any pre-release or non-public beta software or game content or any confidential information of Twitch or third parties. Twitch reserves all rights and remedies against any users who breach these representations and warranties.</p>
-<h4 id="c-content-is-uploaded-at-your-own-risk"><strong>c. Content is Uploaded at Your Own Risk</strong></h4>
+<h4 id="c-content-is-uploaded-at-your-own-risk">
+  <strong>c. Content is Uploaded at Your Own Risk</strong>
+</h4>
 
 
 <style>
@@ -2291,7 +2316,9 @@ This is our disclaimer of legal liability for the security measures of our Servi
 </div>
 
 <p>Twitch uses reasonable security measures in order to attempt to protect User Content against unauthorized copying and distribution. However, Twitch does not guarantee that any unauthorized copying, use, or distribution of User Content by third parties will not take place. To the furthest extent permitted by applicable law, you hereby agree that Twitch shall not be liable for any unauthorized copying, use, or distribution of User Content by third parties and release and forever waive any claims you may have against Twitch for any such unauthorized copying or usage of the User Content, under any theory. TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE SECURITY MEASURES TO PROTECT USER CONTENT USED BY TWITCH HEREIN ARE PROVIDED AND USED “AS-IS” AND WITH NO WARRANTIES, GUARANTEES, CONDITIONS, ASSURANCES, OR OTHER TERMS THAT SUCH SECURITY MEASURES WILL WITHSTAND ATTEMPTS TO EVADE SECURITY MECHANISMS OR THAT THERE WILL BE NO CRACKS, DISABLEMENTS, OR OTHER CIRCUMVENTION OF SUCH SECURITY MEASURES.</p>
-<h4 id="d-promotions"><strong>d. Promotions</strong></h4>
+<h4 id="d-promotions">
+  <strong>d. Promotions</strong>
+</h4>
 
 
 <style>
@@ -2352,7 +2379,9 @@ You may run promotions on Twitch, so long as the promotions comply with applicab
 </div>
 
 <p>Users may promote, administer, or conduct a promotion (e.g., a contest or sweepstakes) on, through, or utilizing the Twitch Services (a “Promotion”), provided that if you choose to do so, you must adhere to the following rules: (1) You may carry out Promotions to the extent permitted by applicable law and you are solely responsible for ensuring that any Promotions comply with any and all applicable laws, obligations, and restrictions; (2) You will be classified as the promoter of your Promotion in the applicable jurisdiction(s) and you will be solely responsible for all aspects of and expenses related to your Promotion, including without limitation the execution, administration, and operation of the Promotion; drafting and posting any official rules; selecting winners; issuing prizes; and obtaining all necessary third-party permissions and approvals, including without limitation filing any and all necessary registrations and bonds. Twitch has the right to remove your Promotion from the Twitch Services if Twitch reasonably believes that your Promotion does not comply with the Terms of Service or applicable law; (3) Twitch is not responsible for and does not endorse or support any such Promotions. You may not indicate that Twitch is a sponsor or co-sponsor of the Promotion; and (4) You will display or read out the following disclaimer when promoting, administering, or conducting a Promotion: “This is a promotion by [Your Name]. Twitch does not sponsor or endorse this promotion and is not responsible for it.”.</p>
-<h4 id="e-political-activity"><strong>e. Political Activity</strong></h4>
+<h4 id="e-political-activity">
+  <strong>e. Political Activity</strong>
+</h4>
 
 
 <style>
@@ -2414,7 +2443,9 @@ If you engage in political activity on Twitch, you agree that activity is your o
 
 <p>Subject to these Terms of Service and the Community Guidelines, you may share political opinions; participate in political activity; provide links to a political committee’s official website, including the contribution page of a political committee; and solicit viewers to make contributions directly to a political committee. You agree, however, that these activities are entirely your own. Moreover, by engaging in these activities, you represent and warrant that you are eligible to engage in them under applicable law, and that you will abide by all relevant laws and regulations while doing so.</p>
 <p>You agree not to solicit the use of or use any Twitch monetization tool (e.g., Bits or subscriptions) for the purpose of making or delivering a contribution to a candidate, candidate’s committee, political action committee, ballot committee, or any other campaign committee, or otherwise for the purpose of influencing any election. Candidates for political office are not eligible to use any Twitch monetization tool on their channels.</p>
-<h2 id="9-branded-content">9. Branded Content</h2>
+<h2 id="9-branded-content" tabindex="-1">
+  9. Branded Content
+</h2>
 
 
 <style>
@@ -2476,7 +2507,9 @@ If you publish sponsored or promoted content, which is further described and def
 
 <p>Twitch recognizes that some users collaborate with brands and may publish “Branded Content,” which is any User Content featuring, using, discussing, or promoting products, services, or specific content in exchange for something of value, such as being paid or provided with goods or services. Branded Content includes without limitation paid product placements, endorsements, and sponsorships. Twitch allows you to publish Branded Content using the Twitch Services provided that your Branded Content complies with these Terms of Service and applicable law.</p>
 <p>If you choose to publish Branded Content on the Twitch Services you agree to use Twitch’s Branded Content tool, which provides a written disclosure to viewers that your live stream contains Branded Content. In addition, you agree that you are solely responsible for ensuring that your Branded Content complies with any and all applicable advertising laws, regulations, and guidelines, including without limitation the U.S. Federal Trade Commission’s Guidelines (the “Advertising Guidelines”). For example, if you have been paid or provided with free products in exchange for discussing or promoting a product or service through the Twitch Services, or if you are an employee of a company and you discuss or promote that company’s products or services through the Twitch Services, you agree to comply with the Advertising Guidelines’ requirements for disclosing such relationships to indicate the commercial nature of the Branded Content.</p>
-<h2 id="10-prohibited-conduct">10. Prohibited Conduct</h2>
+<h2 id="10-prohibited-conduct" tabindex="-1">
+  10. Prohibited Conduct
+</h2>
 
 
 <style>
@@ -2794,7 +2827,9 @@ We have the right to remove, hide, or moderate any User Content on our Services.
 <p>To the extent permitted by applicable law, Twitch takes no responsibility and assumes no liability for any User Content or for any loss or damage resulting therefrom, nor is Twitch liable for any mistakes, defamation, slander, libel, omissions, falsehoods, obscenity, pornography, or profanity you may encounter when using the Twitch Services. Your use of the Twitch Services is at your own risk. In addition, these rules do not create any private right of action on the part of any third party or any reasonable expectation that the Twitch Services will not contain any content that is prohibited by such rules.</p>
 <p>Twitch is not liable for any statements or representations included in User Content. Twitch does not endorse any User Content, opinion, recommendation, or advice expressed therein, and, to the extent permitted by applicable law, Twitch expressly disclaims any and all liability in connection with User Content. To the fullest extent permitted by applicable law, Twitch reserves the right to remove, screen, or otherwise moderate any User Content posted or stored on the Twitch Services at any time and without notice, including where such User Content violates these Terms of Service or applicable law, and you are solely responsible for creating backup copies of and replacing any User Content you post or store on the Twitch Services at your sole cost and expense. Any use of the Twitch Services in violation of the foregoing violates these Terms of Service and may result in, among other things, termination or suspension of your rights to use the Twitch Services.</p>
 <p>For residents of the European Union or the European Economic Area, the United Kingdom, or Switzerland who are acting as a Consumer, (i) Twitch will only remove, screen, or otherwise moderate User Content for justified reasons, including without limitation where such User Content violates these Terms of Service or applicable law, and (ii) except where such notice would be unreasonable or legally prohibited considering the specific circumstances of the individual case, Twitch will without delay notify you of the reason for taking the relevant step.</p>
-<h2 id="11-simulcasting">11. Simulcasting</h2>
+<h2 id="11-simulcasting" tabindex="-1">
+  11. Simulcasting
+</h2>
 
 
 <style>
@@ -2861,7 +2896,9 @@ This section sets out the guidelines you must follow if you simultaneously live 
 <li>You do not use third-party services that combine activity from other platforms or services on your Twitch stream during your Simulcast, such as merging chat or other features, to ensure the Twitch community is included in the entirety of the experience of your livestream.</li>
 </ul>
 <p>Collectively, these are referred to as the “Simulcast Guidelines.”</p>
-<h2 id="12-advertisements">12. Advertisements</h2>
+<h2 id="12-advertisements" tabindex="-1">
+  12. Advertisements
+</h2>
 
 
 <style>
@@ -2922,7 +2959,9 @@ Here we delineate who may sell and serve advertisements on Twitch.
 </div>
 
 <p>Twitch has the exclusive right to monetize the Twitch Services, including without limitation, the exclusive right to sell, serve, and display advertisements on the Twitch Services. Third-party advertising networks are not allowed to serve advertising through the Twitch Services. However, you can publish Branded Content using the Twitch Services as set forth in Section 9 above.</p>
-<h2 id="13-recommendations">13. Recommendations</h2>
+<h2 id="13-recommendations" tabindex="-1">
+  13. Recommendations
+</h2>
 
 
 <style>
@@ -2983,7 +3022,9 @@ We will recommend content to you. We are providing notice of where you can find 
 </div>
 
 <p>As part of the Twitch Services, we will recommend content that might be of interest to you. For more information, please see <a href="https://legal.twitch.com/legal/recommendations-on-twitch/">Recommendations On Twitch</a>.</p>
-<h2 id="14-respecting-copyright">14. Respecting Copyright</h2>
+<h2 id="14-respecting-copyright" tabindex="-1">
+  14. Respecting Copyright
+</h2>
 
 
 <style>
@@ -3044,7 +3085,9 @@ This section explains the reporting process for copyright owners who believe con
 </div>
 
 <p>Twitch respects the intellectual property of others and follows the requirements set forth in the Digital Millennium Copyright Act (“DMCA”) and other applicable laws. If you are the copyright owner or agent thereof and believe that content posted on the Twitch Services infringes upon your copyright, please submit a notice following our <a href="https://legal.twitch.com/legal/dmca-guidelines">DMCA Guidelines</a>, which include further information about our policies, what to include in your notice, and where to submit your notice.</p>
-<h2 id="15-trademarks">15. Trademarks</h2>
+<h2 id="15-trademarks" tabindex="-1">
+  15. Trademarks
+</h2>
 
 
 <style>
@@ -3106,7 +3149,9 @@ Here we provide you with notice of our trademark rights and how you may and may 
 
 <p>TWITCH, the Twitch logos, and any other product or service name, logo, or slogan used by Twitch, and the look and feel of the Twitch Services, including all page headers, custom graphics, button icons, and scripts, are trademarks or trade dress of Twitch, and may not be used without our prior written permission in whole or in part in connection with any product or service that is not Twitch’s in any manner that is likely to cause confusion among customers, or in any manner that is otherwise prohibited by applicable trademark laws. Any use of these trademarks must be in accordance with the Twitch <a href="https://legal.twitch.com/legal/trademark/">Trademark Guidelines</a>.</p>
 <p>All other trademarks referenced in the Twitch Services are the property of their respective owners. Reference on the Twitch Services to any products, services, processes, or other information by trade name, trademark, manufacturer, supplier, or otherwise does not constitute or imply endorsement, sponsorship, or recommendation thereof by us or any other affiliation.</p>
-<h2 id="16-third-party-content">16. Third-Party Content</h2>
+<h2 id="16-third-party-content" tabindex="-1">
+  16. Third-Party Content
+</h2>
 
 
 <style>
@@ -3168,7 +3213,9 @@ Others may offer their own content on Twitch, including products and services, a
 
 <p>In addition to the User Content, Twitch may provide other third-party content on the Twitch Services (collectively, the “Third-Party Content”). Twitch does not control or endorse any Third-Party Content and makes no representation or warranties of any kind regarding the Third-Party Content, including without limitation regarding its accuracy or completeness. Please be aware that we do not create Third-Party Content, update, or monitor it. Therefore, to the extent permitted by applicable law, we are not responsible for any Third-Party Content on the Twitch Services.</p>
 <p>You are responsible for deciding if you want to access or use third-party websites or applications that link from the Twitch Services (the “Reference Sites”). Twitch does not control or endorse any such Reference Sites or the information, materials, products, or services contained on or accessible through Reference Sites, and makes no representations or warranties of any kind regarding the Reference Sites. In addition, your correspondence or business dealings with, or participation in promotions of, advertisers found on or through the Twitch Services are solely between you and such advertiser. Access and use of Reference Sites, including the information, materials, products, and services on or available through Reference Sites is solely at your own risk.</p>
-<h2 id="17-idea-submission">17. Idea Submission</h2>
+<h2 id="17-idea-submission" tabindex="-1">
+  17. Idea Submission
+</h2>
 
 
 <style>
@@ -3229,7 +3276,9 @@ If you choose to send us your ideas or suggestions, then you agree that we can u
 </div>
 
 <p>By submitting ideas, suggestions, documents, and/or proposals (the “Submissions”) to Twitch or its employees, you acknowledge and agree that Twitch shall be entitled to use or disclose such Submissions for any purpose in any way without providing compensation or credit to you.</p>
-<h2 id="18-termination">18. Termination</h2>
+<h2 id="18-termination" tabindex="-1">
+  18. Termination
+</h2>
 
 
 <style>
@@ -3410,8 +3459,12 @@ Twitch has the right to end or suspend your ability to use the Services, includi
 <p>You may terminate your license to use the Twitch Services and this Terms of Service agreement at your discretion at any time by ceasing to use the Twitch Services or, if you are a registered user, by deleting your Twitch account. For residents of the European Union or the European Economic Area, or of the United Kingdom, who are acting as a Consumer, you may have a right to withdraw from or cancel the agreement for the use of the Twitch Services under these Terms of Service within a specific cooling-off period. When and how this right may apply is explained in our <a href="https://legal.twitch.com/legal/eu-eea-uk-right-of-withdrawal/">EU, EEA &amp; UK Consumer Right of Withdrawal Information</a>.</p>
 <p>To the fullest extent permitted by applicable law, Twitch reserves the right, without notice and in our sole discretion, to stop providing the Services (or any features) to you or to users generally, to terminate this Terms of Service agreement with you, to terminate your license to use the Twitch Services (including to post User Content), and to block or prevent your future access to and use of the Twitch Services for any reason, including without limitation if: (a) your use of the Twitch Services violates these Terms of Service or applicable law; (b) you fraudulently use or misuse the Twitch Services; or (c) we are unable to continue providing the Twitch Services to you due to technical or legitimate business reasons. Our right to terminate our services, this agreement, and your license includes the ability to terminate or to suspend your access to any purchased products or services, including any subscriptions, Prime Gaming, or Turbo accounts. To the fullest extent permitted by applicable law, your only remedy with respect to any dissatisfaction with: (i) the Twitch Services, (ii) any term of these Terms of Service, (iii) any policy or practice of Twitch in operating the Twitch Services, or (iv) any content or information transmitted through the Twitch Services, is to terminate your account and to discontinue use of any and all parts of the Twitch Services.</p>
 <p>For residents of the European Union or the European Economic Area, the United Kingdom, or Switzerland who are acting as a Consumer, except in the case where Twitch reasonably considers that giving notice is legally prohibited (for instance, when providing notice would either (i) violate applicable laws, regulations, or orders from regulatory authorities or (ii) compromise an ongoing investigation conducted by a regulatory authority) or that any notice may cause harm to you, third parties, Twitch, and/or its affiliates (for instance, when providing notice harms the security of the Twitch Services), Twitch will without delay notify you of the reason for its action.</p>
-<h2 id="19-disputes">19. Disputes</h2>
-<h4 id="a-indemnification">a. Indemnification</h4>
+<h2 id="19-disputes" tabindex="-1">
+  19. Disputes
+</h2>
+<h4 id="a-indemnification">
+  a. Indemnification
+</h4>
 
 
 <style>
@@ -3472,7 +3525,9 @@ You agree to compensate Twitch (and other named parties) and defend us against a
 </div>
 
 <p>To the fullest extent permitted by applicable law, you agree to indemnify, defend, and hold harmless Twitch, its affiliated companies, and each of our respective contractors, employees, officers, directors, agents, third-party suppliers, licensors, and partners (individually and collectively, the “Twitch Parties”) from any claims, losses, damages, demands, expenses, costs, and liabilities, including legal fees and expenses, arising out of or related to your access, use, or misuse of the Twitch Services, any User Content you post, store, or otherwise transmit in or through the Twitch Services, your violation of the rights of any third party, any violation by you of these Terms of Service, or any breach of the representations, warranties, and covenants made by you herein. You agree to promptly notify the Twitch Parties of any third-party claim, and Twitch reserves the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify Twitch, and you agree to cooperate with Twitch’s defense of these claims. Twitch will use reasonable efforts to notify you of any such claim, action, or proceeding upon becoming aware of it.</p>
-<h4 id="b-disclaimers-no-warranties">b. Disclaimers; No Warranties</h4>
+<h4 id="b-disclaimers-no-warranties">
+  b. Disclaimers; No Warranties
+</h4>
 
 
 <style>
@@ -3537,7 +3592,9 @@ This is our disclaimer of legal liability for the quality, safety, or reliabilit
 <p>ii. EU/EEA/UK/CH Warranty Rights</p>
 <p>For residents of the European Union or the European Economic Area, the United Kingdom, or Switzerland who are acting as a Consumer, there are warranty rights under applicable law in case of any non-conformity of digital content and services. Such rights shall remain unaffected by these Terms of Service. In such a case, Twitch offers no further implied or statutory warranties or conditions with regard to digital content and services, and explicitly disclaims all implied warranties and conditions to the maximum extent permitted by applicable law.</p>
 <p>You acknowledge that we may change the Twitch Services from time to time without causing its non-conformity, including when needed to comply with applicable law or regulation, or for justified commercial, security, or operational reasons, and including to make any improvements to your access to the Twitch Services.</p>
-<h4 id="c-limitation-of-liability-and-damages">c. Limitation of Liability and Damages</h4>
+<h4 id="c-limitation-of-liability-and-damages">
+  c. Limitation of Liability and Damages
+</h4>
 
 
 <style>
@@ -3604,7 +3661,9 @@ This section details the limits of legal liability we may have to you.
 <p>THESE LIMITATIONS OF LIABILITY ALSO APPLY WITH RESPECT TO DAMAGES INCURRED BY YOU BY REASON OF ANY PRODUCTS OR SERVICES SOLD OR PROVIDED ON ANY REFERENCE SITES OR OTHERWISE BY THIRD PARTIES OTHER THAN TWITCH AND RECEIVED THROUGH OR ADVERTISED ON THE TWITCH SERVICES OR RECEIVED THROUGH ANY REFERENCE SITES.</p>
 <p>iii. Basis of the Bargain</p>
 <p>YOU ACKNOWLEDGE AND AGREE THAT TWITCH HAS OFFERED THE TWITCH SERVICES, USER CONTENT, MATERIALS, AND OTHER CONTENT AND INFORMATION, SET ITS PRICES, AND ENTERED INTO THESE TERMS OF SERVICE IN RELIANCE UPON THE WARRANTY DISCLAIMERS AND LIMITATIONS OF LIABILITY SET FORTH HEREIN, THAT THE WARRANTY DISCLAIMERS AND LIMITATIONS OF LIABILITY SET FORTH HEREIN REFLECT A REASONABLE AND FAIR ALLOCATION OF RISK BETWEEN YOU AND TWITCH, AND THAT THE WARRANTY DISCLAIMERS AND LIMITATIONS OF LIABILITY SET FORTH HEREIN FORM AN ESSENTIAL BASIS OF THE BARGAIN BETWEEN YOU AND TWITCH. TWITCH WOULD NOT BE ABLE TO PROVIDE THE TWITCH SERVICES TO YOU ON AN ECONOMICALLY REASONABLE BASIS WITHOUT THESE LIMITATIONS.</p>
-<h4 id="d-informal-resolution">d. Informal Resolution</h4>
+<h4 id="d-informal-resolution">
+  d. Informal Resolution
+</h4>
 
 
 <style>
@@ -3665,7 +3724,9 @@ You promise to notify us 60 days before filing a lawsuit against us so that we w
 </div>
 
 <p>Most disputes can be resolved informally, so you agree to contact us before initiating a lawsuit related to these Terms of Service or your use of the Twitch Services. Email your informal dispute resolution notice to <a href="mailto:legal@twitch.tv">legal@twitch.tv</a> and include the information necessary for Twitch to investigate and respond, including your name, your Twitch username (if you have a registered Twitch account), a description of the dispute and alleged harm, your contact email address, and the name and contact information for your attorney, if you are represented by one (“Notice of Dispute”). After you send us the required Notice of Dispute, you and Twitch will have 60 days from Twitch’s receipt to engage in informal discussions to attempt to resolve the dispute amicably. To the extent permitted by applicable law, you must engage in this informal resolution process before starting any formal dispute process. Any applicable statutes of limitations will be tolled for the 60-day period following Twitch’s receipt of your Notice of Dispute, to allow the parties to attempt informal resolution.</p>
-<h4 id="e-applicable-law-and-jurisdiction">e. <strong>Applicable Law and Jurisdiction</strong></h4>
+<h4 id="e-applicable-law-and-jurisdiction">
+  e. <strong>Applicable Law and Jurisdiction</strong>
+</h4>
 
 
 <style>
@@ -3727,7 +3788,9 @@ If we end up in a legal dispute, you and Twitch agree to resolve it in the named
 
 <p>You agree that any dispute, claim, or cause of action of any sort that might arise between the parties will be governed by this Agreement and the laws of the State of California and applicable United States federal law, without regard to any conflict of laws principles. Any disputes, claims, or causes of action arising out of or in connection with these Terms of Service or your use of the Twitch Services shall be brought and resolved exclusively by the United States District Court for the Northern District of California or a California state court located in San Francisco County, California. You expressly agree to submit to the personal jurisdiction of these courts for the purpose of litigating any such claim, waive any jurisdiction or venue defenses, and agree to service of process by email.</p>
 <p>For residents of the European Union or the European Economic Area, the United Kingdom, or Switzerland who are acting as a Consumer, (i) the choice of governing law in this Section will not deprive you of the protection afforded to you as a consumer by provisions that cannot be derogated from by agreement by virtue of the laws applicable where you reside, and (ii) any disputes or claims relating in any way to these Terms of Service or your use of the Twitch Services shall be resolved by a competent civil court in the country where you reside.</p>
-<h4 id="f-claims">f. <strong>Claims</strong></h4>
+<h4 id="f-claims">
+  f. <strong>Claims</strong>
+</h4>
 
 
 <style>
@@ -3788,7 +3851,9 @@ You and Twitch both agree to bring any legal claims against one another within o
 </div>
 
 <p>TO THE EXTENT PERMITTED BY APPLICABLE LAW, YOU AND TWITCH AGREE THAT ANY CAUSE OF ACTION ARISING OUT OF OR RELATED TO THE TWITCH SERVICES MUST COMMENCE WITHIN ONE (1) YEAR AFTER THE CAUSE OF ACTION ACCRUES. OTHERWISE, SUCH CAUSE OF ACTION IS PERMANENTLY BARRED.</p>
-<h2 id="20-miscellaneous">20. Miscellaneous</h2>
+<h2 id="20-miscellaneous" tabindex="-1">
+  20. Miscellaneous
+</h2>
 
 
 <style>
@@ -3848,17 +3913,29 @@ This section contains some additional important details about our contract with 
   </div>
 </div>
 
-<h4 id="a-waiver"><strong>a. Waiver</strong></h4>
+<h4 id="a-waiver">
+  <strong>a. Waiver</strong>
+</h4>
 <p>If we fail to exercise or enforce any right or provision of these Terms of Service, it will not constitute a waiver of such right or provision. Any waiver of any provision of these Terms of Service will be effective only if in writing and signed by the relevant party.</p>
-<h4 id="b-severability"><strong>b. Severability</strong></h4>
+<h4 id="b-severability">
+  <strong>b. Severability</strong>
+</h4>
 <p>If any provision of these Terms of Service is held to be unlawful, void, or for any reason unenforceable, then that provision will be limited or eliminated from these Terms of Service to the minimum extent necessary and will not affect the validity and enforceability of any remaining provisions.</p>
-<h4 id="c-assignment"><strong>c. Assignment</strong></h4>
+<h4 id="c-assignment">
+  <strong>c. Assignment</strong>
+</h4>
 <p>To the extent permitted by applicable law, these Terms of Service, and any rights and licenses granted hereunder, may not be transferred or assigned by you, but may be assigned by Twitch without restriction. Any assignment attempted to be made in violation of this Terms of Service shall be void.</p>
-<h4 id="d-survival"><strong>d. Survival</strong></h4>
+<h4 id="d-survival">
+  <strong>d. Survival</strong>
+</h4>
 <p>Upon termination of these Terms of Service, any provision which, by its nature or express terms should survive, will survive such termination or expiration, including, but not limited to, Sections 7-10, and 14-20.</p>
-<h4 id="e-entire-agreement"><strong>e. Entire Agreement</strong></h4>
+<h4 id="e-entire-agreement">
+  <strong>e. Entire Agreement</strong>
+</h4>
 <p>The Terms of Service, which incorporate the Guidelines, is the entire agreement between you and Twitch relating to the subject matter herein and will not be modified except by a writing signed by authorized representatives of both parties, or by a change to these Terms of Service made by Twitch as set forth in Section 6 above.</p>
-<h2 id="21-contact-information">21. Contact Information</h2>
+<h2 id="21-contact-information" tabindex="-1">
+  21. Contact Information
+</h2>
 
 
 <style>
@@ -3927,7 +4004,9 @@ Here is our contact information. Our online Help Desk also provides more informa
 <p>Twitch Interactive, Inc. is a company registered in the US State of Delaware under file no. 4221511.</p>
 <p>For questions or more information, please visit our <a href="http://help.twitch.tv/">Help Desk</a> or write to us at the address above, Attn: Customer Support.</p>
 <p>The EU Commission provides a platform for online dispute resolution at <a href="https://ec.europa.eu/consumers/odr">https://ec.europa.eu/consumers/odr</a>. Please note that Twitch is not obliged to participate in such dispute resolution.</p>
-<h2 id="22-requests-for-information-and-subpoenas">22. Requests for Information and Subpoenas</h2>
+<h2 id="22-requests-for-information-and-subpoenas" tabindex="-1">
+  22. Requests for Information and Subpoenas
+</h2>
 
 
 <style>
@@ -4007,7 +4086,7 @@ This section explains the required process for requesting information or documen
   <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
     <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </svg>
-  <span class="sr-only" x-text="mobileTOCOpen ? 'Collapse table of contents' : 'Expand table of contents'"></span>
+  
 </button>
 <div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
   <nav id="TableOfContents">
@@ -4085,8 +4164,16 @@ This section explains the required process for requesting information or documen
         const tocLinks = document.querySelectorAll('.toc-header + div a');
         tocLinks.forEach(link => {
           link.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            const targetId = this.getAttribute('href').substring(1);
+            const targetHeading = document.getElementById(targetId);
             
-            
+            if (targetHeading) {
+              
+              targetHeading.focus();
+              
+              targetHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
           });
         });
         
@@ -4222,7 +4309,6 @@ This section explains the required process for requesting information or documen
         const maxAttempts = 20;
         const interval = setInterval(function () {
             attempts++;
-            attempts++;
 
             if (initializeSearch() || attempts >= maxAttempts) {
                 clearInterval(interval);
@@ -4242,7 +4328,7 @@ This section explains the required process for requesting information or documen
 
 
 <div id="search" class="w-full max-[479px]:max-w-[55%] max-w-[40%] lg:max-w-full"><form class="pagefind-modular-input-wrapper" role="search" aria-label="Search this site" action="javascript:void(0);"><label for="pfmod-input-0" data-pfmod-sr-hidden="true">Search this site</label><input id="pfmod-input-0" class="pagefind-modular-input" autocapitalize="none" enterkeyhint="search" placeholder="Search legal docs"><button class="pagefind-modular-input-clear" data-pfmod-suppressed="true">Clear</button></form></div>
-<div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" tabindex="0" role="dialog" aria-label="Search results"></div>
+<div id="results" class="hidden absolute mt-4 bg-white border border-[#8D41F9] rounded-lg z-20 overflow-hidden lg:w-[446px] left-0 right-0 lg:left-auto lg:right-auto top-[100%]" role="dialog" aria-label="Search results"></div>
 
     </div>
     
@@ -4434,7 +4520,7 @@ This section explains the required process for requesting information or documen
     
       
       
-      
+        
       <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
         
         
@@ -4533,7 +4619,9 @@ To help you understand the subject matters covered by our Terms of Service, we h
   </div>
 </div>
 
-<h2 id="1-introduction-your-agreement-to-these-terms-of-service">1. Introduction; Your Agreement to these Terms of Service</h2>
+<h2 id="1-introduction-your-agreement-to-these-terms-of-service" tabindex="-1">
+  1. Introduction; Your Agreement to these Terms of Service
+</h2>
 
 
 <style>
@@ -4715,7 +4803,9 @@ Your use of Twitch is also subject to (a) our Community Guidelines, which detail
 <p>When using the Twitch Services, you will be subject to Twitch’s <a href="https://legal.twitch.com/legal/community-guidelines/">Community Guidelines</a> and additional guidelines or rules that are posted on the Twitch Services, made available to you, or disclosed to you in connection with specific services and features you may be offered. Twitch may also offer certain paid services, which are subject to the <a href="https://legal.twitch.com/legal/terms-of-sale">Twitch Terms of Sale</a> as well as any additional terms or conditions that are disclosed to you in connection with such services. All such terms and guidelines (the “Guidelines”) are incorporated into these Terms of Service by reference.</p>
 <p>The Terms of Service apply whether you are a user that registers an account with the Twitch Services or an unregistered user. You agree that by clicking “Sign Up” or otherwise registering, downloading, accessing, or using the Twitch Services, you are entering into a legally binding agreement between you and Twitch regarding your use of the Twitch Services. You acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these Terms of Service, do not access or otherwise use any of the Twitch Services.</p>
 <p>When using Twitch or opening an account with Twitch on behalf of a company, entity, or organization (collectively, “Subscribing Organization”), you represent and warrant that you: (i) are an authorized representative of that Subscribing Organization with the authority to bind that organization to these Terms of Service and grant the licenses set forth herein; and (ii) agree to these Terms of Service on behalf of such Subscribing Organization.</p>
-<h2 id="2-use-of-twitch-by-minors-and-blocked-persons">2. Use of Twitch by Minors and Blocked Persons</h2>
+<h2 id="2-use-of-twitch-by-minors-and-blocked-persons" tabindex="-1">
+  2. Use of Twitch by Minors and Blocked Persons
+</h2>
 
 
 <style>
@@ -4837,7 +4927,9 @@ If you are between 13 and the age you legally become an adult where you live, yo
 <p>The Twitch Services are not available to persons under the age of 13. If you are between the ages of 13 and the age of legal majority in your jurisdiction of residence, you may only use the Twitch Services under the supervision of a parent or legal guardian who agrees to be bound by these Terms of Service.</p>
 <p>The Twitch Services are also not available to any users previously removed from the Twitch Services by Twitch or to any persons barred from receiving them under the laws of the United States (such as its export and re-export restrictions and regulations) or applicable laws in any other jurisdiction.</p>
 <p>BY DOWNLOADING, INSTALLING, OR OTHERWISE USING THE TWITCH SERVICES, YOU REPRESENT THAT YOU ARE AT LEAST 13 YEARS OF AGE, THAT YOUR PARENT OR LEGAL GUARDIAN AGREES TO BE BOUND BY THESE TERMS OF SERVICE IF YOU ARE BETWEEN 13 AND THE AGE OF LEGAL MAJORITY IN YOUR JURISDICTION OF RESIDENCE, AND THAT YOU HAVE NOT BEEN PREVIOUSLY REMOVED FROM AND ARE NOT PROHIBITED FROM RECEIVING THE TWITCH SERVICES.</p>
-<h2 id="3-privacy-notice">3. Privacy Notice</h2>
+<h2 id="3-privacy-notice" tabindex="-1">
+  3. Privacy Notice
+</h2>
 
 
 <style>
@@ -4898,8 +4990,12 @@ Our Privacy Notice covers how we collect, use, and share your personal informati
 </div>
 
 <p>Your privacy is important to Twitch. Please see our <a href="https://legal.twitch.com/legal/privacy-policy">Privacy Notice</a> for information relating to how we collect, use, and disclose your personal information, and our <a href="https://legal.twitch.com/legal/privacy-choices">Privacy Choices</a> on how you can manage your online privacy when you use the Twitch Services.</p>
-<h2 id="4-account">4. Account</h2>
-<h4 id="a-account-and-password"><strong>a. Account and Password</strong></h4>
+<h2 id="4-account" tabindex="-1">
+  4. Account
+</h2>
+<h4 id="a-account-and-password">
+  <strong>a. Account and Password</strong>
+</h4>
 
 
 <style>
@@ -5139,7 +5235,9 @@ You promise not to sell, rent, or transfer your account to anyone else.
 <p>In order to open an account, you will be asked to provide us with certain information such as an account name and password. Please make sure the information you provide to Twitch upon registration and at all other times is true, accurate, current, and complete to the best of your knowledge.</p>
 <p>You are solely responsible for maintaining the confidentiality of your account, your password and for restricting access to the device(s) on which you use your account. If you permit others to use your account credentials, you agree to these Terms of Service on behalf of all other persons who use the Services under your account or password, and you are responsible for all activities that occur under your account or password.</p>
 <p>Unless expressly permitted in writing by Twitch, you may not sell, rent, lease, transfer, share, or provide access to your account to anyone else, including without limitation, charging anyone for access to administrative rights on your account. Twitch reserves all available legal rights and remedies to prevent unauthorized use of the Twitch Services, including, but not limited to, technological barriers, IP mapping, and, in serious cases, directly contacting your Internet Service Provider (ISP) regarding such unauthorized use.</p>
-<h4 id="b-third-party-accounts"><strong>b. Third-Party Accounts</strong></h4>
+<h4 id="b-third-party-accounts">
+  <strong>b. Third-Party Accounts</strong>
+</h4>
 
 
 <style>
@@ -5200,7 +5298,9 @@ If you access Twitch through another service or link your Twitch account to your
 </div>
 
 <p>Twitch may permit you to register for and log on to the Twitch Services via certain third-party services. The third party’s collection, use, and disclosure of your information will be subject to that third-party service’s privacy notice. Further information about how Twitch collects, uses, and discloses your personal information when you link your Twitch account with your account on any third-party service can be found in our Privacy Notice.</p>
-<h2 id="5-use-of-devices-and-services">5. Use of Devices and Services</h2>
+<h2 id="5-use-of-devices-and-services" tabindex="-1">
+  5. Use of Devices and Services
+</h2>
 
 
 <style>
@@ -5261,7 +5361,9 @@ You are responsible for paying any fees or charges from other companies that you
 </div>
 
 <p>Access to the Twitch Services may require the use of your personal computer or mobile device, as well as communications with or use of space on such devices. You are responsible for any Internet connection or mobile fees and charges from third parties that you incur when accessing the Twitch Services.</p>
-<h2 id="6-modification-of-these-terms-of-service">6. Modification of these Terms of Service</h2>
+<h2 id="6-modification-of-these-terms-of-service" tabindex="-1">
+  6. Modification of these Terms of Service
+</h2>
 
 
 <style>
@@ -5323,7 +5425,9 @@ This section explains how we may make changes to this contract and how you agree
 
 <p>Twitch may amend any of the terms of these Terms of Service by posting the amended terms and updating the “Last modified” date above. Your continued use of the Twitch Services after the effective date of the revised Terms of Service constitutes your acceptance of the terms.</p>
 <p>For residents of the European Union or the European Economic Area, the United Kingdom, or Switzerland, who are acting as a consumer (i.e., for a purpose which can be regarded as being outside your trade, craft or profession) (“Consumer”) and have registered a Twitch account, Twitch will provide reasonable prior notice of amendments to these Terms of Service. To the extent permitted by applicable law, not canceling your agreement to use the Twitch Services under these Terms of Service before the effective date will be deemed your consent to the amended terms. Where required by applicable law, Twitch will ask for your consent to the amended terms.</p>
-<h2 id="7-license">7. License</h2>
+<h2 id="7-license" tabindex="-1">
+  7. License
+</h2>
 
 
 <style>
@@ -5503,7 +5607,9 @@ We are giving you limited permission to access and use Twitch for either persona
 
 <p>The Twitch Services are owned and operated by Twitch. Unless otherwise indicated, all content, information, and other materials on the Twitch Services (excluding User Content, set out in Section 8 below), including, without limitation, Twitch’s trademarks and logos, the visual interfaces, graphics, design, compilation, information, software, computer code (including source code or object code), services, text, pictures, information, data, sound files, other files, and the selection and arrangement thereof (collectively, the “Materials”) are protected by relevant intellectual property and proprietary rights and laws. All Materials are the property of Twitch or its subsidiaries or affiliated companies and/or third-party licensors. Unless otherwise expressly stated in writing by Twitch, by agreeing to these Terms of Service you are granted a limited, non-sublicensable, and non-transferable license (i.e., a personal and limited right) to access and use the Twitch Services for your personal use or internal business use only.</p>
 <p>Twitch reserves all rights not expressly granted in these Terms of Service. This license is subject to these Terms of Service and does not permit you to engage in any of the following: (a) resale or commercial use of the Twitch Services or the Materials; (b) distribution, public performance or public display of any Materials; (c) modifying or otherwise making any derivative uses of the Twitch Services or the Materials, or any portion of them; (d) use of any data mining, robots, or similar data gathering or extraction methods; (e) downloading (except page caching) of any portion of the Twitch Services, the Materials, or any information contained in them, except as expressly permitted on the Twitch Services; or (f) any use of the Twitch Services or the Materials except for their intended purposes. Any use of the Twitch Services or the Materials except as specifically authorized in these Terms of Service, without the prior written permission of Twitch, is strictly prohibited and may violate intellectual property rights or other laws. Unless explicitly stated in these Terms of Service, nothing in them shall be interpreted as conferring any license to intellectual property rights, whether by estoppel, implication, or other legal principles. Twitch can terminate this license as set out in Section 18.</p>
-<h2 id="8-user-content">8. User Content</h2>
+<h2 id="8-user-content" tabindex="-1">
+  8. User Content
+</h2>
 
 
 <style>
@@ -5564,7 +5670,9 @@ We refer to everything you create on Twitch or provide to us as “User Content�
 </div>
 
 <p>Twitch allows you to distribute streaming live and pre-recorded audio-visual works; to use services, such as chat, bulletin boards, forum postings, wiki contributions, and voice interactive services; and to participate in other activities in which you may create, post, transmit, perform, or store content, messages, text, sound, images, applications, code, or other data or materials on the Twitch Services (“User Content”).</p>
-<h4 id="a-license-to-twitch--other-twitch-users"><strong>a. License to Twitch &amp; Other Twitch Users</strong></h4>
+<h4 id="a-license-to-twitch--other-twitch-users">
+  <strong>a. License to Twitch &amp; Other Twitch Users</strong>
+</h4>
 
 
 <style>
@@ -5747,7 +5855,9 @@ If your User Content contains anyone else’s biographical information, then you
 <p>(iii) Should your User Content contain the name, identity, likeness, and voice (or other biographical information) of third parties, you represent and warrant that you have obtained the appropriate consents and/or licenses for your use of such elements and that Twitch, other users (as described in section (a)(ii) above), and their respective sub-licensees (as applicable) are allowed to use them to the extent indicated in these Terms of Service.</p>
 <p>(iv) With respect to User Content known as “add-ons”, “maps”, “mods”, or other types of projects submitted through CurseForge.com or similar sites (the “Submitted Projects”), the rights granted by you hereunder terminate once you remove or delete such Submitted Projects from the Twitch Services. You also acknowledge that Twitch may retain, but not display, distribute, or perform, server copies of Submitted Projects that have been removed or deleted.</p>
 <p>(v) With respect to streaming live and pre-recorded audio-visual works, the rights granted by you hereunder terminate once you delete such User Content from the Twitch Services, or generally by closing your account, except: (a) to the extent you shared it with others as part of the Twitch Services and others copied or stored portions of the User Content (e.g., made a Clip); (b) to the extent others accessed, used, and/or shared your User Content outside the Twitch Services pursuant to the license granted in Section 8(a) above, (c) to the extent Twitch used it for promotional purposes; (d) for the reasonable time it takes to remove from backup and other systems; or (e) to the extent Twitch is required by applicable law to retain it.</p>
-<h4 id="b-user-content-representations-and-warranties"><strong>b. User Content Representations and Warranties</strong></h4>
+<h4 id="b-user-content-representations-and-warranties">
+  <strong>b. User Content Representations and Warranties</strong>
+</h4>
 
 
 <style>
@@ -5808,7 +5918,9 @@ You are responsible for your User Content and the consequences of publishing it.
 </div>
 
 <p>You are solely responsible for your User Content and the consequences of posting or publishing it. You represent and warrant that: (1) you are the creator or own or control all rights in and to the User Content or otherwise have sufficient rights and authority to grant the rights granted herein; (2) your User Content does not and will not: (a) infringe, violate, or misappropriate any third-party right, including any copyright, trademark, patent, trade secret, moral right, privacy right, right of publicity, or any other intellectual property or proprietary right, or (b) defame any other person; (3) your User Content does not contain any viruses, adware, spyware, worms, or other harmful or malicious code; and (4) unless you have received prior written authorization, your User Content specifically does not contain any pre-release or non-public beta software or game content or any confidential information of Twitch or third parties. Twitch reserves all rights and remedies against any users who breach these representations and warranties.</p>
-<h4 id="c-content-is-uploaded-at-your-own-risk"><strong>c. Content is Uploaded at Your Own Risk</strong></h4>
+<h4 id="c-content-is-uploaded-at-your-own-risk">
+  <strong>c. Content is Uploaded at Your Own Risk</strong>
+</h4>
 
 
 <style>
@@ -5869,7 +5981,9 @@ This is our disclaimer of legal liability for the security measures of our Servi
 </div>
 
 <p>Twitch uses reasonable security measures in order to attempt to protect User Content against unauthorized copying and distribution. However, Twitch does not guarantee that any unauthorized copying, use, or distribution of User Content by third parties will not take place. To the furthest extent permitted by applicable law, you hereby agree that Twitch shall not be liable for any unauthorized copying, use, or distribution of User Content by third parties and release and forever waive any claims you may have against Twitch for any such unauthorized copying or usage of the User Content, under any theory. TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE SECURITY MEASURES TO PROTECT USER CONTENT USED BY TWITCH HEREIN ARE PROVIDED AND USED “AS-IS” AND WITH NO WARRANTIES, GUARANTEES, CONDITIONS, ASSURANCES, OR OTHER TERMS THAT SUCH SECURITY MEASURES WILL WITHSTAND ATTEMPTS TO EVADE SECURITY MECHANISMS OR THAT THERE WILL BE NO CRACKS, DISABLEMENTS, OR OTHER CIRCUMVENTION OF SUCH SECURITY MEASURES.</p>
-<h4 id="d-promotions"><strong>d. Promotions</strong></h4>
+<h4 id="d-promotions">
+  <strong>d. Promotions</strong>
+</h4>
 
 
 <style>
@@ -5930,7 +6044,9 @@ You may run promotions on Twitch, so long as the promotions comply with applicab
 </div>
 
 <p>Users may promote, administer, or conduct a promotion (e.g., a contest or sweepstakes) on, through, or utilizing the Twitch Services (a “Promotion”), provided that if you choose to do so, you must adhere to the following rules: (1) You may carry out Promotions to the extent permitted by applicable law and you are solely responsible for ensuring that any Promotions comply with any and all applicable laws, obligations, and restrictions; (2) You will be classified as the promoter of your Promotion in the applicable jurisdiction(s) and you will be solely responsible for all aspects of and expenses related to your Promotion, including without limitation the execution, administration, and operation of the Promotion; drafting and posting any official rules; selecting winners; issuing prizes; and obtaining all necessary third-party permissions and approvals, including without limitation filing any and all necessary registrations and bonds. Twitch has the right to remove your Promotion from the Twitch Services if Twitch reasonably believes that your Promotion does not comply with the Terms of Service or applicable law; (3) Twitch is not responsible for and does not endorse or support any such Promotions. You may not indicate that Twitch is a sponsor or co-sponsor of the Promotion; and (4) You will display or read out the following disclaimer when promoting, administering, or conducting a Promotion: “This is a promotion by [Your Name]. Twitch does not sponsor or endorse this promotion and is not responsible for it.”.</p>
-<h4 id="e-political-activity"><strong>e. Political Activity</strong></h4>
+<h4 id="e-political-activity">
+  <strong>e. Political Activity</strong>
+</h4>
 
 
 <style>
@@ -5992,7 +6108,9 @@ If you engage in political activity on Twitch, you agree that activity is your o
 
 <p>Subject to these Terms of Service and the Community Guidelines, you may share political opinions; participate in political activity; provide links to a political committee’s official website, including the contribution page of a political committee; and solicit viewers to make contributions directly to a political committee. You agree, however, that these activities are entirely your own. Moreover, by engaging in these activities, you represent and warrant that you are eligible to engage in them under applicable law, and that you will abide by all relevant laws and regulations while doing so.</p>
 <p>You agree not to solicit the use of or use any Twitch monetization tool (e.g., Bits or subscriptions) for the purpose of making or delivering a contribution to a candidate, candidate’s committee, political action committee, ballot committee, or any other campaign committee, or otherwise for the purpose of influencing any election. Candidates for political office are not eligible to use any Twitch monetization tool on their channels.</p>
-<h2 id="9-branded-content">9. Branded Content</h2>
+<h2 id="9-branded-content" tabindex="-1">
+  9. Branded Content
+</h2>
 
 
 <style>
@@ -6054,7 +6172,9 @@ If you publish sponsored or promoted content, which is further described and def
 
 <p>Twitch recognizes that some users collaborate with brands and may publish “Branded Content,” which is any User Content featuring, using, discussing, or promoting products, services, or specific content in exchange for something of value, such as being paid or provided with goods or services. Branded Content includes without limitation paid product placements, endorsements, and sponsorships. Twitch allows you to publish Branded Content using the Twitch Services provided that your Branded Content complies with these Terms of Service and applicable law.</p>
 <p>If you choose to publish Branded Content on the Twitch Services you agree to use Twitch’s Branded Content tool, which provides a written disclosure to viewers that your live stream contains Branded Content. In addition, you agree that you are solely responsible for ensuring that your Branded Content complies with any and all applicable advertising laws, regulations, and guidelines, including without limitation the U.S. Federal Trade Commission’s Guidelines (the “Advertising Guidelines”). For example, if you have been paid or provided with free products in exchange for discussing or promoting a product or service through the Twitch Services, or if you are an employee of a company and you discuss or promote that company’s products or services through the Twitch Services, you agree to comply with the Advertising Guidelines’ requirements for disclosing such relationships to indicate the commercial nature of the Branded Content.</p>
-<h2 id="10-prohibited-conduct">10. Prohibited Conduct</h2>
+<h2 id="10-prohibited-conduct" tabindex="-1">
+  10. Prohibited Conduct
+</h2>
 
 
 <style>
@@ -6372,7 +6492,9 @@ We have the right to remove, hide, or moderate any User Content on our Services.
 <p>To the extent permitted by applicable law, Twitch takes no responsibility and assumes no liability for any User Content or for any loss or damage resulting therefrom, nor is Twitch liable for any mistakes, defamation, slander, libel, omissions, falsehoods, obscenity, pornography, or profanity you may encounter when using the Twitch Services. Your use of the Twitch Services is at your own risk. In addition, these rules do not create any private right of action on the part of any third party or any reasonable expectation that the Twitch Services will not contain any content that is prohibited by such rules.</p>
 <p>Twitch is not liable for any statements or representations included in User Content. Twitch does not endorse any User Content, opinion, recommendation, or advice expressed therein, and, to the extent permitted by applicable law, Twitch expressly disclaims any and all liability in connection with User Content. To the fullest extent permitted by applicable law, Twitch reserves the right to remove, screen, or otherwise moderate any User Content posted or stored on the Twitch Services at any time and without notice, including where such User Content violates these Terms of Service or applicable law, and you are solely responsible for creating backup copies of and replacing any User Content you post or store on the Twitch Services at your sole cost and expense. Any use of the Twitch Services in violation of the foregoing violates these Terms of Service and may result in, among other things, termination or suspension of your rights to use the Twitch Services.</p>
 <p>For residents of the European Union or the European Economic Area, the United Kingdom, or Switzerland who are acting as a Consumer, (i) Twitch will only remove, screen, or otherwise moderate User Content for justified reasons, including without limitation where such User Content violates these Terms of Service or applicable law, and (ii) except where such notice would be unreasonable or legally prohibited considering the specific circumstances of the individual case, Twitch will without delay notify you of the reason for taking the relevant step.</p>
-<h2 id="11-simulcasting">11. Simulcasting</h2>
+<h2 id="11-simulcasting" tabindex="-1">
+  11. Simulcasting
+</h2>
 
 
 <style>
@@ -6439,7 +6561,9 @@ This section sets out the guidelines you must follow if you simultaneously live 
 <li>You do not use third-party services that combine activity from other platforms or services on your Twitch stream during your Simulcast, such as merging chat or other features, to ensure the Twitch community is included in the entirety of the experience of your livestream.</li>
 </ul>
 <p>Collectively, these are referred to as the “Simulcast Guidelines.”</p>
-<h2 id="12-advertisements">12. Advertisements</h2>
+<h2 id="12-advertisements" tabindex="-1">
+  12. Advertisements
+</h2>
 
 
 <style>
@@ -6500,7 +6624,9 @@ Here we delineate who may sell and serve advertisements on Twitch.
 </div>
 
 <p>Twitch has the exclusive right to monetize the Twitch Services, including without limitation, the exclusive right to sell, serve, and display advertisements on the Twitch Services. Third-party advertising networks are not allowed to serve advertising through the Twitch Services. However, you can publish Branded Content using the Twitch Services as set forth in Section 9 above.</p>
-<h2 id="13-recommendations">13. Recommendations</h2>
+<h2 id="13-recommendations" tabindex="-1">
+  13. Recommendations
+</h2>
 
 
 <style>
@@ -6561,7 +6687,9 @@ We will recommend content to you. We are providing notice of where you can find 
 </div>
 
 <p>As part of the Twitch Services, we will recommend content that might be of interest to you. For more information, please see <a href="https://legal.twitch.com/legal/recommendations-on-twitch/">Recommendations On Twitch</a>.</p>
-<h2 id="14-respecting-copyright">14. Respecting Copyright</h2>
+<h2 id="14-respecting-copyright" tabindex="-1">
+  14. Respecting Copyright
+</h2>
 
 
 <style>
@@ -6622,7 +6750,9 @@ This section explains the reporting process for copyright owners who believe con
 </div>
 
 <p>Twitch respects the intellectual property of others and follows the requirements set forth in the Digital Millennium Copyright Act (“DMCA”) and other applicable laws. If you are the copyright owner or agent thereof and believe that content posted on the Twitch Services infringes upon your copyright, please submit a notice following our <a href="https://legal.twitch.com/legal/dmca-guidelines">DMCA Guidelines</a>, which include further information about our policies, what to include in your notice, and where to submit your notice.</p>
-<h2 id="15-trademarks">15. Trademarks</h2>
+<h2 id="15-trademarks" tabindex="-1">
+  15. Trademarks
+</h2>
 
 
 <style>
@@ -6684,7 +6814,9 @@ Here we provide you with notice of our trademark rights and how you may and may 
 
 <p>TWITCH, the Twitch logos, and any other product or service name, logo, or slogan used by Twitch, and the look and feel of the Twitch Services, including all page headers, custom graphics, button icons, and scripts, are trademarks or trade dress of Twitch, and may not be used without our prior written permission in whole or in part in connection with any product or service that is not Twitch’s in any manner that is likely to cause confusion among customers, or in any manner that is otherwise prohibited by applicable trademark laws. Any use of these trademarks must be in accordance with the Twitch <a href="https://legal.twitch.com/legal/trademark/">Trademark Guidelines</a>.</p>
 <p>All other trademarks referenced in the Twitch Services are the property of their respective owners. Reference on the Twitch Services to any products, services, processes, or other information by trade name, trademark, manufacturer, supplier, or otherwise does not constitute or imply endorsement, sponsorship, or recommendation thereof by us or any other affiliation.</p>
-<h2 id="16-third-party-content">16. Third-Party Content</h2>
+<h2 id="16-third-party-content" tabindex="-1">
+  16. Third-Party Content
+</h2>
 
 
 <style>
@@ -6746,7 +6878,9 @@ Others may offer their own content on Twitch, including products and services, a
 
 <p>In addition to the User Content, Twitch may provide other third-party content on the Twitch Services (collectively, the “Third-Party Content”). Twitch does not control or endorse any Third-Party Content and makes no representation or warranties of any kind regarding the Third-Party Content, including without limitation regarding its accuracy or completeness. Please be aware that we do not create Third-Party Content, update, or monitor it. Therefore, to the extent permitted by applicable law, we are not responsible for any Third-Party Content on the Twitch Services.</p>
 <p>You are responsible for deciding if you want to access or use third-party websites or applications that link from the Twitch Services (the “Reference Sites”). Twitch does not control or endorse any such Reference Sites or the information, materials, products, or services contained on or accessible through Reference Sites, and makes no representations or warranties of any kind regarding the Reference Sites. In addition, your correspondence or business dealings with, or participation in promotions of, advertisers found on or through the Twitch Services are solely between you and such advertiser. Access and use of Reference Sites, including the information, materials, products, and services on or available through Reference Sites is solely at your own risk.</p>
-<h2 id="17-idea-submission">17. Idea Submission</h2>
+<h2 id="17-idea-submission" tabindex="-1">
+  17. Idea Submission
+</h2>
 
 
 <style>
@@ -6807,7 +6941,9 @@ If you choose to send us your ideas or suggestions, then you agree that we can u
 </div>
 
 <p>By submitting ideas, suggestions, documents, and/or proposals (the “Submissions”) to Twitch or its employees, you acknowledge and agree that Twitch shall be entitled to use or disclose such Submissions for any purpose in any way without providing compensation or credit to you.</p>
-<h2 id="18-termination">18. Termination</h2>
+<h2 id="18-termination" tabindex="-1">
+  18. Termination
+</h2>
 
 
 <style>
@@ -6988,8 +7124,12 @@ Twitch has the right to end or suspend your ability to use the Services, includi
 <p>You may terminate your license to use the Twitch Services and this Terms of Service agreement at your discretion at any time by ceasing to use the Twitch Services or, if you are a registered user, by deleting your Twitch account. For residents of the European Union or the European Economic Area, or of the United Kingdom, who are acting as a Consumer, you may have a right to withdraw from or cancel the agreement for the use of the Twitch Services under these Terms of Service within a specific cooling-off period. When and how this right may apply is explained in our <a href="https://legal.twitch.com/legal/eu-eea-uk-right-of-withdrawal/">EU, EEA &amp; UK Consumer Right of Withdrawal Information</a>.</p>
 <p>To the fullest extent permitted by applicable law, Twitch reserves the right, without notice and in our sole discretion, to stop providing the Services (or any features) to you or to users generally, to terminate this Terms of Service agreement with you, to terminate your license to use the Twitch Services (including to post User Content), and to block or prevent your future access to and use of the Twitch Services for any reason, including without limitation if: (a) your use of the Twitch Services violates these Terms of Service or applicable law; (b) you fraudulently use or misuse the Twitch Services; or (c) we are unable to continue providing the Twitch Services to you due to technical or legitimate business reasons. Our right to terminate our services, this agreement, and your license includes the ability to terminate or to suspend your access to any purchased products or services, including any subscriptions, Prime Gaming, or Turbo accounts. To the fullest extent permitted by applicable law, your only remedy with respect to any dissatisfaction with: (i) the Twitch Services, (ii) any term of these Terms of Service, (iii) any policy or practice of Twitch in operating the Twitch Services, or (iv) any content or information transmitted through the Twitch Services, is to terminate your account and to discontinue use of any and all parts of the Twitch Services.</p>
 <p>For residents of the European Union or the European Economic Area, the United Kingdom, or Switzerland who are acting as a Consumer, except in the case where Twitch reasonably considers that giving notice is legally prohibited (for instance, when providing notice would either (i) violate applicable laws, regulations, or orders from regulatory authorities or (ii) compromise an ongoing investigation conducted by a regulatory authority) or that any notice may cause harm to you, third parties, Twitch, and/or its affiliates (for instance, when providing notice harms the security of the Twitch Services), Twitch will without delay notify you of the reason for its action.</p>
-<h2 id="19-disputes">19. Disputes</h2>
-<h4 id="a-indemnification">a. Indemnification</h4>
+<h2 id="19-disputes" tabindex="-1">
+  19. Disputes
+</h2>
+<h4 id="a-indemnification">
+  a. Indemnification
+</h4>
 
 
 <style>
@@ -7050,7 +7190,9 @@ You agree to compensate Twitch (and other named parties) and defend us against a
 </div>
 
 <p>To the fullest extent permitted by applicable law, you agree to indemnify, defend, and hold harmless Twitch, its affiliated companies, and each of our respective contractors, employees, officers, directors, agents, third-party suppliers, licensors, and partners (individually and collectively, the “Twitch Parties”) from any claims, losses, damages, demands, expenses, costs, and liabilities, including legal fees and expenses, arising out of or related to your access, use, or misuse of the Twitch Services, any User Content you post, store, or otherwise transmit in or through the Twitch Services, your violation of the rights of any third party, any violation by you of these Terms of Service, or any breach of the representations, warranties, and covenants made by you herein. You agree to promptly notify the Twitch Parties of any third-party claim, and Twitch reserves the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify Twitch, and you agree to cooperate with Twitch’s defense of these claims. Twitch will use reasonable efforts to notify you of any such claim, action, or proceeding upon becoming aware of it.</p>
-<h4 id="b-disclaimers-no-warranties">b. Disclaimers; No Warranties</h4>
+<h4 id="b-disclaimers-no-warranties">
+  b. Disclaimers; No Warranties
+</h4>
 
 
 <style>
@@ -7115,7 +7257,9 @@ This is our disclaimer of legal liability for the quality, safety, or reliabilit
 <p>ii. EU/EEA/UK/CH Warranty Rights</p>
 <p>For residents of the European Union or the European Economic Area, the United Kingdom, or Switzerland who are acting as a Consumer, there are warranty rights under applicable law in case of any non-conformity of digital content and services. Such rights shall remain unaffected by these Terms of Service. In such a case, Twitch offers no further implied or statutory warranties or conditions with regard to digital content and services, and explicitly disclaims all implied warranties and conditions to the maximum extent permitted by applicable law.</p>
 <p>You acknowledge that we may change the Twitch Services from time to time without causing its non-conformity, including when needed to comply with applicable law or regulation, or for justified commercial, security, or operational reasons, and including to make any improvements to your access to the Twitch Services.</p>
-<h4 id="c-limitation-of-liability-and-damages">c. Limitation of Liability and Damages</h4>
+<h4 id="c-limitation-of-liability-and-damages">
+  c. Limitation of Liability and Damages
+</h4>
 
 
 <style>
@@ -7182,7 +7326,9 @@ This section details the limits of legal liability we may have to you.
 <p>THESE LIMITATIONS OF LIABILITY ALSO APPLY WITH RESPECT TO DAMAGES INCURRED BY YOU BY REASON OF ANY PRODUCTS OR SERVICES SOLD OR PROVIDED ON ANY REFERENCE SITES OR OTHERWISE BY THIRD PARTIES OTHER THAN TWITCH AND RECEIVED THROUGH OR ADVERTISED ON THE TWITCH SERVICES OR RECEIVED THROUGH ANY REFERENCE SITES.</p>
 <p>iii. Basis of the Bargain</p>
 <p>YOU ACKNOWLEDGE AND AGREE THAT TWITCH HAS OFFERED THE TWITCH SERVICES, USER CONTENT, MATERIALS, AND OTHER CONTENT AND INFORMATION, SET ITS PRICES, AND ENTERED INTO THESE TERMS OF SERVICE IN RELIANCE UPON THE WARRANTY DISCLAIMERS AND LIMITATIONS OF LIABILITY SET FORTH HEREIN, THAT THE WARRANTY DISCLAIMERS AND LIMITATIONS OF LIABILITY SET FORTH HEREIN REFLECT A REASONABLE AND FAIR ALLOCATION OF RISK BETWEEN YOU AND TWITCH, AND THAT THE WARRANTY DISCLAIMERS AND LIMITATIONS OF LIABILITY SET FORTH HEREIN FORM AN ESSENTIAL BASIS OF THE BARGAIN BETWEEN YOU AND TWITCH. TWITCH WOULD NOT BE ABLE TO PROVIDE THE TWITCH SERVICES TO YOU ON AN ECONOMICALLY REASONABLE BASIS WITHOUT THESE LIMITATIONS.</p>
-<h4 id="d-informal-resolution">d. Informal Resolution</h4>
+<h4 id="d-informal-resolution">
+  d. Informal Resolution
+</h4>
 
 
 <style>
@@ -7243,7 +7389,9 @@ You promise to notify us 60 days before filing a lawsuit against us so that we w
 </div>
 
 <p>Most disputes can be resolved informally, so you agree to contact us before initiating a lawsuit related to these Terms of Service or your use of the Twitch Services. Email your informal dispute resolution notice to <a href="mailto:legal@twitch.tv">legal@twitch.tv</a> and include the information necessary for Twitch to investigate and respond, including your name, your Twitch username (if you have a registered Twitch account), a description of the dispute and alleged harm, your contact email address, and the name and contact information for your attorney, if you are represented by one (“Notice of Dispute”). After you send us the required Notice of Dispute, you and Twitch will have 60 days from Twitch’s receipt to engage in informal discussions to attempt to resolve the dispute amicably. To the extent permitted by applicable law, you must engage in this informal resolution process before starting any formal dispute process. Any applicable statutes of limitations will be tolled for the 60-day period following Twitch’s receipt of your Notice of Dispute, to allow the parties to attempt informal resolution.</p>
-<h4 id="e-applicable-law-and-jurisdiction">e. <strong>Applicable Law and Jurisdiction</strong></h4>
+<h4 id="e-applicable-law-and-jurisdiction">
+  e. <strong>Applicable Law and Jurisdiction</strong>
+</h4>
 
 
 <style>
@@ -7305,7 +7453,9 @@ If we end up in a legal dispute, you and Twitch agree to resolve it in the named
 
 <p>You agree that any dispute, claim, or cause of action of any sort that might arise between the parties will be governed by this Agreement and the laws of the State of California and applicable United States federal law, without regard to any conflict of laws principles. Any disputes, claims, or causes of action arising out of or in connection with these Terms of Service or your use of the Twitch Services shall be brought and resolved exclusively by the United States District Court for the Northern District of California or a California state court located in San Francisco County, California. You expressly agree to submit to the personal jurisdiction of these courts for the purpose of litigating any such claim, waive any jurisdiction or venue defenses, and agree to service of process by email.</p>
 <p>For residents of the European Union or the European Economic Area, the United Kingdom, or Switzerland who are acting as a Consumer, (i) the choice of governing law in this Section will not deprive you of the protection afforded to you as a consumer by provisions that cannot be derogated from by agreement by virtue of the laws applicable where you reside, and (ii) any disputes or claims relating in any way to these Terms of Service or your use of the Twitch Services shall be resolved by a competent civil court in the country where you reside.</p>
-<h4 id="f-claims">f. <strong>Claims</strong></h4>
+<h4 id="f-claims">
+  f. <strong>Claims</strong>
+</h4>
 
 
 <style>
@@ -7366,7 +7516,9 @@ You and Twitch both agree to bring any legal claims against one another within o
 </div>
 
 <p>TO THE EXTENT PERMITTED BY APPLICABLE LAW, YOU AND TWITCH AGREE THAT ANY CAUSE OF ACTION ARISING OUT OF OR RELATED TO THE TWITCH SERVICES MUST COMMENCE WITHIN ONE (1) YEAR AFTER THE CAUSE OF ACTION ACCRUES. OTHERWISE, SUCH CAUSE OF ACTION IS PERMANENTLY BARRED.</p>
-<h2 id="20-miscellaneous">20. Miscellaneous</h2>
+<h2 id="20-miscellaneous" tabindex="-1">
+  20. Miscellaneous
+</h2>
 
 
 <style>
@@ -7426,17 +7578,29 @@ This section contains some additional important details about our contract with 
   </div>
 </div>
 
-<h4 id="a-waiver"><strong>a. Waiver</strong></h4>
+<h4 id="a-waiver">
+  <strong>a. Waiver</strong>
+</h4>
 <p>If we fail to exercise or enforce any right or provision of these Terms of Service, it will not constitute a waiver of such right or provision. Any waiver of any provision of these Terms of Service will be effective only if in writing and signed by the relevant party.</p>
-<h4 id="b-severability"><strong>b. Severability</strong></h4>
+<h4 id="b-severability">
+  <strong>b. Severability</strong>
+</h4>
 <p>If any provision of these Terms of Service is held to be unlawful, void, or for any reason unenforceable, then that provision will be limited or eliminated from these Terms of Service to the minimum extent necessary and will not affect the validity and enforceability of any remaining provisions.</p>
-<h4 id="c-assignment"><strong>c. Assignment</strong></h4>
+<h4 id="c-assignment">
+  <strong>c. Assignment</strong>
+</h4>
 <p>To the extent permitted by applicable law, these Terms of Service, and any rights and licenses granted hereunder, may not be transferred or assigned by you, but may be assigned by Twitch without restriction. Any assignment attempted to be made in violation of this Terms of Service shall be void.</p>
-<h4 id="d-survival"><strong>d. Survival</strong></h4>
+<h4 id="d-survival">
+  <strong>d. Survival</strong>
+</h4>
 <p>Upon termination of these Terms of Service, any provision which, by its nature or express terms should survive, will survive such termination or expiration, including, but not limited to, Sections 7-10, and 14-20.</p>
-<h4 id="e-entire-agreement"><strong>e. Entire Agreement</strong></h4>
+<h4 id="e-entire-agreement">
+  <strong>e. Entire Agreement</strong>
+</h4>
 <p>The Terms of Service, which incorporate the Guidelines, is the entire agreement between you and Twitch relating to the subject matter herein and will not be modified except by a writing signed by authorized representatives of both parties, or by a change to these Terms of Service made by Twitch as set forth in Section 6 above.</p>
-<h2 id="21-contact-information">21. Contact Information</h2>
+<h2 id="21-contact-information" tabindex="-1">
+  21. Contact Information
+</h2>
 
 
 <style>
@@ -7505,7 +7669,9 @@ Here is our contact information. Our online Help Desk also provides more informa
 <p>Twitch Interactive, Inc. is a company registered in the US State of Delaware under file no. 4221511.</p>
 <p>For questions or more information, please visit our <a href="http://help.twitch.tv/">Help Desk</a> or write to us at the address above, Attn: Customer Support.</p>
 <p>The EU Commission provides a platform for online dispute resolution at <a href="https://ec.europa.eu/consumers/odr">https://ec.europa.eu/consumers/odr</a>. Please note that Twitch is not obliged to participate in such dispute resolution.</p>
-<h2 id="22-requests-for-information-and-subpoenas">22. Requests for Information and Subpoenas</h2>
+<h2 id="22-requests-for-information-and-subpoenas" tabindex="-1">
+  22. Requests for Information and Subpoenas
+</h2>
 
 
 <style>
@@ -7585,7 +7751,7 @@ This section explains the required process for requesting information or documen
   <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden rotate-[270deg]" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
     <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </svg>
-  <span class="sr-only" x-text="mobileTOCOpen ? 'Collapse table of contents' : 'Expand table of contents'">Expand table of contents</span>
+  
 </button>
 <div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;" class="hidden xl:block">
   <nav id="TableOfContents">
@@ -7663,8 +7829,16 @@ This section explains the required process for requesting information or documen
         const tocLinks = document.querySelectorAll('.toc-header + div a');
         tocLinks.forEach(link => {
           link.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            const targetId = this.getAttribute('href').substring(1);
+            const targetHeading = document.getElementById(targetId);
             
-            
+            if (targetHeading) {
+              
+              targetHeading.focus();
+              
+              targetHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
           });
         });
         
