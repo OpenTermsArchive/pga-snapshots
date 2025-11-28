@@ -1569,7 +1569,10 @@
 
         <div class="mo__center_content align-center">
           <h3>…</h3>
-          <p>You’re not in a country this is intended for. You will be redirected shortly.</p>
+          <p>
+            <span x-show="countryCode">We detected you're in <strong x-text="countryCode.toUpperCase()"></strong>. </span>
+            This document is intended for users in other regions. You will be redirected shortly.
+          </p>
           <a href="/en/legal/">Click here if you are not redirected.</a>
         </div>
       
