@@ -590,6 +590,7 @@
     </ul>
 </div>
 
+
 </aside>
             <div id="main-content">
               
@@ -600,7 +601,7 @@
       
       
         
-      <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
+      <div class="grid grid-cols-1 pb-16 xl:grid-cols-[1fr_350px]">
         
         
         
@@ -613,8 +614,38 @@
           
         
 
-        <h1 class="pt-12  pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 col-span-2 row-span-2 xl:row-span-1">Cookie Notice</h1>
-        <div class="pl-5 pr-5 xl:pr-0">
+        <h1 class="pt-12 pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 xl:col-span-2">Cookie Notice</h1>
+        
+        
+        
+        <div class=" xl:sticky top-0 self-start px-4 xl:pl-5 xl:pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll xl:col-start-2 xl:row-start-2 xl:max-w-[350px] order-first xl:order-none" x-data="{mobileTOCOpen: false}">
+          <style>
+            @media (max-width: 1279px) {
+              .toc-header {
+                margin-bottom: 13px;
+              }
+            }
+          </style>
+          
+            <div class="bg-brand-ice xl:bg-transparent p-4 xl:p-0 rounded-lg xl:rounded-none">
+              <button class="text-sm font-[500] flex items-center justify-between xl:border-none xl:toc-header w-full text-left group" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" :data-state="mobileTOCOpen ? 'open' : 'closed'" aria-controls="table-of-contents">
+                <div>ON THIS PAGE</div>
+                <div class="flex items-center justify-end xl:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 h-4 transition-transform duration-300 select-none" :class="mobileTOCOpen ? '-scale-y-100' : ''"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg>
+                </div>
+              </button>
+              <div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" class="xl:px-0" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cookie-notice"><strong>Cookie Notice</strong></a></li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          
+        </div>
+        
+        <div class="pl-5 pr-5 xl:pr-0 xl:col-start-1 xl:row-start-2">
           
             
               <div class="flex items-center justify-between mb-5">
@@ -672,33 +703,6 @@
 <p>You may also refuse to accept cookies from the Twitch Services or Extension developers at any time by activating the setting on your browser which allows you to refuse cookies. Further information about the procedure to follow in order to disable cookies can be found on your Internet browser provider’s website via your help screen. For additional guidance please visit the Digital Advertising Alliance’s Ad Choices [<a href="https://youradchoices.com/choices-faq">https://youradchoices.com/choices-faq</a>] page. Please be aware that if cookies are disabled, not all features of the Twitch Services or Extensions may operate as intended.</p>
 
           </article>
-        </div>
-        
-        
-        <div class=" xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2 max-w-[350px]" x-data="{mobileTOCOpen: false}">
-          <style>
-            @media (max-width: 1023px) {
-              .toc-header {
-                margin-bottom: 13px;
-              }
-            }
-          </style>
-          
-<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
-  ON THIS PAGE
-  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
-    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  </svg>
-  
-</button>
-<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#cookie-notice"><strong>Cookie Notice</strong></a></li>
-  </ul>
-</nav>
-</div>
-          
         </div>
       </div>
     
@@ -1091,6 +1095,7 @@
     </ul>
 </div>
 
+
 </aside>
             <div id="main-content">
               
@@ -1101,7 +1106,7 @@
       
       
         
-      <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
+      <div class="grid grid-cols-1 pb-16 xl:grid-cols-[1fr_350px]">
         
         
         
@@ -1114,8 +1119,38 @@
           
         
 
-        <h1 class="pt-12  pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 col-span-2 row-span-2 xl:row-span-1">Cookie Notice</h1>
-        <div class="pl-5 pr-5 xl:pr-0">
+        <h1 class="pt-12 pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 xl:col-span-2">Cookie Notice</h1>
+        
+        
+        
+        <div class=" xl:sticky top-0 self-start px-4 xl:pl-5 xl:pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll xl:col-start-2 xl:row-start-2 xl:max-w-[350px] order-first xl:order-none" x-data="{mobileTOCOpen: false}">
+          <style>
+            @media (max-width: 1279px) {
+              .toc-header {
+                margin-bottom: 13px;
+              }
+            }
+          </style>
+          
+            <div class="bg-brand-ice xl:bg-transparent p-4 xl:p-0 rounded-lg xl:rounded-none">
+              <button class="text-sm font-[500] flex items-center justify-between xl:border-none xl:toc-header w-full text-left group" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" :data-state="mobileTOCOpen ? 'open' : 'closed'" aria-controls="table-of-contents" data-state="closed">
+                <div>ON THIS PAGE</div>
+                <div class="flex items-center justify-end xl:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 h-4 transition-transform duration-300 select-none" :class="mobileTOCOpen ? '-scale-y-100' : ''"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg>
+                </div>
+              </button>
+              <div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" class="xl:px-0 hidden xl:block" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cookie-notice"><strong>Cookie Notice</strong></a></li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          
+        </div>
+        
+        <div class="pl-5 pr-5 xl:pr-0 xl:col-start-1 xl:row-start-2">
           
             
               <div class="flex items-center justify-between mb-5">
@@ -1173,33 +1208,6 @@
 <p>You may also refuse to accept cookies from the Twitch Services or Extension developers at any time by activating the setting on your browser which allows you to refuse cookies. Further information about the procedure to follow in order to disable cookies can be found on your Internet browser provider’s website via your help screen. For additional guidance please visit the Digital Advertising Alliance’s Ad Choices [<a href="https://youradchoices.com/choices-faq">https://youradchoices.com/choices-faq</a>] page. Please be aware that if cookies are disabled, not all features of the Twitch Services or Extensions may operate as intended.</p>
 
           </article>
-        </div>
-        
-        
-        <div class=" xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2 max-w-[350px]" x-data="{mobileTOCOpen: false}">
-          <style>
-            @media (max-width: 1023px) {
-              .toc-header {
-                margin-bottom: 13px;
-              }
-            }
-          </style>
-          
-<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
-  ON THIS PAGE
-  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden rotate-[270deg]" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
-    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  </svg>
-  
-</button>
-<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;" class="hidden xl:block">
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#cookie-notice"><strong>Cookie Notice</strong></a></li>
-  </ul>
-</nav>
-</div>
-          
         </div>
       </div>
     
