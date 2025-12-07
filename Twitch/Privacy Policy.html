@@ -542,7 +542,7 @@
                 
                 
 
-                <a class="p-3  text-brand-dragon font-[700]" aria-current="page" href="https://legal.twitch.com/en/legal/privacy-notice/" data-i18n="menu:privacy-notice">Privacy Notice</a>
+                <a class="p-3  text-brand-dragon font-[700] underline" aria-current="page" href="https://legal.twitch.com/en/legal/privacy-notice/" data-i18n="menu:privacy-notice">Privacy Notice</a>
             
 
             
@@ -616,6 +616,7 @@
     </ul>
 </div>
 
+
 </aside>
             <div id="main-content">
               
@@ -626,7 +627,7 @@
       
       
         
-      <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
+      <div class="grid grid-cols-1 pb-16 xl:grid-cols-[1fr_350px]">
         
         
         
@@ -639,8 +640,55 @@
           
         
 
-        <h1 class="pt-12  pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 col-span-2 row-span-2 xl:row-span-1">Privacy Notice</h1>
-        <div class="pl-5 pr-5 xl:pr-0">
+        <h1 class="pt-12 pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 xl:col-span-2">Privacy Notice</h1>
+        
+        
+        
+        <div class=" xl:sticky top-0 self-start px-4 xl:pl-5 xl:pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll xl:col-start-2 xl:row-start-2 xl:max-w-[350px] order-first xl:order-none" x-data="{mobileTOCOpen: false}">
+          <style>
+            @media (max-width: 1279px) {
+              .toc-header {
+                margin-bottom: 13px;
+              }
+            }
+          </style>
+          
+            <div class="bg-brand-ice xl:bg-transparent p-4 xl:p-0 rounded-lg xl:rounded-none">
+              <button class="text-sm font-[500] flex items-center justify-between xl:border-none xl:toc-header w-full text-left group" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" :data-state="mobileTOCOpen ? 'open' : 'closed'" aria-controls="table-of-contents">
+                <div>ON THIS PAGE</div>
+                <div class="flex items-center justify-end xl:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 h-4 transition-transform duration-300 select-none" :class="mobileTOCOpen ? '-scale-y-100' : ''"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg>
+                </div>
+              </button>
+              <div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" class="xl:px-0" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#table-of-contents">Table of Contents</a></li>
+    <li><a href="#personal-information-twitch-collects-about-you">Personal Information Twitch Collects About You</a></li>
+    <li><a href="#how-twitch-uses-personal-information">How Twitch Uses Personal Information</a></li>
+    <li><a href="#when-twitch-discloses-personal-information">When Twitch Discloses Personal Information</a></li>
+    <li><a href="#data-subject-rights-and-your-choices">Data Subject Rights and Your Choices</a></li>
+    <li><a href="#account-closure-and-deletion">Account Closure and Deletion</a></li>
+    <li><a href="#third-party-services-and-websites">Third-Party Services and Websites</a></li>
+    <li><a href="#extensions-and-applications">Extensions and Applications</a></li>
+    <li><a href="#advertisers-and-analytics-providers">Advertisers and Analytics Providers</a></li>
+    <li><a href="#do-not-track">Do Not Track</a></li>
+    <li><a href="#data-security">Data Security</a></li>
+    <li><a href="#retention-of-your-information">Retention of Your Information</a></li>
+    <li><a href="#childrens-privacy">Children’s Privacy</a></li>
+    <li><a href="#merger-or-sale">Merger or Sale</a></li>
+    <li><a href="#international-data-transfers">International Data Transfers</a></li>
+    <li><a href="#changes-and-updates-to-this-privacy-notice">Changes and Updates to This Privacy Notice</a></li>
+    <li><a href="#twitch-contact-information">Twitch Contact Information</a></li>
+    <li><a href="#additional-information-for-certain-jurisdictions">Additional Information for Certain Jurisdictions</a></li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          
+        </div>
+        
+        <div class="pl-5 pr-5 xl:pr-0 xl:col-start-1 xl:row-start-2">
           
             
               <div class="flex items-center justify-between mb-5">
@@ -809,50 +857,6 @@
 <p>Visit the <a href="https://www.twitch.tv/legal/japan-privacy-notice/">Japan Privacy Disclosures</a> page to read additional disclosures required under the Act on Protection of Personal Information.</p>
 
           </article>
-        </div>
-        
-        
-        <div class=" xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2 max-w-[350px]" x-data="{mobileTOCOpen: false}">
-          <style>
-            @media (max-width: 1023px) {
-              .toc-header {
-                margin-bottom: 13px;
-              }
-            }
-          </style>
-          
-<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
-  ON THIS PAGE
-  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
-    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  </svg>
-  
-</button>
-<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#table-of-contents">Table of Contents</a></li>
-    <li><a href="#personal-information-twitch-collects-about-you">Personal Information Twitch Collects About You</a></li>
-    <li><a href="#how-twitch-uses-personal-information">How Twitch Uses Personal Information</a></li>
-    <li><a href="#when-twitch-discloses-personal-information">When Twitch Discloses Personal Information</a></li>
-    <li><a href="#data-subject-rights-and-your-choices">Data Subject Rights and Your Choices</a></li>
-    <li><a href="#account-closure-and-deletion">Account Closure and Deletion</a></li>
-    <li><a href="#third-party-services-and-websites">Third-Party Services and Websites</a></li>
-    <li><a href="#extensions-and-applications">Extensions and Applications</a></li>
-    <li><a href="#advertisers-and-analytics-providers">Advertisers and Analytics Providers</a></li>
-    <li><a href="#do-not-track">Do Not Track</a></li>
-    <li><a href="#data-security">Data Security</a></li>
-    <li><a href="#retention-of-your-information">Retention of Your Information</a></li>
-    <li><a href="#childrens-privacy">Children’s Privacy</a></li>
-    <li><a href="#merger-or-sale">Merger or Sale</a></li>
-    <li><a href="#international-data-transfers">International Data Transfers</a></li>
-    <li><a href="#changes-and-updates-to-this-privacy-notice">Changes and Updates to This Privacy Notice</a></li>
-    <li><a href="#twitch-contact-information">Twitch Contact Information</a></li>
-    <li><a href="#additional-information-for-certain-jurisdictions">Additional Information for Certain Jurisdictions</a></li>
-  </ul>
-</nav>
-</div>
-          
         </div>
       </div>
     
@@ -1173,7 +1177,7 @@
                 
                 
 
-                <a class="p-3  text-brand-dragon font-[700]" aria-current="page" href="https://legal.twitch.com/en/legal/privacy-notice/" data-i18n="menu:privacy-notice">Privacy Notice</a>
+                <a class="p-3  text-brand-dragon font-[700] underline" aria-current="page" href="https://legal.twitch.com/en/legal/privacy-notice/" data-i18n="menu:privacy-notice">Privacy Notice</a>
             
 
             
@@ -1247,6 +1251,7 @@
     </ul>
 </div>
 
+
 </aside>
             <div id="main-content">
               
@@ -1257,7 +1262,7 @@
       
       
         
-      <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
+      <div class="grid grid-cols-1 pb-16 xl:grid-cols-[1fr_350px]">
         
         
         
@@ -1270,8 +1275,55 @@
           
         
 
-        <h1 class="pt-12  pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 col-span-2 row-span-2 xl:row-span-1">Privacy Notice</h1>
-        <div class="pl-5 pr-5 xl:pr-0">
+        <h1 class="pt-12 pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 xl:col-span-2">Privacy Notice</h1>
+        
+        
+        
+        <div class=" xl:sticky top-0 self-start px-4 xl:pl-5 xl:pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll xl:col-start-2 xl:row-start-2 xl:max-w-[350px] order-first xl:order-none" x-data="{mobileTOCOpen: false}">
+          <style>
+            @media (max-width: 1279px) {
+              .toc-header {
+                margin-bottom: 13px;
+              }
+            }
+          </style>
+          
+            <div class="bg-brand-ice xl:bg-transparent p-4 xl:p-0 rounded-lg xl:rounded-none">
+              <button class="text-sm font-[500] flex items-center justify-between xl:border-none xl:toc-header w-full text-left group" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" :data-state="mobileTOCOpen ? 'open' : 'closed'" aria-controls="table-of-contents" data-state="closed">
+                <div>ON THIS PAGE</div>
+                <div class="flex items-center justify-end xl:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 h-4 transition-transform duration-300 select-none" :class="mobileTOCOpen ? '-scale-y-100' : ''"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg>
+                </div>
+              </button>
+              <div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" class="xl:px-0 hidden xl:block" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#table-of-contents">Table of Contents</a></li>
+    <li><a href="#personal-information-twitch-collects-about-you">Personal Information Twitch Collects About You</a></li>
+    <li><a href="#how-twitch-uses-personal-information">How Twitch Uses Personal Information</a></li>
+    <li><a href="#when-twitch-discloses-personal-information">When Twitch Discloses Personal Information</a></li>
+    <li><a href="#data-subject-rights-and-your-choices">Data Subject Rights and Your Choices</a></li>
+    <li><a href="#account-closure-and-deletion">Account Closure and Deletion</a></li>
+    <li><a href="#third-party-services-and-websites">Third-Party Services and Websites</a></li>
+    <li><a href="#extensions-and-applications">Extensions and Applications</a></li>
+    <li><a href="#advertisers-and-analytics-providers">Advertisers and Analytics Providers</a></li>
+    <li><a href="#do-not-track">Do Not Track</a></li>
+    <li><a href="#data-security">Data Security</a></li>
+    <li><a href="#retention-of-your-information">Retention of Your Information</a></li>
+    <li><a href="#childrens-privacy">Children’s Privacy</a></li>
+    <li><a href="#merger-or-sale">Merger or Sale</a></li>
+    <li><a href="#international-data-transfers">International Data Transfers</a></li>
+    <li><a href="#changes-and-updates-to-this-privacy-notice">Changes and Updates to This Privacy Notice</a></li>
+    <li><a href="#twitch-contact-information">Twitch Contact Information</a></li>
+    <li><a href="#additional-information-for-certain-jurisdictions">Additional Information for Certain Jurisdictions</a></li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          
+        </div>
+        
+        <div class="pl-5 pr-5 xl:pr-0 xl:col-start-1 xl:row-start-2">
           
             
               <div class="flex items-center justify-between mb-5">
@@ -1440,50 +1492,6 @@
 <p>Visit the <a href="https://www.twitch.tv/legal/japan-privacy-notice/">Japan Privacy Disclosures</a> page to read additional disclosures required under the Act on Protection of Personal Information.</p>
 
           </article>
-        </div>
-        
-        
-        <div class=" xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2 max-w-[350px]" x-data="{mobileTOCOpen: false}">
-          <style>
-            @media (max-width: 1023px) {
-              .toc-header {
-                margin-bottom: 13px;
-              }
-            }
-          </style>
-          
-<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
-  ON THIS PAGE
-  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden rotate-[270deg]" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
-    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  </svg>
-  
-</button>
-<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;" class="hidden xl:block">
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#table-of-contents">Table of Contents</a></li>
-    <li><a href="#personal-information-twitch-collects-about-you">Personal Information Twitch Collects About You</a></li>
-    <li><a href="#how-twitch-uses-personal-information">How Twitch Uses Personal Information</a></li>
-    <li><a href="#when-twitch-discloses-personal-information">When Twitch Discloses Personal Information</a></li>
-    <li><a href="#data-subject-rights-and-your-choices">Data Subject Rights and Your Choices</a></li>
-    <li><a href="#account-closure-and-deletion">Account Closure and Deletion</a></li>
-    <li><a href="#third-party-services-and-websites">Third-Party Services and Websites</a></li>
-    <li><a href="#extensions-and-applications">Extensions and Applications</a></li>
-    <li><a href="#advertisers-and-analytics-providers">Advertisers and Analytics Providers</a></li>
-    <li><a href="#do-not-track">Do Not Track</a></li>
-    <li><a href="#data-security">Data Security</a></li>
-    <li><a href="#retention-of-your-information">Retention of Your Information</a></li>
-    <li><a href="#childrens-privacy">Children’s Privacy</a></li>
-    <li><a href="#merger-or-sale">Merger or Sale</a></li>
-    <li><a href="#international-data-transfers">International Data Transfers</a></li>
-    <li><a href="#changes-and-updates-to-this-privacy-notice">Changes and Updates to This Privacy Notice</a></li>
-    <li><a href="#twitch-contact-information">Twitch Contact Information</a></li>
-    <li><a href="#additional-information-for-certain-jurisdictions">Additional Information for Certain Jurisdictions</a></li>
-  </ul>
-</nav>
-</div>
-          
         </div>
       </div>
     
