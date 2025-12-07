@@ -831,7 +831,7 @@
                 
                 
 
-                <a class="p-3  text-brand-dragon font-[700]" aria-current="page" href="https://legal.twitch.com/en/legal/monetized-streamer-agreement/" data-i18n="menu:monetized-streamer-agreement">Monetized Streamer Agreement</a>
+                <a class="p-3  text-brand-dragon font-[700] underline" aria-current="page" href="https://legal.twitch.com/en/legal/monetized-streamer-agreement/" data-i18n="menu:monetized-streamer-agreement">Monetized Streamer Agreement</a>
             
 
             
@@ -848,6 +848,7 @@
     </ul>
 </div>
 
+
 </aside>
             <div id="main-content">
               
@@ -858,7 +859,7 @@
       
       
         
-      <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
+      <div class="grid grid-cols-1 pb-16 xl:grid-cols-[1fr_350px]">
         
         
         
@@ -871,8 +872,38 @@
           
         
 
-        <h1 class="pt-12  pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 col-span-2 row-span-2 xl:row-span-1">Monetized Streamer Agreement</h1>
-        <div class="pl-5 pr-5 xl:pr-0">
+        <h1 class="pt-12 pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 xl:col-span-2">Monetized Streamer Agreement</h1>
+        
+        
+        
+        <div class=" xl:sticky top-0 self-start px-4 xl:pl-5 xl:pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll xl:col-start-2 xl:row-start-2 xl:max-w-[350px] order-first xl:order-none" x-data="{mobileTOCOpen: false}">
+          <style>
+            @media (max-width: 1279px) {
+              .toc-header {
+                margin-bottom: 13px;
+              }
+            }
+          </style>
+          
+            <div class="bg-brand-ice xl:bg-transparent p-4 xl:p-0 rounded-lg xl:rounded-none">
+              <button class="text-sm font-[500] flex items-center justify-between xl:border-none xl:toc-header w-full text-left group" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" :data-state="mobileTOCOpen ? 'open' : 'closed'" aria-controls="table-of-contents">
+                <div>ON THIS PAGE</div>
+                <div class="flex items-center justify-end xl:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 h-4 transition-transform duration-300 select-none" :class="mobileTOCOpen ? '-scale-y-100' : ''"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg>
+                </div>
+              </button>
+              <div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" class="xl:px-0" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
+                <nav id="TableOfContents">
+  <ul>
+    <li></li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          
+        </div>
+        
+        <div class="pl-5 pr-5 xl:pr-0 xl:col-start-1 xl:row-start-2">
           
 
           <article data-pagefind-body="" data-pagefind-meta="title:Monetized Streamer Agreement" class="prose max-w-none prose-brand-purple prose-base prose-headings:text-brand-purple-dark prose-a:text-brand-black hover:prose-a:underline">
@@ -953,33 +984,6 @@
 <p>13.7. This Agreement is the complete and exclusive agreement between you and us with respect to the subject matter contemplated by this Agreement, superseding, canceling, and replacing all prior or contemporaneous agreements, communications, and understandings, both oral and written, regarding that subject matter. Other than as provided in Section 7 above, this Agreement may be amended only by a written agreement signed by authorized representatives of you and us. To the extent there is any conflict between this Agreement and the Terms of Service, this Agreement will take precedence. All capitalized terms not defined in this Agreement have the respective meanings set forth in the Terms of Service. You and we desire that this Agreement be construed fairly, according to its terms, in plain English, without constructive presumptions against the drafting party, and without reference to the titles or section headings, which are for reference only. All uses in this Agreement of the words “including,” “include(s),” “such as,” “for example,” and “e.g.” are deemed “without limitation.” You acknowledge and agree you have been provided the opportunity for your independent legal counsel to review and advise you regarding this Agreement prior to agreeing to its terms.</p>
 
           </article>
-        </div>
-        
-        
-        <div class=" xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2 max-w-[350px]" x-data="{mobileTOCOpen: false}">
-          <style>
-            @media (max-width: 1023px) {
-              .toc-header {
-                margin-bottom: 13px;
-              }
-            }
-          </style>
-          
-<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
-  ON THIS PAGE
-  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
-    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  </svg>
-  
-</button>
-<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
-  <nav id="TableOfContents">
-  <ul>
-    <li></li>
-  </ul>
-</nav>
-</div>
-          
         </div>
       </div>
     
@@ -1357,7 +1361,7 @@
                 
                 
 
-                <a class="p-3  text-brand-dragon font-[700]" aria-current="page" href="https://legal.twitch.com/en/legal/monetized-streamer-agreement/" data-i18n="menu:monetized-streamer-agreement">Monetized Streamer Agreement</a>
+                <a class="p-3  text-brand-dragon font-[700] underline" aria-current="page" href="https://legal.twitch.com/en/legal/monetized-streamer-agreement/" data-i18n="menu:monetized-streamer-agreement">Monetized Streamer Agreement</a>
             
 
             
@@ -1374,6 +1378,7 @@
     </ul>
 </div>
 
+
 </aside>
             <div id="main-content">
               
@@ -1384,7 +1389,7 @@
       
       
         
-      <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
+      <div class="grid grid-cols-1 pb-16 xl:grid-cols-[1fr_350px]">
         
         
         
@@ -1397,8 +1402,38 @@
           
         
 
-        <h1 class="pt-12  pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 col-span-2 row-span-2 xl:row-span-1">Monetized Streamer Agreement</h1>
-        <div class="pl-5 pr-5 xl:pr-0">
+        <h1 class="pt-12 pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 xl:col-span-2">Monetized Streamer Agreement</h1>
+        
+        
+        
+        <div class=" xl:sticky top-0 self-start px-4 xl:pl-5 xl:pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll xl:col-start-2 xl:row-start-2 xl:max-w-[350px] order-first xl:order-none" x-data="{mobileTOCOpen: false}">
+          <style>
+            @media (max-width: 1279px) {
+              .toc-header {
+                margin-bottom: 13px;
+              }
+            }
+          </style>
+          
+            <div class="bg-brand-ice xl:bg-transparent p-4 xl:p-0 rounded-lg xl:rounded-none">
+              <button class="text-sm font-[500] flex items-center justify-between xl:border-none xl:toc-header w-full text-left group" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" :data-state="mobileTOCOpen ? 'open' : 'closed'" aria-controls="table-of-contents" data-state="closed">
+                <div>ON THIS PAGE</div>
+                <div class="flex items-center justify-end xl:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 h-4 transition-transform duration-300 select-none" :class="mobileTOCOpen ? '-scale-y-100' : ''"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg>
+                </div>
+              </button>
+              <div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" class="xl:px-0 hidden xl:block" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
+                <nav id="TableOfContents">
+  <ul>
+    <li></li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          
+        </div>
+        
+        <div class="pl-5 pr-5 xl:pr-0 xl:col-start-1 xl:row-start-2">
           
 
           <article data-pagefind-body="" data-pagefind-meta="title:Monetized Streamer Agreement" class="prose max-w-none prose-brand-purple prose-base prose-headings:text-brand-purple-dark prose-a:text-brand-black hover:prose-a:underline">
@@ -1479,33 +1514,6 @@
 <p>13.7. This Agreement is the complete and exclusive agreement between you and us with respect to the subject matter contemplated by this Agreement, superseding, canceling, and replacing all prior or contemporaneous agreements, communications, and understandings, both oral and written, regarding that subject matter. Other than as provided in Section 7 above, this Agreement may be amended only by a written agreement signed by authorized representatives of you and us. To the extent there is any conflict between this Agreement and the Terms of Service, this Agreement will take precedence. All capitalized terms not defined in this Agreement have the respective meanings set forth in the Terms of Service. You and we desire that this Agreement be construed fairly, according to its terms, in plain English, without constructive presumptions against the drafting party, and without reference to the titles or section headings, which are for reference only. All uses in this Agreement of the words “including,” “include(s),” “such as,” “for example,” and “e.g.” are deemed “without limitation.” You acknowledge and agree you have been provided the opportunity for your independent legal counsel to review and advise you regarding this Agreement prior to agreeing to its terms.</p>
 
           </article>
-        </div>
-        
-        
-        <div class=" xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2 max-w-[350px]" x-data="{mobileTOCOpen: false}">
-          <style>
-            @media (max-width: 1023px) {
-              .toc-header {
-                margin-bottom: 13px;
-              }
-            }
-          </style>
-          
-<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
-  ON THIS PAGE
-  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden rotate-[270deg]" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
-    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  </svg>
-  
-</button>
-<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;" class="hidden xl:block">
-  <nav id="TableOfContents">
-  <ul>
-    <li></li>
-  </ul>
-</nav>
-</div>
-          
         </div>
       </div>
     
