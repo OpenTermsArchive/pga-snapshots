@@ -708,7 +708,7 @@
                 
                 
 
-                <a class="p-3  text-brand-dragon font-[700]" aria-current="page" href="https://legal.twitch.com/en/legal/terms-of-service/" data-i18n="menu:terms-of-service">Terms of Service</a>
+                <a class="p-3  text-brand-dragon font-[700] underline" aria-current="page" href="https://legal.twitch.com/en/legal/terms-of-service/" data-i18n="menu:terms-of-service">Terms of Service</a>
             
 
             
@@ -846,6 +846,7 @@
     </ul>
 </div>
 
+
 </aside>
             <div id="main-content">
               
@@ -856,7 +857,7 @@
       
       
         
-      <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
+      <div class="grid grid-cols-1 pb-16 xl:grid-cols-[1fr_350px]">
         
         
         
@@ -869,8 +870,59 @@
           
         
 
-        <h1 class="pt-12  pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 col-span-2 row-span-2 xl:row-span-1">Terms of Service</h1>
-        <div class="pl-5 pr-5 xl:pr-0">
+        <h1 class="pt-12 pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 xl:col-span-2">Terms of Service</h1>
+        
+        
+        
+        <div class=" xl:sticky top-0 self-start px-4 xl:pl-5 xl:pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll xl:col-start-2 xl:row-start-2 xl:max-w-[350px] order-first xl:order-none" x-data="{mobileTOCOpen: false}">
+          <style>
+            @media (max-width: 1279px) {
+              .toc-header {
+                margin-bottom: 13px;
+              }
+            }
+          </style>
+          
+            <div class="bg-brand-ice xl:bg-transparent p-4 xl:p-0 rounded-lg xl:rounded-none">
+              <button class="text-sm font-[500] flex items-center justify-between xl:border-none xl:toc-header w-full text-left group" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" :data-state="mobileTOCOpen ? 'open' : 'closed'" aria-controls="table-of-contents">
+                <div>ON THIS PAGE</div>
+                <div class="flex items-center justify-end xl:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 h-4 transition-transform duration-300 select-none" :class="mobileTOCOpen ? '-scale-y-100' : ''"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg>
+                </div>
+              </button>
+              <div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" class="xl:px-0" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-introduction-your-agreement-to-these-terms-of-service">1. Introduction; Your Agreement to these Terms of Service</a></li>
+    <li><a href="#2-use-of-twitch-by-minors-and-blocked-persons">2. Use of Twitch by Minors and Blocked Persons</a></li>
+    <li><a href="#3-privacy-notice">3. Privacy Notice</a></li>
+    <li><a href="#4-account">4. Account</a></li>
+    <li><a href="#5-use-of-devices-and-services">5. Use of Devices and Services</a></li>
+    <li><a href="#6-modification-of-these-terms-of-service">6. Modification of these Terms of Service</a></li>
+    <li><a href="#7-license">7. License</a></li>
+    <li><a href="#8-user-content">8. User Content</a></li>
+    <li><a href="#9-branded-content">9. Branded Content</a></li>
+    <li><a href="#10-prohibited-conduct">10. Prohibited Conduct</a></li>
+    <li><a href="#11-simulcasting">11. Simulcasting</a></li>
+    <li><a href="#12-advertisements">12. Advertisements</a></li>
+    <li><a href="#13-recommendations">13. Recommendations</a></li>
+    <li><a href="#14-respecting-copyright">14. Respecting Copyright</a></li>
+    <li><a href="#15-trademarks">15. Trademarks</a></li>
+    <li><a href="#16-third-party-content">16. Third-Party Content</a></li>
+    <li><a href="#17-idea-submission">17. Idea Submission</a></li>
+    <li><a href="#18-termination">18. Termination</a></li>
+    <li><a href="#19-disputes">19. Disputes</a></li>
+    <li><a href="#20-miscellaneous">20. Miscellaneous</a></li>
+    <li><a href="#21-contact-information">21. Contact Information</a></li>
+    <li><a href="#22-requests-for-information-and-subpoenas">22. Requests for Information and Subpoenas</a></li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          
+        </div>
+        
+        <div class="pl-5 pr-5 xl:pr-0 xl:col-start-1 xl:row-start-2">
           
             
               <div class="flex items-center justify-between mb-5">
@@ -4069,54 +4121,6 @@ This section explains the required process for requesting information or documen
 <p>All requests for information or documents related to potential, anticipated, or current legal proceedings, investigations, or disputes must be made using the appropriate level of legal process. Please see our <a href="https://legal.twitch.com/legal/service-of-process/">Service of Process</a> page for more information.</p>
 
           </article>
-        </div>
-        
-        
-        <div class=" xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2 max-w-[350px]" x-data="{mobileTOCOpen: false}">
-          <style>
-            @media (max-width: 1023px) {
-              .toc-header {
-                margin-bottom: 13px;
-              }
-            }
-          </style>
-          
-<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
-  ON THIS PAGE
-  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
-    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  </svg>
-  
-</button>
-<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-introduction-your-agreement-to-these-terms-of-service">1. Introduction; Your Agreement to these Terms of Service</a></li>
-    <li><a href="#2-use-of-twitch-by-minors-and-blocked-persons">2. Use of Twitch by Minors and Blocked Persons</a></li>
-    <li><a href="#3-privacy-notice">3. Privacy Notice</a></li>
-    <li><a href="#4-account">4. Account</a></li>
-    <li><a href="#5-use-of-devices-and-services">5. Use of Devices and Services</a></li>
-    <li><a href="#6-modification-of-these-terms-of-service">6. Modification of these Terms of Service</a></li>
-    <li><a href="#7-license">7. License</a></li>
-    <li><a href="#8-user-content">8. User Content</a></li>
-    <li><a href="#9-branded-content">9. Branded Content</a></li>
-    <li><a href="#10-prohibited-conduct">10. Prohibited Conduct</a></li>
-    <li><a href="#11-simulcasting">11. Simulcasting</a></li>
-    <li><a href="#12-advertisements">12. Advertisements</a></li>
-    <li><a href="#13-recommendations">13. Recommendations</a></li>
-    <li><a href="#14-respecting-copyright">14. Respecting Copyright</a></li>
-    <li><a href="#15-trademarks">15. Trademarks</a></li>
-    <li><a href="#16-third-party-content">16. Third-Party Content</a></li>
-    <li><a href="#17-idea-submission">17. Idea Submission</a></li>
-    <li><a href="#18-termination">18. Termination</a></li>
-    <li><a href="#19-disputes">19. Disputes</a></li>
-    <li><a href="#20-miscellaneous">20. Miscellaneous</a></li>
-    <li><a href="#21-contact-information">21. Contact Information</a></li>
-    <li><a href="#22-requests-for-information-and-subpoenas">22. Requests for Information and Subpoenas</a></li>
-  </ul>
-</nav>
-</div>
-          
         </div>
       </div>
     
@@ -4373,7 +4377,7 @@ This section explains the required process for requesting information or documen
                 
                 
 
-                <a class="p-3  text-brand-dragon font-[700]" aria-current="page" href="https://legal.twitch.com/en/legal/terms-of-service/" data-i18n="menu:terms-of-service">Terms of Service</a>
+                <a class="p-3  text-brand-dragon font-[700] underline" aria-current="page" href="https://legal.twitch.com/en/legal/terms-of-service/" data-i18n="menu:terms-of-service">Terms of Service</a>
             
 
             
@@ -4511,6 +4515,7 @@ This section explains the required process for requesting information or documen
     </ul>
 </div>
 
+
 </aside>
             <div id="main-content">
               
@@ -4521,7 +4526,7 @@ This section explains the required process for requesting information or documen
       
       
         
-      <div class="grid grid-cols-1 pb-16 xl:grid-cols-1">
+      <div class="grid grid-cols-1 pb-16 xl:grid-cols-[1fr_350px]">
         
         
         
@@ -4534,8 +4539,59 @@ This section explains the required process for requesting information or documen
           
         
 
-        <h1 class="pt-12  pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 col-span-2 row-span-2 xl:row-span-1">Terms of Service</h1>
-        <div class="pl-5 pr-5 xl:pr-0">
+        <h1 class="pt-12 pl-5 text-4xl text-brand-purple-dark font-[700] mb-4 xl:col-span-2">Terms of Service</h1>
+        
+        
+        
+        <div class=" xl:sticky top-0 self-start px-4 xl:pl-5 xl:pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll xl:col-start-2 xl:row-start-2 xl:max-w-[350px] order-first xl:order-none" x-data="{mobileTOCOpen: false}">
+          <style>
+            @media (max-width: 1279px) {
+              .toc-header {
+                margin-bottom: 13px;
+              }
+            }
+          </style>
+          
+            <div class="bg-brand-ice xl:bg-transparent p-4 xl:p-0 rounded-lg xl:rounded-none">
+              <button class="text-sm font-[500] flex items-center justify-between xl:border-none xl:toc-header w-full text-left group" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" :data-state="mobileTOCOpen ? 'open' : 'closed'" aria-controls="table-of-contents" data-state="closed">
+                <div>ON THIS PAGE</div>
+                <div class="flex items-center justify-end xl:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 h-4 transition-transform duration-300 select-none" :class="mobileTOCOpen ? '-scale-y-100' : ''"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg>
+                </div>
+              </button>
+              <div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" class="xl:px-0 hidden xl:block" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-introduction-your-agreement-to-these-terms-of-service">1. Introduction; Your Agreement to these Terms of Service</a></li>
+    <li><a href="#2-use-of-twitch-by-minors-and-blocked-persons">2. Use of Twitch by Minors and Blocked Persons</a></li>
+    <li><a href="#3-privacy-notice">3. Privacy Notice</a></li>
+    <li><a href="#4-account">4. Account</a></li>
+    <li><a href="#5-use-of-devices-and-services">5. Use of Devices and Services</a></li>
+    <li><a href="#6-modification-of-these-terms-of-service">6. Modification of these Terms of Service</a></li>
+    <li><a href="#7-license">7. License</a></li>
+    <li><a href="#8-user-content">8. User Content</a></li>
+    <li><a href="#9-branded-content">9. Branded Content</a></li>
+    <li><a href="#10-prohibited-conduct">10. Prohibited Conduct</a></li>
+    <li><a href="#11-simulcasting">11. Simulcasting</a></li>
+    <li><a href="#12-advertisements">12. Advertisements</a></li>
+    <li><a href="#13-recommendations">13. Recommendations</a></li>
+    <li><a href="#14-respecting-copyright">14. Respecting Copyright</a></li>
+    <li><a href="#15-trademarks">15. Trademarks</a></li>
+    <li><a href="#16-third-party-content">16. Third-Party Content</a></li>
+    <li><a href="#17-idea-submission">17. Idea Submission</a></li>
+    <li><a href="#18-termination">18. Termination</a></li>
+    <li><a href="#19-disputes">19. Disputes</a></li>
+    <li><a href="#20-miscellaneous">20. Miscellaneous</a></li>
+    <li><a href="#21-contact-information">21. Contact Information</a></li>
+    <li><a href="#22-requests-for-information-and-subpoenas">22. Requests for Information and Subpoenas</a></li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          
+        </div>
+        
+        <div class="pl-5 pr-5 xl:pr-0 xl:col-start-1 xl:row-start-2">
           
             
               <div class="flex items-center justify-between mb-5">
@@ -7734,54 +7790,6 @@ This section explains the required process for requesting information or documen
 <p>All requests for information or documents related to potential, anticipated, or current legal proceedings, investigations, or disputes must be made using the appropriate level of legal process. Please see our <a href="https://legal.twitch.com/legal/service-of-process/">Service of Process</a> page for more information.</p>
 
           </article>
-        </div>
-        
-        
-        <div class=" xl:sticky top-0 self-start pl-5 pr-5 pt-8 xl:h-[100vh] xl:overflow-y-scroll col-start-1 xl:col-start-2 row-start-1 xl:row-start-2 max-w-[350px]" x-data="{mobileTOCOpen: false}">
-          <style>
-            @media (max-width: 1023px) {
-              .toc-header {
-                margin-bottom: 13px;
-              }
-            }
-          </style>
-          
-<button class="text-sm font-[500] flex items-center border-b border-b-[#9145FF33] xl:border-none pb-4 toc-header w-full text-left" @click="mobileTOCOpen = !mobileTOCOpen" @keydown.enter="mobileTOCOpen = !mobileTOCOpen" @keydown.space.prevent="mobileTOCOpen = !mobileTOCOpen" aria-expanded="false" :aria-expanded="mobileTOCOpen ? 'true' : 'false'" aria-controls="table-of-contents">
-  ON THIS PAGE
-  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="block ml-4 xl:hidden rotate-[270deg]" :class="mobileTOCOpen ? 'rotate-[0deg]' : 'rotate-[270deg]'" aria-hidden="true">
-    <path d="M11.0006 8.49963L6.00058 13.4996M6.00058 13.4996L1.00058 8.49963M6.00058 13.4996V1.49963" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  </svg>
-  
-</button>
-<div id="table-of-contents" :class="mobileTOCOpen ? 'block xl:block' : 'hidden xl:block'" style="background-color: #F0F0FF; border-radius: 0.5rem; padding: 16px;" class="hidden xl:block">
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-introduction-your-agreement-to-these-terms-of-service">1. Introduction; Your Agreement to these Terms of Service</a></li>
-    <li><a href="#2-use-of-twitch-by-minors-and-blocked-persons">2. Use of Twitch by Minors and Blocked Persons</a></li>
-    <li><a href="#3-privacy-notice">3. Privacy Notice</a></li>
-    <li><a href="#4-account">4. Account</a></li>
-    <li><a href="#5-use-of-devices-and-services">5. Use of Devices and Services</a></li>
-    <li><a href="#6-modification-of-these-terms-of-service">6. Modification of these Terms of Service</a></li>
-    <li><a href="#7-license">7. License</a></li>
-    <li><a href="#8-user-content">8. User Content</a></li>
-    <li><a href="#9-branded-content">9. Branded Content</a></li>
-    <li><a href="#10-prohibited-conduct">10. Prohibited Conduct</a></li>
-    <li><a href="#11-simulcasting">11. Simulcasting</a></li>
-    <li><a href="#12-advertisements">12. Advertisements</a></li>
-    <li><a href="#13-recommendations">13. Recommendations</a></li>
-    <li><a href="#14-respecting-copyright">14. Respecting Copyright</a></li>
-    <li><a href="#15-trademarks">15. Trademarks</a></li>
-    <li><a href="#16-third-party-content">16. Third-Party Content</a></li>
-    <li><a href="#17-idea-submission">17. Idea Submission</a></li>
-    <li><a href="#18-termination">18. Termination</a></li>
-    <li><a href="#19-disputes">19. Disputes</a></li>
-    <li><a href="#20-miscellaneous">20. Miscellaneous</a></li>
-    <li><a href="#21-contact-information">21. Contact Information</a></li>
-    <li><a href="#22-requests-for-information-and-subpoenas">22. Requests for Information and Subpoenas</a></li>
-  </ul>
-</nav>
-</div>
-          
         </div>
       </div>
     
