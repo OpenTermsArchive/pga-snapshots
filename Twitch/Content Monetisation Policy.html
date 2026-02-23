@@ -143,14 +143,14 @@
       
 
   <div class="relative max-[479px]:w-full" x-data="{languageModalOpen: false}">
-    <button class="max-[479px]:w-full max-[479px]:justify-center text-white text-base px-3 flex items-center gap-[10px] border-2 border-white rounded-lg p-[14px_12px] leading-[20px] " @click="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" :aria-expanded="languageModalOpen" aria-haspopup="true" aria-label="Languages" @keydown.down.prevent="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" @keydown.up.prevent="languageModalOpen = true;$focus.within($refs.language_dropdown).last()" @keydown.escape="languageModalOpen = false" x-ref="language_button" aria-expanded="false">
+    <button class="max-[479px]:w-full max-[479px]:justify-center text-white text-base px-3 flex items-center gap-[10px] border-2 border-white rounded-lg p-[14px_12px] leading-[20px] " @click="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" :aria-expanded="languageModalOpen" aria-haspopup="true" aria-label="Languages" @keydown.down.prevent="languageModalOpen = true;$focus.within($refs.language_dropdown).first()" @keydown.up.prevent="languageModalOpen = true;$focus.within($refs.language_dropdown).last()" @keydown.escape="languageModalOpen = false;$nextTick(() =&gt; $refs.language_button.focus())" x-ref="language_button" aria-expanded="false">
         <div>
           Languages
         </div>
         <img src="/images/icons/arrow.svg" alt="">
     </button>
 
-    <ul class="max-[479px]:w-full border-brand-purple border rounded-lg bg-white p-2 absolute z-[200] top-[calc(100%+7.5px)]" role="menu" x-show="languageModalOpen" @click.outside="languageModalOpen = false" @keydown.escape="languageModalOpen = false;$focus.within($refs.language_button)" @keydown.down.prevent="$focus.wrap().next()" @keydown.up.prevent="$focus.wrap().previous()" x-ref="language_dropdown" x-trap.inert="languageModalOpen" style="display: none;">
+    <ul class="max-[479px]:w-full border-brand-purple border rounded-lg bg-white p-2 absolute z-[200] top-[calc(100%+7.5px)]" role="menu" x-show="languageModalOpen" @click.outside="languageModalOpen = false" @keydown.escape="languageModalOpen = false;$nextTick(() =&gt; $refs.language_button.focus())" @keydown.down.prevent="$focus.wrap().next()" @keydown.up.prevent="$focus.wrap().previous()" x-ref="language_dropdown" x-trap.inert="languageModalOpen" style="display: none;">
       
           
           
