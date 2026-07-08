@@ -12,15 +12,15 @@
         <link rel="dns-prefetch" href="https://www.redditstatic.com/">
       
         
-    <link rel="preload" href="https://www.reddit.com/svc/events/preload-head?renderId=9be9b841-b65d-4e2b-9414-08cb7bcd549e&amp;pageType=policies" as="fetch">
-    <script nonce="">window.addEventListener('load',function(){fetch("https://www.reddit.com/svc/events/preload-head?renderId=9be9b841-b65d-4e2b-9414-08cb7bcd549e&pageType=policies").catch(function(){});});</script>
+    <link rel="preload" href="https://www.reddit.com/svc/events/preload-head?renderId=745bb5ac-3ea6-4ad6-b729-12ae8285785a&amp;pageType=policies" as="fetch">
+    <script nonce="">window.addEventListener('load',function(){fetch("https://www.reddit.com/svc/events/preload-head?renderId=745bb5ac-3ea6-4ad6-b729-12ae8285785a&pageType=policies").catch(function(){});});</script>
   
         
         
     
       <script nonce="">
-        window.CLIENT_EXPERIMENTS = {"shreddit_ad_event_migration_cutoff_m1":"enabled","shreddit_ad_event_migration_cutoff_m3":"enabled","shreddit_ad_event_migration_m3":"enabled","ads_in_related_posts_m1":"enabled","shreddit_age_settings":"enabled","web_bermuda_remove_pm_ui":"enabled","shreddit_cuj_pdp_new_timestamps":"enabled","shreddit_feeds_cuj":"enabled","shreddit_network_info_logging":"enabled","shreddit_paid_ua_landing_good_visit":"enabled","shreddit_record_version_skew":"enabled","shreddit_screenview_counter":"enabled","shreddit_seo_referred_initiated_gv":"enabled","shreddit_server_navigation_session_telemetry":"enabled","shreddit_service_worker_registration":"enabled","shreddit_system_theme":"enabled","shreddit_post_media_multipart_upload":"enabled"};
-        window.CLIENT_EXPERIMENT_VERSIONS = {"shreddit_app_first_navigation":"12","shreddit_post_media_multipart_upload":"9"};
+        window.CLIENT_EXPERIMENTS = {"shreddit_ad_event_migration_cutoff_m1":"enabled","shreddit_ad_event_migration_cutoff_m3":"enabled","shreddit_ad_event_migration_m3":"enabled","ads_in_related_posts_m1":"enabled","shreddit_age_settings":"enabled","web_bermuda_remove_pm_ui":"enabled","shreddit_cuj_pdp_new_timestamps":"enabled","shreddit_feeds_cuj":"enabled","shreddit_paid_ua_landing_good_visit":"enabled","shreddit_record_version_skew":"enabled","shreddit_screenview_counter":"enabled","shreddit_seo_referred_initiated_gv":"enabled","shreddit_server_navigation_session_telemetry":"enabled","shreddit_service_worker_registration":"enabled","shreddit_system_theme":"enabled","shreddit_post_media_multipart_upload":"control_1"};
+        window.CLIENT_EXPERIMENT_VERSIONS = {"shreddit_app_first_navigation":"12","shreddit_post_media_multipart_upload":"10"};
       </script>
     
   
@@ -29,7 +29,7 @@
       <script nonce="">
         // Setting this provides Lit a CSP nonce to use when dyamically creating style elements in
         // browsers that don't support constructed stylesheets. See https://lit.dev/docs/api/LitElement/#LitElement.styles
-        window.litNonce = 'AFz0n39fkcxbGo//JFmmjg==';
+        window.litNonce = 'YyRWU3csRsU4SXJelDSjEQ==';
         var CLIENT_CONFIG = {"APPLE_SSO_CLIENT_ID":"com.reddit.RedditAppleSSO","ORIGIN":"https://www.reddit.com","GOOGLE_SSO_CLIENT_ID":"705819728788-b2c1kcs7tst3b7ghv7at0hkqmtc68ckl.apps.googleusercontent.com","PRECONNECT_ORIGINS":["https://www.redditstatic.com/"],"STATIC_BASE_URL":"https://www.redditstatic.com/shreddit/","IN_CLUSTER_STATIC_BASE_URL":"https://www.redditstatic.com/shreddit/","RUNTIME_CONCAT_BASE_URL":"https://www.redditstatic.com/js/concat","W3_REPORTING_WEB_VITAL_REPORTS_URL":"https://w3-reporting.reddit.com/reports","DEVVIT_GATEWAY_ORIGIN":"https://devvit-gateway.reddit.com","WORLD_ID_APP_ID":"staging_c8137371ceac59890774ccc932e11dcf","WORLD_ID_RP_ID":"rp_4e7b34a51d24e1eb"};
       </script>
     
@@ -41,7 +41,7 @@
     
       <script nonce="">
         
-        class e{constructor(){let e,t;this.promise=new Promise((s,o)=>{e=s,t=o}),this.resolve=e,this.reject=t}}function t(e){return Array.isArray(e)?{id:e[0]}:{id:e}}class ShredditModuleLoader{addModulePromise(e){var t,s,o;this.moduleRegistry[e]?.promise||((t=this.moduleRegistry)[s=e]??(t[s]={}),this.moduleRegistry[e].isResolved=!1,(o=this.moduleRegistry[e]).promise??(o.promise=new Promise(t=>{this.moduleRegistry[e].resolver=t})))}resolveModule(e){this.moduleRegistry[e].resolver?.(),this.moduleRegistry[e].isResolved=!0}preDeclareModules(e){for(const t of e)this.moduleRegistry[t]||this.addModulePromise(t),this.moduleRegistry[t].isLoading=!0}dm(e,t,s){this.moduleRegistry[e]?.isDeclared||(this.moduleRegistry[e]={...this.moduleRegistry[e],deps:t,factory:s,moduleExports:void 0,isDeclared:!0},this.addModulePromise(e),this._evaluateModule(e,!0).then(()=>{this.resolveModule(e)}))}async _evaluateModule(e,t=!1){if(this.moduleRegistry[e]?.isEvaluated)return this.moduleRegistry[e].moduleExports;this.addModulePromise(e),this.moduleRegistry[e].isResolved||t||await this.moduleRegistry[e].promise;const s=this.moduleRegistry[e];if(!s.isEvaluated&&!s.isEvaluating){s.isEvaluating=!0,await Promise.resolve();const e=await Promise.all(s.deps?.map(e=>this._evaluateModule(e))||[]),t=await(s.factory?.apply(null,e));return s.moduleExports=t??{},s.isEvaluated=!0,s.isEvaluating=!1,s.moduleExports}return s.promise?.then(()=>s.moduleExports)}async di(e,t,s,o="auto"){if(this.moduleRegistry[s])return this._evaluateModule(s);const r=/\/[^/]*$/;if(!this._diState.concatMode){const o=new URL(t).href.replace(r,"/"),i=new URL(e,o);i.pathname;const a=i.href;return import(a).then(()=>this._evaluateModule(s,!0))}const i=new URL(t).searchParams.get("prefix")??this._diState.lastPrefix,a=e.replaceAll(/(^\.\/|\.js$)/g,"");return this.addModulePromise(s),"high"===o?this._load([a],{prefix:i,priority:o}):(this._diState.queue.push([[a],i,void 0,!1]),this.debounce(this.debounceTimeout,25)),this.moduleRegistry[s].promise.then(()=>this._evaluateModule(s,!0))}debounce(e,t=25){var s;clearTimeout(this._diState.debounceTimeout),(s=this._diState).debounceStart||(s.debounceStart=Date.now()),Date.now()-this._diState.debounceStart>3*t?e():this._diState.debounceTimeout=setTimeout(this.debounceTimeout,t)}processDIQueue(){const e=[...this._diState.queue];this._diState.queue=[],this._diState.debounceStart=0;return[...e.reduce((e,[t,s,o,r=!1])=>{const i=`${r?"preserve":"sort"}:${s}`;e.has(i)||e.set(i,{prefix:s,preserveOrder:r,chunks:[],deferreds:[]});const a=e.get(i);return a.chunks.push(...t),o&&a.deferreds.push(o),e},new Map).values()].map(({prefix:e,chunks:t,deferreds:s,preserveOrder:o})=>[e,t,s,o])}load(t,s="",o="auto",r=!1){this._diState.concatMode=!0;const i=new e;return"high"===o?this._load(t,{prefix:s,priority:o,deferreds:[i],preserveOrder:r}):(this._diState.queue.push([t,s,i,r]),this.debounce(this.debounceTimeout)),i.promise}flushLoadBuffer(){this._diState.shouldBufferLoad=!1;for(const e of this._loadBuffer.splice(0))e()}_load(e,{prefix:s="",priority:o="auto",deferreds:r=[],preserveOrder:i=!1}={}){s&&(this._diState.lastPrefix=s);const a=new Map;for(const s of e.map(t))a.has(s.id)||a.set(s.id,s);const d=[...a.values()].filter(({id:e})=>{const t=this.moduleRegistry[this.urlToName(e)];return!t||!t.isLoading&&!t.isResolved}),n=()=>{r.forEach(e=>e?.resolve())};0!==d.length?(this.preDeclareModules(d.map(({id:e})=>this.urlToName(e))),Promise.all(this.getChunkGroups(d).map(e=>this._loadChunkGroup(e,s,o,i))).then(n,e=>{r.forEach(t=>t?.reject(e))})):n()}getChunkGroups(e){return e.length>this.maxChunks?function(e,t){const s=[];for(let o=0;o<e.length;o+=t)s.push(e.slice(o,o+t));return s}(e,this.maxChunks):[e]}_loadChunkGroup(e,t,s,o){const r=e.map(({id:e})=>e),i=`${window.CONCAT_BASE_URL??"/js/concat"}?prefix=${t}&chunks=${this.getConcatRequestChunkIDs(r,o).join(",")}`;return this._diState.shouldBufferLoad?(this._createPreloadTag(i,s),new Promise((e,t)=>{this._loadBuffer.push(()=>this._createScript(i,s).then(()=>{this.resolveChunksWithoutModules(r),e()},t))})):this._createScript(i,s).then(()=>{this.resolveChunksWithoutModules(r)})}getConcatRequestChunkIDs(e,t){return t?e:[...e].sort()}resolveChunksWithoutModules(e){for(const t of e){const e=this.urlToName(t);this.moduleRegistry[e]?.factory||this.resolveModule(e)}}_createScript(e,t){const s=document.createElement("script");return s.type="module",s.src=e,s.fetchPriority=t,document.body.appendChild(s),new Promise((e,t)=>{s.onload=()=>e(),s.onerror=()=>t()})}_createPreloadTag(e,t){const s=document.createElement("link");s.rel="modulepreload",s.href=e,s.as="script",s.fetchPriority=t,s.crossOrigin="anonymous",document.head.appendChild(s)}urlToName(e){return e.replaceAll(/(^.+\/|\.js$)/g,"")}constructor(e={},t=250){this._diState={queue:[],debounceStart:0,lastPrefix:"en-US/",shouldBufferLoad:"loading"===document.readyState},this.debounceTimeout=()=>this.processDIQueue().forEach(([e,t,s,o])=>this._load(t,{prefix:e,deferreds:s??[],preserveOrder:o})),this._loadBuffer=[],this.moduleRegistry=e,this.maxChunks=t,document.addEventListener("DOMContentLoaded",()=>this.flushLoadBuffer(),{once:!0})}}function s(e){const t=new URL(e,window.location.href);return t.searchParams.set("s","1"),t.href}window.ShredditModuleLoader=window.SML_STREAMING?class extends ShredditModuleLoader{_createPreloadTag(e,t){const o=document.createElement("link");o.rel="preload",o.href=s(e),o.as="fetch",o.fetchPriority=t,o.crossOrigin="anonymous",document.head.appendChild(o)}async _createScript(e,t){navigator.onLine||await new Promise(e=>{window.addEventListener("online",e,{once:!0})});const o=await fetch(s(e),{priority:t});if(!o.ok)throw new Error(`Failed to load chunk group: ${o.status} ${o.statusText}`);const r=o.body.getReader(),i=new TextDecoder,a="/* @sml-chunk */",d=`import.meta.url = "${o.url}";\n\n`;let n="";const u=window.SML_STREAMING_MAX_IN_FLIGHT_IMPORTS??16,l=[],h=async e=>{const t=async function(e){const t=new Blob([e],{type:"text/javascript"}),s=URL.createObjectURL(t);await import(s).catch(console.error),URL.revokeObjectURL(s)}(`${d}${e}`);l.push(t),l.length>=u&&await l.shift()};for(;;){const{done:e,value:t}=await r.read();if(e){n+=i.decode();break}n+=i.decode(t,{stream:!0});const s=n.lastIndexOf(a);if(-1===s)continue;const o=n.slice(0,s);n=n.slice(s+16),await h(o)}await h(n),await Promise.all(l)}}:ShredditModuleLoader;{let e=250;window.SML_STREAMING&&(e=window.SML_STREAMING_MAX_CHUNKS??500),window.SML=Object.freeze(new window.ShredditModuleLoader({},e))}
+        class e{constructor(){let e,t;this.promise=new Promise((s,o)=>{e=s,t=o}),this.resolve=e,this.reject=t}}function t(e){return Array.isArray(e)?{id:e[0]}:{id:e}}class ShredditModuleLoader{addModulePromise(e){var t,s,o;this.moduleRegistry[e]?.promise||((t=this.moduleRegistry)[s=e]??(t[s]={}),this.moduleRegistry[e].isResolved=!1,(o=this.moduleRegistry[e]).promise??(o.promise=new Promise(t=>{this.moduleRegistry[e].resolver=t})))}resolveModule(e){this.moduleRegistry[e].resolver?.(),this.moduleRegistry[e].isResolved=!0}preDeclareModules(e){for(const t of e)this.moduleRegistry[t]||this.addModulePromise(t),this.moduleRegistry[t].isLoading=!0}dm(e,t,s){this.moduleRegistry[e]?.isDeclared||(this.moduleRegistry[e]={...this.moduleRegistry[e],deps:t,factory:s,moduleExports:void 0,isDeclared:!0},this.addModulePromise(e),this._evaluateModule(e,!0).then(()=>{this.resolveModule(e)}))}async _evaluateModule(e,t=!1){if(this.moduleRegistry[e]?.isEvaluated)return this.moduleRegistry[e].moduleExports;this.addModulePromise(e),this.moduleRegistry[e].isResolved||t||await this.moduleRegistry[e].promise;const s=this.moduleRegistry[e];if(!s.isEvaluated&&!s.isEvaluating){s.isEvaluating=!0,await Promise.resolve();const e=await Promise.all(s.deps?.map(e=>this._evaluateModule(e))||[]),t=await(s.factory?.apply(null,e));return s.moduleExports=t??{},s.isEvaluated=!0,s.isEvaluating=!1,s.moduleExports}return s.promise?.then(()=>s.moduleExports)}async di(e,t,s,o="auto"){if(this.moduleRegistry[s])return this._evaluateModule(s);const r=/\/[^/]*$/;if(!this._diState.concatMode){const o=new URL(t).href.replace(r,"/"),i=new URL(e,o);i.pathname;const a=i.href;return import(a).then(()=>this._evaluateModule(s,!0))}const i=new URL(t).searchParams.get("prefix")??this._diState.lastPrefix,a=e.replaceAll(/(^\.\/|\.js$)/g,"");return this.addModulePromise(s),"high"===o?this._load([a],{prefix:i,priority:o}):(this._diState.queue.push([[a],i,void 0,!1]),this.debounce(this.debounceTimeout,25)),this.moduleRegistry[s].promise.then(()=>this._evaluateModule(s,!0))}debounce(e,t=25){var s;clearTimeout(this._diState.debounceTimeout),(s=this._diState).debounceStart||(s.debounceStart=Date.now()),Date.now()-this._diState.debounceStart>3*t?e():this._diState.debounceTimeout=setTimeout(this.debounceTimeout,t)}processDIQueue(){const e=[...this._diState.queue];this._diState.queue=[],this._diState.debounceStart=0;return[...e.reduce((e,[t,s,o,r=!1])=>{const i=`${r?"preserve":"sort"}:${s}`;e.has(i)||e.set(i,{prefix:s,preserveOrder:r,chunks:[],deferreds:[]});const a=e.get(i);return a.chunks.push(...t),o&&a.deferreds.push(o),e},new Map).values()].map(({prefix:e,chunks:t,deferreds:s,preserveOrder:o})=>[e,t,s,o])}load(t,s="",o="auto",r=!1){this._diState.concatMode=!0;const i=new e;return"high"===o?this._load(t,{prefix:s,priority:o,deferreds:[i],preserveOrder:r}):(this._diState.queue.push([t,s,i,r]),this.debounce(this.debounceTimeout)),i.promise}flushLoadBuffer(){this._diState.shouldBufferLoad=!1;for(const e of this._loadBuffer.splice(0))e()}_load(e,{prefix:s="",priority:o="auto",deferreds:r=[],preserveOrder:i=!1}={}){s&&(this._diState.lastPrefix=s);const a=new Map;for(const s of e.map(t))a.has(s.id)||a.set(s.id,s);const d=[...a.values()].filter(({id:e})=>{const t=this.moduleRegistry[this.urlToName(e)];return!t||!t.isLoading&&!t.isResolved}),n=()=>{r.forEach(e=>e?.resolve())};0!==d.length?(this.preDeclareModules(d.map(({id:e})=>this.urlToName(e))),Promise.all(this.getChunkGroups(d).map(e=>this._loadChunkGroup(e,s,o,i))).then(n,e=>{r.forEach(t=>t?.reject(e))})):n()}getChunkGroups(e){return e.length>this.maxChunks?function(e,t){const s=[];for(let o=0;o<e.length;o+=t)s.push(e.slice(o,o+t));return s}(e,this.maxChunks):[e]}_loadChunkGroup(e,t,s,o){const r=e.map(({id:e})=>e),i=`${window.CONCAT_BASE_URL??"/js/concat"}?prefix=${t}&chunks=${this.getConcatRequestChunkIDs(r,o).join(",")}`;return this._diState.shouldBufferLoad?(this._createPreloadTag(i,s),new Promise((e,t)=>{this._loadBuffer.push(()=>this._createScript(i,s).then(()=>{this.resolveChunksWithoutModules(r),e()},t))})):this._createScript(i,s).then(()=>{this.resolveChunksWithoutModules(r)})}getConcatRequestChunkIDs(e,t){return t?e:[...e].sort()}resolveChunksWithoutModules(e){for(const t of e){const e=this.urlToName(t);this.moduleRegistry[e]?.factory||this.resolveModule(e)}}_createScript(e,t){const s=document.createElement("script");return s.type="module",s.src=e,s.fetchPriority=t,document.body.appendChild(s),new Promise((e,t)=>{s.onload=()=>e(),s.onerror=()=>t()})}_createPreloadTag(e,t){const s=document.createElement("link");s.rel="modulepreload",s.href=e,s.as="script",s.fetchPriority=t,s.crossOrigin="anonymous",document.head.appendChild(s)}urlToName(e){return e.replaceAll(/(^.+\/|\.js$)/g,"")}constructor(e={},t=250){this._diState={queue:[],debounceStart:0,lastPrefix:"en-US/",shouldBufferLoad:"loading"===document.readyState},this.debounceTimeout=()=>this.processDIQueue().forEach(([e,t,s,o])=>this._load(t,{prefix:e,deferreds:s??[],preserveOrder:o})),this._loadBuffer=[],this.moduleRegistry=e,this.maxChunks=t,document.addEventListener("DOMContentLoaded",()=>this.flushLoadBuffer(),{once:!0})}}function s(e){const t=new URL(e,window.location.href);return t.searchParams.set("s","1"),t.href}window.ShredditModuleLoader=window.SML_STREAMING?class extends ShredditModuleLoader{_createPreloadTag(e,t){const o=document.createElement("link");o.rel="preload",o.href=s(e),o.as="fetch",o.fetchPriority=t,o.crossOrigin="anonymous",document.head.appendChild(o)}async _createScript(e,t){const o=new Request(s(e),{priority:t}),r="/* @sml-chunk */",i=`import.meta.url = "${o.url}";\n\n`;let a="";const d=window.SML_STREAMING_MAX_IN_FLIGHT_IMPORTS??16,n=[],u=async e=>{const t=async function(e){const t=new Blob([e],{type:"text/javascript"}),s=URL.createObjectURL(t);await import(s).catch(console.error),URL.revokeObjectURL(s)}(`${i}${e}`);n.push(t),n.length>=d&&await n.shift()};for await(const e of async function*(e){let t=0,s=0;for(;;){s++;try{navigator.onLine||await new Promise(e=>{window.addEventListener("online",e,{once:!0})});const s=await fetch(e.clone());if(!s.ok)throw new Error("response not ok");const o=s.body.getReader(),r=new TextDecoder;let i="";for(;;){const{done:e,value:s}=await o.read();if(e){i+=r.decode();break}i+=r.decode(s,{stream:!0}),i.length<t||(yield i.slice(t),t=i.length)}yield i.slice(t);break}catch(e){if(s>=3)throw e;const t=1e3*Math.pow(2,s-1);await new Promise(e=>setTimeout(e,t))}}}(o)){a+=e;const t=a.lastIndexOf(r);if(-1===t)continue;const s=a.slice(0,t);a=a.slice(t+16),await u(s)}await u(a),await Promise.all(n)}}:ShredditModuleLoader;{let e=250;window.SML_STREAMING&&(e=window.SML_STREAMING_MAX_CHUNKS??500),window.SML=Object.freeze(new window.ShredditModuleLoader({},e))}
 ;
       </script>
     
@@ -57,7 +57,7 @@
     
   
     
-    <script type="module" nonce="" src="data:text/javascript,let%20e%3Dnull%3Basync%20function%20t()%7Breturn%20e%7C%7C(e%3Dasync%20function()%7Bif(!window.navigation)try%7Bconst%7BapplyPolyfill%3Ae%7D%3Dawait%20import(%22https%3A%2F%2Fwww.redditstatic.com%2Fshreddit%2Fapply-polyfill-BcpMVdvg.js%22)%3Be()%7Dcatch(e)%7Bwindow.Sentry%3F.captureException(new%20Error(%22Navigation%20polyfill%20failed%20to%20initialize.%22%2C%7Bcause%3Ae%7D))%7Dreturn%20window.navigation%7D())%2Ce%7Dvar%20n%3D%2FEdge%3F%5C%2F(1%7B2%7D%5B6-9%5D%7C1%5B2-9%5D%5Cd%7C%5B2-9%5D%5Cd%7B2%7D%7C%5Cd%7B4%2C%7D)%5C.%5Cd%2B(%5C.%5Cd%2B%7C)%7CFirefox%5C%2F(1%7B2%7D%5B7-9%5D%7C1%5B2-9%5D%5Cd%7C%5B2-9%5D%5Cd%7B2%7D%7C%5Cd%7B4%2C%7D)%5C.%5Cd%2B(%5C.%5Cd%2B%7C)%7CChrom(ium%7Ce)%5C%2F(4%5B1-9%5D%7C%5B5-9%5D%5Cd%7C%5Cd%7B3%2C%7D)%5C.%5Cd%2B(%5C.%5Cd%2B%7C)(%5B%5Cd.%5D%2B%24%7C.*Safari%5C%2F(%3F!%5B%5Cd.%5D%2B%20Edge%5C%2F%5B%5Cd.%5D%2B%24))%7C(Maci%7CX1%7B2%7D).%2B%20Version%5C%2F(15%5C.%5Cd%2B%7C(1%5B6-9%5D%7C%5B2-9%5D%5Cd%7C%5Cd%7B3%2C%7D)%5C.%5Cd%2B)(%5B%2C.%5D%5Cd%2B%7C)(%20%5C(%5Cw%2B%5C)%7C)(%20Mobile%5C%2F%5Cw%2B%7C)%20Safari%5C%2F%7CChrome.%2BOPR%5C%2F(10%5B1-9%5D%7C1%5B1-9%5D%5Cd%7C%5B2-9%5D%5Cd%7B2%7D%7C%5Cd%7B4%2C%7D)%5C.%5Cd%2B%5C.%5Cd%2B%7C(CPU%5B%20%2B%5DOS%7CiPhone%5B%20%2B%5DOS%7CCPU%5B%20%2B%5DiPhone%7CCPU%20IPhone%20OS%7CCPU%20iPad%20OS)%5B%20%2B%5D%2B(15%5B._%5D%5Cd%2B%7C(1%5B6-9%5D%7C%5B2-9%5D%5Cd%7C%5Cd%7B3%2C%7D)%5B._%5D%5Cd%2B)(%5B._%5D%5Cd%2B%7C)%2F%3Bconst%20o%3D%5B%22window.performance.mark%20is%20not%20a%20function%22%2C%22performance.getEntriesByName%20is%20not%20a%20function%22%2C%22window.queueMicrotask%20is%20not%20a%20function%22%2C%22runCustomize%20is%20not%20defined%22%2C%22require%20is%20not%20defined%22%2C%22n.assignedElements%20is%20not%20a%20function%22%2C%22SymBrowser_ModifyAnchorTagWithTarget%22%2C%22ibFindAllVideos%22%2C%22Unexpected%20token%20'for'%22%5D%2Ci%3D%5B%22findTopmostVisibleElement%22%5D%2Cr%3De%3D%3E%7Bconst%20t%3D(r%3Dnavigator.userAgent%2C!n.test(r))%3Bvar%20r%3Breturn!!((e%3D%3E!!o.some(t%3D%3Ee%3F.originalException%3F.message%3F.includes(t)))(e)%7C%7C(e%3D%3E!!i.some(t%3D%3Ee%3F.originalException%3F.stack%3F.includes(t)))(e)%7C%7Ct)%7D%2Ca%3D%5B%5D%3Blet%20s%3Dnull%3Bconst%20c%3Dasync(e%2Ct)%3D%3E%7Bif(0%3D%3D%3De.length)return%3Bconst%20n%3D%5B...e%5D%3Be.length%3D0%3Btry%7B(await%20fetch(%22%2Fsvc%2Fshreddit%2Fclient-errors%22%2C%7Bmethod%3A%22POST%22%2Cheaders%3A%7B%22Content-Type%22%3A%22application%2Fjson%22%7D%2Cbody%3AJSON.stringify(%7Bcsrf_token%3A(o%3D%22csrf_token%22%2Cdocument.cookie.split(%22%3B%22).map(e%3D%3Ee.trim()).filter(Boolean).map(e%3D%3Ee.split(%22%3D%22)).find((%5Be%5D)%3D%3Ee.trim()%3D%3D%3Do)%3F.%5B1%5D%3F%3Fnull)%2Cerrors%3An%7D)%2Ckeepalive%3At%3F.keepalive%7D)).status%3E%3D500%26%26(u%3D!0)%7Dcatch%7Bu%3D!0%7Dvar%20o%7D%2Cd%3D()%3D%3E%7Bs%26%26(clearTimeout(s)%2Cs%3Dnull)%2Cc(a%2C%7Bkeepalive%3A!0%7D)%7D%3Bdocument.addEventListener(%22visibilitychange%22%2C()%3D%3E%7B%22hidden%22%3D%3D%3Ddocument.visibilityState%26%26d()%7D)%2Cwindow.addEventListener(%22pagehide%22%2Cd)%3Blet%20u%3D!1%3B((e%2Cn%2Co%2Ci%2Cr%2Ca%2Cs)%3D%3E%7Bvar%20c%3D!1%2Cd%3D!1%2Cu%3D%5B%5D%2Cl%3Dfunction(e)%7B(%22e%22in%20e%7C%7C%22p%22in%20e%7C%7Ce.f%26%26e.f.indexOf(%22capture%22)%3E-1%7C%7Ce.f%26%26e.f.indexOf(%22withScope%22)%3E-1%7C%7Ce.f%26%26e.f.indexOf(%22showReportDialog%22)%3E-1)%26%26f(u)%2Cl.data.push(e)%7D%3Bfunction%20f(n)%7Bfunction%20o()%7Bt().then(()%3D%3Eimport(%22https%3A%2F%2Fwww.redditstatic.com%2Fshreddit%2Fsentry-DswLfAC_.js%22)).then(t%3D%3E%7Btry%7Be%5Ba%5D%3Dt.default%2Ce%5Bi%5D%3Dp%2Ce%5Br%5D%3Dm%3Bvar%20o%3De%5Ba%5D%2Cc%3Do.init%3Bo.init%3Dfunction(e)%7Bvar%20t%3Ds%3Bfor(var%20n%20in%20e)Object.prototype.hasOwnProperty.call(e%2Cn)%26%26(t%5Bn%5D%3De%5Bn%5D)%3Bc(t)%7D%2Cfunction(t%2Cn)%7Btry%7Bfor(var%20o%3Dl.data%2Ca%3D0%3Ba%3Ct.length%3Ba%2B%2B)%22function%22%3D%3Dtypeof%20t%5Ba%5D%26%26t%5Ba%5D()%3Bvar%20s%3D!1%2Cc%3De.__SENTRY__%3Bvoid%200!%3D%3Dc%26%26c.hub%26%26c.hub.getClient()%26%26(s%3D!0)%3Bvar%20d%3D!1%3Bfor(a%3D0%3Ba%3Co.length%3Ba%2B%2B)if(o%5Ba%5D.f)%7Bd%3D!0%3Bvar%20u%3Do%5Ba%5D%3B!1%3D%3D%3Ds%26%26%22init%22!%3D%3Du.f%26%26n.init()%2Cs%3D!0%2Cu.f%26%26n%5Bu.f%5D.apply(n%2Cu.a)%7D!1%3D%3D%3Ds%26%26!1%3D%3D%3Dd%26%26n.init()%3Bvar%20f%3De%5Bi%5D%2Cp%3De%5Br%5D%3Bfor(a%3D0%3Ba%3Co.length%3Ba%2B%2B)%22e%22in%20o%5Ba%5D%26%26f%3Ff.apply(e%2Co%5Ba%5D.e)%3A%22p%22in%20o%5Ba%5D%26%26p%26%26p.apply(e%2C%5Bo%5Ba%5D.p%5D)%7Dcatch(e)%7Bconsole.error(e)%7D%7D(n%2Co)%7Dcatch(e)%7Bconsole.error(e)%7D%7D)%7Dd%7C%7C(d%3D!0%2C%22requestIdleCallback%22in%20e%3Fe.requestIdleCallback(o%2C%7Btimeout%3A3e3%7D)%3Ae.setTimeout(o%2C0))%7Dl.data%3D%5B%5D%2Ce%5Ba%5D%3De%5Ba%5D%7C%7C%7B%7D%2Ce%5Ba%5D.onLoad%3Dfunction(e)%7Bu.push(e)%2Cc%26%26f(u)%7D%2Ce%5Ba%5D.forceLoad%3Dfunction()%7Bc%3D!0%2CsetTimeout(function()%7Bf(u)%7D)%7D%2C%5B%22init%22%2C%22addBreadcrumb%22%2C%22captureMessage%22%2C%22captureException%22%2C%22captureEvent%22%2C%22configureScope%22%2C%22withScope%22%2C%22showReportDialog%22%5D.forEach(function(t)%7Be%5Ba%5D%5Bt%5D%3Dfunction()%7Bl(%7Bf%3At%2Ca%3Aarguments%7D)%7D%7D)%3Bvar%20p%3De%5Bi%5D%3Be%5Bi%5D%3Dfunction(t%2Cn%2Co%2Ci%2Cr)%7Bl(%7Be%3A%5B%5D.slice.call(arguments)%7D)%2Cp%26%26p.apply(e%2Carguments)%7D%3Bvar%20m%3De%5Br%5D%3Be%5Br%5D%3Dfunction(t)%7Bl(%7Bp%3A%22reason%22in%20t%3Ft.reason%3A%22detail%22in%20t%26%26%22reason%22in%20t.detail%3Ft.detail.reason%3At%7D)%2Cm%26%26m.apply(e%2Carguments)%7D%7D)(window%2Cdocument%2C0%2C%22onerror%22%2C%22onunhandledrejection%22%2C%22Sentry%22%2C%7Benabled%3ASENTRY_CONFIG.enabled%2Cdsn%3ASENTRY_CONFIG.dsn%2Cenvironment%3ASENTRY_CONFIG.environment%2Crelease%3A%22a1b8f5e80ce64a7c1d7a6a7885e1bc4529fefcdb%22%2CbeforeSend%3A(e%2Ct)%3D%3E%7Bif(r(t))return%20null%3Bconst%20n%3DMath.random()%3C(SENTRY_CONFIG.sampleRate%3F%3F.004)%3Bif(!u%26%26e.exception)%7Blet%20n%3D%22unknown%22%2Co%3D%22unknown%22%3Bconst%20i%3Ddocument.querySelector(%22shreddit-app%22)%3BcustomElements.get(%22shreddit-app%22)%26%26%22function%22%3D%3Dtypeof%20i%3F._trackEvent%26%26(n%3Di.pageType%7C%7C%22unknown%22%2Co%3Di.routeName%7C%7C%22unknown%22)%3Bconst%20r%3D(e%3D%3E%7Bconst%20t%3De.exception%3F.values%3F.%5B0%5D%3Breturn%20t%3F.type%26%26t%3F.value%3F%60%24%7Bt.type%7D%3A%20%24%7Bt.value%7D%60%3A%22%22%7D)(e)%3Br%26%26(e%3D%3E%7Ba.push(e)%2Ca.length%3E%3D10%3F(s%26%26(clearTimeout(s)%2Cs%3Dnull)%2Cc(a))%3As%7C%7C(s%3DsetTimeout(()%3D%3E%7Bs%3Dnull%2Ca.length%3E0%26%26c(a)%7D%2C2e3))%7D)(%7Bmessage%3Ar%2Cstack%3At.originalException%3F.stack%3F%3Ft.syntheticException%3F.stack%3F%3F%22%22%2Cpage_type%3An%2Croute_name%3Ao%2CctData%3Ai%3F.ctData%7D)%7Dreturn%20n%3Fe%3Anull%7D%7D)%3Bclass%20l%20extends%20HTMLElement%7Bconstructor()%7Bsuper(...arguments)%2Cthis.marked%3D!1%7DconnectedCallback()%7Bif(this.marked)return%3Bconst%20e%3Dthis.getAttribute(%22name%22)%3Bif(!e)throw%20new%20Error(%22No%20name%20attribute%20specified%20on%20faceplate-perfmark%20element.%22)%3Bwindow.performance.mark(e)%2Cthis.marked%3D!0%7D%7Dfunction%20f(e%2Ct%2Cn%3D!0)%7Breturn%20new%20CustomEvent(e%2C%7Bcomposed%3A!0%2Cbubbles%3An%2Ccancelable%3A!0%2Cdetail%3At%7D)%7Dfunction%20p(e%2Ct)%7Bconst%20n%3Df(%22faceplate-track%22%2Ct)%2Co%3Dfunction(e)%7Breturn%60%24%7Be.source%7D%2F%24%7Be.action%7D%2F%24%7Be.noun%7D%60.toLowerCase()%7D(t)%3Bn.SAN%3Do%2Ce.dispatchEvent(n)%7DcustomElements.define(%22faceplate-perfmark%22%2Cl)%3Bconst%20m%3D%22frontend_start_timestamp%22%3Bfunction%20_(e)%7Bconst%20t%3Dfunction(e)%7Bif(window%3F.CLIENT_EXPERIMENTS)return%20window%3F.CLIENT_EXPERIMENTS%3F.%5Be%5D%7D(e)%3Breturn(e%3D%3E!!(e%3D%3E%7Bif(%22control_1%22!%3D%3De%26%26%22control_2%22!%3D%3De)return%20e%7C%7Cvoid%200%7D)(e))(t)%7Dconst%20w%3D%2F%5E(%5Ba-z0-9-%5D%2B%5C.)%3Freddit%5C.com%24%2F%2Ch%3D%2F%5E(%5B%5CS%5D%2B%5C.)%3Fsnoo%5C.dev%24%2F%3Bconst%20y%3D(e%3D%22%22%2Ct%3D%22%22)%3D%3E%7Bconst%20n%3D(e%3D%3E%7Bif(!e)return%3Blet%20t%3Btry%7Bconst%7BsearchParams%3An%7D%3Dnew%20URL(e)%2Co%3Dn.get(%22embed_host_url%22)%2Ci%3Do%26%26decodeURIComponent(o)%3Bif(!i)return%3Bt%3D%7Burl%3Ai%2Cdomain%3Anew%20URL(i).hostname%7D%7Dcatch(e)%7B%7Dreturn%20t%7D)(t)%3Bif(n)return%20n%3Blet%20o%3D%22%22%3Btry%7Bo%3De%26%26new%20URL(e)%3F.hostname%7C%7C%22%22%7Dcatch(e)%7B%7Dreturn%7Burl%3Ae%2Cdomain%3Ao%7D%7D%2Cv%3De%3D%3E%7Blet%20t%3D%7B%7D%3Btry%7Bt%3DJSON.parse(document.querySelector(%22shreddit-screenview-data%22)%3F.getAttribute(%22data%22)%3F%3F%22%7B%7D%22)%7Dcatch(e)%7Bwindow.Sentry.captureException(new%20Error(%22Unable%20to%20parse%20screenview%20data%22%2C%7Bcause%3Ae%7D))%7Dreturn%20e%3Ft%5Be%5D%3At%7D%2Cg%3D()%3D%3E%7Bconst%20e%3Ddocument.getElementsByTagName(%22shreddit-app%22)%3F.%5B0%5D%3F.getAttribute(%22referrer%22)%7C%7Cdocument.referrer%2Ct%3Dfunction(e)%7Bif(!e)return%20null%3Btry%7Breturn%20new%20URL(e)%7Dcatch%7Breturn%20null%7D%7D(e)%3Blet%20n%3Bif(t%26%26(o%3Dt.hostname%2Cw.test(o)%7C%7Ch.test(o)))%7Bconst%20e%3Dt.pathname%3Bn%3D_(%22shreddit_pdp_telemetry_code_yellow_killswitch%22)%3Fvoid%200%3Ak(e)%7Delse%20t%26%26(n%3D%22deeplink%22)%3Bvar%20o%3Breturn%7Breferrer%3Ay(e%2Cwindow.location.href)%2Cclient_timestamp%3ADate.now()%2C...n%3F%7Bnavigation_session%3A%7Breferring_page_type%3An%7D%7D%3A%7B%7D%7D%7D%2Cb%3D(e%2Ct%2Cn%3Dv)%3D%3E%7Bif(t%3F.%5Be%5D)return%7B%7D%3Bconst%20o%3Dn(e)%3Breturn%20o%3F%7B%5Be%5D%3Ao%7D%3A%7B%7D%7D%3Bfunction%20E(e%2Ct)%7Bconst%7Bsource%3An%2Caction%3Ao%2Cnoun%3Ai%2C...r%7D%3Dfunction(e)%7Bif(%22string%22%3D%3Dtypeof%20e)%7Bconst%20t%3De.split(%22__%22)%3Bif(t.length%3C3)return%7Bsource%3A%22%22%2Caction%3A%22%22%2Cnoun%3A%22%22%7D%3Bconst%20n%3Dt.pop()%2Co%3Dt.pop()%3Breturn%7Bsource%3At.join(%22__%22)%2Caction%3Ao%2Cnoun%3An%7D%7Dreturn%20e%7D(e)%2Ca%3D%7B...t%7C%7C%7B%7D%2Csource%3An%2Caction%3Ao%2Cnoun%3Ai%2C...g()%2C...b(%22post%22%2Ct)%2C...r%7D%3Breturn%20a.screen%3D%7B...t%3F.screen%3F%3F%7B%7D%2Cdevice_pixel_ratio%3Awindow.devicePixelRatio%2Cwidth%3Awindow.screen.width%2Cheight%3Awindow.screen.height%2Cviewport_width%3Awindow.innerWidth%2Cviewport_height%3Awindow.innerHeight%7D%2Cfunction(e%2Ct)%7Bif(!(%22request%22in%20e))return%7B...e%2Crequest%3At%7D%3Bconst%20n%3D%7B...e.request%3F.shreddit_client_timestamps%3F%3F%7B%7D%2C...t.shreddit_client_timestamps%7D%2Co%3D%7B...e.request%3F%3F%7B%7D%2Cshreddit_client_timestamps%3An%7D%3Breturn%7B...e%2Crequest%3Ao%7D%7D(a%2C%7Bshreddit_client_timestamps%3A%7B%5Bm%5D%3ADate.now()%7D%7D)%7Dconst%20k%3De%3D%3E%7Bconst%20t%3De%3F.toLowerCase()%3Bif(!t)return%3Bconst%20n%3DsessionStorage.getItem(%22pathname-page-type-map%22)%3Breturn(n%3FJSON.parse(n)%3A%7B%7D)%5Bt%5D%7D%2CS%3Dnew%20Set(%5B%22v%22%2C%22dn%22%2C%22p%22%2C%22cs%22%2C%22rb%22%5D)%2CT%3D()%3D%3E%7Bconst%20e%3D((e%3Dnavigator)%3D%3E%7Bif(!_(%22shreddit_network_info_logging%22))return%3Bconst%20t%3De.connection%3F%3Fe.mozConnection%3F%3Fe.webkitConnection%3Bif(!t)return%3Bconst%20n%3D%7B%7D%3Breturn%22string%22%3D%3Dtypeof%20t.effectiveType%26%26(n.effectiveType%3Dt.effectiveType)%2CNumber.isFinite(t.downlink)%26%26(n.downlink%3Dt.downlink)%2CNumber.isFinite(t.rtt)%26%26(n.rtt%3Dt.rtt)%2C%22string%22%3D%3Dtypeof%20t.type%26%26(n.type%3Dt.type)%2C%22boolean%22%3D%3Dtypeof%20t.saveData%26%26(n.saveData%3Dt.saveData)%2CObject.keys(n).length%3E0%3Fn%3Avoid%200%7D)()%3Bif(!e)return%3Bconst%20t%3D%7Beffective_type%3Ae.effectiveType%2Cdownlink%3Ae.downlink%2Crtt%3Ae.rtt%2Ctype%3Ae.type%2Csave_data%3Ae.saveData%7D%3Breturn%20e%3F%7Bbrowser_network_info%3At%7D%3Avoid%200%7D%2CC%3D%5B%22js%22%2C%22css%22%2C%22document%22%5D%2CN%3D%7Bnavigation%3A%22document%22%2Cscript%3A%22js%22%2Clink%3Ae%3D%3Ee.endsWith(%22.js%22)%3F%22js%22%3Ae.endsWith(%22.css%22)%3F%22css%22%3Anull%2Ccss%3A%22css%22%7D%2CO%3D%7Bgzip%3A%22gzip%22%2Cbr%3A%22br%22%2Czstd%3A%22zstd%22%2Cdcz%3A%22dcz%22%2Cdcb%3A%22dcb%22%2Cdeflate%3A%22deflate%22%2Cidentity%3A%22identity%22%2C%22%22%3A%22%22%7D%2CR%3De%3D%3ENumber.isFinite(e)%26%26e%3E%3D0%26%26e%3C%3D4294967295%3Fe%3A0%2CL%3De%3D%3Enew%20Promise(t%3D%3EsetTimeout(t%2Ce))%2Cz%3D6e5%3B!function()%7Bconst%20e%3Dnew%20PerformanceObserver(t%3D%3E%7Bt.getEntries().forEach(t%3D%3E%7Bconst%7BdomContentLoadedEventStart%3An%7D%3Dt%3Bif(n)%7B!function(e)%7Bconst%20t%3Ddocument.querySelector(%22shreddit-app%22)%3Bif(!t)return%3Bconst%20n%3Dnew%20CustomEvent(%22faceplate-track%22%2C%7Bdetail%3A%7Bsource%3A%22client%22%2Caction%3A%22emit%22%2Cnoun%3A%22metric%22%2Cclient_timestamp%3ADate.now()%2Cmetric%3A%7Bname%3A%22shreddit_dom_content_loaded_seconds%22%2Cvalue%3Ae%2Clabel_values%3A%5B%60page_type%2C%24%7Bt.getAttribute(%22pagetype%22)%7D%60%2C%60device_type%2C%24%7Bt.getAttribute(%22devicetype%22)%7D%60%5D%7D%7D%7D)%3Bt.dispatchEvent(n)%7D(n%2F1e3)%2Ce.disconnect()%7D%7D)%7D)%3Be.observe(%7Btype%3A%22navigation%22%2Cbuffered%3A!0%7D)%7D()%2Casync%20function(e%3D!1%2Ct%3Dwindow.performance)%7Bconst%20n%3De%3Ft.now()%3A0%3Bt.mark(%22total-page-load-start%22)%3Blet%20o%3D!1%2Ci%3D!1%2Cr%3D-1%3Bwindow.addEventListener(%22beforeRoute%22%2C()%3D%3Eo%3D!0)%2Cwindow.addEventListener(%22afterRoute%22%2C()%3D%3E%7Bi%3D!0%2Cr%3Dt.now()%7D)%3Blet%20a%3D-1%3Bconst%20s%3Dnew%20PerformanceObserver(e%3D%3E%7Be.getEntries().forEach(e%3D%3E%7B%22longtask%22%3D%3D%3De.entryType%26%26e.duration%3E%3D50%26%26(a%3De.startTime%2Be.duration)%7D)%7D)%2Cc%3DPerformanceObserver.supportedEntryTypes.includes(%22longtask%22)%3Bc%26%26s.observe(%7Btype%3A%22longtask%22%7D)%3Bconst%20d%3DC.reduce((e%2Ct)%3D%3E(e%5Bt%5D%3D%7Btype%3At%2Ccount%3A0%2Ccached%3A0%2Ccontent_encoding%3A%22unknown%22%2Ctotal_encoded_size_bytes%3A0%2Ctotal_decoded_size_bytes%3A0%2Ctotal_download_size_bytes%3A0%2Ctotal_load_time_ms%3A0%2Ccumulative_load_time_ms%3A0%2CearliestResourceStart%3A1%2F0%2ClatestResourceEnd%3A-1%2F0%2Cblocking_count%3A0%7D%2Ce)%2C%7B%7D)%2Cu%3D(%7Bname%3Ae%2CinitiatorType%3At%2CstartTime%3An%2CresponseEnd%3Ao%2CtransferSize%3Ai%2CcontentEncoding%3Ar%2CdecodedBodySize%3Aa%2CencodedBodySize%3As%2CrenderBlockingStatus%3Ac%3D%22%22%7D)%3D%3E%7Bconst%20u%3D%22function%22%3D%3Dtypeof%20N%5Bt%5D%3FN%5Bt%5D(e)%3AN%5Bt%5D%3Bif(!u)return%3Bconst%20l%3Dd%5Bu%5D%3Bif(!l)return%3Bconst%20f%3DR(s)%2Cp%3DR(a)%2Cm%3DR(i)%3Bl.content_encoding%3D(e%3D%3Evoid%200%3D%3D%3De%3F%22unknown%22%3AO%5Be%5D%3F%3F%22unknown%22)(r)%2Cl.count%2B%2B%2C0%3D%3D%3Dm%26%26p%3E0%3Fl.cached%2B%2B%3A(l.total_decoded_size_bytes%2B%3Dp%2Cl.total_encoded_size_bytes%2B%3Df%2Cl.total_download_size_bytes%2B%3Dm%2Cl.cumulative_load_time_ms%2B%3Do-n%2Cl.earliestResourceStart%3DMath.min(l.earliestResourceStart%2Cn)%2Cl.latestResourceEnd%3DMath.max(l.latestResourceEnd%2Co))%2C%22blocking%22%3D%3D%3Dc%26%26l.blocking_count%2B%2B%7D%2Cl%3Dnew%20PerformanceObserver(e%3D%3E%7Be.getEntriesByType(%22navigation%22).forEach(e%3D%3E%7Bu(e)%7D)%7D)%3Bnew%20PerformanceObserver(e%3D%3E%7Be.getEntries().forEach(e%3D%3E%7Bif(%22resource%22%3D%3D%3De.entryType)%7Bconst%7Bname%3At%2CinitiatorType%3An%7D%3De%3B(t.includes(CLIENT_CONFIG.STATIC_BASE_URL)%7C%7Ct.includes(CLIENT_CONFIG.RUNTIME_CONCAT_BASE_URL))%26%26N%5Bn%5D%26%26u(e)%3Bconst%20o%3De%3Bif(%22fetch%22%3D%3D%3Do.initiatorType%26%26o.serverTiming)%7Bconst%20e%3Do.serverTiming.find(e%3D%3E%22requestType%22%3D%3D%3De.name)%2Ct%3Do.serverTiming.find(e%3D%3E%22reddit-ct%22%3D%3D%3De.name)%3Bif(e%26%26t)%7Bconst%20n%3D%22hybrid%22%3D%3D%3De.description%3B!function(e%2Ct)%7Bif(!e)return%3Bdocument.querySelector(%22shreddit-app%22)%3F.dispatchEvent(new%20CustomEvent(%22ct-data-update%22%2C%7Bdetail%3A%7Bdata%3Ae%2CisNavigation%3At%7D%7D))%7D((e%3D%3E%7Bif(!e)return%20null%3Bconst%20t%3D%7B%7D%3Bfor(const%20n%20of%20e.split(%22%2C%22))%7Bconst%20e%3Dn.indexOf(%22%3D%22)%3Bif(-1%3D%3D%3De)continue%3Bconst%20o%3Dn.slice(0%2Ce)%2Ci%3Dn.slice(e%2B1)%3Bo%26%26i%26%26S.has(o)%26%26(t%5Bo%5D%3Di)%7Dreturn%20Object.keys(t).length%3E0%3Ft%3Anull%7D)(t.description)%2Cn)%7D%7D%7D%7D)%7D).observe(%7Btype%3A%22resource%22%2Cbuffered%3A!e%7D)%2Cl.observe(%7Btype%3A%22navigation%22%2Cbuffered%3A!e%7D)%3Blet%20f%3D0%2Cm%3D-1%3Bconst%20_%3De%3D%3E%22FACEPLATE-IMG%22%3D%3D%3De.target%3F.nodeName%3Bwindow.addEventListener(%22faceplate-load-start%22%2Ce%3D%3E%7B_(e)%7C%7Cf%2B%2B%7D)%2Cwindow.addEventListener(%22faceplate-load%22%2Ce%3D%3E%7B_(e)%7C%7C(f--%2Cm%3Dt.now())%7D)%2C%22complete%22!%3D%3Ddocument.readyState%26%26await%20new%20Promise(e%3D%3Ewindow.addEventListener(%22load%22%2Ce%2C%7Bonce%3A!0%7D))%3Blet%20w%3Dt.now()%3Bfor(%3Bt.now()-n%3Cz%3B)%7Bif(await%20L(1e3)%2Co)return%3Bif((!e%7C%7Ci)%26%26!(f%3E0))%7Bif(-1%3D%3D%3Da)return%20h(Math.max(w%2Cm%2Cr))%3Bif(a%3C%3Dw)return%20h(w)%3Bw%3DMath.max(a%2Cm%2Cr)%7D%7Dfunction%20h(e)%7Bconst%20o%3De-n%3Bt.mark(%22total-page-load-end%22%2C%7BstartTime%3Ae%7D)%2Ct.measure(%22total-page-load%22%2C%7Bstart%3An%2Cend%3Ae%7D)%2Cfunction(e)%7Bconst%20t%3Dnew%20CustomEvent(%22faceplate-request%22%2C%7Bdetail%3A%7Bresource%3A%22%2Fsvc%2Fshreddit%2FperfMetrics%22%2Crequest%3A%7Bbody%3A%7Bmetrics%3A%7B%22total-page-load%22%3AMath.round(e)%7D%7D%7D%7D%7D)%3Bdocument.querySelector(%22shreddit-app%22)%3F.dispatchEvent(t)%7D(o)%2Cfunction(e%2Ct)%7Bfor(const%20n%20of%20Object.values(e))%7Bconst%7Btype%3Ae%2Ccount%3Ao%2Ccached%3Ai%2Cblocking_count%3Ar%2Ccontent_encoding%3Aa%2Ctotal_decoded_size_bytes%3As%2Ctotal_encoded_size_bytes%3Ac%2Ctotal_download_size_bytes%3Ad%2CearliestResourceStart%3Au%2ClatestResourceEnd%3Al%2Ccumulative_load_time_ms%3Af%7D%3Dn%2Cm%3Ddocument.querySelector(%22shreddit-app%22)%2C_%3Du!%3D%3D1%2F0%26%26l!%3D%3D-1%2F0%3Fl-u%3A0%2Cw%3DE(%7Bsource%3A%22browser%22%2Caction%3A%22observe%22%2Cnoun%3A%22performance%22%7D%2C%7Bbrowser_context%3A%7B...T()%7D%2Cstatic_asset_usage%3A%7Basset_type%3Ae%2Ccount%3Ao%2Ccache_hit_rate%3A0!%3D%3Do%3Fi%2Fo%3A0%2Ccontent_encoding%3Aa%2Ctotal_encoded_size_bytes%3Ac%2Ctotal_decoded_size_bytes%3As%2Ctotal_download_size_bytes%3Ad%2Ctotal_load_time_ms%3A_%2Ccumulative_load_time_ms%3Af%2Cblocking_count%3Ar%2Clong_task_supported%3At%7D%7D)%3Bm%26%26p(m%2Cw)%7D%7D(d%2Cc)%7Dh(n%2Bz)%7D()%3Blet%20P%3D!0%3Bconst%20x%3D%5B%5D%3Bfunction%20I(e)%7BP%26%26x.push(e)%7Dwindow.addEventListener(%22faceplate-alert%22%2CI)%2Cwindow.setTimeout(()%3D%3E%7Bif(P%3D!1%2Cwindow.removeEventListener(%22faceplate-alert%22%2CI)%2Cx.length)for(const%20e%20of%20x)e.target%26%26window.navigator.onLine%26%26e.target.dispatchEvent(f(%22faceplate-alert%22%2Ce.detail))%7D%2C5e3)%2Cwindow.addEventListener(%22no-resolve%22%2Cfunction(e)%7Bwindow.Sentry.captureException(new%20Error(%60Request%20resolution%20halted%20due%20to%20issue%20with%20GVS%20event%3A%20%24%7BJSON.stringify(e.detail)%7D%60))%7D)%3B%0A"></script> 
+    <script type="module" nonce="" src="data:text/javascript,let%20e%3Dnull%3Basync%20function%20t()%7Breturn%20e%7C%7C(e%3Dasync%20function()%7Bif(!window.navigation)try%7Bconst%7BapplyPolyfill%3Ae%7D%3Dawait%20import(%22https%3A%2F%2Fwww.redditstatic.com%2Fshreddit%2Fapply-polyfill-BcpMVdvg.js%22)%3Be()%7Dcatch(e)%7Bwindow.Sentry%3F.captureException(new%20Error(%22Navigation%20polyfill%20failed%20to%20initialize.%22%2C%7Bcause%3Ae%7D))%7Dreturn%20window.navigation%7D())%2Ce%7Dvar%20n%3D%2FEdge%3F%5C%2F(1%7B2%7D%5B6-9%5D%7C1%5B2-9%5D%5Cd%7C%5B2-9%5D%5Cd%7B2%7D%7C%5Cd%7B4%2C%7D)%5C.%5Cd%2B(%5C.%5Cd%2B%7C)%7CFirefox%5C%2F(1%7B2%7D%5B7-9%5D%7C1%5B2-9%5D%5Cd%7C%5B2-9%5D%5Cd%7B2%7D%7C%5Cd%7B4%2C%7D)%5C.%5Cd%2B(%5C.%5Cd%2B%7C)%7CChrom(ium%7Ce)%5C%2F(4%5B1-9%5D%7C%5B5-9%5D%5Cd%7C%5Cd%7B3%2C%7D)%5C.%5Cd%2B(%5C.%5Cd%2B%7C)(%5B%5Cd.%5D%2B%24%7C.*Safari%5C%2F(%3F!%5B%5Cd.%5D%2B%20Edge%5C%2F%5B%5Cd.%5D%2B%24))%7C(Maci%7CX1%7B2%7D).%2B%20Version%5C%2F(15%5C.%5Cd%2B%7C(1%5B6-9%5D%7C%5B2-9%5D%5Cd%7C%5Cd%7B3%2C%7D)%5C.%5Cd%2B)(%5B%2C.%5D%5Cd%2B%7C)(%20%5C(%5Cw%2B%5C)%7C)(%20Mobile%5C%2F%5Cw%2B%7C)%20Safari%5C%2F%7CChrome.%2BOPR%5C%2F(10%5B1-9%5D%7C1%5B1-9%5D%5Cd%7C%5B2-9%5D%5Cd%7B2%7D%7C%5Cd%7B4%2C%7D)%5C.%5Cd%2B%5C.%5Cd%2B%7C(CPU%5B%20%2B%5DOS%7CiPhone%5B%20%2B%5DOS%7CCPU%5B%20%2B%5DiPhone%7CCPU%20IPhone%20OS%7CCPU%20iPad%20OS)%5B%20%2B%5D%2B(15%5B._%5D%5Cd%2B%7C(1%5B6-9%5D%7C%5B2-9%5D%5Cd%7C%5Cd%7B3%2C%7D)%5B._%5D%5Cd%2B)(%5B._%5D%5Cd%2B%7C)%2F%3Bconst%20o%3D%5B%22window.performance.mark%20is%20not%20a%20function%22%2C%22performance.getEntriesByName%20is%20not%20a%20function%22%2C%22window.queueMicrotask%20is%20not%20a%20function%22%2C%22runCustomize%20is%20not%20defined%22%2C%22require%20is%20not%20defined%22%2C%22n.assignedElements%20is%20not%20a%20function%22%2C%22SymBrowser_ModifyAnchorTagWithTarget%22%2C%22ibFindAllVideos%22%2C%22Unexpected%20token%20'for'%22%5D%2Ci%3D%5B%22findTopmostVisibleElement%22%5D%2Cr%3De%3D%3E%7Bconst%20t%3D(r%3Dnavigator.userAgent%2C!n.test(r))%3Bvar%20r%3Breturn!!((e%3D%3E!!o.some(t%3D%3Ee%3F.originalException%3F.message%3F.includes(t)))(e)%7C%7C(e%3D%3E!!i.some(t%3D%3Ee%3F.originalException%3F.stack%3F.includes(t)))(e)%7C%7Ct)%7D%2Ca%3D%5B%5D%3Blet%20s%3Dnull%3Bconst%20c%3Dasync(e%2Ct)%3D%3E%7Bif(0%3D%3D%3De.length)return%3Bconst%20n%3D%5B...e%5D%3Be.length%3D0%3Btry%7B(await%20fetch(%22%2Fsvc%2Fshreddit%2Fclient-errors%22%2C%7Bmethod%3A%22POST%22%2Cheaders%3A%7B%22Content-Type%22%3A%22application%2Fjson%22%7D%2Cbody%3AJSON.stringify(%7Bcsrf_token%3A(o%3D%22csrf_token%22%2Cdocument.cookie.split(%22%3B%22).map(e%3D%3Ee.trim()).filter(Boolean).map(e%3D%3Ee.split(%22%3D%22)).find((%5Be%5D)%3D%3Ee.trim()%3D%3D%3Do)%3F.%5B1%5D%3F%3Fnull)%2Cerrors%3An%7D)%2Ckeepalive%3At%3F.keepalive%7D)).status%3E%3D500%26%26(u%3D!0)%7Dcatch%7Bu%3D!0%7Dvar%20o%7D%2Cd%3D()%3D%3E%7Bs%26%26(clearTimeout(s)%2Cs%3Dnull)%2Cc(a%2C%7Bkeepalive%3A!0%7D)%7D%3Bdocument.addEventListener(%22visibilitychange%22%2C()%3D%3E%7B%22hidden%22%3D%3D%3Ddocument.visibilityState%26%26d()%7D)%2Cwindow.addEventListener(%22pagehide%22%2Cd)%3Blet%20u%3D!1%3B((e%2Cn%2Co%2Ci%2Cr%2Ca%2Cs)%3D%3E%7Bvar%20c%3D!1%2Cd%3D!1%2Cu%3D%5B%5D%2Cl%3Dfunction(e)%7B(%22e%22in%20e%7C%7C%22p%22in%20e%7C%7Ce.f%26%26e.f.indexOf(%22capture%22)%3E-1%7C%7Ce.f%26%26e.f.indexOf(%22withScope%22)%3E-1%7C%7Ce.f%26%26e.f.indexOf(%22showReportDialog%22)%3E-1)%26%26p(u)%2Cl.data.push(e)%7D%3Bfunction%20p(n)%7Bfunction%20o()%7Bt().then(()%3D%3Eimport(%22https%3A%2F%2Fwww.redditstatic.com%2Fshreddit%2Fsentry-DswLfAC_.js%22)).then(t%3D%3E%7Btry%7Be%5Ba%5D%3Dt.default%2Ce%5Bi%5D%3Df%2Ce%5Br%5D%3Dm%3Bvar%20o%3De%5Ba%5D%2Cc%3Do.init%3Bo.init%3Dfunction(e)%7Bvar%20t%3Ds%3Bfor(var%20n%20in%20e)Object.prototype.hasOwnProperty.call(e%2Cn)%26%26(t%5Bn%5D%3De%5Bn%5D)%3Bc(t)%7D%2Cfunction(t%2Cn)%7Btry%7Bfor(var%20o%3Dl.data%2Ca%3D0%3Ba%3Ct.length%3Ba%2B%2B)%22function%22%3D%3Dtypeof%20t%5Ba%5D%26%26t%5Ba%5D()%3Bvar%20s%3D!1%2Cc%3De.__SENTRY__%3Bvoid%200!%3D%3Dc%26%26c.hub%26%26c.hub.getClient()%26%26(s%3D!0)%3Bvar%20d%3D!1%3Bfor(a%3D0%3Ba%3Co.length%3Ba%2B%2B)if(o%5Ba%5D.f)%7Bd%3D!0%3Bvar%20u%3Do%5Ba%5D%3B!1%3D%3D%3Ds%26%26%22init%22!%3D%3Du.f%26%26n.init()%2Cs%3D!0%2Cu.f%26%26n%5Bu.f%5D.apply(n%2Cu.a)%7D!1%3D%3D%3Ds%26%26!1%3D%3D%3Dd%26%26n.init()%3Bvar%20p%3De%5Bi%5D%2Cf%3De%5Br%5D%3Bfor(a%3D0%3Ba%3Co.length%3Ba%2B%2B)%22e%22in%20o%5Ba%5D%26%26p%3Fp.apply(e%2Co%5Ba%5D.e)%3A%22p%22in%20o%5Ba%5D%26%26f%26%26f.apply(e%2C%5Bo%5Ba%5D.p%5D)%7Dcatch(e)%7Bconsole.error(e)%7D%7D(n%2Co)%7Dcatch(e)%7Bconsole.error(e)%7D%7D)%7Dd%7C%7C(d%3D!0%2C%22requestIdleCallback%22in%20e%3Fe.requestIdleCallback(o%2C%7Btimeout%3A3e3%7D)%3Ae.setTimeout(o%2C0))%7Dl.data%3D%5B%5D%2Ce%5Ba%5D%3De%5Ba%5D%7C%7C%7B%7D%2Ce%5Ba%5D.onLoad%3Dfunction(e)%7Bu.push(e)%2Cc%26%26p(u)%7D%2Ce%5Ba%5D.forceLoad%3Dfunction()%7Bc%3D!0%2CsetTimeout(function()%7Bp(u)%7D)%7D%2C%5B%22init%22%2C%22addBreadcrumb%22%2C%22captureMessage%22%2C%22captureException%22%2C%22captureEvent%22%2C%22configureScope%22%2C%22withScope%22%2C%22showReportDialog%22%5D.forEach(function(t)%7Be%5Ba%5D%5Bt%5D%3Dfunction()%7Bl(%7Bf%3At%2Ca%3Aarguments%7D)%7D%7D)%3Bvar%20f%3De%5Bi%5D%3Be%5Bi%5D%3Dfunction(t%2Cn%2Co%2Ci%2Cr)%7Bl(%7Be%3A%5B%5D.slice.call(arguments)%7D)%2Cf%26%26f.apply(e%2Carguments)%7D%3Bvar%20m%3De%5Br%5D%3Be%5Br%5D%3Dfunction(t)%7Bl(%7Bp%3A%22reason%22in%20t%3Ft.reason%3A%22detail%22in%20t%26%26%22reason%22in%20t.detail%3Ft.detail.reason%3At%7D)%2Cm%26%26m.apply(e%2Carguments)%7D%7D)(window%2Cdocument%2C0%2C%22onerror%22%2C%22onunhandledrejection%22%2C%22Sentry%22%2C%7Benabled%3ASENTRY_CONFIG.enabled%2Cdsn%3ASENTRY_CONFIG.dsn%2Cenvironment%3ASENTRY_CONFIG.environment%2Crelease%3A%22797a4dda068c15445433e8747d2145f362262d02%22%2CbeforeSend%3A(e%2Ct)%3D%3E%7Bif(r(t))return%20null%3Bconst%20n%3DMath.random()%3C(SENTRY_CONFIG.sampleRate%3F%3F.004)%3Bif(!u%26%26e.exception)%7Blet%20n%3D%22unknown%22%2Co%3D%22unknown%22%3Bconst%20i%3Ddocument.querySelector(%22shreddit-app%22)%3BcustomElements.get(%22shreddit-app%22)%26%26%22function%22%3D%3Dtypeof%20i%3F._trackEvent%26%26(n%3Di.pageType%7C%7C%22unknown%22%2Co%3Di.routeName%7C%7C%22unknown%22)%3Bconst%20r%3D(e%3D%3E%7Bconst%20t%3De.exception%3F.values%3F.%5B0%5D%3Breturn%20t%3F.type%26%26t%3F.value%3F%60%24%7Bt.type%7D%3A%20%24%7Bt.value%7D%60%3A%22%22%7D)(e)%3Br%26%26(e%3D%3E%7Ba.push(e)%2Ca.length%3E%3D10%3F(s%26%26(clearTimeout(s)%2Cs%3Dnull)%2Cc(a))%3As%7C%7C(s%3DsetTimeout(()%3D%3E%7Bs%3Dnull%2Ca.length%3E0%26%26c(a)%7D%2C2e3))%7D)(%7Bmessage%3Ar%2Cstack%3At.originalException%3F.stack%3F%3Ft.syntheticException%3F.stack%3F%3F%22%22%2Cpage_type%3An%2Croute_name%3Ao%2CctData%3Ai%3F.ctData%7D)%7Dreturn%20n%3Fe%3Anull%7D%7D)%3Bclass%20l%20extends%20HTMLElement%7Bconstructor()%7Bsuper(...arguments)%2Cthis.marked%3D!1%7DconnectedCallback()%7Bif(this.marked)return%3Bconst%20e%3Dthis.getAttribute(%22name%22)%3Bif(!e)throw%20new%20Error(%22No%20name%20attribute%20specified%20on%20faceplate-perfmark%20element.%22)%3Bwindow.performance.mark(e)%2Cthis.marked%3D!0%7D%7Dfunction%20p(e%2Ct%2Cn%3D!0)%7Breturn%20new%20CustomEvent(e%2C%7Bcomposed%3A!0%2Cbubbles%3An%2Ccancelable%3A!0%2Cdetail%3At%7D)%7Dfunction%20f(e%2Ct)%7Bconst%20n%3Dp(%22faceplate-track%22%2Ct)%2Co%3Dfunction(e)%7Breturn%60%24%7Be.source%7D%2F%24%7Be.action%7D%2F%24%7Be.noun%7D%60.toLowerCase()%7D(t)%3Bn.SAN%3Do%2Ce.dispatchEvent(n)%7DcustomElements.define(%22faceplate-perfmark%22%2Cl)%3Bconst%20m%3D%22frontend_start_timestamp%22%3Bfunction%20_(e)%7Bconst%20t%3Dfunction(e)%7Bif(window%3F.CLIENT_EXPERIMENTS)return%20window%3F.CLIENT_EXPERIMENTS%3F.%5Be%5D%7D(e)%3Breturn(e%3D%3E!!(e%3D%3E%7Bif(%22control_1%22!%3D%3De%26%26%22control_2%22!%3D%3De)return%20e%7C%7Cvoid%200%7D)(e))(t)%7Dconst%20w%3D%2F%5E(%5Ba-z0-9-%5D%2B%5C.)%3Freddit%5C.com%24%2F%2Ch%3D%2F%5E(%5B%5CS%5D%2B%5C.)%3Fsnoo%5C.dev%24%2F%3Bconst%20y%3D(e%3D%22%22%2Ct%3D%22%22)%3D%3E%7Bconst%20n%3D(e%3D%3E%7Bif(!e)return%3Blet%20t%3Btry%7Bconst%7BsearchParams%3An%7D%3Dnew%20URL(e)%2Co%3Dn.get(%22embed_host_url%22)%2Ci%3Do%26%26decodeURIComponent(o)%3Bif(!i)return%3Bt%3D%7Burl%3Ai%2Cdomain%3Anew%20URL(i).hostname%7D%7Dcatch(e)%7B%7Dreturn%20t%7D)(t)%3Bif(n)return%20n%3Blet%20o%3D%22%22%3Btry%7Bo%3De%26%26new%20URL(e)%3F.hostname%7C%7C%22%22%7Dcatch(e)%7B%7Dreturn%7Burl%3Ae%2Cdomain%3Ao%7D%7D%2Cv%3De%3D%3E%7Blet%20t%3D%7B%7D%3Btry%7Bt%3DJSON.parse(document.querySelector(%22shreddit-screenview-data%22)%3F.getAttribute(%22data%22)%3F%3F%22%7B%7D%22)%7Dcatch(e)%7Bwindow.Sentry.captureException(new%20Error(%22Unable%20to%20parse%20screenview%20data%22%2C%7Bcause%3Ae%7D))%7Dreturn%20e%3Ft%5Be%5D%3At%7D%2Cg%3D()%3D%3E%7Bconst%20e%3Ddocument.getElementsByTagName(%22shreddit-app%22)%3F.%5B0%5D%3F.getAttribute(%22referrer%22)%7C%7Cdocument.referrer%2Ct%3Dfunction(e)%7Bif(!e)return%20null%3Btry%7Breturn%20new%20URL(e)%7Dcatch%7Breturn%20null%7D%7D(e)%3Blet%20n%3Bif(t%26%26(o%3Dt.hostname%2Cw.test(o)%7C%7Ch.test(o)))%7Bconst%20e%3Dt.pathname%3Bn%3D_(%22shreddit_pdp_telemetry_code_yellow_killswitch%22)%3Fvoid%200%3Ak(e)%7Delse%20t%26%26(n%3D%22deeplink%22)%3Bvar%20o%3Breturn%7Breferrer%3Ay(e%2Cwindow.location.href)%2Cclient_timestamp%3ADate.now()%2C...n%3F%7Bnavigation_session%3A%7Breferring_page_type%3An%7D%7D%3A%7B%7D%7D%7D%2CE%3D(e%2Ct%2Cn%3Dv)%3D%3E%7Bif(t%3F.%5Be%5D)return%7B%7D%3Bconst%20o%3Dn(e)%3Breturn%20o%3F%7B%5Be%5D%3Ao%7D%3A%7B%7D%7D%3Bfunction%20b(e%2Ct)%7Bconst%7Bsource%3An%2Caction%3Ao%2Cnoun%3Ai%2C...r%7D%3Dfunction(e)%7Bif(%22string%22%3D%3Dtypeof%20e)%7Bconst%20t%3De.split(%22__%22)%3Bif(t.length%3C3)return%7Bsource%3A%22%22%2Caction%3A%22%22%2Cnoun%3A%22%22%7D%3Bconst%20n%3Dt.pop()%2Co%3Dt.pop()%3Breturn%7Bsource%3At.join(%22__%22)%2Caction%3Ao%2Cnoun%3An%7D%7Dreturn%20e%7D(e)%2Ca%3D%7B...t%7C%7C%7B%7D%2Csource%3An%2Caction%3Ao%2Cnoun%3Ai%2C...g()%2C...E(%22post%22%2Ct)%2C...r%7D%3Breturn%20a.screen%3D%7B...t%3F.screen%3F%3F%7B%7D%2Cdevice_pixel_ratio%3Awindow.devicePixelRatio%2Cwidth%3Awindow.screen.width%2Cheight%3Awindow.screen.height%2Cviewport_width%3Awindow.innerWidth%2Cviewport_height%3Awindow.innerHeight%7D%2Cfunction(e%2Ct)%7Bif(!(%22request%22in%20e))return%7B...e%2Crequest%3At%7D%3Bconst%20n%3D%7B...e.request%3F.shreddit_client_timestamps%3F%3F%7B%7D%2C...t.shreddit_client_timestamps%7D%2Co%3D%7B...e.request%3F%3F%7B%7D%2Cshreddit_client_timestamps%3An%7D%3Breturn%7B...e%2Crequest%3Ao%7D%7D(a%2C%7Bshreddit_client_timestamps%3A%7B%5Bm%5D%3ADate.now()%7D%7D)%7Dconst%20k%3De%3D%3E%7Bconst%20t%3De%3F.toLowerCase()%3Bif(!t)return%3Bconst%20n%3DsessionStorage.getItem(%22pathname-page-type-map%22)%3Breturn(n%3FJSON.parse(n)%3A%7B%7D)%5Bt%5D%7D%2CS%3Dnew%20Set(%5B%22v%22%2C%22dn%22%2C%22p%22%2C%22cs%22%2C%22rb%22%5D)%2CT%3D()%3D%3E%7Bconst%20e%3D((e%3Dnavigator)%3D%3E%7Bconst%20t%3De.connection%3F%3Fe.mozConnection%3F%3Fe.webkitConnection%3Bif(!t)return%3Bconst%20n%3D%7B%7D%3Breturn%22string%22%3D%3Dtypeof%20t.effectiveType%26%26(n.effectiveType%3Dt.effectiveType)%2CNumber.isFinite(t.downlink)%26%26(n.downlink%3Dt.downlink)%2CNumber.isFinite(t.rtt)%26%26(n.rtt%3Dt.rtt)%2C%22string%22%3D%3Dtypeof%20t.type%26%26(n.type%3Dt.type)%2C%22boolean%22%3D%3Dtypeof%20t.saveData%26%26(n.saveData%3Dt.saveData)%2CObject.keys(n).length%3E0%3Fn%3Avoid%200%7D)()%3Bif(!e)return%3Bconst%20t%3D%7Beffective_type%3Ae.effectiveType%2Cdownlink%3Ae.downlink%2Crtt%3Ae.rtt%2Ctype%3Ae.type%2Csave_data%3Ae.saveData%7D%3Breturn%20e%3F%7Bbrowser_network_info%3At%7D%3Avoid%200%7D%2CC%3D%5B%22js%22%2C%22css%22%2C%22document%22%5D%2CN%3D%7Bnavigation%3A%22document%22%2Cscript%3A%22js%22%2Clink%3Ae%3D%3Ee.endsWith(%22.js%22)%3F%22js%22%3Ae.endsWith(%22.css%22)%3F%22css%22%3Anull%2Ccss%3A%22css%22%7D%2CO%3D%7Bgzip%3A%22gzip%22%2Cbr%3A%22br%22%2Czstd%3A%22zstd%22%2Cdcz%3A%22dcz%22%2Cdcb%3A%22dcb%22%2Cdeflate%3A%22deflate%22%2Cidentity%3A%22identity%22%2C%22%22%3A%22%22%7D%2CR%3De%3D%3ENumber.isFinite(e)%26%26e%3E%3D0%26%26e%3C%3D4294967295%3Fe%3A0%2CL%3De%3D%3Enew%20Promise(t%3D%3EsetTimeout(t%2Ce))%2Cz%3D6e5%3B!function()%7Bconst%20e%3Dnew%20PerformanceObserver(t%3D%3E%7Bt.getEntries().forEach(t%3D%3E%7Bconst%7BdomContentLoadedEventStart%3An%7D%3Dt%3Bif(n)%7B!function(e)%7Bconst%20t%3Ddocument.querySelector(%22shreddit-app%22)%3Bif(!t)return%3Bconst%20n%3Dnew%20CustomEvent(%22faceplate-track%22%2C%7Bdetail%3A%7Bsource%3A%22client%22%2Caction%3A%22emit%22%2Cnoun%3A%22metric%22%2Cclient_timestamp%3ADate.now()%2Cmetric%3A%7Bname%3A%22shreddit_dom_content_loaded_seconds%22%2Cvalue%3Ae%2Clabel_values%3A%5B%60page_type%2C%24%7Bt.getAttribute(%22pagetype%22)%7D%60%2C%60device_type%2C%24%7Bt.getAttribute(%22devicetype%22)%7D%60%5D%7D%7D%7D)%3Bt.dispatchEvent(n)%7D(n%2F1e3)%2Ce.disconnect()%7D%7D)%7D)%3Be.observe(%7Btype%3A%22navigation%22%2Cbuffered%3A!0%7D)%7D()%2Casync%20function(e%3D!1%2Ct%3Dwindow.performance)%7Bconst%20n%3De%3Ft.now()%3A0%3Bt.mark(%22total-page-load-start%22)%3Blet%20o%3D!1%2Ci%3D!1%2Cr%3D-1%3Bwindow.addEventListener(%22beforeRoute%22%2C()%3D%3Eo%3D!0)%2Cwindow.addEventListener(%22afterRoute%22%2C()%3D%3E%7Bi%3D!0%2Cr%3Dt.now()%7D)%3Blet%20a%3D-1%3Bconst%20s%3Dnew%20PerformanceObserver(e%3D%3E%7Be.getEntries().forEach(e%3D%3E%7B%22longtask%22%3D%3D%3De.entryType%26%26e.duration%3E%3D50%26%26(a%3De.startTime%2Be.duration)%7D)%7D)%2Cc%3DPerformanceObserver.supportedEntryTypes.includes(%22longtask%22)%3Bc%26%26s.observe(%7Btype%3A%22longtask%22%7D)%3Bconst%20d%3DC.reduce((e%2Ct)%3D%3E(e%5Bt%5D%3D%7Btype%3At%2Ccount%3A0%2Ccached%3A0%2Ccontent_encoding%3A%22unknown%22%2Ctotal_encoded_size_bytes%3A0%2Ctotal_decoded_size_bytes%3A0%2Ctotal_download_size_bytes%3A0%2Ctotal_load_time_ms%3A0%2Ccumulative_load_time_ms%3A0%2CearliestResourceStart%3A1%2F0%2ClatestResourceEnd%3A-1%2F0%2Cblocking_count%3A0%7D%2Ce)%2C%7B%7D)%2Cu%3D(%7Bname%3Ae%2CinitiatorType%3At%2CstartTime%3An%2CresponseEnd%3Ao%2CtransferSize%3Ai%2CcontentEncoding%3Ar%2CdecodedBodySize%3Aa%2CencodedBodySize%3As%2CrenderBlockingStatus%3Ac%3D%22%22%7D)%3D%3E%7Bconst%20u%3D%22function%22%3D%3Dtypeof%20N%5Bt%5D%3FN%5Bt%5D(e)%3AN%5Bt%5D%3Bif(!u)return%3Bconst%20l%3Dd%5Bu%5D%3Bif(!l)return%3Bconst%20p%3DR(s)%2Cf%3DR(a)%2Cm%3DR(i)%3Bl.content_encoding%3D(e%3D%3Evoid%200%3D%3D%3De%3F%22unknown%22%3AO%5Be%5D%3F%3F%22unknown%22)(r)%2Cl.count%2B%2B%2C0%3D%3D%3Dm%26%26f%3E0%3Fl.cached%2B%2B%3A(l.total_decoded_size_bytes%2B%3Df%2Cl.total_encoded_size_bytes%2B%3Dp%2Cl.total_download_size_bytes%2B%3Dm%2Cl.cumulative_load_time_ms%2B%3Do-n%2Cl.earliestResourceStart%3DMath.min(l.earliestResourceStart%2Cn)%2Cl.latestResourceEnd%3DMath.max(l.latestResourceEnd%2Co))%2C%22blocking%22%3D%3D%3Dc%26%26l.blocking_count%2B%2B%7D%2Cl%3Dnew%20PerformanceObserver(e%3D%3E%7Be.getEntriesByType(%22navigation%22).forEach(e%3D%3E%7Bu(e)%7D)%7D)%3Bnew%20PerformanceObserver(e%3D%3E%7Be.getEntries().forEach(e%3D%3E%7Bif(%22resource%22%3D%3D%3De.entryType)%7Bconst%7Bname%3At%2CinitiatorType%3An%7D%3De%3B(t.includes(CLIENT_CONFIG.STATIC_BASE_URL)%7C%7Ct.includes(CLIENT_CONFIG.RUNTIME_CONCAT_BASE_URL))%26%26N%5Bn%5D%26%26u(e)%3Bconst%20o%3De%3Bif(%22fetch%22%3D%3D%3Do.initiatorType%26%26o.serverTiming)%7Bconst%20e%3Do.serverTiming.find(e%3D%3E%22requestType%22%3D%3D%3De.name)%2Ct%3Do.serverTiming.find(e%3D%3E%22reddit-ct%22%3D%3D%3De.name)%3Bif(e%26%26t)%7Bconst%20n%3D%22hybrid%22%3D%3D%3De.description%3B!function(e%2Ct)%7Bif(!e)return%3Bdocument.querySelector(%22shreddit-app%22)%3F.dispatchEvent(new%20CustomEvent(%22ct-data-update%22%2C%7Bdetail%3A%7Bdata%3Ae%2CisNavigation%3At%7D%7D))%7D((e%3D%3E%7Bif(!e)return%20null%3Bconst%20t%3D%7B%7D%3Bfor(const%20n%20of%20e.split(%22%2C%22))%7Bconst%20e%3Dn.indexOf(%22%3D%22)%3Bif(-1%3D%3D%3De)continue%3Bconst%20o%3Dn.slice(0%2Ce)%2Ci%3Dn.slice(e%2B1)%3Bo%26%26i%26%26S.has(o)%26%26(t%5Bo%5D%3Di)%7Dreturn%20Object.keys(t).length%3E0%3Ft%3Anull%7D)(t.description)%2Cn)%7D%7D%7D%7D)%7D).observe(%7Btype%3A%22resource%22%2Cbuffered%3A!e%7D)%2Cl.observe(%7Btype%3A%22navigation%22%2Cbuffered%3A!e%7D)%3Blet%20p%3D0%2Cm%3D-1%3Bconst%20_%3De%3D%3E%22FACEPLATE-IMG%22%3D%3D%3De.target%3F.nodeName%3Bwindow.addEventListener(%22faceplate-load-start%22%2Ce%3D%3E%7B_(e)%7C%7Cp%2B%2B%7D)%2Cwindow.addEventListener(%22faceplate-load%22%2Ce%3D%3E%7B_(e)%7C%7C(p--%2Cm%3Dt.now())%7D)%2C%22complete%22!%3D%3Ddocument.readyState%26%26await%20new%20Promise(e%3D%3Ewindow.addEventListener(%22load%22%2Ce%2C%7Bonce%3A!0%7D))%3Blet%20w%3Dt.now()%3Bfor(%3Bt.now()-n%3Cz%3B)%7Bif(await%20L(1e3)%2Co)return%3Bif((!e%7C%7Ci)%26%26!(p%3E0))%7Bif(-1%3D%3D%3Da)return%20h(Math.max(w%2Cm%2Cr))%3Bif(a%3C%3Dw)return%20h(w)%3Bw%3DMath.max(a%2Cm%2Cr)%7D%7Dfunction%20h(e)%7Bconst%20o%3De-n%3Bt.mark(%22total-page-load-end%22%2C%7BstartTime%3Ae%7D)%2Ct.measure(%22total-page-load%22%2C%7Bstart%3An%2Cend%3Ae%7D)%2Cfunction(e)%7Bconst%20t%3Dnew%20CustomEvent(%22faceplate-request%22%2C%7Bdetail%3A%7Bresource%3A%22%2Fsvc%2Fshreddit%2FperfMetrics%22%2Crequest%3A%7Bbody%3A%7Bmetrics%3A%7B%22total-page-load%22%3AMath.round(e)%7D%7D%7D%7D%7D)%3Bdocument.querySelector(%22shreddit-app%22)%3F.dispatchEvent(t)%7D(o)%2Cfunction(e%2Ct)%7Bfor(const%20n%20of%20Object.values(e))%7Bconst%7Btype%3Ae%2Ccount%3Ao%2Ccached%3Ai%2Cblocking_count%3Ar%2Ccontent_encoding%3Aa%2Ctotal_decoded_size_bytes%3As%2Ctotal_encoded_size_bytes%3Ac%2Ctotal_download_size_bytes%3Ad%2CearliestResourceStart%3Au%2ClatestResourceEnd%3Al%2Ccumulative_load_time_ms%3Ap%7D%3Dn%2Cm%3Ddocument.querySelector(%22shreddit-app%22)%2C_%3Du!%3D%3D1%2F0%26%26l!%3D%3D-1%2F0%3Fl-u%3A0%2Cw%3Db(%7Bsource%3A%22browser%22%2Caction%3A%22observe%22%2Cnoun%3A%22performance%22%7D%2C%7Bbrowser_context%3A%7B...T()%7D%2Cstatic_asset_usage%3A%7Basset_type%3Ae%2Ccount%3Ao%2Ccache_hit_rate%3A0!%3D%3Do%3Fi%2Fo%3A0%2Ccontent_encoding%3Aa%2Ctotal_encoded_size_bytes%3Ac%2Ctotal_decoded_size_bytes%3As%2Ctotal_download_size_bytes%3Ad%2Ctotal_load_time_ms%3A_%2Ccumulative_load_time_ms%3Ap%2Cblocking_count%3Ar%2Clong_task_supported%3At%7D%7D)%3Bm%26%26f(m%2Cw)%7D%7D(d%2Cc)%7Dh(n%2Bz)%7D()%3Blet%20P%3D!0%3Bconst%20x%3D%5B%5D%3Bfunction%20I(e)%7BP%26%26x.push(e)%7Dwindow.addEventListener(%22faceplate-alert%22%2CI)%2Cwindow.setTimeout(()%3D%3E%7Bif(P%3D!1%2Cwindow.removeEventListener(%22faceplate-alert%22%2CI)%2Cx.length)for(const%20e%20of%20x)e.target%26%26window.navigator.onLine%26%26e.target.dispatchEvent(p(%22faceplate-alert%22%2Ce.detail))%7D%2C5e3)%2Cwindow.addEventListener(%22no-resolve%22%2Cfunction(e)%7Bwindow.Sentry.captureException(new%20Error(%60Request%20resolution%20halted%20due%20to%20issue%20with%20GVS%20event%3A%20%24%7BJSON.stringify(e.detail)%7D%60))%7D)%3B%0A"></script> 
    
     
       <script nonce="">
@@ -72,8 +72,8 @@
           window.CONCAT_BASE_URL = "https://www.redditstatic.com/js/concat";
         </script>
         <script nonce="">
-    SML.load([["7HkyzXYUTK",4511],["7HkyzXYUTK",4511],["Cy3KohLaeJ",267037],["DjgkdbObOr",76867]], 'en-US/', 'high');
-  </script><link rel="modulepreload" href="https://www.redditstatic.com/js/concat?prefix=en-US/&amp;chunks=7HkyzXYUTK,Cy3KohLaeJ,DjgkdbObOr" as="script" fetchpriority="high" crossorigin="anonymous">
+    SML.load([["C4DV97-xg4",69939],["dylzgcgSfv",1235],["dylzgcgSfv",1235],["x4uT4UsxQk",260491]], 'en-US/', 'high');
+  </script><link rel="modulepreload" href="https://www.redditstatic.com/js/concat?prefix=en-US/&amp;chunks=C4DV97-xg4,dylzgcgSfv,x4uT4UsxQk" as="script" fetchpriority="high" crossorigin="anonymous">
       
     
         <link rel="stylesheet" href="https://www.redditstatic.com/shreddit/search-input-desktop-client-css-D7ZbVXoe.css"><style nonce="" data-testid="header-large-client-css">click-card:not(:defined) [slot=content]{display:none}</style><style nonce="" data-testid="header-client-css">#left-nav-drawer::part(base){align-items:start;flex-direction:column;justify-content:start;top:calc(var(--shreddit-header-height) + 1px);z-index:5}#left-nav-drawer::part(overlay){top:calc(var(--shreddit-header-height) + 1px)}#left-nav-drawer::part(panel){border-radius:0;box-shadow:none;max-height:none;width:280px}</style><style nonce="" data-testid="policies-page-client-css">html{scroll-behavior:smooth}article h1{font:var(--font-title-h1)}article h2{font:var(--font-title-h2)}article h2:before{content:'';display:block;height:calc(var(--shreddit-header-height) + 1rem);margin:calc((var(--shreddit-header-height) + 1rem) * -1) 0 0}article h3{font:var(--font-title-h3)}</style>
@@ -93,7 +93,7 @@
         
         
         <script nonce="">window.__servedBy = new Promise((resolve) => { window.__servedByRes = resolve; });</script>
-      <link rel="modulepreload" href="https://www.redditstatic.com/js/concat?prefix=en-US/&amp;chunks=-nVOEgZNGK,0Q_HvaZnBq,5h7IyAqpvj,6Q_31tCcJh,6qrc34GcYA,87ywoxS141,B-C4saAC2w,B0YadBH7tb,B5Jvvn3EFV,B9EOQHj3o1,B9k1AYF8N4,BBC3srIDjv,BC3ecCcfp5,BF4134JuFa,BJXndtN9NL,BLUUVJeGCo,BLtTT2phgo,BMvQn_lX2G,BPXHKzfT4A,BSFiqEpO9E,BUDR6Vi58G,BUMEaxS4f0,BVRaWjgrS9,BbSJkEDy32,BbaXb3LbF1,BcCLCEzlqu,BfzNcCvneb,Bha_q4-WrG,Bj2RMpcrpv,Bj4KSWVCAZ,BlTWBvG_FG,Bla7uoFIT6,BmuiEwgQTY,Bp8QrlT_2o,BpxnZD7JJT,BqUPtXNSSh,BvmuE_ke0R,BzMMrtUIND,BzfYI0GHHJ,BznEC8SBsi,C4ttzdZeoB,C7KrlTpcjQ,C9KD6krOxB,C9ULvClHKG,CA01rOKbVy,CCgOe6mxT5,CFO1hSAbUl,CPG-DWZ2Sa,CQA2nDDrPV,CRf-_6vRWv,CRhY8hANRb,CSCMUvAEeN,CUAfN2qQ5g,CWzaunT7sS,CfxgYECT_5,Cipyd2huEM,CjVtux2x48,Cjkg-58Mx1,CkW4ooJ3KI,Cl_HABG_Oa,CmEVpTly8w,CmH6PI5a8g,Cv2rkqTOrx,CvONE9vmeV,CxJpzXI68w,CxW79TPXTH,D-71rBzf4-,D-W6D3p7KK,D0nSDkJHX0,D1A05ZzPK5,D1Tl6Cb40S,D1ucdOLqw1,D339AanQvo,D4LrB02aS4,D6g-0ge0dW,D7lQ4HboAx,DH4qkDu1GV,DI-hpB9Usl,DKcSQt-Gdi,DN6-Wpeuwp,DNOEKU5Yvh,DOEberIpF6,DPyNbxOM-U,DR65PXnZpi,DS2vXrv4Ko,DXulnwRTSi,DYt7-lEIqD,DZ1RPEB5Sn,DbbqCfTG4r,Di0a-qdnTV,DiCZ3eoHIR,DkYQtl8dOX,Dkh8OTRPWf,Dqw4cj-E0u,DyHb3wZAZ1,DzWlVWpURQ,EXyEypYTiS,GooJHxMIkH,GvduWCCKsG,R0qO21ECvL,RTAxED06um,UETwFYZm0G,W3S2tYgtXL,Yl48h84uId,ao8ntYOKrz,cjj6oyxm4t,ktw0utFsf_,lX91i74thS,mbxiZIjRPq,vdkH5Yg0mi,wLekiOoAZ_" as="script" fetchpriority="auto" crossorigin="anonymous"></head>
+      <link rel="modulepreload" href="https://www.redditstatic.com/js/concat?prefix=en-US/&amp;chunks=3AtK_5f3ZG,3ar6ciE3CO,An9y-oo3Zg,B009xXe53k,B3HqzHlCvM,B65d8mZ9dk,BBI-1JuYdC,BBtYuvwkNA,BCyeEByYVb,BDEODwYllU,BDUQsXhkca,BGf-xs-tiu,BIz2DVxZ5h,BJEM1srERv,BSNrwlgjbF,BTTARN4BxY,BYvaftwcjr,BZyOL_I_9v,BccZjvvKr8,Bd1LA3j_Ef,BfPwWfeyW8,Bgi_Li6EGw,BhEzYIF6b-,BosSiKR1Af,BqTIHTqGnx,BtupjYoFVn,BuL3a0h2mq,BupeymoqZy,Bv0vCdangO,Bvc5R0lcRm,C0Rsei0e9x,C3-Ka_hGp3,C3Z6sE0dPS,C5Ipn0U9xr,C62xDMfdQn,C7SdcAwKkl,CAw_DF5-MW,CC4Gk34WtH,CCjH-i8VU5,CD-dI7o_Z_,CDLiPc07mR,CEZu9vqBAA,CEvq12cbO2,CF8166SqCh,CGmRrKdbZ3,CHlpeGtDdF,CHukOdp3f5,CJZO6zCEnN,CLFMRjM8Yk,CLIEJrCal3,COX1cwA1hk,COwLlU9yLa,COwdBSp-Kc,CSpmzM1Axg,CVUw9gdXDq,CWEi0dqDsb,CZXUxOkjzJ,C_-xA37Tq9,CmNl2nhAnT,CmSqgueO0y,Cme5JW7itu,CoypTrkba9,CsD_VaehLb,CssuxQHkQs,CtvMoWQgEb,Cw0S9TL8e7,Cw3UbWISRj,CyodcBLUBi,D--kWOZazX,D0ac2bI8VQ,D6P9fk7XXS,D7iXMKNupM,D9syWr9LmG,DDQppS6v06,DEKQ9UAt5d,DESgJwDNiN,DEq3c0a4PM,DGLjqbH43H,DRaWIefdSi,DZlGu0-N5K,D_8DcBlktt,Dag00w-zJ8,DfuoZJ8sMB,DjZUcJYKAO,DoWY1jvDtl,DygdmaUEEb,EB8CKEK4-W,HPpaP37OvG,HuHzgTf7uA,IKjvUt6Nu8,JzOxM6uQEp,LjmYMM7LK1,Lk3zpv_GCV,OYeAYYbeCS,R6lsLy74f6,TgoXBse86h,ZVbmilOE7V,aTX0CMWvlj,c0P5Jwa8Ny,dpzwpBqBw4,gtQkKs8eBq,hDPI-TN32M,hhIGVhV-wZ,lXmtgL270o,ndDP9NeK9c,sg2R9m-JJW,thjN-4qr--,v6vXA6udyE,wydo9eHYuw,ym2aM1eoHN,zGEyvA3uFj" as="script" fetchpriority="auto" crossorigin="anonymous"><style>.rpl-scroll-lock{overflow:hidden!important;padding-right:var(--rpl-scrollbar-width,0)!important}body.rpl-scroll-lock .fixed.right-0{right:var(--rpl-scrollbar-width,0)!important}</style></head>
       <body>
         <a rpl="" class="
 button-medium px-[calc(var(--rem12)-var(--button-border-width,0px))]
@@ -116,7 +116,7 @@ button inline-flex " href="#main-content" id="shreddit-skip-link"><span class="f
     </shreddit-async-loader>
   
         
-        <shreddit-app class="overflow-visible pt-[var(--page-y-padding)]  nd-visible" loid="000000002i23vjz2ax.2.1783428753601.Z0FBQUFBQnFUUGFSSGVfTUNTSDllYU1aenhfaXJvNEx0M0h3YjJGRUdDZENQR2g2aVkySWFueldTMjZlU3FlMnZ3SDhMNUppX3lBZVExX0ExY2o1eFdyTk1uZ29XS1dhM1lELXZHNUR4TDE4ZkJBTHhqOXFJVGNEMHFmUVFYN0tqOV9Rakoxdi1RaUM" correlation-id="cc385be9-1de6-49f8-ba5c-3bf494f28e54" serverrenderid="9be9b841-b65d-4e2b-9414-08cb7bcd549e" routename="policies" route-type="" pagetype="policies" devicetype="desktop" ctn="CSRF" referrer="https://www.reddit.com/policies/privacy-policy" referrer-type="reddit" country="DE" browser="chrome" app-name="web3x" microapp-name="monolith" microapp-pool="first-time-user" clienthash="6E8Nuy95n5OHHmef" release="2026-07-07T10:49Z~a1b8f5e8" cluster="so2nI2ZO" spp="20j+igr1GuunJZNFCukUknoNKogEfZkwCieZOnZnnevRmq7w==" global-leave-screen-event-enabled="" auto-refresh-mode="on_fetch" platform-health-id="djEuaDEuYTEubTE=" data-faceplate-tracking-context="{&quot;correlation_id&quot;:&quot;cc385be9-1de6-49f8-ba5c-3bf494f28e54&quot;}" data-partial-auto-refresh-after="1783515154831" routetype="" seeker-session="false" paid-ua-session="false" feed-correlation-id="" profile-correlation-id="">
+        <shreddit-app class="overflow-visible pt-[var(--page-y-padding)]  nd-visible" loid="000000002i3c9h6vqq.2.1783471933831.Z0FBQUFBQnFUWjg5Zlh1TTZXeDI3eU54ZW50UkFwbmdMdGdVTURDeV9aS2JFdEI5X0hrVHpmc3Q5NFhQWFhidWVLTDN0T2psQkl5VWFPaS1jdEx6OERxMXByMkotOUFBUDZiajRqWVk3M1F6Y3IyR2xkQnZFVW56NmpiX1NJdHRfWnZDVlRldHZ2UXY" correlation-id="ebee44f1-8e56-446b-9585-e8c9c51fdbbf" serverrenderid="745bb5ac-3ea6-4ad6-b729-12ae8285785a" routename="policies" route-type="" pagetype="policies" devicetype="desktop" ctn="CSRF" referrer="https://www.reddit.com/policies/privacy-policy" referrer-type="reddit" country="DE" browser="chrome" app-name="web3x" microapp-name="monolith" microapp-pool="first-time-user" clienthash="ahSawynHVmIPW24a" release="2026-07-07T21:03Z~797a4dda" cluster="MvqI0hhL" spp="sHwX1wv2aq5GJPVE3U4U0Y+sO2g3bwiDKWOOqPQWH3mBmq7w==" global-leave-screen-event-enabled="" ipv4-probe-url="https://pi.reddit.com/v4/p" platform-health-id="djEuaDEuYTEubTE=" data-faceplate-tracking-context="{&quot;correlation_id&quot;:&quot;ebee44f1-8e56-446b-9585-e8c9c51fdbbf&quot;}" routetype="" seeker-session="false" paid-ua-session="false" feed-correlation-id="" profile-correlation-id="">
           <app-plugin-overlay-manager-controller parent="shreddit-app">
           </app-plugin-overlay-manager-controller>
           <app-plugin-navigation-controller parent="shreddit-app">
@@ -124,7 +124,7 @@ button inline-flex " href="#main-content" id="shreddit-skip-link"><span class="f
           <app-plugin-performance-observer-controller parent="shreddit-app">
           </app-plugin-performance-observer-controller>
           <app-plugin-pwa-controller parent="shreddit-app"></app-plugin-pwa-controller>
-        <faceplate-server-session timestamp="1783428753624"></faceplate-server-session>
+        <faceplate-server-session timestamp="1783471933855"></faceplate-server-session>
         
         <shreddit-good-visit-tracker referrertype="reddit" pagetype="policies">
               </shreddit-good-visit-tracker><shreddit-seo-good-visit-tracker referrer-type="reddit" page-type="policies" referrer="https://www.reddit.com/policies/privacy-policy">
@@ -139,23 +139,23 @@ button inline-flex " href="#main-content" id="shreddit-skip-link"><span class="f
     <shreddit-activated-feature-meta></shreddit-activated-feature-meta>
   <shreddit-page-meta>
     <template>
-      <shreddit-app-attrs serverrenderid="9be9b841-b65d-4e2b-9414-08cb7bcd549e" routename="policies" routetype="" pagetype="policies" referrer="https://www.reddit.com/policies/privacy-policy" referrer-type="reddit" app-name="web3x" microapp-name="monolith" microapp-pool="first-time-user" correlation-id="cc385be9-1de6-49f8-ba5c-3bf494f28e54" seeker-session="false" paid-ua-session="false" auto-refresh-mode="on_fetch">
+      <shreddit-app-attrs serverrenderid="745bb5ac-3ea6-4ad6-b729-12ae8285785a" routename="policies" routetype="" pagetype="policies" referrer="https://www.reddit.com/policies/privacy-policy" referrer-type="reddit" app-name="web3x" microapp-name="monolith" microapp-pool="first-time-user" correlation-id="ebee44f1-8e56-446b-9585-e8c9c51fdbbf" seeker-session="false" paid-ua-session="false">
       </shreddit-app-attrs>
       <shreddit-good-visit-tracker-attrs pagetype="policies" referrertype="reddit">
       </shreddit-good-visit-tracker-attrs>
       <shreddit-seo-good-visit-tracker-attrs referrer-type="reddit" page-type="policies" referrer="https://www.reddit.com/policies/privacy-policy">
             </shreddit-seo-good-visit-tracker-attrs>
     </template>
-  </shreddit-page-meta> <faceplate-loader name="PoliciesPage_dsvcc1" src="concat:BLtTT2phgo,CjVtux2x48,Cy3KohLaeJ,DN6-Wpeuwp" loading="eager" data-prefix="en-US/" data-chunk-sizes="9692|2131|267037|2141">
+  </shreddit-page-meta> <faceplate-loader name="PoliciesPage_dsvcc1" src="concat:B009xXe53k,CWEi0dqDsb,DZlGu0-N5K,x4uT4UsxQk" loading="eager" data-prefix="en-US/" data-chunk-sizes="9752|2191|2141|260491">
     
         <script nonce="">
-          SML.load([["BLtTT2phgo",9692],["CjVtux2x48",2131],["Cy3KohLaeJ",267037],["DN6-Wpeuwp",2141]], 'en-US/', 'auto');
+          SML.load([["B009xXe53k",9752],["CWEi0dqDsb",2191],["DZlGu0-N5K",2141],["x4uT4UsxQk",260491]], 'en-US/', 'auto');
         </script>
       
-  <!----></faceplate-loader>  <faceplate-loader name="HeaderLarge_FStGrg" src="concat:-nVOEgZNGK,7HkyzXYUTK,87ywoxS141,ao8ntYOKrz,B-C4saAC2w,B5Jvvn3EFV,B9EOQHj3o1,BBC3srIDjv,BbSJkEDy32,BC3ecCcfp5,BF4134JuFa,Bj2RMpcrpv,BlTWBvG_FG,BLUUVJeGCo,BPXHKzfT4A,BqUPtXNSSh,BVRaWjgrS9,C4ttzdZeoB,CFO1hSAbUl,CfxgYECT_5,CjVtux2x48,CmEVpTly8w,CUAfN2qQ5g,Cv2rkqTOrx,CxW79TPXTH,Cy3KohLaeJ,D-W6D3p7KK,D1A05ZzPK5,D4LrB02aS4,D6g-0ge0dW,DI-hpB9Usl,DjgkdbObOr,DKcSQt-Gdi,Dkh8OTRPWf,Dqw4cj-E0u,DS2vXrv4Ko,DyHb3wZAZ1,DYt7-lEIqD,DzWlVWpURQ,ktw0utFsf_,lX91i74thS,mbxiZIjRPq,R0qO21ECvL,vdkH5Yg0mi,Yl48h84uId" loading="eager" data-prefix="en-US/" data-chunk-sizes="1959|4511|2832|3012|233|3657|24869|1599|2922|5328|1484|3929|1387|1445|1303|2654|8952|789|5023|4056|2131|519|1832|1937|1203|267037|1059|67779|405|3127|509|76867|26241|666|521|1371|4589|1129|1395|434|788|15179|6684|3934|631">
+  <!----></faceplate-loader>  <faceplate-loader name="HeaderLarge_FStGrg" src="concat:An9y-oo3Zg,B3HqzHlCvM,B65d8mZ9dk,BGf-xs-tiu,BosSiKR1Af,BSNrwlgjbF,BuL3a0h2mq,BYvaftwcjr,C3-Ka_hGp3,C4DV97-xg4,C5Ipn0U9xr,CAw_DF5-MW,CCjH-i8VU5,CDLiPc07mR,CEvq12cbO2,CGmRrKdbZ3,CHukOdp3f5,CJZO6zCEnN,CLFMRjM8Yk,Cme5JW7itu,CmSqgueO0y,COX1cwA1hk,CoypTrkba9,CSpmzM1Axg,CVUw9gdXDq,CWEi0dqDsb,D_8DcBlktt,D--kWOZazX,D0ac2bI8VQ,D7iXMKNupM,Dag00w-zJ8,DDQppS6v06,DESgJwDNiN,DGLjqbH43H,DoWY1jvDtl,DRaWIefdSi,dylzgcgSfv,gtQkKs8eBq,hhIGVhV-wZ,HPpaP37OvG,HuHzgTf7uA,LjmYMM7LK1,sg2R9m-JJW,x4uT4UsxQk,zGEyvA3uFj" loading="eager" data-prefix="en-US/" data-chunk-sizes="3717|3187|849|1123|3994|5387|1451|67857|1994|69939|24928|15238|1303|1832|292|8952|5083|2713|1455|730|1267|852|583|1129|573|2191|1959|6744|695|1544|1431|2892|4649|498|2981|1669|1235|521|4116|405|3988|26300|1502|260491|3071">
     
         <script nonce="">
-          SML.load([["-nVOEgZNGK",1959],["7HkyzXYUTK",4511],["87ywoxS141",2832],["ao8ntYOKrz",3012],["B-C4saAC2w",233],["B5Jvvn3EFV",3657],["B9EOQHj3o1",24869],["BBC3srIDjv",1599],["BbSJkEDy32",2922],["BC3ecCcfp5",5328],["BF4134JuFa",1484],["Bj2RMpcrpv",3929],["BlTWBvG_FG",1387],["BLUUVJeGCo",1445],["BPXHKzfT4A",1303],["BqUPtXNSSh",2654],["BVRaWjgrS9",8952],["C4ttzdZeoB",789],["CFO1hSAbUl",5023],["CfxgYECT_5",4056],["CjVtux2x48",2131],["CmEVpTly8w",519],["CUAfN2qQ5g",1832],["Cv2rkqTOrx",1937],["CxW79TPXTH",1203],["Cy3KohLaeJ",267037],["D-W6D3p7KK",1059],["D1A05ZzPK5",67779],["D4LrB02aS4",405],["D6g-0ge0dW",3127],["DI-hpB9Usl",509],["DjgkdbObOr",76867],["DKcSQt-Gdi",26241],["Dkh8OTRPWf",666],["Dqw4cj-E0u",521],["DS2vXrv4Ko",1371],["DyHb3wZAZ1",4589],["DYt7-lEIqD",1129],["DzWlVWpURQ",1395],["ktw0utFsf_",434],["lX91i74thS",788],["mbxiZIjRPq",15179],["R0qO21ECvL",6684],["vdkH5Yg0mi",3934],["Yl48h84uId",631]], 'en-US/', 'auto');
+          SML.load([["An9y-oo3Zg",3717],["B3HqzHlCvM",3187],["B65d8mZ9dk",849],["BGf-xs-tiu",1123],["BosSiKR1Af",3994],["BSNrwlgjbF",5387],["BuL3a0h2mq",1451],["BYvaftwcjr",67857],["C3-Ka_hGp3",1994],["C4DV97-xg4",69939],["C5Ipn0U9xr",24928],["CAw_DF5-MW",15238],["CCjH-i8VU5",1303],["CDLiPc07mR",1832],["CEvq12cbO2",292],["CGmRrKdbZ3",8952],["CHukOdp3f5",5083],["CJZO6zCEnN",2713],["CLFMRjM8Yk",1455],["Cme5JW7itu",730],["CmSqgueO0y",1267],["COX1cwA1hk",852],["CoypTrkba9",583],["CSpmzM1Axg",1129],["CVUw9gdXDq",573],["CWEi0dqDsb",2191],["D_8DcBlktt",1959],["D--kWOZazX",6744],["D0ac2bI8VQ",695],["D7iXMKNupM",1544],["Dag00w-zJ8",1431],["DDQppS6v06",2892],["DESgJwDNiN",4649],["DGLjqbH43H",498],["DoWY1jvDtl",2981],["DRaWIefdSi",1669],["dylzgcgSfv",1235],["gtQkKs8eBq",521],["hhIGVhV-wZ",4116],["HPpaP37OvG",405],["HuHzgTf7uA",3988],["LjmYMM7LK1",26300],["sg2R9m-JJW",1502],["x4uT4UsxQk",260491],["zGEyvA3uFj",3071]], 'en-US/', 'auto');
         </script>
       
   <!----></faceplate-loader><reddit-header-large class="nd:visible top-0 start-0 end-0 fixed z-[4] theme-beta" is-hamburger-menu-included="" show-accountmanager-modal="true">
@@ -204,10 +204,10 @@ button inline-flex " id="navbar-menu-button" type="button">
 
           <div class="h-[40px] flex-1 py-xs flex justify-stretch">
             <div class="flex justify-stretch w-full l:absolute l:top-xs l:h-[40px] l:pointer-events-none l:start-0 l:end-0 l:flex">
-              <div class="flex justify-stretch w-full m:block m:pointer-events-auto m:w-[560px] m:mx-auto"> <faceplate-loader name="SearchInputDesktop_qMQpPT" src="concat:0Q_HvaZnBq,5h7IyAqpvj,6Q_31tCcJh,6qrc34GcYA,7HkyzXYUTK,B0YadBH7tb,B9k1AYF8N4,BbaXb3LbF1,BC3ecCcfp5,BF4134JuFa,BfzNcCvneb,Bha_q4-WrG,Bj4KSWVCAZ,BJXndtN9NL,Bla7uoFIT6,BlTWBvG_FG,BmuiEwgQTY,BMvQn_lX2G,BpxnZD7JJT,BUDR6Vi58G,BUMEaxS4f0,BvmuE_ke0R,BzMMrtUIND,BznEC8SBsi,C4ttzdZeoB,C9KD6krOxB,C9ULvClHKG,CA01rOKbVy,CCgOe6mxT5,CFO1hSAbUl,CfxgYECT_5,Cipyd2huEM,cjj6oyxm4t,Cjkg-58Mx1,CjVtux2x48,CkW4ooJ3KI,Cl_HABG_Oa,CmH6PI5a8g,CPG-DWZ2Sa,CQA2nDDrPV,CRf-_6vRWv,CRhY8hANRb,CSCMUvAEeN,CvONE9vmeV,CWzaunT7sS,CxJpzXI68w,Cy3KohLaeJ,D-71rBzf4-,D0nSDkJHX0,D1A05ZzPK5,D1Tl6Cb40S,D339AanQvo,D6g-0ge0dW,D7lQ4HboAx,DbbqCfTG4r,DH4qkDu1GV,Di0a-qdnTV,DiCZ3eoHIR,DjgkdbObOr,DKcSQt-Gdi,DkYQtl8dOX,DNOEKU5Yvh,DOEberIpF6,DPyNbxOM-U,DR65PXnZpi,DXulnwRTSi,DyHb3wZAZ1,GooJHxMIkH,GvduWCCKsG,lX91i74thS,R0qO21ECvL,UETwFYZm0G,W3S2tYgtXL,wLekiOoAZ_" loading="eager" data-prefix="en-US/" data-chunk-sizes="10834|1740|1228|1105|4511|7576|5340|1347|5328|1484|680|7418|13558|1710|2819|1387|1225|3678|5987|1034|15210|362|403|2016|789|4616|4526|11560|11455|5023|4056|6010|5327|583|2131|1498|4839|444|10677|457|557|66386|7033|2316|407|1304|267037|3326|5446|67779|2030|44082|3127|2830|786|1611|651|11421|76867|26241|9516|10705|23844|1538|370|1701|4589|1244|1855|788|6684|7699|1383|6020">
+              <div class="flex justify-stretch w-full m:block m:pointer-events-auto m:w-[560px] m:mx-auto"> <faceplate-loader name="SearchInputDesktop_qMQpPT" src="concat:3ar6ciE3CO,3AtK_5f3ZG,aTX0CMWvlj,B3HqzHlCvM,B65d8mZ9dk,BBI-1JuYdC,BBtYuvwkNA,BccZjvvKr8,BCyeEByYVb,Bd1LA3j_Ef,BDEODwYllU,Bgi_Li6EGw,BhEzYIF6b-,BIz2DVxZ5h,BJEM1srERv,BqTIHTqGnx,BSNrwlgjbF,BTTARN4BxY,BuL3a0h2mq,BupeymoqZy,Bv0vCdangO,Bvc5R0lcRm,BYvaftwcjr,BZyOL_I_9v,c0P5Jwa8Ny,C0Rsei0e9x,C3Z6sE0dPS,C4DV97-xg4,C62xDMfdQn,C7SdcAwKkl,CC4Gk34WtH,CD-dI7o_Z_,CEZu9vqBAA,CF8166SqCh,CHlpeGtDdF,CHukOdp3f5,CLIEJrCal3,CmNl2nhAnT,COwdBSp-Kc,COwLlU9yLa,COX1cwA1hk,CsD_VaehLb,CssuxQHkQs,CtvMoWQgEb,Cw0S9TL8e7,Cw3UbWISRj,CWEi0dqDsb,CZXUxOkjzJ,D--kWOZazX,D7iXMKNupM,D9syWr9LmG,DEq3c0a4PM,DESgJwDNiN,DfuoZJ8sMB,DjZUcJYKAO,dpzwpBqBw4,DygdmaUEEb,dylzgcgSfv,EB8CKEK4-W,hDPI-TN32M,hhIGVhV-wZ,JzOxM6uQEp,LjmYMM7LK1,Lk3zpv_GCV,lXmtgL270o,ndDP9NeK9c,OYeAYYbeCS,R6lsLy74f6,TgoXBse86h,thjN-4qr--,v6vXA6udyE,x4uT4UsxQk,ym2aM1eoHN,ZVbmilOE7V" loading="eager" data-prefix="en-US/" data-chunk-sizes="23904|10765|9516|3187|849|426|1098|2076|850|10741|647|1760|2375|2830|1799|434|5387|2883|1451|1290|2090|7093|67857|4899|1304|58133|715|69939|3738|7477|2290|3388|6070|15269|1611|5083|11515|44605|1770|4584|852|10894|7636|5508|1406|964|2191|4676|6744|1544|463|6819|4649|6046|1364|1557|11481|1235|1598|617|4116|1165|26300|11619|1284|508|521|1915|6080|5400|1443|260491|744|5387">
     
         <script nonce="">
-          SML.load([["0Q_HvaZnBq",10834],["5h7IyAqpvj",1740],["6Q_31tCcJh",1228],["6qrc34GcYA",1105],["7HkyzXYUTK",4511],["B0YadBH7tb",7576],["B9k1AYF8N4",5340],["BbaXb3LbF1",1347],["BC3ecCcfp5",5328],["BF4134JuFa",1484],["BfzNcCvneb",680],["Bha_q4-WrG",7418],["Bj4KSWVCAZ",13558],["BJXndtN9NL",1710],["Bla7uoFIT6",2819],["BlTWBvG_FG",1387],["BmuiEwgQTY",1225],["BMvQn_lX2G",3678],["BpxnZD7JJT",5987],["BUDR6Vi58G",1034],["BUMEaxS4f0",15210],["BvmuE_ke0R",362],["BzMMrtUIND",403],["BznEC8SBsi",2016],["C4ttzdZeoB",789],["C9KD6krOxB",4616],["C9ULvClHKG",4526],["CA01rOKbVy",11560],["CCgOe6mxT5",11455],["CFO1hSAbUl",5023],["CfxgYECT_5",4056],["Cipyd2huEM",6010],["cjj6oyxm4t",5327],["Cjkg-58Mx1",583],["CjVtux2x48",2131],["CkW4ooJ3KI",1498],["Cl_HABG_Oa",4839],["CmH6PI5a8g",444],["CPG-DWZ2Sa",10677],["CQA2nDDrPV",457],["CRf-_6vRWv",557],["CRhY8hANRb",66386],["CSCMUvAEeN",7033],["CvONE9vmeV",2316],["CWzaunT7sS",407],["CxJpzXI68w",1304],["Cy3KohLaeJ",267037],["D-71rBzf4-",3326],["D0nSDkJHX0",5446],["D1A05ZzPK5",67779],["D1Tl6Cb40S",2030],["D339AanQvo",44082],["D6g-0ge0dW",3127],["D7lQ4HboAx",2830],["DbbqCfTG4r",786],["DH4qkDu1GV",1611],["Di0a-qdnTV",651],["DiCZ3eoHIR",11421],["DjgkdbObOr",76867],["DKcSQt-Gdi",26241],["DkYQtl8dOX",9516],["DNOEKU5Yvh",10705],["DOEberIpF6",23844],["DPyNbxOM-U",1538],["DR65PXnZpi",370],["DXulnwRTSi",1701],["DyHb3wZAZ1",4589],["GooJHxMIkH",1244],["GvduWCCKsG",1855],["lX91i74thS",788],["R0qO21ECvL",6684],["UETwFYZm0G",7699],["W3S2tYgtXL",1383],["wLekiOoAZ_",6020]], 'en-US/', 'auto');
+          SML.load([["3ar6ciE3CO",23904],["3AtK_5f3ZG",10765],["aTX0CMWvlj",9516],["B3HqzHlCvM",3187],["B65d8mZ9dk",849],["BBI-1JuYdC",426],["BBtYuvwkNA",1098],["BccZjvvKr8",2076],["BCyeEByYVb",850],["Bd1LA3j_Ef",10741],["BDEODwYllU",647],["Bgi_Li6EGw",1760],["BhEzYIF6b-",2375],["BIz2DVxZ5h",2830],["BJEM1srERv",1799],["BqTIHTqGnx",434],["BSNrwlgjbF",5387],["BTTARN4BxY",2883],["BuL3a0h2mq",1451],["BupeymoqZy",1290],["Bv0vCdangO",2090],["Bvc5R0lcRm",7093],["BYvaftwcjr",67857],["BZyOL_I_9v",4899],["c0P5Jwa8Ny",1304],["C0Rsei0e9x",58133],["C3Z6sE0dPS",715],["C4DV97-xg4",69939],["C62xDMfdQn",3738],["C7SdcAwKkl",7477],["CC4Gk34WtH",2290],["CD-dI7o_Z_",3388],["CEZu9vqBAA",6070],["CF8166SqCh",15269],["CHlpeGtDdF",1611],["CHukOdp3f5",5083],["CLIEJrCal3",11515],["CmNl2nhAnT",44605],["COwdBSp-Kc",1770],["COwLlU9yLa",4584],["COX1cwA1hk",852],["CsD_VaehLb",10894],["CssuxQHkQs",7636],["CtvMoWQgEb",5508],["Cw0S9TL8e7",1406],["Cw3UbWISRj",964],["CWEi0dqDsb",2191],["CZXUxOkjzJ",4676],["D--kWOZazX",6744],["D7iXMKNupM",1544],["D9syWr9LmG",463],["DEq3c0a4PM",6819],["DESgJwDNiN",4649],["DfuoZJ8sMB",6046],["DjZUcJYKAO",1364],["dpzwpBqBw4",1557],["DygdmaUEEb",11481],["dylzgcgSfv",1235],["EB8CKEK4-W",1598],["hDPI-TN32M",617],["hhIGVhV-wZ",4116],["JzOxM6uQEp",1165],["LjmYMM7LK1",26300],["Lk3zpv_GCV",11619],["lXmtgL270o",1284],["ndDP9NeK9c",508],["OYeAYYbeCS",521],["R6lsLy74f6",1915],["TgoXBse86h",6080],["thjN-4qr--",5400],["v6vXA6udyE",1443],["x4uT4UsxQk",260491],["ym2aM1eoHN",744],["ZVbmilOE7V",5387]], 'en-US/', 'auto');
         </script>
       
   <!----></faceplate-loader><search-dynamic-id-cache-controller class="contents" search-telemetry-source="qf">
@@ -228,7 +228,7 @@ button inline-flex " id="navbar-menu-button" type="button">
     </form>
   
     </reddit-search-large>
-  </search-dynamic-id-cache-controller></div>
+  <!----></search-dynamic-id-cache-controller></div>
             </div>
           </div>
           
@@ -269,10 +269,10 @@ button inline-flex " href="https://www.reddit.com/login/" id="login-button"><spa
   <!----></faceplate-tracker> </span><div class="flex items-center justify-center w-[40px] h-[40px]">
   
 <rpl-dropdown distance="8">
-   <faceplate-loader name="HeaderActionItemUserDrawer_jKz2d1" src="concat:7HkyzXYUTK,BC3ecCcfp5,CFO1hSAbUl,CfxgYECT_5,Cy3KohLaeJ,D1A05ZzPK5,D6g-0ge0dW,DjgkdbObOr,DKcSQt-Gdi" loading="eager" data-prefix="en-US/" data-chunk-sizes="4511|5328|5023|4056|267037|67779|3127|76867|26241">
+   <faceplate-loader name="HeaderActionItemUserDrawer_jKz2d1" src="concat:B3HqzHlCvM,BSNrwlgjbF,BYvaftwcjr,C4DV97-xg4,CHukOdp3f5,dylzgcgSfv,hhIGVhV-wZ,LjmYMM7LK1,x4uT4UsxQk" loading="eager" data-prefix="en-US/" data-chunk-sizes="3187|5387|67857|69939|5083|1235|4116|26300|260491">
     
         <script nonce="">
-          SML.load([["7HkyzXYUTK",4511],["BC3ecCcfp5",5328],["CFO1hSAbUl",5023],["CfxgYECT_5",4056],["Cy3KohLaeJ",267037],["D1A05ZzPK5",67779],["D6g-0ge0dW",3127],["DjgkdbObOr",76867],["DKcSQt-Gdi",26241]], 'en-US/', 'auto');
+          SML.load([["B3HqzHlCvM",3187],["BSNrwlgjbF",5387],["BYvaftwcjr",67857],["C4DV97-xg4",69939],["CHukOdp3f5",5083],["dylzgcgSfv",1235],["hhIGVhV-wZ",4116],["LjmYMM7LK1",26300],["x4uT4UsxQk",260491]], 'en-US/', 'auto');
         </script>
       
   <!----></faceplate-loader>
@@ -305,7 +305,7 @@ button inline-flex " id="expand-user-drawer-button" slot="trigger" type="button"
    </div> </rpl-dropdown> </div></div>
         </nav>
       </header></reddit-header-action-items>
-   <faceplate-loader name="HamburgerMenu_nwYSWB" src="concat:7HkyzXYUTK,87ywoxS141,ao8ntYOKrz,B-C4saAC2w,B5Jvvn3EFV,BbSJkEDy32,BF4134JuFa,Bj2RMpcrpv,BlTWBvG_FG,CFO1hSAbUl,CfxgYECT_5,CjVtux2x48,CUAfN2qQ5g,Cv2rkqTOrx,Cy3KohLaeJ,D1A05ZzPK5,D4LrB02aS4,DI-hpB9Usl,DjgkdbObOr,DS2vXrv4Ko,DyHb3wZAZ1,mbxiZIjRPq,R0qO21ECvL,vdkH5Yg0mi" loading="programmatic" data-prefix="en-US/" data-chunk-sizes="4511|2832|3012|233|3657|2922|1484|3929|1387|5023|4056|2131|1832|1937|267037|67779|405|509|76867|1371|4589|15179|6684|3934">
+   <faceplate-loader name="HamburgerMenu_nwYSWB" src="concat:An9y-oo3Zg,BosSiKR1Af,BuL3a0h2mq,BYvaftwcjr,C3-Ka_hGp3,C4DV97-xg4,CAw_DF5-MW,CDLiPc07mR,CEvq12cbO2,CHukOdp3f5,CVUw9gdXDq,CWEi0dqDsb,D--kWOZazX,D7iXMKNupM,Dag00w-zJ8,DDQppS6v06,DESgJwDNiN,DoWY1jvDtl,dylzgcgSfv,hhIGVhV-wZ,HPpaP37OvG,HuHzgTf7uA,x4uT4UsxQk,zGEyvA3uFj" loading="programmatic" data-prefix="en-US/" data-chunk-sizes="3717|3994|1451|67857|1994|69939|15238|1832|292|5083|573|2191|6744|1544|1431|2892|4649|2981|1235|4116|405|3988|260491|3071">
     
   <!----></faceplate-loader>
     <faceplate-partial name="HamburgerMenu_nwYSWB" src="/svc/shreddit/hamburger-menu" loading="programmatic">
@@ -321,10 +321,10 @@ button inline-flex " id="expand-user-drawer-button" slot="trigger" type="button"
       <span data-human-verification-contribution-dialog-root="" class="contents">
         
       </span>
-     <faceplate-loader name="AlertController_nwPwX3" src="concat:7HkyzXYUTK,BcCLCEzlqu,Bp8QrlT_2o,BSFiqEpO9E,BzfYI0GHHJ,C7KrlTpcjQ,CjVtux2x48,Cy3KohLaeJ,D1A05ZzPK5,D1ucdOLqw1,DjgkdbObOr,DPyNbxOM-U,DyHb3wZAZ1,DZ1RPEB5Sn,EXyEypYTiS,RTAxED06um" loading="eager" data-prefix="en-US/" data-chunk-sizes="4511|1521|4442|3084|752|9733|2131|267037|67779|728|76867|1538|4589|2752|306|3825">
+     <faceplate-loader name="AlertController_nwPwX3" src="concat:BDUQsXhkca,BfPwWfeyW8,BtupjYoFVn,BYvaftwcjr,C_-xA37Tq9,C4DV97-xg4,CWEi0dqDsb,CyodcBLUBi,D6P9fk7XXS,DEKQ9UAt5d,DESgJwDNiN,dylzgcgSfv,EB8CKEK4-W,IKjvUt6Nu8,wydo9eHYuw,x4uT4UsxQk" loading="eager" data-prefix="en-US/" data-chunk-sizes="816|792|3084|67857|2811|69939|2191|9793|1581|4501|4649|1235|1598|306|3884|260491">
     
         <script nonce="">
-          SML.load([["7HkyzXYUTK",4511],["BcCLCEzlqu",1521],["Bp8QrlT_2o",4442],["BSFiqEpO9E",3084],["BzfYI0GHHJ",752],["C7KrlTpcjQ",9733],["CjVtux2x48",2131],["Cy3KohLaeJ",267037],["D1A05ZzPK5",67779],["D1ucdOLqw1",728],["DjgkdbObOr",76867],["DPyNbxOM-U",1538],["DyHb3wZAZ1",4589],["DZ1RPEB5Sn",2752],["EXyEypYTiS",306],["RTAxED06um",3825]], 'en-US/', 'auto');
+          SML.load([["BDUQsXhkca",816],["BfPwWfeyW8",792],["BtupjYoFVn",3084],["BYvaftwcjr",67857],["C_-xA37Tq9",2811],["C4DV97-xg4",69939],["CWEi0dqDsb",2191],["CyodcBLUBi",9793],["D6P9fk7XXS",1581],["DEKQ9UAt5d",4501],["DESgJwDNiN",4649],["dylzgcgSfv",1235],["EB8CKEK4-W",1598],["IKjvUt6Nu8",306],["wydo9eHYuw",3884],["x4uT4UsxQk",260491]], 'en-US/', 'auto');
         </script>
       
   <!----></faceplate-loader>
@@ -332,7 +332,7 @@ button inline-flex " id="expand-user-drawer-button" slot="trigger" type="button"
     <alert-controller></alert-controller>
     </template>
   
-     <faceplate-loader name="ThemeSwitcherModal_pQqdVY" src="concat:-IoVYb1hUs,7HkyzXYUTK,9KAY1dL0h3,B5Jvvn3EFV,BbSJkEDy32,Bgg7fvPg1v,BLtTT2phgo,BMvQn_lX2G,BzMMrtUIND,C0rBBSjOJ4,C5hFQItZOl,C7KrlTpcjQ,CCgOe6mxT5,CFO1hSAbUl,CfxgYECT_5,CixyHdO44E,CjVtux2x48,Cs9RuaDlct,Cy3KohLaeJ,D1A05ZzPK5,DjgkdbObOr,DPyNbxOM-U,DyHb3wZAZ1,HimdHNjWhD,mbxiZIjRPq,P9flVWw_o9,RZi7OcBxdh" loading="programmatic" data-prefix="en-US/" data-chunk-sizes="5673|4511|3381|3657|2922|10720|9692|3678|403|1196|6201|9733|11455|5023|4056|4638|2131|707|267037|67779|76867|1538|4589|10362|15179|13682|2868">
+     <faceplate-loader name="ThemeSwitcherModal_pQqdVY" src="concat:An9y-oo3Zg,B009xXe53k,BYvaftwcjr,C-IIzwKovL,C4DV97-xg4,C62xDMfdQn,CAw_DF5-MW,CDhWWw5uuE,CHukOdp3f5,Ck6Ldj3EjQ,CLIEJrCal3,CWEi0dqDsb,CyodcBLUBi,D9syWr9LmG,DESgJwDNiN,DeXtaabT2e,DGRBUn3QQ_,DoWY1jvDtl,dq_8NHX2OU,DSWDY7vPwk,DUNQldPkun,DXhhAEMzL0,dylzgcgSfv,EB8CKEK4-W,hhIGVhV-wZ,x4uT4UsxQk,XCDkFuh1WA" loading="programmatic" data-prefix="en-US/" data-chunk-sizes="3717|9752|67857|10362|69939|3738|15238|3441|5083|6261|11515|2191|9793|463|4649|4638|1260|2981|5732|771|13741|10780|1235|1598|4116|260491|2928">
     
   <!----></faceplate-loader>
     <faceplate-partial name="ThemeSwitcherModal_pQqdVY" src="/svc/shreddit/partial/pQqdVY/theme-switcher-modal" loading="programmatic">
@@ -364,7 +364,7 @@ button inline-flex " slot="button-page-type">
     <faceplate-menu slot="dropdown-page-type" class="absolute z-1 top-100 start-0 end-0 bg-ui-modalbackground box-shadow rounded-1">
       
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/all" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/all" style="padding-inline-end: 16px" tabindex="0">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -380,7 +380,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/user-agreement" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/user-agreement" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -396,7 +396,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -412,7 +412,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/reddit-rules" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/reddit-rules" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -428,7 +428,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/moderator-code-of-conduct" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/moderator-code-of-conduct" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -444,7 +444,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/policies/cookies" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/policies/cookies" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -460,7 +460,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/econ-terms" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/econ-terms" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -476,7 +476,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/previews-terms" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/previews-terms" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -492,7 +492,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/creator-terms" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/creator-terms" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -508,7 +508,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/developer-terms" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/developer-terms" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -524,7 +524,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/data-api-terms" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/data-api-terms" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -540,7 +540,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/embeds-terms" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/embeds-terms" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -556,7 +556,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/bug-bounty-program" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/bug-bounty-program" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -572,7 +572,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/trademark-use-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/trademark-use-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -588,7 +588,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/transparency" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/transparency" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -604,7 +604,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/guideline-for-law-enforcement" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/guideline-for-law-enforcement" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -620,7 +620,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/reddits-anti-slavery-and-human-trafficking-statement" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/reddits-anti-slavery-and-human-trafficking-statement" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -636,7 +636,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/earn-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/earn-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -652,7 +652,7 @@ button inline-flex " slot="button-page-type">
     </li>
     
       <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/earn-terms" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="https://redditinc.com/policies/earn-terms" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -690,7 +690,7 @@ button inline-flex " slot="button-locale">
     <faceplate-menu slot="dropdown-locale" class="absolute z-1 top-100 start-0 end-0 bg-ui-modalbackground box-shadow rounded-1">
       
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ar-eg/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ar-eg/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="0">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -706,7 +706,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/bg-bg/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/bg-bg/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -722,7 +722,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/cs-cz/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/cs-cz/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -738,7 +738,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/da-dk/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/da-dk/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -754,7 +754,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/de-de/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/de-de/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -770,7 +770,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/el-gr/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/el-gr/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -786,7 +786,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/en-us/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/en-us/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -802,7 +802,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/es-es/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/es-es/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -818,7 +818,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/es-mx/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/es-mx/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -834,7 +834,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/fi-fi/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/fi-fi/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -850,7 +850,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/hu-hu/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/hu-hu/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -866,7 +866,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/fr-fr/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/fr-fr/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -882,7 +882,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/hr-hr/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/hr-hr/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -898,7 +898,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/nl-nl/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/nl-nl/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -914,7 +914,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/nb-no/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/nb-no/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -930,7 +930,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/it-it/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/it-it/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -946,7 +946,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ja-jp/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ja-jp/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -962,7 +962,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ko-kr/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ko-kr/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -978,7 +978,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/pl-pl/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/pl-pl/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -994,7 +994,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/pt-br/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/pt-br/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1010,7 +1010,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/pt-pt/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/pt-pt/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1026,7 +1026,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ru-ru/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ru-ru/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1042,7 +1042,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/sk-sk/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/sk-sk/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1058,7 +1058,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/sv-se/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/sv-se/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1074,7 +1074,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/hi-in/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/hi-in/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1090,7 +1090,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/bn-in/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/bn-in/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1106,7 +1106,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/tl-ph/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/tl-ph/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1122,7 +1122,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/th-th/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/th-th/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1138,7 +1138,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/sr-rs/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/sr-rs/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1154,7 +1154,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/tr-tr/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/tr-tr/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1170,7 +1170,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ms-my/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ms-my/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1186,7 +1186,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ro-ro/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/ro-ro/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1202,7 +1202,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/uk-ua/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/uk-ua/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1218,7 +1218,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/vi-vn/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/vi-vn/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1234,7 +1234,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/zh-cn/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/zh-cn/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1250,7 +1250,7 @@ button inline-flex " slot="button-locale">
     </li>
         
           <li rpl="" class="relative list-none mt-0 " role="presentation">
-      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/zh-tw/policies/privacy-policy" style="padding-inline-end: 16px">
+      <a class="flex justify-between relative px-md gap-xs text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer  py-xs  -outline-offset-1   no-underline" href="/zh-tw/policies/privacy-policy" style="padding-inline-end: 16px" tabindex="-1">
     <span class="flex items-center gap-xs min-w-0 shrink">
       
       
@@ -1424,7 +1424,7 @@ button inline-flex " slot="button-locale">
   <div class="large-text" locale="en-us">Effective: July 1, 2026. Last Revised: May 26, 2026.</div>
   
   <div id="introduction">
-    <h2 class="text-24 mb-md">Introduction</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-1">Introduction</h2>
     <div class="text no-counter">
       <p>
         At Reddit, we believe that privacy is a right. We want to empower our users to be the
@@ -1491,7 +1491,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="platform">
-    <h2 class="text-24 mb-md">Reddit Is a Public Platform</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-2">Reddit Is a Public Platform</h2>
     <div class="text no-counter">
       <p>
         Much of the information on the Services is public and accessible to everyone, even without
@@ -1543,7 +1543,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="information-collected">
-    <h2 class="text-24 mb-md">What Information We Collect</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-3">What Information We Collect</h2>
     <div class="text no-counter">
       <div class="overflow-x-scroll w-100">
         <table border="1">
@@ -2043,7 +2043,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="information-use">
-    <h2 class="text-24 mb-md">How We Use Your Information</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-4">How We Use Your Information</h2>
     <div class="text no-counter">
       <p>We use information about you to:</p>
       <ul>
@@ -2081,7 +2081,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="information-share">
-    <h2 class="text-24 mb-md">How We Share Your Information</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-5">How We Share Your Information</h2>
     <div class="text no-counter">
       <p>
         In addition to the ways that public content is shared as described above in “Reddit Is a
@@ -2148,7 +2148,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="information-protect">
-    <h2 class="text-24 mb-md">How We Protect Your Information</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-6">How We Protect Your Information</h2>
     <div class="text no-counter">
       <p>
         We take measures to help protect information about you from loss, theft, misuse and
@@ -2171,7 +2171,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="rights-and-choices">
-    <h2 class="text-24 mb-md">Your Rights and Choices</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-7">Your Rights and Choices</h2>
     <div class="text no-counter">
       <p>
         You have choices about how to protect and limit the collection, use, and sharing of
@@ -2417,7 +2417,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="data-transfer">
-    <h2 class="text-24 mb-md">International Data Transfers</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-8">International Data Transfers</h2>
     <div class="text no-counter">
       <p>
         Reddit is a global platform with operations across the world. We process and store
@@ -2434,7 +2434,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="data-privacy-framework-disclosure">
-    <h2 class="text-24 mb-md">
+    <h2 class="text-24 mb-md" id="policy-h2-9">
       EU-U.S., UK Extension, and Swiss-U.S. Data Privacy Frameworks Disclosure
     </h2>
     <div class="text no-counter">
@@ -2479,7 +2479,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="eea-uk-users">
-    <h2 class="text-24 mb-md">Additional Information for EEA, Swiss, and UK Users</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-10">Additional Information for EEA, Swiss, and UK Users</h2>
     <div class="text no-counter">
       <p>
         If you live in the European Economic Area (“EEA”) or Switzerland, Reddit Netherlands B.V. is
@@ -3289,7 +3289,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="california-users">
-    <h2 class="text-24 mb-md">Additional Information for California &amp; Other US State Users</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-11">Additional Information for California &amp; Other US State Users</h2>
     <div class="text no-counter">
       <p>
         Some US state laws, including the California Consumer Privacy Act (“CCPA”), as amended,
@@ -3376,7 +3376,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="brazilian-users">
-    <h2 class="text-24 mb-md">Additional Information for Brazilian Users</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-12">Additional Information for Brazilian Users</h2>
     <div class="text no-counter">
       <p>
         All information regarding the processing of your personal data is detailed in the Privacy
@@ -3458,7 +3458,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="policy-changes">
-    <h2 class="text-24 mb-md">Changes to This Policy</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-13">Changes to This Policy</h2>
     <div class="text no-counter">
       <p>
         We may change this Privacy Policy from time to time. If we do, we will let you know by
@@ -3473,7 +3473,7 @@ button inline-flex " slot="button-locale">
     </div>
   </div>
   <div id="contact-us">
-    <h2 class="text-24 mb-md">Contact Us</h2>
+    <h2 class="text-24 mb-md" id="policy-h2-14">Contact Us</h2>
     <div class="text no-counter">
       <p>If you have other questions about this Privacy Policy, please contact us at:</p>
       <p>
@@ -3539,4 +3539,4 @@ button inline-flex " slot="button-locale">
         
 
         
-  <script type="module" src="https://www.redditstatic.com/js/concat?prefix=en-US/&amp;chunks=7HkyzXYUTK,Cy3KohLaeJ,DjgkdbObOr" fetchpriority="high"></script><script type="module" src="https://www.redditstatic.com/js/concat?prefix=en-US/&amp;chunks=-nVOEgZNGK,0Q_HvaZnBq,5h7IyAqpvj,6Q_31tCcJh,6qrc34GcYA,87ywoxS141,B-C4saAC2w,B0YadBH7tb,B5Jvvn3EFV,B9EOQHj3o1,B9k1AYF8N4,BBC3srIDjv,BC3ecCcfp5,BF4134JuFa,BJXndtN9NL,BLUUVJeGCo,BLtTT2phgo,BMvQn_lX2G,BPXHKzfT4A,BSFiqEpO9E,BUDR6Vi58G,BUMEaxS4f0,BVRaWjgrS9,BbSJkEDy32,BbaXb3LbF1,BcCLCEzlqu,BfzNcCvneb,Bha_q4-WrG,Bj2RMpcrpv,Bj4KSWVCAZ,BlTWBvG_FG,Bla7uoFIT6,BmuiEwgQTY,Bp8QrlT_2o,BpxnZD7JJT,BqUPtXNSSh,BvmuE_ke0R,BzMMrtUIND,BzfYI0GHHJ,BznEC8SBsi,C4ttzdZeoB,C7KrlTpcjQ,C9KD6krOxB,C9ULvClHKG,CA01rOKbVy,CCgOe6mxT5,CFO1hSAbUl,CPG-DWZ2Sa,CQA2nDDrPV,CRf-_6vRWv,CRhY8hANRb,CSCMUvAEeN,CUAfN2qQ5g,CWzaunT7sS,CfxgYECT_5,Cipyd2huEM,CjVtux2x48,Cjkg-58Mx1,CkW4ooJ3KI,Cl_HABG_Oa,CmEVpTly8w,CmH6PI5a8g,Cv2rkqTOrx,CvONE9vmeV,CxJpzXI68w,CxW79TPXTH,D-71rBzf4-,D-W6D3p7KK,D0nSDkJHX0,D1A05ZzPK5,D1Tl6Cb40S,D1ucdOLqw1,D339AanQvo,D4LrB02aS4,D6g-0ge0dW,D7lQ4HboAx,DH4qkDu1GV,DI-hpB9Usl,DKcSQt-Gdi,DN6-Wpeuwp,DNOEKU5Yvh,DOEberIpF6,DPyNbxOM-U,DR65PXnZpi,DS2vXrv4Ko,DXulnwRTSi,DYt7-lEIqD,DZ1RPEB5Sn,DbbqCfTG4r,Di0a-qdnTV,DiCZ3eoHIR,DkYQtl8dOX,Dkh8OTRPWf,Dqw4cj-E0u,DyHb3wZAZ1,DzWlVWpURQ,EXyEypYTiS,GooJHxMIkH,GvduWCCKsG,R0qO21ECvL,RTAxED06um,UETwFYZm0G,W3S2tYgtXL,Yl48h84uId,ao8ntYOKrz,cjj6oyxm4t,ktw0utFsf_,lX91i74thS,mbxiZIjRPq,vdkH5Yg0mi,wLekiOoAZ_" fetchpriority="auto"></script></body></html>
+  <script type="module" src="https://www.redditstatic.com/js/concat?prefix=en-US/&amp;chunks=C4DV97-xg4,dylzgcgSfv,x4uT4UsxQk" fetchpriority="high"></script><script type="module" src="https://www.redditstatic.com/js/concat?prefix=en-US/&amp;chunks=3AtK_5f3ZG,3ar6ciE3CO,An9y-oo3Zg,B009xXe53k,B3HqzHlCvM,B65d8mZ9dk,BBI-1JuYdC,BBtYuvwkNA,BCyeEByYVb,BDEODwYllU,BDUQsXhkca,BGf-xs-tiu,BIz2DVxZ5h,BJEM1srERv,BSNrwlgjbF,BTTARN4BxY,BYvaftwcjr,BZyOL_I_9v,BccZjvvKr8,Bd1LA3j_Ef,BfPwWfeyW8,Bgi_Li6EGw,BhEzYIF6b-,BosSiKR1Af,BqTIHTqGnx,BtupjYoFVn,BuL3a0h2mq,BupeymoqZy,Bv0vCdangO,Bvc5R0lcRm,C0Rsei0e9x,C3-Ka_hGp3,C3Z6sE0dPS,C5Ipn0U9xr,C62xDMfdQn,C7SdcAwKkl,CAw_DF5-MW,CC4Gk34WtH,CCjH-i8VU5,CD-dI7o_Z_,CDLiPc07mR,CEZu9vqBAA,CEvq12cbO2,CF8166SqCh,CGmRrKdbZ3,CHlpeGtDdF,CHukOdp3f5,CJZO6zCEnN,CLFMRjM8Yk,CLIEJrCal3,COX1cwA1hk,COwLlU9yLa,COwdBSp-Kc,CSpmzM1Axg,CVUw9gdXDq,CWEi0dqDsb,CZXUxOkjzJ,C_-xA37Tq9,CmNl2nhAnT,CmSqgueO0y,Cme5JW7itu,CoypTrkba9,CsD_VaehLb,CssuxQHkQs,CtvMoWQgEb,Cw0S9TL8e7,Cw3UbWISRj,CyodcBLUBi,D--kWOZazX,D0ac2bI8VQ,D6P9fk7XXS,D7iXMKNupM,D9syWr9LmG,DDQppS6v06,DEKQ9UAt5d,DESgJwDNiN,DEq3c0a4PM,DGLjqbH43H,DRaWIefdSi,DZlGu0-N5K,D_8DcBlktt,Dag00w-zJ8,DfuoZJ8sMB,DjZUcJYKAO,DoWY1jvDtl,DygdmaUEEb,EB8CKEK4-W,HPpaP37OvG,HuHzgTf7uA,IKjvUt6Nu8,JzOxM6uQEp,LjmYMM7LK1,Lk3zpv_GCV,OYeAYYbeCS,R6lsLy74f6,TgoXBse86h,ZVbmilOE7V,aTX0CMWvlj,c0P5Jwa8Ny,dpzwpBqBw4,gtQkKs8eBq,hDPI-TN32M,hhIGVhV-wZ,lXmtgL270o,ndDP9NeK9c,sg2R9m-JJW,thjN-4qr--,v6vXA6udyE,wydo9eHYuw,ym2aM1eoHN,zGEyvA3uFj" fetchpriority="auto"></script><script type="module" src="https://www.redditstatic.com/js/concat?prefix=en-US/&amp;chunks=BpA256IO_f,DqAqZlb3TD,mrUyOcjUs5,pULrzkoXJM" fetchpriority="auto"></script></body></html>
