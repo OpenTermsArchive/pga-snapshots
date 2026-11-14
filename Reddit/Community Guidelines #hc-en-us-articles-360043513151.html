@@ -1036,7 +1036,151 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   white-space: nowrap;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3VpL2NvbXBvbmVudHMvU3Vic2NyaWJlL2luZGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixvQ0FBb0M7RUFDcEMsa0JBQWtCO0VBQ2xCLHdDQUF3QztFQUN4QyxlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLG1CQUFtQjtFQUNuQixPQUFPO0VBQ1AsZ0JBQWdCO0VBQ2hCLGFBQWE7RUFDYixlQUFlO0VBQ2YsYUFBYTtBQUNmOztBQUVBO0VBQ0UsV0FBVztFQUNYLGVBQWU7RUFDZixjQUFjO0VBQ2QsMEJBQTBCO0VBQzFCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULGdCQUFnQjtFQUNoQiw4QkFBOEI7RUFDOUIsVUFBVTtFQUNWLFdBQVc7RUFDWCxtQkFBbUI7QUFDckIiLCJzb3VyY2VzQ29udGVudCI6WyI6cm9vdCB7XG4gIC0tcmVhY2gtbWVudS1idXR0b246IDE7XG59XG5cbi5saXN0IHtcbiAgYmFja2dyb3VuZDogI2ZmZjtcbiAgYm9yZGVyOiAxcHggc29saWQgcmdiKDIxNiwgMjE2LCAyMTYpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDVweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xuICBmb250LXdlaWdodDogbm9ybWFsO1xuICBsZWZ0OiAwO1xuICBtaW4td2lkdGg6IDE3MHB4O1xuICBvdXRsaW5lOiBub25lO1xuICBwYWRkaW5nOiAxMHB4IDA7XG4gIHotaW5kZXg6IDEwMDA7XG59XG5cbi5pdGVtIHtcbiAgY29sb3I6ICMzMzM7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgZGlzcGxheTogYmxvY2s7XG4gIHBhZGRpbmc6IDdweCA0MHB4IDdweCAyMHB4O1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xufVxuXG4uc3BhY2VyIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB3aWR0aDogMTBweDtcbn1cblxuLmludmlzaWJsZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiBhdXRvO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBjbGlwOiByZWN0KDFweCwgMXB4LCAxcHgsIDFweCk7XG4gIHdpZHRoOiAxcHg7XG4gIGhlaWdodDogMXB4O1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3VpL2NvbXBvbmVudHMvU3Vic2NyaWJlL2luZGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixvQ0FBb0M7RUFDcEMsa0JBQWtCO0VBQ2xCLHdDQUF3QztFQUN4QyxlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLG1CQUFtQjtFQUNuQixPQUFPO0VBQ1AsZ0JBQWdCO0VBQ2hCLGFBQWE7RUFDYixlQUFlO0VBQ2YsYUFBYTtBQUNmOztBQUVBO0VBQ0UsV0FBVztFQUNYLGVBQWU7RUFDZixjQUFjO0VBQ2QsMEJBQTBCO0VBQzFCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULGdCQUFnQjtFQUNoQiw4QkFBOEI7RUFDOUIsVUFBVTtFQUNWLFdBQVc7RUFDWCxtQkFBbUI7QUFDckIiLCJzb3VyY2VzQ29udGVudCI6WyI6cm9vdCB7XG4gIC0tcmVhY2gtbWVudS1idXR0b246IDE7XG59XG5cbi5saXN0IHtcbiAgYmFja2dyb3VuZDogI2ZmZjtcbiAgYm9yZGVyOiAxcHggc29saWQgcmdiKDIxNiwgMjE2LCAyMTYpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDVweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xuICBmb250LXdlaWdodDogbm9ybWFsO1xuICBsZWZ0OiAwO1xuICBtaW4td2lkdGg6IDE3MHB4O1xuICBvdXRsaW5lOiBub25lO1xuICBwYWRkaW5nOiAxMHB4IDA7XG4gIHotaW5kZXg6IDEwMDA7XG59XG5cbi5pdGVtIHtcbiAgY29sb3I6ICMzMzM7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgZGlzcGxheTogYmxvY2s7XG4gIHBhZGRpbmc6IDdweCA0MHB4IDdweCAyMHB4O1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xufVxuXG4uc3BhY2VyIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB3aWR0aDogMTBweDtcbn1cblxuLmludmlzaWJsZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiBhdXRvO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBjbGlwOiByZWN0KDFweCwgMXB4LCAxcHgsIDFweCk7XG4gIHdpZHRoOiAxcHg7XG4gIGhlaWdodDogMXB4O1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>
+.alert {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  min-height: 70px;
+  position: relative;
+  font-size: 1rem;
+}
+
+.alert,
+.alert * {
+  box-sizing: border-box;
+}
+
+.alert--alert_info {
+  background-color: #44a9ef;
+  color: #fff;
+}
+
+.alert--alert_info .alert__icon--notify {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMTIgLjg3NkM1LjM4My44NzYgMCA1LjMxIDAgMTAuNzU5YzAgMi41NzMgMS4xNzcgNC45ODUgMy4zMjUgNi44MzFsLTIuNDEgNC44MTJhLjQ5OS40OTkgMCAwIDAgLjY1OC42NzZsNi40MzctMi45OTZjMS4yOC4zNzEgMi42MjIuNTYgMy45OS41NiA2LjYxNyAwIDEyLTQuNDM0IDEyLTkuODgzUzE4LjYxNy44NzYgMTIgLjg3NnptMCAxOC43NjZjLTEuMzM2IDAtMi42NDItLjE5Mi0zLjg4My0uNTcxYS41LjUgMCAwIDAtLjM1Ny4wMjVsLTUuMzA4IDIuNDcxIDEuOTQ2LTMuODg0YS41LjUgMCAwIDAtLjEzNS0uNjE0QzIuMTU5IDE1LjM4NiAxIDEzLjE0NSAxIDEwLjc1OSAxIDUuODYgNS45MzUgMS44NzYgMTIgMS44NzZzMTEgMy45ODQgMTEgOC44ODMtNC45MzUgOC44ODMtMTEgOC44ODN6Ii8+PHBhdGggZD0iTTcuNSA5SDE0YS41LjUgMCAwIDAgMC0xSDcuNWEuNS41IDAgMCAwIDAgMXpNMTcgMTFINy41YS41LjUgMCAwIDAgMCAxSDE3YS41LjUgMCAwIDAgMC0xek0xNyAxNEg3LjVhLjUuNSAwIDAgMCAwIDFIMTdhLjUuNSAwIDAgMCAwLTF6Ii8+PGc+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIvPjwvZz48L3N2Zz4=);
+}
+
+.alert--alert_success {
+  background-color: #1eca94;
+  color: #fff;
+}
+
+.alert--alert_success .alert__icon--notify {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjMgMTFjMC0xLjEwMy0uODk3LTItMi0yaC03LjM1OGMuMjg2LTEuMTc1Ljg1OC0zLjcxNy44NTgtNS4yODEgMC0uODgzLS4yNC0xLjYyMS0uNjk0LTIuMTMzQTIuMDk1IDIuMDk1IDAgMCAwIDEyLjI0NS44N2MtLjk5NSAwLTEuNzQ1LjcwMS0xLjc0NSAxLjYzIDAgNC40Mi0zLjY4OSA3LjUtNyA3LjVoLTNhLjUuNSAwIDAgMC0uNS41djlhLjUuNSAwIDAgMCAuNS41YzQuNTgzIDAgNi4xNTEuNjczIDcuNDExIDEuMjE0Ljk0MS40MDUgMS44MjkuNzg2IDMuNTg5Ljc4NkgxOGMxLjEwMyAwIDItLjg5NyAyLTIgMC0uNDExLS4xMjUtLjc5NC0uMzM5LTEuMTEyQTIuMDA1IDIuMDA1IDAgMCAwIDIxIDE3YzAtLjQxMS0uMTI1LS43OTQtLjMzOS0xLjExMkEyLjAwNSAyLjAwNSAwIDAgMCAyMiAxNGMwLS40MTEtLjEyNS0uNzk0LS4zMzktMS4xMTJBMi4wMDUgMi4wMDUgMCAwIDAgMjMgMTF6bS0yIDFoLTFhLjUuNSAwIDAgMCAwIDEgMS4wMDEgMS4wMDEgMCAwIDEgMCAyaC0xYS41LjUgMCAwIDAgMCAxIDEuMDAxIDEuMDAxIDAgMCAxIDAgMmgtMWEuNS41IDAgMCAwIDAgMSAxLjAwMSAxLjAwMSAwIDAgMSAwIDJoLTYuNWMtMS41NTQgMC0yLjI3OC0uMzExLTMuMTk0LS43MDVDNy4wMSAxOS43MzkgNS40MDcgMTkuMDUxIDEgMTkuMDAzVjExaDIuNWMzLjc4NCAwIDgtMy40OTEgOC04LjUgMC0uNDMzLjM4Ny0uNjMuNzQ1LS42My4xNzggMCAuNTIuMDQ5LjgxMi4zNzkuMjkuMzI3LjQ0My44MzUuNDQzIDEuNDcgMCAxLjkxMi0uOTc0IDUuNjE2LS45ODMgNS42NTNBLjQ5OC40OTggMCAwIDAgMTMgMTBoOGExLjAwMSAxLjAwMSAwIDAgMSAwIDJ6Ii8+PGc+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIvPjwvZz48L3N2Zz4=);
+}
+
+.alert--alert_warning {
+  background-color: #f8d88b;
+  color: #333;
+}
+
+.alert--alert_warning .alert__icon--notify {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjMzMzIj48cGF0aCBkPSJNMTEuNjk2IDFsLS4yMDUuMDAyQzUuMTI1IDEuMTEyLS4xMDcgNi4zNTQuMDAyIDEyLjcwMWMuMTEgNi4zMzggNS4wNzYgMTEuMzAyIDExLjMwNSAxMS4zMDJsLjIwMi0uMDAxYzYuNDQ1LS4xMTMgMTEuNi01LjM2MiAxMS40ODktMTEuNzAxQzIyLjg4OCA1Ljk2NCAxNy45MjQgMSAxMS42OTYgMXptLS4yMDUgMjIuMDAybC0uMTg1LjAwMWMtNS42NzggMC0xMC4yMDQtNC41MzMtMTAuMzA1LTEwLjMyQy45IDYuOTA2IDUuNjggMi4xMDIgMTEuNTA5IDIuMDAyTDExLjY5NiAyYzUuNjc3IDAgMTAuMjAxIDQuNTMyIDEwLjMwMiAxMC4zMTguMTAxIDUuNzg4LTQuNjEzIDEwLjU4MS0xMC41MDcgMTAuNjg0eiIvPjxwYXRoIGQ9Ik0xMS41IDE0LjVhLjUuNSAwIDAgMCAuNS0uNVY3YS41LjUgMCAwIDAtMSAwdjdhLjUuNSAwIDAgMCAuNS41eiIvPjxjaXJjbGUgY3g9IjExLjUiIGN5PSIxNy41IiByPSIxIi8+PGc+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIvPjwvZz48L3N2Zz4=);
+}
+
+.alert--alert_warning .alert__icon--close {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjMzMzIj48cGF0aCBkPSJNMTIuNzA3IDEyTDIzLjg1NC44NTRhLjUuNSAwIDAgMC0uNzA3LS43MDdMMTIgMTEuMjkzLjg1NC4xNDZhLjUuNSAwIDAgMC0uNzA3LjcwN0wxMS4yOTMgMTIgLjE0NiAyMy4xNDZhLjUuNSAwIDAgMCAuNzA3LjcwN0wxMiAxMi43MDdsMTEuMTQ2IDExLjE0N2EuNS41IDAgMCAwIC43MDctLjcwN0wxMi43MDcgMTJ6Ii8+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIvPjwvc3ZnPg==);
+}
+
+.alert--alert_danger {
+  background-color: #ff7f7f;
+  color: #fff;
+}
+
+.alert--alert_danger .alert__icon--notify {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMTEgOS4xNTN2Ny42NTJhLjUuNSAwIDAgMCAxIDBWOS4xNTNhLjUuNSAwIDAgMC0xIDB6Ii8+PHBhdGggZD0iTTExLjk0NyAxLjI3NmMtLjE3LS4zMzktLjcyNS0uMzM5LS44OTUgMGwtMTEgMjJBLjUwMS41MDEgMCAwIDAgLjUgMjRoMjIuMDJhLjUuNSAwIDAgMCAuMzcyLS44MzRMMTEuOTQ3IDEuMjc2ek0xLjMwOSAyM0wxMS41IDIuNjE4IDIxLjY5MSAyM0gxLjMwOXoiLz48Y2lyY2xlIGN4PSIxMS41IiBjeT0iMjAiIHI9IjEiLz48Zz48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PC9nPjwvc3ZnPg==);
+}
+
+.alert__shape {
+  display: -ms-flexbox;
+  display: flex;
+          align-items: center;
+          justify-content: center;
+  width: 70px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.alert__shape--main {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.alert__icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: cover;
+}
+
+.alert__icon--notify {
+  width: 2em;
+  height: 2em;
+}
+
+.alert__icon--close {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMTIuNzA3IDEyTDIzLjg1NC44NTRhLjUuNSAwIDAgMC0uNzA3LS43MDdMMTIgMTEuMjkzLjg1NC4xNDZhLjUuNSAwIDAgMC0uNzA3LjcwN0wxMS4yOTMgMTIgLjE0NiAyMy4xNDZhLjUuNSAwIDAgMCAuNzA3LjcwN0wxMiAxMi43MDdsMTEuMTQ2IDExLjE0N2EuNS41IDAgMCAwIC43MDctLjcwN0wxMi43MDcgMTJ6Ii8+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIvPjwvc3ZnPg==);
+}
+
+.alert__body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1em 1em calc(1em - 8px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+.alert__body p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.alert__body p:last-of-type {
+  margin-bottom: 0;
+}
+
+.alert__title {
+  font-weight: bold;
+}
+
+.alert__title,
+.alert__text {
+  margin-bottom: 8px;
+}
+
+.alert__text:empty {
+  display: none;
+}
+
+.alert__text a {
+  color: currentColor;
+  text-decoration: underline;
+}
+</style>
       <style id="prev-next-styles">
         .prevnext {
           width: 100%;
@@ -1081,7 +1225,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
       </style>
     </head>
-<body class=""><div></div>
+<body class=""><div class="js-alert-box"></div><div></div>
   
   
   
@@ -4375,8 +4519,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li data-list-item-id="e377737293ca83f583fb1d5d1c48f6bf0">Depicting or encouraging the malicious abuse or suffering of animals for entertainment.</li>
 </ul><div class="callout callout--warning"><p>Note: Content that depicts violence but doesn't violate this policy (as described above) should be labeled Not Safe for Work (“NSFW”). Additionally, we may allow appropriately labelled graphic content that has public interest value, such as legitimate news reporting, historical documentation, or citizen journalism, provided it is not used to mock victims, celebrate violence, or promote a perpetrator’s message or ideology.</p></div><div class="accordion accordion--default">
 <div class="accordion__item">
-<div class="accordion__item-title"><strong>Some examples of policy violations</strong></div>
-<div class="accordion__item-content"><ul>
+<button class="accordion__item-title" aria-expanded="false" aria-controls="content-50">Some examples of policy violations</button>
+<div class="accordion__item-content" id="content-50"><ul>
 <li data-list-item-id="e8ceb9dfd3b6d77967b423a1b18f32ce6">A post including violent imagery that encourages others to take action against an individual or a group.</li>
 <li data-list-item-id="e58a6fc06e072b7497642ad8211cf943e">Creating a community that praises a mass shooter as a hero.</li>
 <li data-list-item-id="ef47221d55f3bfff2d77cb9654edbad89">Posting threats against protest participants, counter-protesters, or law enforcement agents.</li>
@@ -4389,8 +4533,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul></div>
 </div>
 <div class="accordion__item">
-<div class="accordion__item-title"><strong>Some examples that do NOT violate this policy</strong></div>
-<div class="accordion__item-content"><ul>
+<button class="accordion__item-title" aria-expanded="false" aria-controls="content-51">Some examples that do NOT violate this policy</button>
+<div class="accordion__item-content" id="content-51"><ul>
 <li data-list-item-id="ef930615d2ff4ae31972e53949adf6391">A post discussing a war, with graphic images from the event correctly labeled as NSFW.</li>
 <li data-list-item-id="ef08ce08585161cf3bd386cea0401f6f0">A user expressing thoughts of self-harm in the context of seeking help in a support community.</li>
 <li data-list-item-id="e528a59d37fa9de9a97ea4a17bebc0ffa">A post showing a picture of a legally hunted animal.</li>
